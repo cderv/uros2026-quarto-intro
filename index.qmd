@@ -1,0 +1,66 @@
+---
+pagetitle: "Talk Title - Conference Name"
+date: 01/01/2027
+format:
+  clean-revealjs:
+    width: 1280
+    height: 720
+    theme: [default, reveal-style.scss]
+    footer: Follow along at <https://cderv.github.io/REPO-NAME/> and <https://quarto.org>
+    code-line-numbers: false
+    slide-number: true
+    mermaid-format: png
+    preview-links: auto
+    multiplex: false
+    include-after-body:
+      - revealjs-tweak.html
+    # logo: images/conference-logo.png
+revealjs-plugins:
+  - attribution
+---
+
+## {#title-slide .quarto-title-block .center}
+
+```{=html}
+<h1 class='title'>Talk Title</h1>
+<p class='subtitle'>Subtitle</p>
+```
+
+<!-- ![](images/conference-logo.png){.absolute bottom='35px' right='100px' width='50%' fig-alt="Conference logo"} -->
+
+::: {.quarto-title-authors}
+::: {.quarto-title-author}
+::: {.quarto-title-author-name}
+Christophe Dervieux
+`<p class="quarto-title-affiliation">Posit PBC</p>`{=html}
+:::
+:::
+:::
+
+{{< meta date >}}
+
+# What is Quarto?
+
+*Quarto is the next generation of R Markdown:\
+It unifies and extends it*
+
+## Quarto ...
+
+...is an open-source, scientific, and technical publishing system
+
+- Computations: Python, R, Julia, Observable JS
+- Markdown: [Pandoc](https://pandoc.org) w/ many enhancements
+- Output: Documents, presentations, websites, books, blogs
+
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel. Illustrated by Allison Horst.]{.small-cap}](images/horst_quarto_schematic.png){fig-align="center" fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto."}
+
+## Learning More {.smaller}
+
+#### Slides: <https://cderv.github.io/REPO-NAME/> {.bottom-pad}
+
+- Getting started: <https://quarto.org/docs/get-started/>
+- User guide: <https://quarto.org/docs/guide/>
+- Gallery: <https://quarto.org/docs/gallery/>
+- Awesome Quarto: <https://github.com/mcanouil/awesome-quarto>
+
+#### Questions? {.top-pad}

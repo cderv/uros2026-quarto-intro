@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  // Hide the logo on the title slide only. No-op when the deck has no logo.
+  function toggleLogo(indexh) {
+    var logo = document.querySelector("div.has-logo > img.slide-logo");
+    if (!logo) return;
+    logo.style.display = indexh === 0 ? "none" : null;
+  }
+  Reveal.on('ready', (event) => {
+    toggleLogo(event.indexh);
+    // In an r-vstack made only of image paragraphs, lift the images out of
+    // their <p> so the stack sizes them.
+    var slides = Reveal.getSlidesElement();
+    slides.querySelectorAll('div.r-vstack').forEach((vstack) => {
+      var isAllP = Array.from(vstack.children).every((child) => child.tagName === 'P');
+      var isAllImg = Array.from(vstack.children).every((child) => Array.from(child.children).every((child) => child.tagName === 'IMG'));
+      if (isAllP && isAllImg) {
+        Array.from(vstack.children).forEach((child) => {
+          Array.from(child.children).forEach((img) => {
+            vstack.appendChild(img);
+          });
+          vstack.removeChild(child);
+        });
+      }
+    });
+  });
+  Reveal.on('slidechanged', (event) => {
+    toggleLogo(event.indexh);
+  });
+</script>

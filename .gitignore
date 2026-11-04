@@ -1,0 +1,12 @@
+/.quarto/
+/*.html
+!revealjs-tweak.html
+/*-speaker.html
+*_files/
+*_cache/
+/_site/
+slides-*.pdf
+.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
