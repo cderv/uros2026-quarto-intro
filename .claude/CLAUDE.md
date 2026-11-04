@@ -6,15 +6,23 @@ the first session, then keep it current.
 
 ## This talk
 
-- **Title:** TODO
-- **Event, date, place:** TODO
-- **Language:** TODO (EN or FR)
-- **Duration:** TODO
-- **Audience:** TODO
-- **Talk type:** TODO (intro/overview or topic-specific)
-- **Core message:** TODO
-- **Slides URL:** `https://cderv.github.io/<repo-name>/`
-- **Work tracking:** braid, label `<talk-label>` (for example `uros2026`)
+- **Title:** Reproducible Statistical Publications with Quarto (official programme title)
+- **Event, date, place:** uRos2026, 14th International Conference on the Use of R in Official
+  Statistics, hosted by INSEE. Thursday 19 November 2026, session C1 "Automated and Accessible
+  Statistical Outputs" (11:30–13:00, 4th of 5 talks), room Bloch-Lainé 2, Centre de conférences
+  Pierre Mendès France, 139 rue de Bercy, Paris. Conference site: <https://urosconf.org/>
+- **Language:** EN
+- **Duration:** 15 min
+- **Audience:** international official statisticians (national statistical institutes, Eurostat,
+  international organisations, central banks, some academia). They know R; most know the R Markdown
+  name, few use Quarto. Details and evidence in `.claude/audience.md`.
+- **Talk type:** short intro to Quarto oriented to official-statistics publications. The narrative
+  arc is still open: a dedicated brainstorm comes next, once the context is complete.
+- **Core message:** TODO (decided in the brainstorm)
+- **Closing:** standard EN "Learning More" (Getting started, guide, gallery, Awesome Quarto), slide
+  URL first.
+- **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
+- **Work tracking:** braid, label `uros2026`
 
 ## Context files
 
@@ -24,6 +32,7 @@ the first session, then keep it current.
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/rules/talk-inventory.md` | Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
+| `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 
 ## Preparing the talk
 
