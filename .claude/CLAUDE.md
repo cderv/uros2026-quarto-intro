@@ -59,8 +59,13 @@ Each step is a braid task under the talk's epic (see **Work tracking**).
 
 braid holds the plan and the history of the talk; the repository holds only the result.
 
-- Start every session with `braid ready --label <talk-label>`. Run `braid agents-info` when the
-  workflow is unclear. Never run `braid secret` unless asked.
+- Start every session with `braid ready --label <talk-label>`, then `braid show` the
+  highest-priority ready task and read its latest comment starting with `HANDOFF`: it says where
+  the previous session stopped and what to do next. Run `braid agents-info` when the workflow is
+  unclear. Never run `braid secret` unless asked.
+- End every session with a `HANDOFF` comment on the next task to pick up: state, key facts,
+  what to do first, what was lost with the container (scratchpad files). Handoffs live in braid,
+  never in a file in this repository.
 - One epic per talk, one task per step of **Preparing the talk**, linked to the epic
   (`--deps parent-child:<epic>`) and to each other with `blocks` dependencies. File work found on
   the way with `--deps discovered-from:<current>`.
