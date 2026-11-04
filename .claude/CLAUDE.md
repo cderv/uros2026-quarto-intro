@@ -16,9 +16,17 @@ the first session, then keep it current.
 - **Audience:** international official statisticians (national statistical institutes, Eurostat,
   international organisations, central banks, some academia). They know R; most know the R Markdown
   name, few use Quarto. Details and evidence in `.claude/audience.md`.
-- **Talk type:** short intro to Quarto oriented to official-statistics publications. The narrative
-  arc is still open: a dedicated brainstorm comes next, once the context is complete.
-- **Core message:** TODO (decided in the brainstorm)
+- **Talk type:** short intro to Quarto oriented to official-statistics publications, aimed at
+  bringing in new users: why Quarto matters to people who already use R and communicate statistics.
+  Storytelling first (hook, unfold, open up), little technical detail, no live rebuild. The talk
+  stands on its own: no structural reliance on the talks before it in the session.
+- **Core message (governing idea, may be adjusted with the outline):** By publishing with Quarto
+  (reproducible: every number computed from your R code; one source for HTML, PDF, Word and your
+  website; publication-ready tooling: figures, tables, cross-references, your institute's look),
+  you get publications that stay correct and consistent everywhere and update in one run, for
+  statistics you communicate faster, to every audience, with confidence.
+- **Candidate closing line:** "You already do R. You already publish. Quarto makes it
+  reproducible, from one source, ready to publish."
 - **Closing:** standard EN "Learning More" (Getting started, guide, gallery, Awesome Quarto), slide
   URL first.
 - **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
