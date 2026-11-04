@@ -33,17 +33,45 @@ the first session, then keep it current.
 | `.claude/rules/talk-inventory.md` | Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
+| `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |
+| `.claude/settings.json` | No Claude attribution trailers or session URLs in commits and PRs |
 
 ## Preparing the talk
 
-1. Fill in **This talk**: ask for any field that is still TODO.
-2. Find the closest previous talks in `talk-inventory.md` and clone them read-only for material.
-3. Agree on a timed outline before writing slides.
-4. `index.qmd` already follows the EN boilerplate. For a FR talk, add `lang: fr` and
-   `from: markdown+emoji`, then switch the opening and closing to the FR formulas.
-5. Add the conference logo to `images/` and set `logo:` and the title-slide image.
-6. When the talk is published, add it to `talk-inventory.md` in this template repository so the
-   next talk starts with the full list.
+Each step is a braid task under the talk's epic (see **Work tracking**).
+
+1. Framing: fill in **This talk**; ask for any field that is still TODO.
+2. Audience: analyse the conference programme and past editions (who attends, recurring themes,
+   our session and its neighbours). Record the public, de-personalised result in
+   `.claude/audience.md`.
+3. Material: find the closest previous talks in `talk-inventory.md`, clone them read-only and note
+   what to reuse.
+4. Story: brainstorm the narrative and the core message.
+5. Agree on a timed outline before writing slides.
+6. Build the slides. `index.qmd` already follows the EN boilerplate. For a FR talk, add
+   `lang: fr` and `from: markdown+emoji`, then switch the opening and closing to the FR formulas.
+   Add the conference logo to `images/` and set `logo:` and the title-slide image.
+7. Rehearse and time it; review the deck.
+8. Publish (gh-pages, PDF for the organisers), then add the talk to `talk-inventory.md` in the
+   template repository so the next talk starts with the full list.
+
+## Work tracking
+
+braid holds the plan and the history of the talk; the repository holds only the result.
+
+- Start every session with `braid ready --label <talk-label>`. Run `braid agents-info` when the
+  workflow is unclear. Never run `braid secret` unless asked.
+- One epic per talk, one task per step of **Preparing the talk**, linked to the epic
+  (`--deps parent-child:<epic>`) and to each other with `blocks` dependencies. File work found on
+  the way with `--deps discovered-from:<current>`.
+- Claim a task when starting it (`braid update <id> --status in_progress`). Record each decision
+  as it is made with `braid comment <id> "..."`. Close with `braid close <id> --reason "..."` only
+  once Christophe agrees.
+- Where things go:
+  - decisions, working notes, anything about named people or private exchanges → braid comments;
+  - durable, public, de-personalised context → `.claude/` (for example `.claude/audience.md`);
+  - talk content → `index.qmd`, `images/`.
+- Never write braid IDs (`br-...`) in files or commit messages.
 
 ## Conventions
 

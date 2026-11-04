@@ -10,3 +10,4 @@ slides-*.pdf
 .Rhistory
 .RData
 .DS_Store
+.braid.toml
