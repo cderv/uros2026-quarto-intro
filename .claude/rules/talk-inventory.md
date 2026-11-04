@@ -181,10 +181,11 @@
 - **Format:** Google Slides (adapted from posit::conf 2025 EN version)
 - **Google Slides (RR-2026 FR, 56 slides):** private link (not published here)
 - **Google Slides (alt FR version, 54 slides):** private link (not published here)
-- **GitHub:** https://github.com/cderv/rr2026-lua-filters (private)
+- **Published slides (PDF):** https://connect.posit.cloud/cderv/content/019ebcb5-0b39-52d4-66da-d5b559f6e0b3
+- **GitHub:** https://github.com/cderv/rr2026-lua-filters (private on purpose, see notes)
 - **Conference:** Rencontres R 2026, Nantes
 - **Recording (EN original):** https://www.youtube.com/watch?v=u9ev3mvC-p0
-- **Notes:** FR adaptation of posit::conf 2025 talk. Delivered from Google Slides. The .qmd in the folder is a parallel Quarto draft.
+- **Notes:** FR adaptation of posit::conf 2025 talk, made and delivered in Google Slides. The repo holds no slide source: it exports the deck to `slides-source.pdf` and publishes that PDF to Posit Connect Cloud. A Quarto `clean-revealjs` draft (`index.qmd`) was started and abandoned; it only survives in git history. The repo stays private (history has the draft, posit::conf assets and the deck ID); for Lua filter material, use the published PDF or the EN recording.
 
 ### rencontre-r-2026/tuto-quarto-typst-rr-2026
 - **Title:** PDF sans frictions – Typst dans vos projets Quarto (Tutorial)
