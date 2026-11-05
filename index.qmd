@@ -20,6 +20,7 @@ format:
       duration: 12m30s
 filters:
   - timing-bar
+  - easycarousel
 revealjs-plugins:
   - attribution
   - magic-move
@@ -571,33 +572,46 @@ None.
 
 <!-- ============================ Z (2:30) ============================ -->
 
-## One source, many products {#products .timing-section timing-title="Z · And next" timing-duration="50s"}
+## Already published with Quarto {#products .timing-section timing-title="Z · And next" timing-duration="50s"}
 
-<!-- LOW-FI version of key visual 2 (grid of real outputs): final look to choose from mockups -->
+[France · Norway · United Kingdom · international bodies]{.gallery-count}
 
-::: {.grid-4}
-::: {.ph}
-Website
+<!-- Placeholders: replace images/gallery/*.png with cropped screenshots (top of the page) once showing them is agreed -->
+
+::: {.r-stack}
+::: {.gallery-live .fragment .fade-out fragment-index="1"}
+```{.carousel #gallery autoplay="5000" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
+![Insee — working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
+![Agreste — dataviz catalogue](images/gallery/02-agreste-dataviz.png)
+![ONS — weekly deaths dashboard](images/gallery/03-ons-weekly-deaths.png)
+![NISRA — childcare survey report](images/gallery/04-nisra-childcare.png)
+![Statistics Norway — documentation report](images/gallery/05-ssb-documentation.png)
+![OECD — regional country profiles](images/gallery/06-oecd-regional-profiles.png)
+![UNECE — open source principles](images/gallery/07-unece-oss.png)
+![JDemetra+ — documentation](images/gallery/08-jdemetra-docs.png)
+```
 :::
-::: {.ph}
-Book
-:::
-::: {.ph}
-Dashboard
-:::
-::: {.ph .fragment .semi-fade-out data-fragment-index="1"}
-Slides
+
+::: {.gallery-grid .fragment fragment-index="1"}
+![Insee — working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
+![Agreste — dataviz catalogue](images/gallery/02-agreste-dataviz.png)
+![ONS — weekly deaths dashboard](images/gallery/03-ons-weekly-deaths.png)
+![NISRA — childcare survey report](images/gallery/04-nisra-childcare.png)
+![Statistics Norway — documentation report](images/gallery/05-ssb-documentation.png)
+![OECD — regional country profiles](images/gallery/06-oecd-regional-profiles.png)
+![UNECE — open source principles](images/gallery/07-unece-oss.png)
+![JDemetra+ — documentation](images/gallery/08-jdemetra-docs.png)
 :::
 :::
 
-::: {.fragment data-fragment-index="1"}
+::: {.fragment fragment-index="2"}
 [These slides are Quarto too.]{.lead}
 :::
 
 ::: notes
-And a bulletin is only the start. The same source, the same R code, can become a website,
-a book, a dashboard... and slides.
-(click) These slides are Quarto too.
+These are already published with Quarto, in official statistics: a working paper at Insee, in HTML and PDF from one source; a dataviz catalogue at Agreste; dashboards at the ONS; a survey report at NISRA; documentation at Statistics Norway; the OECD, UNECE, JDemetra+...
+Some of you are already in this picture. This is a map, not a ranking.
+(click: the grid) (click) And these slides are Quarto too.
 :::
 
 ## {#number-people-read .center timing-duration="25s"}
