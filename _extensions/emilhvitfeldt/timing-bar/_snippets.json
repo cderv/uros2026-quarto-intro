@@ -1,0 +1,12 @@
+{
+  "Timing Bar: slide duration": {
+    "prefix": "timing-bar:duration",
+    "body": ["## ${1:Slide title} {timing-duration=\"${2:2m}\"}"],
+    "description": "Slide heading with a planned duration for the timing bar."
+  },
+  "Timing Bar: marker div": {
+    "prefix": "timing-bar:div",
+    "body": ["::: {.timing duration=\"${1:90s}\"}", ":::"],
+    "description": "Timing metadata for a slide without a heading (removed from output)."
+  }
+}
