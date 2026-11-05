@@ -42,6 +42,8 @@ the first session, then keep it current.
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 | `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |
+| `.claude/skills/brand-yml/`, `quarto-authoring/`, `alt-text/` | Posit skills from `posit-dev/skills` (`_brand.yml`, Quarto authoring, figure alt text), pinned in `skills-lock.json`; update with `just skills-update`, do not edit |
+| `justfile` | Build, check and publish recipes (`just` lists them) |
 | `.claude/settings.json` | No Claude attribution trailers or session URLs in commits and PRs |
 
 ## Preparing the talk
@@ -97,14 +99,24 @@ braid holds the plan and the history of the talk; the repository holds only the 
 
 ## Commands
 
+`just` (<https://just.systems>) runs every task; `just` alone lists the recipes.
+
+```bash
+just preview          # live preview of the slides
+just check            # render + browser + layout checks, screenshots in _check/slides/
+just pdf              # slides-full.pdf for the organisers
+just example          # render the example bulletin in example/
+just publish          # check, then publish the slides to gh-pages (asks for confirmation)
+```
+
+The recipes call these commands, which also work without `just`:
+
 ```bash
 quarto preview index.qmd
 quarto render index.qmd
-quarto publish gh-pages
-# Check the deck (render, browser, layout) and export the PDF to slides-full.pdf:
 node scripts/check-slides.mjs --strict --pdf
-# PDF only (organisers), optionally one page per fragment step:
 node scripts/check-slides.mjs --pdf-only [--pdf-fragments]
+quarto publish gh-pages index.qmd
 ```
 
 ## Checking the deck

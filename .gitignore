@@ -13,3 +13,5 @@ slides-*.pdf
 .braid.toml
 _check/
 node_modules/
+example/_output/
+example/.quarto/
