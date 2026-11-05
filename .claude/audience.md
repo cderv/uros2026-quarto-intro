@@ -46,6 +46,14 @@ room has just seen.
   pandoc, 3 Quarto reveal.js.
 - *Inference:* most of the room knows the R Markdown name, few use Quarto, almost nobody knows
   Quarto projects, Typst or `_brand.yml`.
+- 2026 marks a shift: 7 of the 112 abstracts in `abstracts.csv` (programme repository) mention
+  Quarto, against about one a year before. They are the OECD country notes talk, the Positron
+  tutorial, a time-series production workflow, an R-based survey fieldwork early-warning system,
+  "What makes the R community unique?", this talk, and a lightning talk titled "Using Quarto
+  Documents in Agricultural Surveys" (Thursday 14:00, after ours). R Markdown appears in 4
+  abstracts. This talk is still the first regular talk dedicated to Quarto.
+- The OECD talk in our session uses "RMarkdown, quarto and officer" (its abstract) and focuses on
+  non-technical constraints: corporate standards, fragmented pipelines, many stakeholders.
 
 ## Recurring needs seen in past programmes
 
