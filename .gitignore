@@ -11,3 +11,5 @@ slides-*.pdf
 .RData
 .DS_Store
 .braid.toml
+_check/
+node_modules/

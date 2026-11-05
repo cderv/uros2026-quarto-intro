@@ -59,9 +59,10 @@ Each step is a braid task under the talk's epic (see **Work tracking**).
 6. Build the slides. `index.qmd` already follows the EN boilerplate. For a FR talk, add
    `lang: fr` and `from: markdown+emoji`, then switch the opening and closing to the FR formulas.
    Add the conference logo to `images/` and set `logo:` and the title-slide image.
-7. Rehearse and time it; review the deck.
-8. Publish (gh-pages, PDF for the organisers), then add the talk to `talk-inventory.md` in the
-   template repository so the next talk starts with the full list.
+7. Rehearse and time it; review the deck. Run `node scripts/check-slides.mjs --strict` and look
+   at the screenshots in `_check/slides/` (see **Checking the deck**).
+8. Publish (gh-pages, PDF for the organisers with `--pdf-only`), then add the talk to
+   `talk-inventory.md` in the template repository so the next talk starts with the full list.
 
 ## Work tracking
 
@@ -100,6 +101,48 @@ braid holds the plan and the history of the talk; the repository holds only the 
 quarto preview index.qmd
 quarto render index.qmd
 quarto publish gh-pages
-# PDF export (Docker):
-docker run --rm -t -v .:/slides astefanutti/decktape -s 1280x720 generic /slides/index.html slides-full.pdf
+# Check the deck (render, browser, layout) and export the PDF to slides-full.pdf:
+node scripts/check-slides.mjs --strict --pdf
+# PDF only (organisers), optionally one page per fragment step:
+node scripts/check-slides.mjs --pdf-only [--pdf-fragments]
 ```
+
+## Checking the deck
+
+`scripts/check-slides.mjs` renders `index.qmd`, opens it in Chromium through Playwright, shows
+every slide with all its fragments, and reports:
+
+- render: `quarto render` failures; its WARNINGs (unresolved cross-reference...) are errors with
+  `--strict`;
+- browser: JavaScript and console errors, failed requests (images, fonts, iframes), broken images;
+  what a site shown in an iframe fails to load is only a warning;
+- layout: content outside the slide box (1280x720) is an error, a code block that scrolls is a
+  warning. `.r-fit-text`, `.absolute` and `.scrollable` are skipped; add `.no-overflow-check` to a
+  slide or an element to skip it on purpose.
+
+Outputs go to `_check/` (gitignored): `slides/NN-<id>.png`, `report.json`, `report.md`. Exit code
+0 means no error, 1 errors in the deck, 2 a tool problem. `--no-render` reuses `index.html`;
+`--help` lists every option.
+
+The PDF uses revealjs `?print-pdf` in the same browser: fragments in their final state, notes
+hidden, Google fonts loaded, background iframes replaced by the screenshot taken during the walk.
+The deck's YAML options `pdf-separate-fragments`, `pdf-max-pages-per-slide` and `show-notes` apply.
+
+Setup:
+
+- Claude cloud sessions: nothing to install; Playwright and Chromium are preinstalled. Do not
+  install another Playwright version and do not use Docker.
+- Locally (Windows, macOS, Linux), once per clone: `npm install --no-save playwright`, then
+  `npx playwright install chromium`. Needs Node.js 18 or later.
+- GitHub: `.github/workflows/check-slides.yml` runs the check with `--strict --pdf` on every push
+  and uploads screenshots, reports and PDF as the `check-slides` artifact.
+
+Fallback if the PDF looks wrong: decktape through npx, still without Docker (slower, renders live
+iframes). In cloud sessions, point it to the preinstalled Chromium and skip Puppeteer's download:
+
+```bash
+PUPPETEER_SKIP_DOWNLOAD=1 npx -y decktape reveal --chrome-path /opt/pw-browsers/chromium --chrome-arg=--no-sandbox -s 1280x720 index.html slides-full.pdf
+```
+
+Locally, `npx -y decktape reveal -s 1280x720 index.html slides-full.pdf` downloads its own Chrome.
+

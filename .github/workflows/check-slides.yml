@@ -1,0 +1,41 @@
+# Render the deck, walk every slide in Chromium, flag errors and overflowing content,
+# and export the PDF. Screenshots, reports and PDF are uploaded as the `check-slides` artifact.
+# A talk with executable R or Python code also needs its runtime here (r-lib/actions/setup-r,
+# actions/setup-python) before the check step.
+name: Check slides
+
+on:
+  push:
+    branches-ignore: [gh-pages]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Check slides and export PDF
+        run: node scripts/check-slides.mjs --strict --pdf
+
+      - name: Upload screenshots, reports and PDF
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: check-slides
+          path: |
+            _check/
+            slides-full.pdf
+          if-no-files-found: ignore

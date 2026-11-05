@@ -12,6 +12,10 @@ talk-name/
 ├── _quarto.yml            # Only for multi-file projects (tutorials)
 ├── reveal-style.scss      # Project-specific SCSS overrides
 ├── revealjs-tweak.html    # JS tweaks (hides logo on slide 1, fixes r-vstack images)
+├── scripts/
+│   └── check-slides.mjs   # Deck check (render, browser, layout) and PDF export
+├── .github/workflows/
+│   └── check-slides.yml   # Runs the check on every push, uploads screenshots and PDF
 ├── _extensions/
 │   ├── grantmcdermott/
 │   │   └── clean/         # clean-revealjs format
@@ -241,9 +245,17 @@ quarto add martinomagnifico/quarto-revealjs-simplemenu  # not this one
 # Render
 quarto render index.qmd
 
+# Check the deck before publishing (screenshots in _check/slides/)
+node scripts/check-slides.mjs --strict
+
 # Publish to GitHub Pages
 quarto publish gh-pages
+
+# PDF for the organisers (slides-full.pdf), without Docker
+node scripts/check-slides.mjs --pdf-only
 ```
+
+Setup, options and the decktape fallback: `.claude/CLAUDE.md`, section **Checking the deck**.
 
 All published talks use GitHub Pages. Slides URL always follows pattern:
 `https://cderv.github.io/[repo-name]/`
