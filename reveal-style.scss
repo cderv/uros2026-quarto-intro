@@ -204,3 +204,158 @@ section#diagrams {
     display: none;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Storyboard (low fidelity): scripted lines, placeholders, key-visual drafts
+// ---------------------------------------------------------------------------
+
+.reveal {
+  .lead {
+    display: block;
+    font-size: 1.1em;
+    color: #4a4a4a;
+    margin: 0.4em 0;
+  }
+
+  .statement {
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0.4em 0;
+  }
+
+  .payoff {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    color: $perso-highlight-color;
+  }
+
+  .big-numbers p {
+    font-size: 1.2em;
+    margin: 0.2em 0;
+    .num {
+      display: inline-block;
+      min-width: 3.2em;
+      font-size: 1.8em;
+      font-weight: bold;
+      color: $presentation-heading-color;
+    }
+  }
+
+  // placeholder for a future screenshot or visual
+  .ph {
+    border: 3px dashed #b0b0b0;
+    border-radius: 8px;
+    background: #f4f4f4;
+    color: #777;
+    font-size: 0.7em;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5em;
+    margin: 0.3em 0;
+    p { margin: 0; }
+  }
+  .ph-tall { min-height: 440px; }
+
+  // code that will come from the example repository
+  .draft, .draft-inline {
+    display: inline-block;
+    background: #fff3cd;
+    color: #8a6d00;
+    border: 1px solid #e0c46c;
+    border-radius: 4px;
+    font-size: 0.45em;
+    padding: 0 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .draft-inline {
+    font-size: 0.8em;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  // key visual 1, low-fi: R code -> 5 chains -> outputs, then one source
+  .chains {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 0.6em;
+    .src {
+      flex: 0 0 auto;
+      width: 6.5em;
+      padding: 1.2em 0.4em;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: $presentation-heading-color;
+      border-radius: 8px;
+    }
+    .chain-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+    }
+    .chain {
+      display: flex;
+      align-items: center;
+      font-size: 0.75em;
+      p { margin: 0; display: flex; align-items: center; width: 100%; }
+      .how {
+        flex: 1;
+        color: #a23b3b;
+        border-bottom: 2px dashed #a23b3b;
+        margin-right: 0.6em;
+        font-style: italic;
+      }
+      .out {
+        flex: 0 0 7.5em;
+        text-align: center;
+        border: 2px solid #555;
+        border-radius: 6px;
+        padding: 0.15em 0.3em;
+        background: white;
+      }
+    }
+    &.merged .chain {
+      justify-content: flex-end;
+      p { justify-content: flex-end; }
+      .out { border-color: $perso-highlight-color; }
+    }
+    &.merged .src { background: $perso-highlight-color; }
+  }
+  .question { font-weight: bold; color: #a23b3b; }
+
+  // key visual 2, low-fi: grid of 4 real outputs
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4em;
+    .ph { min-height: 190px; }
+  }
+
+  .qr-block {
+    text-align: center;
+    margin-top: 1em;
+    .qrcode img, .qrcode canvas { margin: 0 auto; }
+    p { font-size: 0.9em; }
+  }
+
+  .closing-lines li {
+    font-size: 1.3em;
+    margin: 0.4em 0;
+    list-style: none;
+  }
+
+  // magic-move X1 steps: keep the full .qmd on screen
+  section#cells, section#text, section#options, section#inline, section#r-code {
+    div.sourceCode { margin-top: 0.3em; }
+    pre code { font-size: 0.95em; line-height: 1.3; }
+  }
+}

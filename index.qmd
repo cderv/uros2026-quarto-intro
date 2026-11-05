@@ -1,12 +1,13 @@
 ---
-pagetitle: "Talk Title - Conference Name"
-date: 01/01/2027
+pagetitle: "Reproducible Statistical Publications with Quarto - uRos2026"
+date: 11/19/2026
+engine: markdown
 format:
   clean-revealjs:
     width: 1280
     height: 720
     theme: [default, reveal-style.scss]
-    footer: Follow along at <https://cderv.github.io/REPO-NAME/> and <https://quarto.org>
+    footer: Follow along at <https://cderv.github.io/uros2026-quarto-intro/> and <https://quarto.org>
     code-line-numbers: false
     slide-number: true
     mermaid-format: png
@@ -14,19 +15,25 @@ format:
     multiplex: false
     include-after-body:
       - revealjs-tweak.html
-    # logo: images/conference-logo.png
+    logo: images/uros2026-logo.jpg
+    timing-bar:
+      duration: 12m30s
+filters:
+  - timing-bar
 revealjs-plugins:
   - attribution
+  - magic-move
+  - timing-bar
 ---
 
-## {#title-slide .quarto-title-block .center}
+
+## {#title-slide .quarto-title-block .center timing-duration="10s"}
 
 ```{=html}
-<h1 class='title'>Talk Title</h1>
-<p class='subtitle'>Subtitle</p>
+<h1 class='title'>Reproducible Statistical Publications with Quarto</h1>
 ```
 
-<!-- ![](images/conference-logo.png){.absolute bottom='35px' right='100px' width='50%' fig-alt="Conference logo"} -->
+![](images/uros2026-logo.jpg){.absolute bottom='60px' right='100px' width='220px' fig-alt="uRos 2026 logo: a pink hexagon with the Eiffel Tower and an R flag, urosconf.org"}
 
 ::: {.quarto-title-authors}
 ::: {.quarto-title-author}
@@ -39,24 +46,595 @@ Christophe Dervieux
 
 {{< meta date >}}
 
-# What is Quarto?
+<!--
+STORYBOARD, low fidelity. Rhythm, titles, scripted lines and transitions are real;
+boxes with a dashed border (.ph) are placeholders for screenshots of the example
+repository; code marked "draft" will be replaced by the code of that repository.
+Timing (timing-duration) follows the timed outline: intro 2:00, X1 2:30, X2 1:45,
+X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
+-->
 
-*Quarto is the next generation of R Markdown:\
-It unifies and extends it*
+::: notes
+(No words on the title. Walk to the centre, wait, then start with the story.)
+:::
 
-## Quarto ...
+<!-- ============================ INTRO (2:00) ============================ -->
 
-...is an open-source, scientific, and technical publishing system
+## {#conversation .center timing-duration="20s"}
 
-- Computations: Python, R, Julia, Observable JS
-- Markdown: [Pandoc](https://pandoc.org) w/ many enhancements
-- Output: Documents, presentations, websites, books, blogs
+[Friends in official statistics told me:]{.lead}
 
-![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel. Illustrated by Allison Horst.]{.small-cap}](images/horst_quarto_schematic.png){fig-align="center" fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto."}
+[*"Quarto? Not known there."*]{.statement}
 
-## Learning More {.smaller}
+. . .
 
-#### Slides: <https://cderv.github.io/REPO-NAME/> {.bottom-pad}
+[So I checked.]{.lead}
+
+::: notes
+I'm here because of a conversation.
+Friends in official statistics told me: Quarto? Not known there.
+R Markdown? Not really used either. But you are an R community!
+So I checked.
+:::
+
+## {#fourteen-editions .center timing-duration="25s"}
+
+::: {.big-numbers}
+[14]{.num} editions of uRos
+
+[~480]{.num} talks since 2015
+:::
+
+. . .
+
+[Talks dedicated to Quarto: **0**]{.statement}
+
+. . .
+
+[... until this year.]{.lead}
+
+::: notes
+Fourteen editions. About 480 talks since 2015.
+Talks dedicated to Quarto: zero... until this year.
+(If I missed one, tell me after: I'll be happy to be wrong.)
+:::
+
+## {#numbers-leave-r .center timing-duration="15s"}
+
+[You compute the numbers in R.]{.lead}
+
+. . .
+
+[Then the numbers [leave R]{.hl}.]{.statement}
+
+::: notes
+So either Quarto is useless for official statistics... or something else is going on.
+My guess: you use R to compute the numbers. And then the numbers leave R.
+:::
+
+## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
+
+[Release tomorrow. One number in Table 3 is wrong.]{.lead}
+
+<!-- LOW-FI version of key visual 1 (5 chains -> one source): final look to choose from mockups -->
+
+::: {.chains}
+::: {.src data-id="src"}
+R code
+:::
+
+::: {.chain-list}
+::: {.chain .fragment data-id="c1"}
+[copy, paste]{.how} [Word report]{.out data-id="o1"}
+:::
+::: {.chain .fragment data-id="c2"}
+[export]{.how} [PDF]{.out data-id="o2"}
+:::
+::: {.chain .fragment data-id="c3"}
+[save, insert]{.how} [Chart]{.out data-id="o3"}
+:::
+::: {.chain .fragment data-id="c4"}
+[upload to CMS]{.how} [Web page]{.out data-id="o4"}
+:::
+::: {.chain .fragment data-id="c5"}
+[retype]{.how} [Press release]{.out data-id="o5"}
+:::
+:::
+:::
+
+. . .
+
+[Which one did you forget?]{.lead .question}
+
+::: notes
+Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong.
+You fix the R code. (click) Then the Word file. (click) The PDF. (click) The chart.
+(click) The web page. (click) The press release.
+Hands up if you know this evening...
+Which one did you forget?
+:::
+
+## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
+
+[Release tomorrow. One number in Table 3 is wrong.]{.lead}
+
+::: {.chains .merged}
+::: {.src data-id="src"}
+One source
+:::
+
+::: {.chain-list}
+::: {.chain data-id="c1"}
+[Word report]{.out data-id="o1"}
+:::
+::: {.chain data-id="c2"}
+[PDF]{.out data-id="o2"}
+:::
+::: {.chain data-id="c3"}
+[Chart]{.out data-id="o3"}
+:::
+::: {.chain data-id="c4"}
+[Web page]{.out data-id="o4"}
+:::
+::: {.chain data-id="c5"}
+[Press release]{.out data-id="o5"}
+:::
+:::
+:::
+
+[What if you only had to fix it [once]{.hl}?]{.statement}
+
+::: notes
+What if you only had to fix it once?
+(Do not answer. Pause. Then: "Let me show you with a real publication.")
+:::
+
+<!-- ============================ X1 (2:30) ============================ -->
+
+## The R code you already have {#r-code .magic-move .timing-section timing-title="X1 · Every number computed" timing-duration="30s"}
+
+[draft code]{.draft}
+
+```r
+library(eurostat)
+library(ggplot2)
+
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+latest <- hicp[which.max(hicp$time), ]
+
+ggplot(hicp, aes(time, values)) + geom_line()
+```
+
+::: notes
+Here is a monthly inflation bulletin. It starts with the R code you already have:
+get the data from Eurostat, take the latest month, draw the chart.
+Everything that works in R works in Quarto: your packages, your charts, your tables, your models.
+Nothing to rewrite.
+:::
+
+## Put it in code cells {#cells .magic-move timing-duration="20s"}
+
+```` markdown
+```{r}
+library(eurostat)
+library(ggplot2)
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+latest <- hicp[which.max(hicp$time), ]
+```
+
+```{r}
+ggplot(hicp, aes(time, values)) + geom_line()
+```
+````
+
+::: notes
+Step one: put that code in code cells, in a plain text file, a .qmd.
+:::
+
+## Write the text around it {#text .magic-move timing-duration="25s"}
+
+```` markdown
+```{r}
+library(eurostat)
+library(ggplot2)
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+latest <- hicp[which.max(hicp$time), ]
+```
+
+Inflation in the euro area, by month:
+
+```{r}
+ggplot(hicp, aes(time, values)) + geom_line()
+```
+````
+
+::: notes
+Step two: write your text around the code, in plain Markdown.
+The comment, the method note: they live next to the code that makes the numbers.
+:::
+
+## Tell Quarto what each cell is {#options .magic-move timing-duration="25s"}
+
+```` markdown
+```{r}
+#| echo: false
+library(eurostat)
+library(ggplot2)
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+latest <- hicp[which.max(hicp$time), ]
+```
+
+Inflation in the euro area, by month:
+
+```{r}
+#| label: fig-trend
+#| fig-cap: "Annual inflation, euro area"
+ggplot(hicp, aes(time, values)) + geom_line()
+```
+````
+
+::: notes
+Step three: options on each cell. Hide the code from the reader. Give the chart a label and a caption.
+:::
+
+## Put the number in the sentence {#inline .magic-move timing-duration="25s"}
+
+```` markdown
+```{r}
+#| echo: false
+library(eurostat)
+library(ggplot2)
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+latest <- hicp[which.max(hicp$time), ]
+```
+
+Annual inflation in the euro area was `r latest$values`%.
+
+```{r}
+#| label: fig-trend
+#| fig-cap: "Annual inflation, euro area"
+ggplot(hicp, aes(time, values)) + geom_line()
+```
+````
+
+::: notes
+Step four, the important one: the number in the sentence is not typed. It is computed.
+:::
+
+## Every number comes from your code {#rendered timing-duration="25s"}
+
+::: {.ph .ph-tall}
+Screenshot: the rendered HTML bulletin\
+(sentence with the computed rate, Figure 1 with its caption)
+:::
+
+::: notes
+And this is what the reader gets. The sentence, the chart, the caption.
+Nobody typed 2.1. Every number your reader sees comes from your R code.
+:::
+
+<!-- ============================ X2 (1:45) ============================ -->
+
+## One header, every format {#formats .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
+
+```yaml
+---
+title: "Euro area inflation"
+format: html
+---
+```
+
+::: notes
+The formats are one line each, in the header of the same file.
+HTML for the web.
+:::
+
+## One header, every format {#formats-pdf .magic-move timing-duration="10s"}
+
+```yaml
+---
+title: "Euro area inflation"
+format:
+  html: default
+  typst: default
+---
+```
+
+::: notes
+Typst for the PDF: print-ready, and no LaTeX to install or learn.
+:::
+
+## One header, every format {#formats-docx .magic-move timing-duration="15s"}
+
+```yaml
+---
+title: "Euro area inflation"
+format:
+  html: default
+  typst: default
+  docx: default
+---
+```
+
+`quarto render bulletin.qmd` → `bulletin.html` · `bulletin.pdf` · `bulletin.docx`
+
+::: notes
+Word, for the colleague who wants Word.
+One command renders all of them.
+:::
+
+## For the web {#html timing-duration="25s"}
+
+::: {.ph .ph-tall}
+Screenshot: the HTML bulletin in a browser
+:::
+
+::: notes
+For the web: an accessible HTML page, readable on a phone, the chart and the table inside.
+:::
+
+## For print {#pdf timing-duration="25s"}
+
+::: {.ph .ph-tall}
+Screenshot: the PDF bulletin (Typst), page 1
+:::
+
+::: notes
+For print and for the archive: the PDF. Same text, same numbers, same chart. From the same file.
+:::
+
+## Each format for its reader {#each-reader timing-duration="20s"}
+
+::: {.columns}
+::: {.column width="33%"}
+::: {.ph}
+HTML
+:::
+:::
+::: {.column width="33%"}
+::: {.ph}
+PDF
+:::
+:::
+::: {.column width="33%"}
+::: {.ph}
+Word
+:::
+:::
+:::
+
+::: notes
+The web reader, the print reader, the colleague who edits in Word: each gets the format they need,
+and they all read the same numbers.
+:::
+
+<!-- ============================ X3 (1:45) ============================ -->
+
+## Tables ready to publish {#table .timing-section timing-title="X3 · Ready to publish" timing-duration="40s"}
+
+::: {.columns}
+::: {.column width="48%"}
+[draft code]{.draft}
+
+```` markdown
+```{r}
+#| label: tbl-hicp
+#| tbl-cap: "Annual inflation by country"
+hicp_countries |>
+  gt::gt() |>
+  gt::fmt_number(decimals = 1)
+```
+````
+:::
+::: {.column width="52%"}
+::: {.ph}
+Screenshot: Table 1 rendered\
+(HTML and PDF)
+:::
+:::
+:::
+
+::: notes
+Publications are tables. Your R table package, gt or another one, renders the table in HTML and in PDF.
+The label and caption make it Table 1, numbered for you.
+:::
+
+## Captions and cross-references {#crossref timing-duration="30s"}
+
+::: {.columns}
+::: {.column width="48%"}
+```markdown
+Prices rose fastest in services
+(@tbl-hicp, @fig-trend).
+```
+:::
+::: {.column width="52%"}
+::: {.ph}
+Screenshot: "Prices rose fastest in services (Table 1, Figure 1)", with links
+:::
+:::
+:::
+
+::: notes
+Write \@tbl-hicp in your text and Quarto writes "Table 1", with a link in HTML.
+Add a table, the numbers follow. No more "see Table 3" pointing to the old Table 3.
+:::
+
+## Your institute's look {#brand timing-duration="35s"}
+
+::: {.columns}
+::: {.column width="45%"}
+[draft code]{.draft}
+
+```{.yaml filename="_brand.yml"}
+meta:
+  name: Statistics Office
+logo: logo.svg
+color:
+  primary: "#00507a"
+typography:
+  base: Source Sans 3
+```
+:::
+::: {.column width="55%"}
+::: {.ph}
+Screenshots: HTML and PDF\
+in the fictional institute's colours
+:::
+:::
+:::
+
+::: notes
+And your institute's look: colours, logo, fonts, written once in _brand.yml.
+HTML, PDF, even these slides pick it up. Here, a fictional institute.
+:::
+
+<!-- ============================ Y (1:30) ============================ -->
+
+## Thursday, 17:50. Again. {#again .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
+
+[One number in Table 3 is wrong.]{.lead}
+
+[draft code]{.draft}
+
+::: magic-move
+
+```r
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA", coicop = "CP00"))
+```
+
+```r
+hicp <- get_eurostat("prc_hicp_manr",
+  filters = list(geo = "EA20", coicop = "CP00"))
+```
+
+:::
+
+::: notes
+Back to Thursday, ten to six. One number in Table 3 is wrong.
+You fix the R code. One line.
+:::
+
+## One render {#one-render timing-duration="35s"}
+
+`quarto render bulletin.qmd`
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.ph}
+HTML: the corrected number, highlighted
+:::
+:::
+::: {.column width="50%"}
+::: {.ph}
+PDF: the same corrected number, highlighted
+:::
+:::
+:::
+
+::: notes
+One render. The table, the sentence, the chart, the HTML, the PDF, the Word file:
+the same corrected number, everywhere.
+:::
+
+## {#none .center timing-duration="25s"}
+
+[Fix it once. Render.]{.lead}
+
+[Which one did you forget?]{.statement}
+
+. . .
+
+[None.]{.payoff}
+
+::: notes
+Fix it once. Render. Which one did you forget?
+(Pause.)
+None.
+:::
+
+<!-- ============================ Z (2:30) ============================ -->
+
+## One source, many products {#products .timing-section timing-title="Z · And next" timing-duration="50s"}
+
+<!-- LOW-FI version of key visual 2 (grid of real outputs): final look to choose from mockups -->
+
+::: {.grid-4}
+::: {.ph}
+Website
+:::
+::: {.ph}
+Book
+:::
+::: {.ph}
+Dashboard
+:::
+::: {.ph .fragment .semi-fade-out data-fragment-index="1"}
+Slides
+:::
+:::
+
+::: {.fragment data-fragment-index="1"}
+[These slides are Quarto too.]{.lead}
+:::
+
+::: notes
+And a bulletin is only the start. The same source, the same R code, can become a website,
+a book, a dashboard... and slides.
+(click) These slides are Quarto too.
+:::
+
+## {#number-people-read .center timing-duration="25s"}
+
+[The number people read\
+is the number [your code produced]{.hl}.]{.statement}
+
+::: notes
+That is what reproducible means for a publication:
+the number people read is the number your code produced.
+:::
+
+## {#next-year .center timing-duration="35s"}
+
+[Fourteen editions, one talk.]{.lead}
+
+. . .
+
+[Next year, make it [one of yours]{.hl}.]{.statement}
+
+::: notes
+Fourteen editions, one talk. Next year, make it one of yours.
+:::
+
+## {#closing .center timing-duration="40s"}
+
+::: {.incremental .closing-lines}
+- You already do R.
+- You already publish.
+- Quarto makes it [reproducible]{.hl}, from [one source]{.hl}, [ready to publish]{.hl}.
+:::
+
+::: notes
+You already do R. You already publish.
+Quarto makes it reproducible, from one source, ready to publish.
+Thank you.
+:::
+
+<!-- ============================ END (0:30) ============================ -->
+
+## Learning More {#learning-more .smaller .timing-section timing-title="End" timing-duration="30s"}
+
+::: {.columns}
+::: {.column width="62%"}
+#### Slides: <https://cderv.github.io/uros2026-quarto-intro/> {.bottom-pad}
+
+#### Example: [https://github.com/cderv/EXAMPLE-REPO]{.draft-inline} {.bottom-pad}
 
 - Getting started: <https://quarto.org/docs/get-started/>
 - User guide: <https://quarto.org/docs/guide/>
@@ -64,3 +642,17 @@ It unifies and extends it*
 - Awesome Quarto: <https://github.com/mcanouil/awesome-quarto>
 
 #### Questions? {.top-pad}
+:::
+::: {.column width="38%"}
+::: {.qr-block}
+{{< qrcode https://cderv.github.io/uros2026-quarto-intro/ width=200 height=200 >}}
+
+Slides
+:::
+:::
+:::
+
+::: notes
+The slides and the example bulletin are online: take a picture of the QR code.
+Questions?
+:::
