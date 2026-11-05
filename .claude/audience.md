@@ -130,6 +130,34 @@ Keyword counts in the 2023–2025 books of abstracts (lines, not talks):
 (a "Reproducibility and Open Science" session in 2025, a reproducible pipelines session in 2026),
 SAS migration fades, document publishing with R Markdown or Quarto stays marginal.
 
+## Quarto already in use in official statistics
+
+Public products checked on 2026-11-05: each page carries Quarto's `<meta name="generator">` tag,
+or its source repository builds it with Quarto. Candidates for the "one source, many products"
+grid; ask the institutions before showing screenshots if in doubt.
+
+| Institution | Product | Type | URL |
+|---|---|---|---|
+| Insee (DEE) | Working paper on time-varying coefficient regressions for nowcasting, also on insee.fr | report, HTML + PDF | <https://inseefrlab.github.io/DT-tvcoef/> |
+| Insee | Working paper *Introduction aux méthodes ensemblistes* (PDF built with Typst) | book, HTML + PDF | <https://inseefrlab.github.io/DT_methodes_ensemblistes/> |
+| Insee / SSP | *Manuel de protection des tableaux* | book, HTML + PDF | <https://inseefrlab.github.io/manuel-protection-tableaux/> |
+| SSM Agriculture (Agreste) | Dataviz catalogue (Closeread scrollytelling) | website | <https://ssm-agriculture.github.io/site-DataViz/> |
+| ONS | Weekly deaths data explorer (prototype) | dashboard | <https://onsdigital.github.io/weekly_deaths_data_explorer/> |
+| ONS | Health Insight Survey dashboard (official statistics in development) | dashboard | <https://onsdigital.github.io/health-insight-survey-dashboard/> |
+| NISRA | Weekly deaths in Northern Ireland | dashboard | <https://nisra-explore.github.io/weekly-deaths/> |
+| NISRA / Dept of Education | NI Childcare Survey 2024 results | report | <https://nisra-explore.github.io/childcare-survey/> |
+| Statistics Norway | Documentation report with an ISBN (register-based wage statistics) | book | <https://doc.ameld.ssb.no/> |
+| OECD (CFE) | Regional Outlook 2023 country profiles | website | <https://oecd-cfe-eds.github.io/ro2023-country-pages/> |
+| UNECE HLG-MOS | Statistical Open Source Software principles, endorsed by the CES in 2025 | website | <https://unece.github.io/OSS/> |
+| JDemetra+ (Insee, Bundesbank, NBB...) | JDemetra+ documentation, with a PDF | book | <https://jdemetra-new-documentation.netlify.app/> |
+| SSPHub, utilitR, Insee and ENSAE courses | Network site, R documentation, training | website, book | <https://ssphub.netlify.app/>, <https://www.utilitr.org/> |
+
+Also: Insee's `InseeFrLab/etudes.pdf` (Quarto + Typst formats reproducing the *Insee Flash* and
+*Insee Analyses* layouts, not yet used for a published issue), the UK Analysis Function's RAP
+guidance and AQuA Book draft, Statistics Norway's Dapla manual, the DfE analysts' guide. Not found
+(not a proof of absence): Eurostat, ECB, Bundesbank, Banque de France, StatCan, CBS, SCB, ISTAT,
+DREES, DARES, SDES, DEPP; the OECD country notes of our session have no public output.
+
 ## Material from previous talks
 
 - `cderv/2024-quarto-evolution-rmd` (SSP Hub / INSEE 2024, FR, 62 slides): a feature tour with
