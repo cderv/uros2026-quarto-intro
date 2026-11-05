@@ -1,0 +1,56 @@
+---
+title: "Euro area inflation"
+subtitle: "Monthly bulletin of the Northbridge Statistical Office"
+---
+
+```{r}
+#| label: setup
+library(eurostat)
+library(ggplot2)
+library(gt)
+library(brand.yml)
+
+hicp <- get_eurostat(
+  "prc_hicp_minr",
+  filters = list(geo = "EA", unit = "RCH_A", coicop18 = "TOTAL")
+)
+hicp <- hicp[order(hicp$time), ]
+latest <- hicp[nrow(hicp), ]
+previous <- hicp[nrow(hicp) - 1, ]
+month <- format(latest$time, "%B %Y")
+```
+
+Annual inflation in the euro area was `r latest$values`% in `r month`,
+against `r previous$values`% the month before.
+
+```{r}
+#| label: fig-trend
+#| fig-cap: "Annual inflation in the euro area, all items, %"
+#| fig-alt: "Line chart of the annual HICP inflation rate in the euro area over the last five years."
+recent <- hicp[hicp$time >= latest$time - 5 * 365, ]
+ggplot(recent, aes(time, values)) +
+  geom_line(linewidth = 1) +
+  labs(x = NULL, y = NULL) +
+  theme_brand_ggplot2()
+```
+
+```{r}
+#| label: tbl-countries
+#| tbl-cap: "Annual inflation by country, %"
+countries <- get_eurostat(
+  "prc_hicp_minr",
+  filters = list(geo = c("EA", "DE", "FR", "IT", "ES", "NL"),
+                 unit = "RCH_A", coicop18 = "TOTAL"),
+  time_format = "date"
+)
+countries <- countries[countries$time %in% c(previous$time, latest$time), ]
+tab <- reshape(countries[, c("geo", "time", "values")],
+               idvar = "geo", timevar = "time", direction = "wide")
+names(tab) <- c("Country", format(previous$time, "%b %Y"), format(latest$time, "%b %Y"))
+gt(tab) |>
+  fmt_number(columns = -Country, decimals = 1) |>
+  theme_brand_gt()
+```
+
+Prices rose fastest in the countries at the top of @tbl-countries;
+@fig-trend shows the trend for the euro area as a whole.
