@@ -116,68 +116,60 @@ My guess: you use R to compute the numbers. And then the numbers leave R.
 
 [Release tomorrow. One number in Table 3 is wrong.]{.lead}
 
-<!-- LOW-FI version of key visual 1 (5 chains -> one source): final look to choose from mockups -->
-
-::: {.chains}
-::: {.src data-id="src"}
-R code
+::: {.cards}
+::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
+[{{< iconify mdi language-r >}}]{.ico} [R code]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
-
-::: {.chain-list}
-::: {.chain .fragment data-id="c1"}
-[copy, paste]{.how} [Word report]{.out data-id="o1"}
+::: {.card .fragment .custom .fix data-id="card-word" fragment-index="2"}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
-::: {.chain .fragment data-id="c2"}
-[export]{.how} [PDF]{.out data-id="o2"}
+::: {.card .fragment .custom .fix data-id="card-pdf" fragment-index="3"}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
-::: {.chain .fragment data-id="c3"}
-[save, insert]{.how} [Chart]{.out data-id="o3"}
+::: {.card .fragment .custom .fix data-id="card-chart" fragment-index="4"}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
-::: {.chain .fragment data-id="c4"}
-[upload to CMS]{.how} [Web page]{.out data-id="o4"}
+::: {.card .fragment .custom .fix data-id="card-web" fragment-index="5"}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
-::: {.chain .fragment data-id="c5"}
-[retype]{.how} [Press release]{.out data-id="o5"}
-:::
+::: {.card data-id="card-press"}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
 :::
 :::
 
-. . .
-
-[Which one did you forget?]{.lead .question}
+::: {.fragment fragment-index="6"}
+[Which one did you forget?]{.statement .question}
+:::
 
 ::: notes
-Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong.
+Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong: 2.3 instead of 2.1.
 You fix the R code. (click) Then the Word file. (click) The PDF. (click) The chart.
-(click) The web page. (click) The press release.
-Hands up if you know this evening...
-Which one did you forget?
+(click) The web page. Done? Hands up if you know this evening...
+(click) Which one did you forget?
 :::
 
 ## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
 
-[Release tomorrow. One number in Table 3 is wrong.]{.lead}
-
-::: {.chains .merged}
-::: {.src data-id="src"}
-One source
+::: {.cards-fan}
+::: {.card .is-blank .is-code data-id="card-src"}
+[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} 
 :::
 
-::: {.chain-list}
-::: {.chain data-id="c1"}
-[Word report]{.out data-id="o1"}
+::: {.cards}
+::: {.card .is-blank data-id="card-word"}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} 
 :::
-::: {.chain data-id="c2"}
-[PDF]{.out data-id="o2"}
+::: {.card .is-blank data-id="card-pdf"}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} 
 :::
-::: {.chain data-id="c3"}
-[Chart]{.out data-id="o3"}
+::: {.card .is-blank data-id="card-chart"}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} 
 :::
-::: {.chain data-id="c4"}
-[Web page]{.out data-id="o4"}
+::: {.card .is-blank data-id="card-web"}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} 
 :::
-::: {.chain data-id="c5"}
-[Press release]{.out data-id="o5"}
+::: {.card .is-blank data-id="card-press"}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} 
 :::
 :::
 :::
@@ -543,18 +535,36 @@ One render. The table, the sentence, the chart, the HTML, the PDF, the Word file
 the same corrected number, everywhere.
 :::
 
-## {#none .center timing-duration="25s"}
+## Thursday, 17:51 {#none timing-duration="25s"}
 
-[Fix it once. Render.]{.lead}
+::: {.cards-fan}
+::: {.card .is-right .is-code data-id="card-src"}
+[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
 
-[Which one did you forget?]{.statement}
+::: {.cards}
+::: {.card .is-right data-id="card-word"}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
+::: {.card .is-right data-id="card-pdf"}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
+::: {.card .is-right data-id="card-chart"}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
+::: {.card .is-right data-id="card-web"}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
+::: {.card .is-right data-id="card-press"}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+:::
+:::
+:::
 
-. . .
-
-[None.]{.payoff}
+[Fix it once. Render. Which one did you forget? [None.]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-Fix it once. Render. Which one did you forget?
+Thursday, 17:51. Fix it once. Render. Which one did you forget?
 (Pause.)
 None.
 :::
