@@ -1,0 +1,4 @@
+- source: index.qmd
+  posit-connect-cloud:
+    - id: 01a1b279-4973-fc02-0b87-7299cbd53f52
+      url: https://connect.posit.cloud/cderv/content/01a1b279-4973-fc02-0b87-7299cbd53f52
