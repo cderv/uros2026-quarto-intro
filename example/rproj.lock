@@ -26,6 +26,10 @@ name = "ggplot2"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "giscoR"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "gt"
 constraint = "*"
 
@@ -195,17 +199,6 @@ groups = ["main"]
 metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
 
 [[targets.packages]]
-package = "jsonlite"
-version = "2.0.0"
-binary = true
-platform = "aarch64-apple-darwin"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-03-28/bin/macosx/sonoma-arm64/contrib/4.6/jsonlite_2.0.0.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/jsonlite_2.0.0-38c76850.tgz"
-groups = ["main"]
-metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
-
-[[targets.packages]]
 package = "curl"
 version = "8.1.0"
 binary = true
@@ -215,6 +208,17 @@ sources = ["https://p3m.dev/cran/2026-10-15/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/curl_8.1.0-edf1176c.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/macosx/sonoma-arm64/contrib/4.6/jsonlite_2.0.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/jsonlite_2.0.0-38c76850.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
 
 [[targets.packages]]
 package = "cachem"
@@ -503,28 +507,6 @@ groups = ["main"]
 metadata = { RemoteHash = "e8e1d6460022a9948799602d6b95dc78fbfa318ff6f0627e95c20b7190fc612b" }
 
 [[targets.packages]]
-package = "ISOweek"
-version = "0.6-2"
-binary = true
-platform = "aarch64-apple-darwin"
-dependencies = ["stringr"]
-sources = ["https://p3m.dev/cran/2017-10-10/bin/macosx/sonoma-arm64/contrib/4.6/ISOweek_0.6-2.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/ISOweek_0.6-2-31589c02.tgz"
-groups = ["main"]
-metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
-
-[[targets.packages]]
-package = "bitops"
-version = "1.1-0"
-binary = true
-platform = "aarch64-apple-darwin"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-07-31/bin/macosx/sonoma-arm64/contrib/4.6/bitops_1.1-0.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/bitops_1.1-0-08d9a498.tgz"
-groups = ["main"]
-metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
-
-[[targets.packages]]
 package = "httr2"
 version = "1.3.0"
 binary = true
@@ -545,6 +527,28 @@ sources = ["https://p3m.dev/cran/2026-07-14/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/httr2_1.3.0-6448916c.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "031990311482479da4bb910369606c73bb2b2456b8b8c1ab877ad8fbb0703c75" }
+
+[[targets.packages]]
+package = "bitops"
+version = "1.1-0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-31/bin/macosx/sonoma-arm64/contrib/4.6/bitops_1.1-0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/bitops_1.1-0-08d9a498.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
+
+[[targets.packages]]
+package = "ISOweek"
+version = "0.6-2"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = ["stringr"]
+sources = ["https://p3m.dev/cran/2017-10-10/bin/macosx/sonoma-arm64/contrib/4.6/ISOweek_0.6-2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/ISOweek_0.6-2-31589c02.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
 
 [[targets.packages]]
 package = "prettyunits"
@@ -610,6 +614,26 @@ sources = ["https://p3m.dev/cran/2025-09-18/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/pillar_1.11.1-98507d8f.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "giscoR"
+version = "1.3.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "rappdirs",
+    "sf",
+    "tibble",
+    "countrycode",
+    "lifecycle",
+    "jsonlite",
+    "cli",
+    "httr2",
+]
+sources = ["https://p3m.dev/cran/2026-10-02/bin/macosx/sonoma-arm64/contrib/4.6/giscoR_1.3.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/giscoR_1.3.0-369188c3.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "d73e525c197f77cbc5a337568778ada86be10549fbac2fd45248793e2355ce77" }
 
 [[targets.packages]]
 package = "lubridate"
@@ -1540,6 +1564,10 @@ name = "ggplot2"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "giscoR"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "gt"
 constraint = "*"
 
@@ -1710,17 +1738,6 @@ groups = ["main"]
 metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
 
 [[targets.packages]]
-package = "jsonlite"
-version = "2.0.0"
-binary = false
-platform = "source"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-03-28/src/contrib/jsonlite_2.0.0.tar.gz"]
-target = "src/jsonlite_2.0.0-38c76850.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
-
-[[targets.packages]]
 package = "curl"
 version = "8.1.0"
 binary = false
@@ -1731,6 +1748,17 @@ target = "src/curl_8.1.0-edf1176c.tar.gz"
 groups = ["main"]
 system_requirements = "libcurl (>= 7.73): libcurl-devel (rpm) or libcurl4-openssl-dev (deb)"
 metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "src/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
 
 [[targets.packages]]
 package = "cachem"
@@ -2022,28 +2050,6 @@ groups = ["main"]
 metadata = { RemoteHash = "e8e1d6460022a9948799602d6b95dc78fbfa318ff6f0627e95c20b7190fc612b" }
 
 [[targets.packages]]
-package = "ISOweek"
-version = "0.6-2"
-binary = false
-platform = "source"
-dependencies = ["stringr"]
-sources = ["https://p3m.dev/cran/2017-10-10/src/contrib/ISOweek_0.6-2.tar.gz"]
-target = "src/ISOweek_0.6-2-31589c02.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
-
-[[targets.packages]]
-package = "bitops"
-version = "1.1-0"
-binary = false
-platform = "source"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-07-31/src/contrib/bitops_1.1-0.tar.gz"]
-target = "src/bitops_1.1-0-08d9a498.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
-
-[[targets.packages]]
 package = "httr2"
 version = "1.3.0"
 binary = false
@@ -2064,6 +2070,28 @@ sources = ["https://p3m.dev/cran/2026-07-14/src/contrib/httr2_1.3.0.tar.gz"]
 target = "src/httr2_1.3.0-6448916c.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "031990311482479da4bb910369606c73bb2b2456b8b8c1ab877ad8fbb0703c75" }
+
+[[targets.packages]]
+package = "bitops"
+version = "1.1-0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-31/src/contrib/bitops_1.1-0.tar.gz"]
+target = "src/bitops_1.1-0-08d9a498.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
+
+[[targets.packages]]
+package = "ISOweek"
+version = "0.6-2"
+binary = false
+platform = "source"
+dependencies = ["stringr"]
+sources = ["https://p3m.dev/cran/2017-10-10/src/contrib/ISOweek_0.6-2.tar.gz"]
+target = "src/ISOweek_0.6-2-31589c02.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
 
 [[targets.packages]]
 package = "prettyunits"
@@ -2129,6 +2157,26 @@ sources = ["https://p3m.dev/cran/2025-09-18/src/contrib/pillar_1.11.1.tar.gz"]
 target = "src/pillar_1.11.1-98507d8f.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "giscoR"
+version = "1.3.0"
+binary = false
+platform = "source"
+dependencies = [
+    "rappdirs",
+    "sf",
+    "tibble",
+    "countrycode",
+    "lifecycle",
+    "jsonlite",
+    "cli",
+    "httr2",
+]
+sources = ["https://p3m.dev/cran/2026-10-02/src/contrib/giscoR_1.3.0.tar.gz"]
+target = "src/giscoR_1.3.0-369188c3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d73e525c197f77cbc5a337568778ada86be10549fbac2fd45248793e2355ce77" }
 
 [[targets.packages]]
 package = "lubridate"
@@ -3069,6 +3117,10 @@ name = "ggplot2"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "giscoR"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "gt"
 constraint = "*"
 
@@ -3238,17 +3290,6 @@ groups = ["main"]
 metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
 
 [[targets.packages]]
-package = "jsonlite"
-version = "2.0.0"
-binary = true
-platform = "x86_64-unknown-linux-gnu"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
-
-[[targets.packages]]
 package = "curl"
 version = "8.1.0"
 binary = true
@@ -3258,6 +3299,17 @@ sources = ["https://p3m.dev/cran/2026-10-15/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/curl_8.1.0-edf1176c.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
 
 [[targets.packages]]
 package = "cachem"
@@ -3546,28 +3598,6 @@ groups = ["main"]
 metadata = { RemoteHash = "e8e1d6460022a9948799602d6b95dc78fbfa318ff6f0627e95c20b7190fc612b" }
 
 [[targets.packages]]
-package = "ISOweek"
-version = "0.6-2"
-binary = true
-platform = "x86_64-unknown-linux-gnu"
-dependencies = ["stringr"]
-sources = ["https://p3m.dev/cran/2017-10-10/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/ISOweek_0.6-2.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/ISOweek_0.6-2-31589c02.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
-
-[[targets.packages]]
-package = "bitops"
-version = "1.1-0"
-binary = true
-platform = "x86_64-unknown-linux-gnu"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-07-31/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/bitops_1.1-0.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/bitops_1.1-0-08d9a498.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
-
-[[targets.packages]]
 package = "httr2"
 version = "1.3.0"
 binary = true
@@ -3588,6 +3618,28 @@ sources = ["https://p3m.dev/cran/2026-07-14/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/httr2_1.3.0-6448916c.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "031990311482479da4bb910369606c73bb2b2456b8b8c1ab877ad8fbb0703c75" }
+
+[[targets.packages]]
+package = "bitops"
+version = "1.1-0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-31/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/bitops_1.1-0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/bitops_1.1-0-08d9a498.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
+
+[[targets.packages]]
+package = "ISOweek"
+version = "0.6-2"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = ["stringr"]
+sources = ["https://p3m.dev/cran/2017-10-10/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/ISOweek_0.6-2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/ISOweek_0.6-2-31589c02.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
 
 [[targets.packages]]
 package = "prettyunits"
@@ -3653,6 +3705,26 @@ sources = ["https://p3m.dev/cran/2025-09-18/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/pillar_1.11.1-98507d8f.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "giscoR"
+version = "1.3.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "rappdirs",
+    "sf",
+    "tibble",
+    "countrycode",
+    "lifecycle",
+    "jsonlite",
+    "cli",
+    "httr2",
+]
+sources = ["https://p3m.dev/cran/2026-10-02/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/giscoR_1.3.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/giscoR_1.3.0-369188c3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d73e525c197f77cbc5a337568778ada86be10549fbac2fd45248793e2355ce77" }
 
 [[targets.packages]]
 package = "lubridate"
@@ -4583,6 +4655,10 @@ name = "ggplot2"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "giscoR"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "gt"
 constraint = "*"
 
@@ -4753,17 +4829,6 @@ groups = ["main"]
 metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
 
 [[targets.packages]]
-package = "jsonlite"
-version = "2.0.0"
-binary = true
-platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/noble-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
-
-[[targets.packages]]
 package = "curl"
 version = "8.1.0"
 binary = true
@@ -4774,6 +4839,17 @@ target = "bin/linux/noble-x86_64/4.6/curl_8.1.0-edf1176c.tar.gz"
 groups = ["main"]
 system_requirements = "libcurl (>= 7.73): libcurl-devel (rpm) or libcurl4-openssl-dev (deb)"
 metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/noble-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
 
 [[targets.packages]]
 package = "cachem"
@@ -5065,28 +5141,6 @@ groups = ["main"]
 metadata = { RemoteHash = "e8e1d6460022a9948799602d6b95dc78fbfa318ff6f0627e95c20b7190fc612b" }
 
 [[targets.packages]]
-package = "ISOweek"
-version = "0.6-2"
-binary = true
-platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
-dependencies = ["stringr"]
-sources = ["https://p3m.dev/cran/2017-10-10/bin/linux/noble-x86_64/4.6/src/contrib/ISOweek_0.6-2.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/ISOweek_0.6-2-31589c02.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
-
-[[targets.packages]]
-package = "bitops"
-version = "1.1-0"
-binary = true
-platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-07-31/bin/linux/noble-x86_64/4.6/src/contrib/bitops_1.1-0.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/bitops_1.1-0-08d9a498.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
-
-[[targets.packages]]
 package = "httr2"
 version = "1.3.0"
 binary = true
@@ -5107,6 +5161,28 @@ sources = ["https://p3m.dev/cran/2026-07-14/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/httr2_1.3.0-6448916c.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "031990311482479da4bb910369606c73bb2b2456b8b8c1ab877ad8fbb0703c75" }
+
+[[targets.packages]]
+package = "bitops"
+version = "1.1-0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-31/bin/linux/noble-x86_64/4.6/src/contrib/bitops_1.1-0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/bitops_1.1-0-08d9a498.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
+
+[[targets.packages]]
+package = "ISOweek"
+version = "0.6-2"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = ["stringr"]
+sources = ["https://p3m.dev/cran/2017-10-10/bin/linux/noble-x86_64/4.6/src/contrib/ISOweek_0.6-2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/ISOweek_0.6-2-31589c02.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
 
 [[targets.packages]]
 package = "prettyunits"
@@ -5172,6 +5248,26 @@ sources = ["https://p3m.dev/cran/2025-09-18/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/pillar_1.11.1-98507d8f.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "giscoR"
+version = "1.3.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "rappdirs",
+    "sf",
+    "tibble",
+    "countrycode",
+    "lifecycle",
+    "jsonlite",
+    "cli",
+    "httr2",
+]
+sources = ["https://p3m.dev/cran/2026-10-02/bin/linux/noble-x86_64/4.6/src/contrib/giscoR_1.3.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/giscoR_1.3.0-369188c3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d73e525c197f77cbc5a337568778ada86be10549fbac2fd45248793e2355ce77" }
 
 [[targets.packages]]
 package = "lubridate"
@@ -6112,6 +6208,10 @@ name = "ggplot2"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "giscoR"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "gt"
 constraint = "*"
 
@@ -6281,17 +6381,6 @@ groups = ["main"]
 metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
 
 [[targets.packages]]
-package = "jsonlite"
-version = "2.0.0"
-binary = true
-platform = "x86_64-w64-mingw32"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-03-28/bin/windows/contrib/4.6/jsonlite_2.0.0.zip"]
-target = "bin/windows/4.6/jsonlite_2.0.0-38c76850.zip"
-groups = ["main"]
-metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
-
-[[targets.packages]]
 package = "curl"
 version = "8.1.0"
 binary = true
@@ -6301,6 +6390,17 @@ sources = ["https://p3m.dev/cran/2026-10-15/bin/windows/contrib/4.6/curl_8.1.0.z
 target = "bin/windows/4.6/curl_8.1.0-edf1176c.zip"
 groups = ["main"]
 metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/windows/contrib/4.6/jsonlite_2.0.0.zip"]
+target = "bin/windows/4.6/jsonlite_2.0.0-38c76850.zip"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
 
 [[targets.packages]]
 package = "cachem"
@@ -6589,28 +6689,6 @@ groups = ["main"]
 metadata = { RemoteHash = "e8e1d6460022a9948799602d6b95dc78fbfa318ff6f0627e95c20b7190fc612b" }
 
 [[targets.packages]]
-package = "ISOweek"
-version = "0.6-2"
-binary = true
-platform = "x86_64-w64-mingw32"
-dependencies = ["stringr"]
-sources = ["https://p3m.dev/cran/2017-10-10/bin/windows/contrib/4.6/ISOweek_0.6-2.zip"]
-target = "bin/windows/4.6/ISOweek_0.6-2-31589c02.zip"
-groups = ["main"]
-metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
-
-[[targets.packages]]
-package = "bitops"
-version = "1.1-0"
-binary = true
-platform = "x86_64-w64-mingw32"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-07-31/bin/windows/contrib/4.6/bitops_1.1-0.zip"]
-target = "bin/windows/4.6/bitops_1.1-0-08d9a498.zip"
-groups = ["main"]
-metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
-
-[[targets.packages]]
 package = "httr2"
 version = "1.3.0"
 binary = true
@@ -6631,6 +6709,28 @@ sources = ["https://p3m.dev/cran/2026-07-14/bin/windows/contrib/4.6/httr2_1.3.0.
 target = "bin/windows/4.6/httr2_1.3.0-6448916c.zip"
 groups = ["main"]
 metadata = { RemoteHash = "031990311482479da4bb910369606c73bb2b2456b8b8c1ab877ad8fbb0703c75" }
+
+[[targets.packages]]
+package = "bitops"
+version = "1.1-0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-31/bin/windows/contrib/4.6/bitops_1.1-0.zip"]
+target = "bin/windows/4.6/bitops_1.1-0-08d9a498.zip"
+groups = ["main"]
+metadata = { RemoteHash = "73f063f15c6334d769202a178f7dd5499bdd10044a4ffbef571be57cbcc68b22" }
+
+[[targets.packages]]
+package = "ISOweek"
+version = "0.6-2"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = ["stringr"]
+sources = ["https://p3m.dev/cran/2017-10-10/bin/windows/contrib/4.6/ISOweek_0.6-2.zip"]
+target = "bin/windows/4.6/ISOweek_0.6-2-31589c02.zip"
+groups = ["main"]
+metadata = { RemoteHash = "b58a37b61ee772ea2704d510e9fce69dea4dd641b45124d566242825df4530b8" }
 
 [[targets.packages]]
 package = "prettyunits"
@@ -6696,6 +6796,26 @@ sources = ["https://p3m.dev/cran/2025-09-18/bin/windows/contrib/4.6/pillar_1.11.
 target = "bin/windows/4.6/pillar_1.11.1-98507d8f.zip"
 groups = ["main"]
 metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "giscoR"
+version = "1.3.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "rappdirs",
+    "sf",
+    "tibble",
+    "countrycode",
+    "lifecycle",
+    "jsonlite",
+    "cli",
+    "httr2",
+]
+sources = ["https://p3m.dev/cran/2026-10-02/bin/windows/contrib/4.6/giscoR_1.3.0.zip"]
+target = "bin/windows/4.6/giscoR_1.3.0-369188c3.zip"
+groups = ["main"]
+metadata = { RemoteHash = "d73e525c197f77cbc5a337568778ada86be10549fbac2fd45248793e2355ce77" }
 
 [[targets.packages]]
 package = "lubridate"
