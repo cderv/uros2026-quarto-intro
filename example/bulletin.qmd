@@ -63,11 +63,27 @@ record <- latest$values == max(nights$values)
 trend_headline <- paste(month, if (record) "set a new record" else "stayed below the record")
 ```
 
-Tourist accommodation in the EU recorded `r millions(latest$values)` nights
-in `r month`, `r pct(change)` compared with a year earlier.
+::: {#kf-nights}
+[`r millions(latest$values)`]{style="font-size: 2.4em; font-weight: bold; color: #7a1f3d;"}
+
+nights spent at tourist accommodation in the EU in `r month`,
+[`r pct(change)`]{style="font-weight: bold;"} compared with a year earlier.
+
+Nights in the EU, `r month`
+:::
+
+::: {.column-margin}
+**Nights spent** count every night a guest stays in hotels, holiday
+accommodation and campsites (NACE I55.1 to I55.3), whatever the guest's
+country of residence.
+:::
+
+`r if (record) paste("No month on record had more nights than", month) else paste(month, "stayed below the record")`.
+@fig-trend compares this year with the four previous years.
 
 ```{r}
 #| label: fig-trend
+#| column: page-right
 #| fig-cap: !expr trend_headline
 #| fig-alt: !expr paste("Line chart of monthly nights spent at tourist accommodation in the EU in", this_year, "drawn over a shaded band showing the lowest and highest value of each month over the four previous years.", month, "is labelled with", millions(latest$values), "nights.")
 nights$year <- as.integer(format(nights$time, "%Y"))
