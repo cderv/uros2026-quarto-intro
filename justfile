@@ -91,16 +91,18 @@ clean:
 # === publish ===
 
 # Keep target selection inside just so it works in both shells.
-_publish:
-    quarto publish gh-pages index.qmd --no-prompt --no-render
-    @echo "Live at {{ gh_url }}"
+# gh: GitHub Pages (public). connect: Posit Connect Cloud, the content recorded in _publish.yml
+# (the first run creates it and writes _publish.yml; commit that file).
+_publish target:
+    {{ if target == "gh" { "quarto publish gh-pages index.qmd --no-prompt --no-render" } else if target == "connect" { "quarto publish posit-connect-cloud index.qmd --no-render" } else { error("Unknown target: '" + target + "', use 'gh' or 'connect'") } }}
+    @echo "{{ if target == "gh" { "Live at " + gh_url } else { "Published to Posit Connect Cloud, URL in _publish.yml" } }}"
 
-# Check the deck, then publish the slides to GitHub Pages
+# Check the deck, then publish the slides (gh: GitHub Pages, connect: Posit Connect Cloud)
 [group('publish')]
-[confirm("Publish the slides to GitHub Pages? This checks the deck, then pushes to gh-pages.")]
-publish: check _publish
+[confirm("Publish the slides? This checks the deck, then publishes to the chosen target.")]
+publish target="gh": check (_publish target)
 
 # Publish without checking again (when `just check` already ran)
 [group('publish')]
-[confirm("Publish the slides to GitHub Pages (no re-check)?")]
-publish-only: _publish
+[confirm("Publish the slides (no re-check)?")]
+publish-only target="gh": (_publish target)

@@ -109,6 +109,7 @@ just gallery          # screenshots of the public Quarto publications shown on t
 just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
 just example          # render the example bulletin in example/
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
+just publish connect  # same, to the private preview on Posit Connect Cloud
 ```
 
 The recipes call these commands, which also work without `just`:
@@ -120,6 +121,32 @@ node scripts/check-slides.mjs --strict --pdf
 node scripts/check-slides.mjs --pdf-only [--pdf-fragments]
 quarto publish gh-pages index.qmd
 ```
+
+## Previews on Posit Connect Cloud
+
+Each version of the deck can be reviewed before the public gh-pages release: once set up, the
+GitHub workflow publishes every push whose check passes to one Posit Connect Cloud content item
+(all branches share it, so the latest push wins). The content stays private only on the Enhanced
+plan and above, where public access is off by default; on Free and Basic it is always public.
+
+One-time setup, done by Christophe on his own machine (never in a cloud session, never in chat):
+
+1. `just publish connect`: Quarto opens a browser to log in, creates the content and writes
+   `_publish.yml`. On connect.posit.cloud, check that public access is off for it.
+2. Commit and push `_publish.yml`. It holds only the content id and URL, no credentials.
+3. Copy `accessToken` and `refreshToken` from Quarto's token store,
+   `publish/accounts/posit-connect-cloud/accounts.json` in the Quarto data directory
+   (`%LOCALAPPDATA%\quarto` on Windows, `~/Library/Application Support/quarto` on macOS,
+   `~/.local/share/quarto` on Linux), into the repository secrets
+   `POSIT_CONNECT_CLOUD_ACCESS_TOKEN` and `POSIT_CONNECT_CLOUD_REFRESH_TOKEN`. Add
+   `POSIT_CONNECT_CLOUD_ACCOUNT_ID` only with several Connect Cloud accounts.
+
+The publish step is skipped while a secret or `_publish.yml` is missing. Quarto refreshes the
+access token in memory only, so if the step later fails with 401, repeat step 1 (it republishes
+to the same content) and update both secrets.
+
+`resources: [images/]` in `index.qmd` is required: `quarto publish --no-render` bundles only
+`index.html`, `index_files/` and declared resources, for both gh-pages and Connect Cloud.
 
 ## Checking the deck
 

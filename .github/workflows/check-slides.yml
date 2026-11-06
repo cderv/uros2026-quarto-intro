@@ -1,5 +1,7 @@
 # Render the deck, walk every slide in Chromium, flag errors and overflowing content,
 # and export the PDF. Screenshots, reports and PDF are uploaded as the `check-slides` artifact.
+# Once the Posit Connect Cloud secrets and _publish.yml exist, a deck that passes the check is
+# also published there as a preview (see .claude/CLAUDE.md, "Previews on Posit Connect Cloud").
 # A talk with executable R or Python code also needs its runtime here (r-lib/actions/setup-r,
 # actions/setup-python) before the check step.
 name: Check slides
@@ -9,10 +11,18 @@ on:
     branches-ignore: [gh-pages]
   workflow_dispatch:
 
+# A newer push on the same branch replaces a run still in progress, so the preview is the latest.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      # Secrets cannot be tested in `if:` directly; only this true/false flag is exposed to steps.
+      CONNECT_CLOUD_READY: ${{ secrets.POSIT_CONNECT_CLOUD_ACCESS_TOKEN != '' && secrets.POSIT_CONNECT_CLOUD_REFRESH_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v5
 
@@ -29,6 +39,16 @@ jobs:
 
       - name: Check slides and export PDF
         run: node scripts/check-slides.mjs --strict --pdf
+
+      # Publishes the exact HTML that passed the check. Skipped until both secrets are set and
+      # _publish.yml is committed: without it, every run would create a new content item.
+      - name: Publish the preview to Posit Connect Cloud
+        if: env.CONNECT_CLOUD_READY == 'true' && hashFiles('_publish.yml') != ''
+        env:
+          POSIT_CONNECT_CLOUD_ACCESS_TOKEN: ${{ secrets.POSIT_CONNECT_CLOUD_ACCESS_TOKEN }}
+          POSIT_CONNECT_CLOUD_REFRESH_TOKEN: ${{ secrets.POSIT_CONNECT_CLOUD_REFRESH_TOKEN }}
+          POSIT_CONNECT_CLOUD_ACCOUNT_ID: ${{ secrets.POSIT_CONNECT_CLOUD_ACCOUNT_ID }}
+        run: quarto publish posit-connect-cloud index.qmd --no-render --no-prompt --no-browser
 
       - name: Upload screenshots, reports and PDF
         if: always()
