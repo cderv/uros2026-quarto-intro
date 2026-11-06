@@ -17,6 +17,8 @@ format:
       y: 2cm
   docx: default
 
+tbl-cap-location: bottom
+
 execute:
   echo: false
   warning: false
