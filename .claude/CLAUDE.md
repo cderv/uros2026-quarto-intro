@@ -109,7 +109,7 @@ just gallery          # screenshots of the public Quarto publications shown on t
 just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
 just example          # render the example bulletin in example/
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
-just publish connect  # same, to the private preview on Posit Connect Cloud
+just publish connect  # same, to the preview on Posit Connect Cloud (after the one-time setup)
 ```
 
 The recipes call these commands, which also work without `just`:
@@ -131,9 +131,12 @@ plan and above, where public access is off by default; on Free and Basic it is a
 
 One-time setup, done by Christophe on his own machine (never in a cloud session, never in chat):
 
-1. `just publish connect`: Quarto opens a browser to log in, creates the content and writes
-   `_publish.yml`. On connect.posit.cloud, check that public access is off for it.
-2. Commit and push `_publish.yml`. It holds only the content id and URL, no credentials.
+1. `quarto publish posit-connect-cloud index.qmd`: Quarto renders the deck, asks to authorize
+   (browser login), creates the content and writes `_publish.yml`. `just publish connect` cannot do
+   this first run: like raukr-2026-quarto, it passes `--no-prompt`, which only updates an existing
+   target. On connect.posit.cloud, check that public access is off for the content.
+2. Commit and push `_publish.yml` (only the content id and URL, no credentials), and set
+   `connect_url` in the `justfile` to that URL.
 3. Copy `accessToken` and `refreshToken` from Quarto's token store,
    `publish/accounts/posit-connect-cloud/accounts.json` in the Quarto data directory
    (`%LOCALAPPDATA%\quarto` on Windows, `~/Library/Application Support/quarto` on macOS,
@@ -142,8 +145,8 @@ One-time setup, done by Christophe on his own machine (never in a cloud session,
    `POSIT_CONNECT_CLOUD_ACCOUNT_ID` only with several Connect Cloud accounts.
 
 The publish step is skipped while a secret or `_publish.yml` is missing. Quarto refreshes the
-access token in memory only, so if the step later fails with 401, repeat step 1 (it republishes
-to the same content) and update both secrets.
+access token in memory only, so if the step later fails with 401, run the command of step 1 again
+(it republishes to the same content) and update both secrets.
 
 `resources: [images/]` in `index.qmd` is required: `quarto publish --no-render` bundles only
 `index.html`, `index_files/` and declared resources, for both gh-pages and Connect Cloud.

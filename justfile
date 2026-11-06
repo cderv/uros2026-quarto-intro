@@ -5,6 +5,8 @@ set windows-shell := ["pwsh.exe", "-NoLogo", "-Command"]
 
 # Where the slides land once published
 gh_url := "https://cderv.github.io/uros2026-quarto-intro/"
+# Set to the url in _publish.yml once the first `quarto publish posit-connect-cloud index.qmd` ran
+connect_url := "the url recorded in _publish.yml"
 
 # List available recipes
 default:
@@ -91,11 +93,10 @@ clean:
 # === publish ===
 
 # Keep target selection inside just so it works in both shells.
-# gh: GitHub Pages (public). connect: Posit Connect Cloud, the content recorded in _publish.yml
-# (the first run creates it and writes _publish.yml; commit that file).
+# connect needs _publish.yml: --no-prompt only updates an existing target (see .claude/CLAUDE.md).
 _publish target:
-    {{ if target == "gh" { "quarto publish gh-pages index.qmd --no-prompt --no-render" } else if target == "connect" { "quarto publish posit-connect-cloud index.qmd --no-render" } else { error("Unknown target: '" + target + "', use 'gh' or 'connect'") } }}
-    @echo "{{ if target == "gh" { "Live at " + gh_url } else { "Published to Posit Connect Cloud, URL in _publish.yml" } }}"
+    {{ if target == "gh" { "quarto publish gh-pages index.qmd --no-prompt --no-render" } else if target == "connect" { "quarto publish posit-connect-cloud index.qmd --no-prompt --no-render" } else { error("Unknown target: '" + target + "', use 'gh' or 'connect'") } }}
+    @echo "Live at {{ if target == "gh" { gh_url } else { connect_url } }}"
 
 # Check the deck, then publish the slides (gh: GitHub Pages, connect: Posit Connect Cloud)
 [group('publish')]
