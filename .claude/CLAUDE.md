@@ -38,7 +38,7 @@ the first session, then keep it current.
 |------|----------|
 | `.claude/rules/presentation-style.md` | Narrative arc, slide types, signature phrases, opening and closing formulas, CSS classes, code display |
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
-| `.claude/rules/talk-inventory.md` | Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
+| `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 | `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |
@@ -54,7 +54,7 @@ Each step is a braid task under the talk's epic (see **Work tracking**).
 2. Audience: analyse the conference programme and past editions (who attends, recurring themes,
    our session and its neighbours). Record the public, de-personalised result in
    `.claude/audience.md`.
-3. Material: find the closest previous talks in `talk-inventory.md`, clone them read-only and note
+3. Material: find the closest previous talks in `.claude/talk-inventory.md`, clone them read-only and note
    what to reuse.
 4. Story: brainstorm the narrative and the core message.
 5. Agree on a timed outline before writing slides.
