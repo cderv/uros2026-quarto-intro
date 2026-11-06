@@ -5,8 +5,7 @@ set windows-shell := ["pwsh.exe", "-NoLogo", "-Command"]
 
 # Where the slides land once published
 gh_url := "https://cderv.github.io/uros2026-quarto-intro/"
-# Set to the url in _publish.yml once the first `quarto publish posit-connect-cloud index.qmd` ran
-connect_url := "the url recorded in _publish.yml"
+connect_url := "https://connect.posit.cloud/cderv/content/01a1b279-4973-fc02-0b87-7299cbd53f52"
 
 # List available recipes
 default:
