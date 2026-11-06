@@ -127,8 +127,8 @@ trend_alt <- paste0(
 #| label: fig-trend
 #| column: page-right
 #| out-width: 100%
-#| fig-width: 8.5
-#| fig-height: 4.2
+#| fig-width: !expr if (knitr::is_html_output()) 8.5 else 7
+#| fig-height: !expr if (knitr::is_html_output()) 4.2 else 3.8
 #| fig-cap: !expr trend_headline
 #| fig-alt: !expr trend_alt
 ggplot(mapping = aes(month)) +
@@ -237,7 +237,8 @@ map_headline <- paste(rising, "of the", sum(eu), "EU countries recorded more nig
 
 ```{r}
 #| label: fig-map
-#| fig-height: !expr if (knitr::is_html_output()) 6.6 else 5.6
+#| fig-width: !expr if (knitr::is_html_output()) 7 else 5
+#| fig-height: !expr if (knitr::is_html_output()) 6.6 else 5
 #| fig-cap: !expr map_headline
 #| fig-alt: !expr map_alt
 ggplot(europe) +
