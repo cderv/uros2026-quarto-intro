@@ -609,31 +609,31 @@ None.
 
 [France · Norway · United Kingdom · international bodies]{.gallery-count}
 
-<!-- Placeholders: replace images/gallery/*.png with cropped screenshots (top of the page) once showing them is agreed -->
+<!-- Screenshots: just gallery (scripts/capture-gallery.mjs), which also checks each page is made with Quarto -->
 
 ::: {.r-stack}
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
 ```{.carousel #gallery autoplay="5000" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
-![Insee — working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
-![Agreste — dataviz catalogue](images/gallery/02-agreste-dataviz.png)
-![ONS — weekly deaths dashboard](images/gallery/03-ons-weekly-deaths.png)
-![NISRA — childcare survey report](images/gallery/04-nisra-childcare.png)
-![Statistics Norway — documentation report](images/gallery/05-ssb-documentation.png)
-![OECD — regional country profiles](images/gallery/06-oecd-regional-profiles.png)
-![UNECE — open source principles](images/gallery/07-unece-oss.png)
-![JDemetra+ — documentation](images/gallery/08-jdemetra-docs.png)
+![Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef](images/gallery/01-insee-working-paper.png)
+![Agreste (SSM Agriculture): dataviz catalogue · ssm-agriculture.github.io/site-DataViz](images/gallery/02-agreste-dataviz.png)
+![ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer](images/gallery/03-ons-weekly-deaths.png)
+![NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey](images/gallery/04-nisra-childcare.png)
+![Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no](images/gallery/05-ssb-documentation.png)
+![OECD: Regional Outlook 2023 country profiles · oecd-cfe-eds.github.io/ro2023-country-pages](images/gallery/06-oecd-regional-profiles.png)
+![UNECE HLG-MOS: open source principles · unece.github.io/OSS](images/gallery/07-unece-oss.png)
+![JDemetra+: software documentation · jdemetra-new-documentation.netlify.app](images/gallery/08-jdemetra-docs.png)
 ```
 :::
 
 ::: {.gallery-grid .fragment fragment-index="1"}
-![Insee — working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
-![Agreste — dataviz catalogue](images/gallery/02-agreste-dataviz.png)
-![ONS — weekly deaths dashboard](images/gallery/03-ons-weekly-deaths.png)
-![NISRA — childcare survey report](images/gallery/04-nisra-childcare.png)
-![Statistics Norway — documentation report](images/gallery/05-ssb-documentation.png)
-![OECD — regional country profiles](images/gallery/06-oecd-regional-profiles.png)
-![UNECE — open source principles](images/gallery/07-unece-oss.png)
-![JDemetra+ — documentation](images/gallery/08-jdemetra-docs.png)
+[![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){fig-alt="Top of the page: Insee: working paper, HTML + PDF, made with Quarto"}](https://inseefrlab.github.io/DT-tvcoef/)
+[![Agreste (SSM Agriculture): dataviz catalogue](images/gallery/02-agreste-dataviz.png){fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalogue, made with Quarto"}](https://ssm-agriculture.github.io/site-DataViz/)
+[![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){fig-alt="Top of the page: ONS: weekly deaths data explorer (prototype), made with Quarto"}](https://onsdigital.github.io/weekly_deaths_data_explorer/)
+[![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made with Quarto"}](https://nisra-explore.github.io/childcare-survey/)
+[![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){fig-alt="Top of the page: Statistics Norway: documentation report with an ISBN, made with Quarto"}](https://doc.ameld.ssb.no/)
+[![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png){fig-alt="Top of the page: OECD: Regional Outlook 2023 country profiles, made with Quarto"}](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
+[![UNECE HLG-MOS: open source principles](images/gallery/07-unece-oss.png){fig-alt="Top of the page: UNECE HLG-MOS: open source principles, made with Quarto"}](https://unece.github.io/OSS/)
+[![JDemetra+: software documentation](images/gallery/08-jdemetra-docs.png){fig-alt="Top of the page: JDemetra+: software documentation, made with Quarto"}](https://jdemetra-new-documentation.netlify.app/)
 :::
 :::
 

@@ -417,12 +417,16 @@ section#diagrams {
     position: static; background: none; color: #222;
     font-size: 28px; padding: 0.3em 0 0;
   }
+  // the carousel and the linked thumbnails must not widen the stack to their natural size
+  .r-stack:has(.gallery-live) { grid-template-columns: minmax(0, 100%); }
+  .gallery-live, .gallery-grid { min-width: 0; width: 100%; }
   .gallery-grid {
     background: white;
     width: 100%;
     p {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 0.4em 0 0;
+      display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 0.4em 0 0;
       img { width: 100%; height: auto; margin: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); border-radius: 4px; }
+      a { display: block; min-width: 0; }
     }
   }
 }

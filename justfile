@@ -32,6 +32,11 @@ check:
 pdf:
     node scripts/check-slides.mjs --pdf-only
 
+# Screenshot the public Quarto publications of the gallery slide into images/gallery/
+[group('slides')]
+gallery:
+    node scripts/capture-gallery.mjs
+
 # === example ===
 
 # Install the example's R packages from example/rproj.lock (rig proj)
