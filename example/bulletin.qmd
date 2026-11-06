@@ -1,5 +1,5 @@
 ---
-title: "Euro area inflation"
+title: "Tourism in the European Union"
 subtitle: "Monthly bulletin of the Northbridge Statistical Office"
 ---
 
@@ -10,26 +10,31 @@ library(ggplot2)
 library(gt)
 library(brand.yml)
 
-hicp <- get_eurostat(
-  "prc_hicp_minr",
-  filters = list(geo = "EA", unit = "RCH_A", coicop18 = "TOTAL")
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL")
 )
-hicp <- hicp[order(hicp$time), ]
-latest <- hicp[nrow(hicp), ]
-previous <- hicp[nrow(hicp) - 1, ]
+nights <- nights[!is.na(nights$values), ]
+nights <- nights[order(nights$time), ]
+latest <- nights[nrow(nights), ]
+year_ago <- nights[nights$time == seq(latest$time, by = "-1 year", length.out = 2)[2], ]
+change <- 100 * (latest$values / year_ago$values - 1)
+
 month <- format(latest$time, "%B %Y")
-pct <- function(x) sprintf("%.1f%%", x)
+millions <- function(x) sprintf("%.1f million", x / 1e6)
+pct <- function(x) sprintf("%+.1f%%", x)
 ```
 
-Annual inflation in the euro area was `r pct(latest$values)` in `r month`,
-against `r pct(previous$values)` the month before.
+Tourist accommodation in the EU recorded `r millions(latest$values)` nights
+in `r month`, `r pct(change)` compared with a year earlier.
 
 ```{r}
 #| label: fig-trend
-#| fig-cap: "Annual inflation in the euro area, all items, %"
-#| fig-alt: "Line chart of the annual HICP inflation rate in the euro area over the last five years."
-recent <- hicp[hicp$time >= latest$time - 5 * 365, ]
-ggplot(recent, aes(time, values)) +
+#| fig-cap: "Nights spent at tourist accommodation in the EU, millions"
+#| fig-alt: "Line chart of monthly nights spent at tourist accommodation in the EU over the last five years, with a summer peak every year."
+recent <- nights[nights$time > latest$time - 5 * 365, ]
+ggplot(recent, aes(time, values / 1e6)) +
   geom_line(linewidth = 1) +
   labs(x = NULL, y = NULL) +
   theme_brand_ggplot2()
@@ -37,25 +42,30 @@ ggplot(recent, aes(time, values)) +
 
 ```{r}
 #| label: tbl-countries
-#| tbl-cap: "Annual inflation by country, %"
+#| tbl-cap: "Nights spent at tourist accommodation by country, millions"
+labels <- c(EU27_2020 = "European Union", IT = "Italy", FR = "France",
+            ES = "Spain", DE = "Germany", EL = "Greece", HR = "Croatia",
+            NL = "Netherlands", AT = "Austria")
 countries <- get_eurostat(
-  "prc_hicp_minr",
-  filters = list(geo = c("EA", "DE", "FR", "IT", "ES", "NL"),
-                 unit = "RCH_A", coicop18 = "TOTAL"),
-  time_format = "date"
+  "tour_occ_nim",
+  filters = list(geo = names(labels), unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL")
 )
-countries <- as.data.frame(countries[countries$time %in% c(previous$time, latest$time), ])
+countries <- as.data.frame(countries[countries$time %in% c(year_ago$time, latest$time), ])
 tab <- reshape(countries[, c("geo", "time", "values")],
                idvar = "geo", timevar = "time", direction = "wide")
-names(tab) <- c("Country", format(previous$time, "%b %Y"), format(latest$time, "%b %Y"))
-labels <- c(EA = "Euro area", DE = "Germany", FR = "France",
-            IT = "Italy", ES = "Spain", NL = "Netherlands")
+names(tab) <- c("Country", "before", "now")
+tab$change <- 100 * (tab$now / tab$before - 1)
 tab$Country <- labels[tab$Country]
-tab <- tab[order(-tab[[3]]), ]
+tab <- tab[order(-tab$change), ]
 gt(tab) |>
-  fmt_number(columns = -Country, decimals = 1) |>
+  fmt_number(columns = c(before, now), scale_by = 1e-6, decimals = 1) |>
+  fmt_number(columns = change, decimals = 1, force_sign = TRUE) |>
+  cols_label(before = format(year_ago$time, "%b %Y"),
+             now = format(latest$time, "%b %Y"),
+             change = "Change, %") |>
   theme_brand_gt()
 ```
 
-Prices rose fastest in the countries at the top of @tbl-countries;
-@fig-trend shows the trend for the euro area as a whole.
+Nights rose fastest in the countries at the top of @tbl-countries;
+@fig-trend shows the seasonal pattern for the EU as a whole.
