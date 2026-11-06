@@ -92,7 +92,7 @@ clean:
 # === publish ===
 
 # Keep target selection inside just so it works in both shells.
-# connect needs _publish.yml: --no-prompt only updates an existing target (see .claude/CLAUDE.md).
+# connect needs _publish.yml: --no-prompt only updates an existing target (see .claude/connect-cloud-preview.md).
 _publish target:
     {{ if target == "gh" { "quarto publish gh-pages index.qmd --no-prompt --no-render" } else if target == "connect" { "quarto publish posit-connect-cloud index.qmd --no-prompt --no-render" } else { error("Unknown target: '" + target + "', use 'gh' or 'connect'") } }}
     @echo "Live at {{ if target == "gh" { gh_url } else { connect_url } }}"

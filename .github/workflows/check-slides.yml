@@ -1,7 +1,7 @@
 # Render the deck, walk every slide in Chromium, flag errors and overflowing content,
 # and export the PDF. Screenshots, reports and PDF are uploaded as the `check-slides` artifact.
 # Once the Posit Connect Cloud secrets and _publish.yml exist, a deck that passes the check is
-# also published there as a preview (see .claude/CLAUDE.md, "Previews on Posit Connect Cloud").
+# also published there as a preview (see .claude/connect-cloud-preview.md).
 # A talk with executable R or Python code also needs its runtime here (r-lib/actions/setup-r,
 # actions/setup-python) before the check step.
 name: Check slides
