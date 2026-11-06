@@ -22,7 +22,7 @@
     set text(font: "Source Sans 3")
     set par(leading: 0.5em, spacing: 0.6em)
     image("brand/nso-logo.svg", height: 1.1cm,
-          alt: "Northbridge Statistical Office logo")
+          alt: "Northbridge Statistical Office")
     line(length: 100%, stroke: 1.5pt + rgb("#7a1f3d"))
     v(0.1cm)
     text(font: "Source Serif 4", weight: 600, size: 2.1em, fill: rgb("#7a1f3d"), title)

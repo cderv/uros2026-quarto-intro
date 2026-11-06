@@ -26,11 +26,12 @@ color:
     stone: "#f6f3ee"
     slate: "#5f6368"
     # Five classes of yearly change, from strongest fall (drop) to strongest rise (surge)
+    # drop and surge are dark enough for white text (contrast 10.0 and 5.1)
     drop: "#7a1f3d"
     dip: "#c48a9e"
     flat: "#eadbb0"
     gain: "#d9b95a"
-    surge: "#a8841c"
+    surge: "#8a6a12"
     red: burgundy
     yellow: gold
     gray: slate

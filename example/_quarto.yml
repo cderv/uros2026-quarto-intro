@@ -26,7 +26,7 @@ format:
     include-in-header: brand/nso.typ
     include-before-body: brand/nso-body.typ
     papersize: a4
-    pdf-standard: [ua-1]
+    pdf-standard: [a-2b, ua-1]
     toc: true
     toc-depth: 1
     toc-title: Contents

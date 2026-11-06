@@ -499,19 +499,20 @@ HTML, PDF, even these slides pick it up. Here, a fictional institute.
 ```{.yaml filename="_quarto.yml"}
 format:
   typst:
-    pdf-standard: [ua-1]
+    pdf-standard: [a-2b, ua-1]
 ```
 
 ```{.bash}
 $ quarto render bulletin.qmd
+[verapdf]: Validating bulletin.pdf against PDF/2B... PASSED
 [verapdf]: Validating bulletin.pdf against PDF/UA1... PASSED
 ```
 
 [Docs: [quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards](https://quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards)]{.small-cap}
 
 ::: notes
-Your PDF must be accessible too. One line asks for PDF/UA: a tagged PDF that screen readers can follow.
-With veraPDF installed, Quarto checks it at every render. PDF/A for the archive works the same way.
+Your PDF must be accessible too, and archived. One line asks for both: PDF/A for the archive,
+PDF/UA for a tagged PDF that screen readers can follow. With veraPDF installed, Quarto checks them at every render.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->

@@ -101,13 +101,7 @@ country of residence.
 @sec-countries looks at each country and @sec-methods explains the figures.
 
 ```{r}
-#| label: fig-trend
-#| column: page-right
-#| out-width: 100%
-#| fig-width: 8.5
-#| fig-height: 4.2
-#| fig-cap: !expr trend_headline
-#| fig-alt: !expr paste("Line chart of monthly nights spent at tourist accommodation in the EU in", this_year, "drawn over a shaded band showing the lowest and highest value of each month over the four previous years.", month, "is labelled with", millions(latest$values), "nights.")
+#| label: trend-data
 nights$year <- as.integer(format(nights$time, "%Y"))
 nights$month <- as.integer(format(nights$time, "%m"))
 past <- nights[nights$year %in% (this_year - 4):(this_year - 1), ]
@@ -115,7 +109,28 @@ band <- aggregate(values ~ month, past, \(v) c(lo = min(v), hi = max(v)))
 band <- data.frame(month = band$month, band$values / 1e6)
 now <- nights[nights$year == this_year, ]
 last <- now[which.max(now$month), ]
+above <- sum(now$values / 1e6 > band$hi[match(now$month, band$month)])
+peak <- month.name[band$month[which.max(band$hi)]]
+# Alt text: chart type, axes, then the key pattern, all computed
+trend_alt <- paste0(
+  "Line chart. Months from January to December along the x-axis, nights spent ",
+  "at tourist accommodation in the EU in millions along the y-axis, from zero. ",
+  "A burgundy line for ", this_year, ", from January to ", month.name[last$month],
+  ", is drawn over a light band giving the lowest and highest value of each month ",
+  "from ", this_year - 4, " to ", this_year - 1, ". The ", this_year,
+  " line is above the band in ", above, " of its ", nrow(now), " months. ",
+  "Nights peak every year in ", peak, "; ", month, " is labelled with ",
+  millions(latest$values), ".")
+```
 
+```{r}
+#| label: fig-trend
+#| column: page-right
+#| out-width: 100%
+#| fig-width: 8.5
+#| fig-height: 4.2
+#| fig-cap: !expr trend_headline
+#| fig-alt: !expr trend_alt
 ggplot(mapping = aes(month)) +
   geom_ribbon(data = band, aes(ymin = lo, ymax = hi), fill = class_colours[["0 to 2"]]) +
   geom_line(data = now, aes(y = values / 1e6), colour = burgundy, linewidth = 1.2) +
@@ -174,7 +189,7 @@ gt(tab) |>
              bins = c(-Inf, -2, 0, 2, 5, Inf), palette = unname(class_colours),
              autocolor_text = FALSE) |>
   tab_style(style = cell_text(color = "white"),
-            locations = cells_body(columns = change, rows = change < -2)) |>
+            locations = cells_body(columns = change, rows = change < -2 | change >= 5)) |>
   tab_style(style = list(cell_text(weight = "bold"),
                          cell_borders(sides = c("top", "bottom"),
                                       color = brand_color_pluck(brand, "primary"),
@@ -204,6 +219,19 @@ levels(europe$class)[6] <- "no data"
 
 eu <- europe$geo %in% eu_countries$code
 rising <- sum(europe$change[eu] > 0, na.rm = TRUE)
+eu_change <- sf::st_drop_geometry(europe[eu & !is.na(europe$change), c("geo", "change")])
+up <- eu_change[which.max(eu_change$change), ]
+down <- eu_change[which.min(eu_change$change), ]
+geo_name <- function(code) label_eurostat(code, dic = "geo")
+map_alt <- paste0(
+  "Map of Europe. Each country is shaded by the change in nights spent at tourist ",
+  "accommodation between ", format(year_ago$time, "%B %Y"), " and ", month,
+  ", in five classes: below -2%, -2 to 0%, 0 to 2%, 2 to 5% and 5% or more, ",
+  "from dark burgundy for the strongest falls to dark gold for the strongest rises; ",
+  "countries without data are grey. In the EU, the largest rise is in ",
+  geo_name(up$geo), " (", pct(up$change / 100), ") and the largest fall in ",
+  geo_name(down$geo), " (", pct(down$change / 100), "). ",
+  "The EU as a whole changed by ", pct(change), ".")
 map_headline <- paste(rising, "of the", sum(eu), "EU countries recorded more nights than a year earlier")
 ```
 
@@ -211,7 +239,7 @@ map_headline <- paste(rising, "of the", sum(eu), "EU countries recorded more nig
 #| label: fig-map
 #| fig-height: !expr if (knitr::is_html_output()) 6.6 else 5.6
 #| fig-cap: !expr map_headline
-#| fig-alt: !expr paste("Map of Europe shading each country by the change in nights spent at tourist accommodation between", format(year_ago$time, "%B %Y"), "and", paste0(month, ","), "in five classes from burgundy for falls to gold for rises. The EU as a whole changed by", pct(change), ".")
+#| fig-alt: !expr map_alt
 ggplot(europe) +
   geom_sf(aes(fill = class), colour = "white", linewidth = 0.25) +
   annotate("label", x = 2.2e6, y = 3.1e6, hjust = 0, vjust = 1,
