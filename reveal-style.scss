@@ -262,6 +262,35 @@ section#diagrams {
   }
   .ph-tall { min-height: 440px; }
 
+  // screenshots of the example bulletin (images/bulletin/, made by `just captures`)
+  img.shot {
+    border: 1px solid #ddd; border-radius: 4px; margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+  .shots-v {
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    p { margin: 0; }
+  }
+  .shot-label { display: block; text-align: center; font-size: 0.6em; color: #666; margin-top: 0.3em; }
+  // a frame drawn over a screenshot, positioned in % of the image
+  .hl-shot {
+    position: relative;
+    p { margin: 0; }
+    img { width: 100%; display: block; }
+    .hl-box {
+      position: absolute; border: 5px solid $perso-highlight-color; border-radius: 8px;
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+    }
+  }
+  // HTML page with the PDF page laid over its corner
+  .shot-pair {
+    position: relative; height: 500px;
+    p { margin: 0; }
+    img.pair-back { width: 92%; }
+    img.pair-front { position: absolute; right: 0; bottom: 0; height: 76%; }
+  }
+  .print-only { display: none; }
+
   // step-by-step code slides (X1): let the code use the room above the footer
   .slides section.tall-code div.sourceCode pre code { max-height: 580px; }
 
@@ -398,5 +427,9 @@ section#diagrams {
   }
 }
 
-// PDF export shows every fragment: keep only the static grid of the gallery
-html.print-pdf .reveal .gallery-live { display: none !important; }
+// PDF export shows every fragment: keep only the static grid of the gallery,
+// and the static version of the other carousels
+html.print-pdf .reveal .gallery-live,
+html.print-pdf .reveal .carousel-live,
+html.print-pdf .reveal .print-hide { display: none !important; }
+html.print-pdf .reveal .print-only { display: block !important; }

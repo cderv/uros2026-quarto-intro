@@ -26,6 +26,7 @@ shot <- function(file, selector = NULL, cliprect = NULL, expand = 12, height = 5
 shot("html-page.png", cliprect = "viewport", expand = NULL, height = 800)
 shot("html-key-figure.png", "#kf-nights")
 shot("html-rendered.png", c("#sec-eu > p", "#fig-trend figcaption", "#fig-trend img"))
+shot("html-trend.png", c("#fig-trend figcaption", "#fig-trend img"))
 shot("html-crossref.png", "#sec-eu > p")
 shot("html-table.png", "#tbl-countries")
 shot("html-map.png", "#fig-map")

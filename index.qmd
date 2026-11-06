@@ -309,9 +309,10 @@ Step four, the important one: the number in the sentence is not typed. It is com
 
 ## Every number comes from your code {#rendered timing-duration="25s"}
 
-::: {.ph .ph-tall}
-Screenshot: the rendered HTML bulletin\
-(sentence with the computed rate, Figure 1 with its caption)
+::: {.shots-v}
+![](images/bulletin/html-key-figure.png){.shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+
+![](images/bulletin/html-trend.png){.shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
 :::
 
 ::: notes
@@ -371,9 +372,7 @@ One command renders all of them.
 
 ## For the web {#html timing-duration="25s"}
 
-::: {.ph .ph-tall}
-Screenshot: the HTML bulletin in a browser
-:::
+![](images/bulletin/html-page.png){.shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
 
 ::: notes
 For the web: an accessible HTML page, readable on a phone, the chart and the table inside.
@@ -381,9 +380,7 @@ For the web: an accessible HTML page, readable on a phone, the chart and the tab
 
 ## For print {#pdf timing-duration="25s"}
 
-::: {.ph .ph-tall}
-Screenshot: the PDF bulletin (Typst), page 1
-:::
+![](images/bulletin/pdf-p1.png){.shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
 
 ::: notes
 For print and for the archive: the PDF. Same text, same numbers, same chart. From the same file.
@@ -391,15 +388,22 @@ For print and for the archive: the PDF. Same text, same numbers, same chart. Fro
 
 ## Each format for its reader {#each-reader timing-duration="20s"}
 
+::: {.carousel-live}
+```{.carousel #formats-carousel autoplay="3500" effect="scale" slides="1" height="470px" loop="false" dots="false" arrows="false" fragment="false"}
+![bulletin.html, for the web](images/bulletin/html-page.png)
+![bulletin.pdf, for print and the archive](images/bulletin/pdf-p1.png)
+![bulletin.html: the map](images/bulletin/html-map.png)
+![bulletin.pdf: page 2, the table and the map](images/bulletin/pdf-p2.png)
+```
+:::
+
+::: {.print-only}
 ::: {.columns}
-::: {.column width="50%"}
-::: {.ph}
-HTML
+::: {.column width="60%"}
+![](images/bulletin/html-page.png){.shot fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
 :::
-:::
-::: {.column width="50%"}
-::: {.ph}
-PDF
+::: {.column width="40%"}
+![](images/bulletin/pdf-p1.png){.shot height="520px" fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
 :::
 :::
 :::
@@ -428,9 +432,10 @@ gt(tab) |>
 ````
 :::
 ::: {.column width="45%"}
-::: {.ph}
-Screenshot: Table 1 rendered\
-(HTML and PDF)
+::: {.r-stack}
+![](images/bulletin/html-table.png){.shot .fragment .fade-out .print-hide fragment-index="1" width="500px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
+
+![](images/bulletin/pdf-table.png){.shot .fragment fragment-index="1" width="500px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
 :::
 :::
 :::
@@ -442,21 +447,14 @@ The label and caption make it Table 1, numbered for you.
 
 ## Captions and cross-references {#crossref timing-duration="25s"}
 
-::: {.columns}
-::: {.column width="48%"}
 ```markdown
 @fig-trend compares this year
 with the four previous years;
 @sec-countries looks at each country
 and @sec-methods explains the figures.
 ```
-:::
-::: {.column width="52%"}
-::: {.ph}
-Screenshot: "Figure 1 compares... Section 2 looks at... Section 3 explains...", with links
-:::
-:::
-:::
+
+![](images/bulletin/html-crossref.png){.shot width="1100px" fig-align="center" fig-alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures."}
 
 ::: notes
 Write \@fig-trend in your text and Quarto writes "Figure 1", with a link in HTML;
@@ -482,9 +480,10 @@ typography:
 ```
 :::
 ::: {.column width="55%"}
-::: {.ph}
-Screenshots: HTML and PDF\
-in the fictional institute's colours
+::: {.shot-pair}
+![](images/bulletin/html-page.png){.shot .pair-back fig-alt="The HTML bulletin in the institute's colours: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."}
+
+![](images/bulletin/pdf-p1.png){.shot .pair-front fig-alt="Page 1 of the PDF bulletin laid over it, with the same logo, colours and fonts."}
 :::
 :::
 :::
@@ -548,14 +547,20 @@ Someone kept the foreign guests only. You fix the R code: one line, one word.
 
 ::: {.columns}
 ::: {.column width="50%"}
-::: {.ph}
-HTML: the corrected number, highlighted
+::: {.hl-shot}
+![](images/bulletin/html-key-figure.png){.shot fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+
+[]{.hl-box .fragment fragment-index="1" style="left: 3.5%; top: 9%; width: 42%; height: 28%;"}
 :::
+[bulletin.html]{.shot-label}
 :::
 ::: {.column width="50%"}
-::: {.ph}
-PDF: the same corrected number, highlighted
+::: {.hl-shot}
+![](images/bulletin/pdf-key-figure.png){.shot fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."}
+
+[]{.hl-box .fragment fragment-index="1" style="left: 4%; top: 13%; width: 46%; height: 30%;"}
 :::
+[bulletin.pdf]{.shot-label}
 :::
 :::
 
