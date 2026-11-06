@@ -49,6 +49,11 @@ example:
 example-preview:
     quarto preview example
 
+# Screenshot the rendered bulletin for the slides into images/bulletin/ (run `just example` first)
+[group('example')]
+captures:
+    cd example && Rscript captures.R
+
 # === dev ===
 
 # Update the Quarto extensions in _extensions/ from their GitHub sources

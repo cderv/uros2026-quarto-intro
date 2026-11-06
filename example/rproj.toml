@@ -19,3 +19,8 @@ systemfonts = "*"
 ragg = "*"
 svglite = "*"
 marquee = "*"
+
+[dependency-groups.dev]
+webshot2 = "*"
+pdftools = "*"
+png = "*"

@@ -150,6 +150,12 @@ Setup:
 - GitHub: `.github/workflows/check-slides.yml` runs the check with `--strict --pdf` on every push
   and uploads screenshots, reports and PDF as the `check-slides` artifact.
 
+Bulletin screenshots (`just captures`, script `example/captures.R`): webshot2 drives Chrome for the
+HTML, pdftools reads the PDF; both are dev dependencies in `example/rproj.toml`, installed by
+`just example-deps`. Locally, an installed Chrome is enough. In Claude cloud sessions, point
+chromote to the preinstalled Chromium and install the Poppler library pdftools needs on Linux:
+`export CHROMOTE_CHROME=/opt/pw-browsers/chromium` and `apt-get install -y libpoppler-cpp0t64`.
+
 Fallback if the PDF looks wrong: decktape through npx, still without Docker (slower, renders live
 iframes). In cloud sessions, point it to the preinstalled Chromium and skip Puppeteer's download:
 
