@@ -262,6 +262,9 @@ section#diagrams {
   }
   .ph-tall { min-height: 440px; }
 
+  // step-by-step code slides (X1): let the code use the room above the footer
+  .slides section.tall-code div.sourceCode pre code { max-height: 580px; }
+
   // code that will come from the example repository
   .draft, .draft-inline {
     display: inline-block;

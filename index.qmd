@@ -119,22 +119,22 @@ My guess: you use R to compute the numbers. And then the numbers leave R.
 
 ::: {.cards}
 ::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
-[{{< iconify mdi language-r >}}]{.ico} [R code]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi language-r >}}]{.ico} [R code]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .fragment .custom .fix data-id="card-word" fragment-index="2"}
-[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .fragment .custom .fix data-id="card-pdf" fragment-index="3"}
-[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .fragment .custom .fix data-id="card-chart" fragment-index="4"}
-[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .fragment .custom .fix data-id="card-web" fragment-index="5"}
-[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card data-id="card-press"}
-[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 :::
 
@@ -143,7 +143,7 @@ My guess: you use R to compute the numbers. And then the numbers leave R.
 :::
 
 ::: notes
-Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong: 2.3 instead of 2.1.
+Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong: 245.0 million nights instead of 514.7.
 You fix the R code. (click) Then the Word file. (click) The PDF. (click) The chart.
 (click) The web page. Done? Hands up if you know this evening...
 (click) Which one did you forget?
@@ -184,41 +184,43 @@ What if you only had to fix it once?
 
 <!-- ============================ X1 (2:30) ============================ -->
 
-## The R code you already have {#r-code .magic-move .timing-section timing-title="X1 · Every number computed" timing-duration="30s"}
-
-[draft code]{.draft}
+## The R code you already have {#r-code .magic-move .tall-code .timing-section timing-title="X1 · Every number computed" timing-duration="30s"}
 
 ```r
 library(eurostat)
 library(ggplot2)
 
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
-latest <- hicp[which.max(hicp$time), ]
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 
-ggplot(hicp, aes(time, values)) + geom_line()
+ggplot(nights, aes(time, values)) + geom_line()
 ```
 
 ::: notes
-Here is a monthly inflation bulletin. It starts with the R code you already have:
+Here is a monthly tourism bulletin. It starts with the R code you already have:
 get the data from Eurostat, take the latest month, draw the chart.
 Everything that works in R works in Quarto: your packages, your charts, your tables, your models.
 Nothing to rewrite.
 :::
 
-## Put it in code cells {#cells .magic-move timing-duration="20s"}
+## Put it in code cells {#cells .magic-move .tall-code timing-duration="20s"}
 
 ```` markdown
 ```{r}
 library(eurostat)
 library(ggplot2)
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
-latest <- hicp[which.max(hicp$time), ]
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 ```
 
 ```{r}
-ggplot(hicp, aes(time, values)) + geom_line()
+ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
@@ -226,21 +228,23 @@ ggplot(hicp, aes(time, values)) + geom_line()
 Step one: put that code in code cells, in a plain text file, a .qmd.
 :::
 
-## Write the text around it {#text .magic-move timing-duration="25s"}
+## Write the text around it {#text .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
 library(eurostat)
 library(ggplot2)
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
-latest <- hicp[which.max(hicp$time), ]
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 ```
 
-Inflation in the euro area, by month:
+Nights spent in tourist accommodation, EU, by month:
 
 ```{r}
-ggplot(hicp, aes(time, values)) + geom_line()
+ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
@@ -249,24 +253,26 @@ Step two: write your text around the code, in plain Markdown.
 The comment, the method note: they live next to the code that makes the numbers.
 :::
 
-## Tell Quarto what each cell is {#options .magic-move timing-duration="25s"}
+## Tell Quarto what each cell is {#options .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
 #| echo: false
 library(eurostat)
 library(ggplot2)
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
-latest <- hicp[which.max(hicp$time), ]
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 ```
 
-Inflation in the euro area, by month:
+Nights spent in tourist accommodation, EU, by month:
 
 ```{r}
 #| label: fig-trend
-#| fig-cap: "Annual inflation, euro area"
-ggplot(hicp, aes(time, values)) + geom_line()
+#| fig-cap: "Nights spent at tourist accommodation, EU"
+ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
@@ -274,24 +280,26 @@ ggplot(hicp, aes(time, values)) + geom_line()
 Step three: options on each cell. Hide the code from the reader. Give the chart a label and a caption.
 :::
 
-## Put the number in the sentence {#inline .magic-move timing-duration="25s"}
+## Put the number in the sentence {#inline .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
 #| echo: false
 library(eurostat)
 library(ggplot2)
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
-latest <- hicp[which.max(hicp$time), ]
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 ```
 
-Annual inflation in the euro area was `r latest$values`%.
+The EU recorded `r round(latest$values / 1e6, 1)` million nights.
 
 ```{r}
 #| label: fig-trend
-#| fig-cap: "Annual inflation, euro area"
-ggplot(hicp, aes(time, values)) + geom_line()
+#| fig-cap: "Nights spent at tourist accommodation, EU"
+ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
@@ -308,7 +316,7 @@ Screenshot: the rendered HTML bulletin\
 
 ::: notes
 And this is what the reader gets. The sentence, the chart, the caption.
-Nobody typed 2.1. Every number your reader sees comes from your R code.
+Nobody typed 514.7. Every number your reader sees comes from your R code.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
@@ -317,7 +325,7 @@ Nobody typed 2.1. Every number your reader sees comes from your R code.
 
 ```yaml
 ---
-title: "Euro area inflation"
+title: "Tourism in the EU"
 format: html
 ---
 ```
@@ -331,7 +339,7 @@ HTML for the web.
 
 ```yaml
 ---
-title: "Euro area inflation"
+title: "Tourism in the EU"
 format:
   html: default
   typst: default
@@ -346,7 +354,7 @@ Typst for the PDF: print-ready, and no LaTeX to install or learn.
 
 ```yaml
 ---
-title: "Euro area inflation"
+title: "Tourism in the EU"
 format:
   html: default
   typst: default
@@ -384,47 +392,42 @@ For print and for the archive: the PDF. Same text, same numbers, same chart. Fro
 ## Each format for its reader {#each-reader timing-duration="20s"}
 
 ::: {.columns}
-::: {.column width="33%"}
+::: {.column width="50%"}
 ::: {.ph}
 HTML
 :::
 :::
-::: {.column width="33%"}
+::: {.column width="50%"}
 ::: {.ph}
 PDF
-:::
-:::
-::: {.column width="33%"}
-::: {.ph}
-Word
 :::
 :::
 :::
 
 ::: notes
-The web reader, the print reader, the colleague who edits in Word: each gets the format they need,
-and they all read the same numbers.
+The web reader and the print reader each get the format they need, from one file,
+and they all read the same numbers. (Word too, if a colleague asks for it.)
 :::
 
 <!-- ============================ X3 (1:45) ============================ -->
 
-## Tables ready to publish {#table .timing-section timing-title="X3 · Ready to publish" timing-duration="40s"}
+## Tables ready to publish {#table .timing-section timing-title="X3 · Ready to publish" timing-duration="35s"}
 
 ::: {.columns}
-::: {.column width="48%"}
-[draft code]{.draft}
-
+::: {.column width="55%"}
 ```` markdown
 ```{r}
-#| label: tbl-hicp
-#| tbl-cap: "Annual inflation by country"
-hicp_countries |>
-  gt::gt() |>
-  gt::fmt_number(decimals = 1)
+#| label: tbl-countries
+#| tbl-cap: "Nights by country, millions"
+gt(tab) |>
+  fmt_number(columns = c(before, now),
+             scale_by = 1e-6, decimals = 1) |>
+  fmt_number(columns = change, decimals = 1,
+             force_sign = TRUE)
 ```
 ````
 :::
-::: {.column width="52%"}
+::: {.column width="45%"}
 ::: {.ph}
 Screenshot: Table 1 rendered\
 (HTML and PDF)
@@ -437,41 +440,43 @@ Publications are tables. Your R table package, gt or another one, renders the ta
 The label and caption make it Table 1, numbered for you.
 :::
 
-## Captions and cross-references {#crossref timing-duration="30s"}
+## Captions and cross-references {#crossref timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="48%"}
 ```markdown
-Prices rose fastest in services
-(@tbl-hicp, @fig-trend).
+Nights rose fastest in the countries
+at the top of @tbl-countries;
+@fig-trend shows the seasonal pattern.
 ```
 :::
 ::: {.column width="52%"}
 ::: {.ph}
-Screenshot: "Prices rose fastest in services (Table 1, Figure 1)", with links
+Screenshot: "...at the top of Table 1; Figure 1 shows...", with links
 :::
 :::
 :::
 
 ::: notes
-Write \@tbl-hicp in your text and Quarto writes "Table 1", with a link in HTML.
+Write \@tbl-countries in your text and Quarto writes "Table 1", with a link in HTML.
 Add a table, the numbers follow. No more "see Table 3" pointing to the old Table 3.
 :::
 
-## Your institute's look {#brand timing-duration="35s"}
+## Your institute's look {#brand timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
-[draft code]{.draft}
-
 ```{.yaml filename="_brand.yml"}
 meta:
-  name: Statistics Office
-logo: logo.svg
+  name: Northbridge Statistical Office
+logo:
+  images:
+    mark: brand/nso-mark.svg
 color:
-  primary: "#00507a"
+  primary: "#7a1f3d"
 typography:
   base: Source Sans 3
+  headings: Source Serif 4
 ```
 :::
 ::: {.column width="55%"}
@@ -487,31 +492,51 @@ And your institute's look: colours, logo, fonts, written once in _brand.yml.
 HTML, PDF, even these slides pick it up. Here, a fictional institute.
 :::
 
+## Accessible PDF, checked {#pdf-ua timing-duration="20s"}
+
+```{.yaml filename="_quarto.yml"}
+format:
+  typst:
+    pdf-standard: [ua-1]
+```
+
+```{.bash}
+$ quarto render bulletin.qmd
+[verapdf]: Validating bulletin.pdf against PDF/UA1... PASSED
+```
+
+[Docs: [quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards](https://quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards)]{.small-cap}
+
+::: notes
+Your PDF must be accessible too. One line asks for PDF/UA: a tagged PDF that screen readers can follow.
+With veraPDF installed, Quarto checks it at every render. PDF/A for the archive works the same way.
+:::
+
 <!-- ============================ Y (1:30) ============================ -->
 
 ## Thursday, 17:50. Again. {#again .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
 
 [One number in Table 3 is wrong.]{.lead}
 
-[draft code]{.draft}
-
 ::: magic-move
 
 ```r
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA", coicop = "CP00"))
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "FOR"))
 ```
 
 ```r
-hicp <- get_eurostat("prc_hicp_manr",
-  filters = list(geo = "EA20", coicop = "CP00"))
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
 ```
 
 :::
 
 ::: notes
 Back to Thursday, ten to six. One number in Table 3 is wrong.
-You fix the R code. One line.
+Someone kept the foreign guests only. You fix the R code: one line, one word.
 :::
 
 ## One render {#one-render timing-duration="35s"}
@@ -540,24 +565,24 @@ the same corrected number, everywhere.
 
 ::: {.cards-fan}
 ::: {.card .is-right .is-code data-id="card-src"}
-[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 
 ::: {.cards}
 ::: {.card .is-right data-id="card-word"}
-[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .is-right data-id="card-pdf"}
-[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .is-right data-id="card-chart"}
-[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .is-right data-id="card-web"}
-[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 ::: {.card .is-right data-id="card-press"}
-[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [2.3 %]{.num .wrong}[2.1 %]{.num .right}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 :::
 :::
