@@ -445,21 +445,23 @@ The label and caption make it Table 1, numbered for you.
 ::: {.columns}
 ::: {.column width="48%"}
 ```markdown
-Nights rose fastest in the countries
-at the top of @tbl-countries;
-@fig-trend shows the seasonal pattern.
+@fig-trend compares this year
+with the four previous years;
+@sec-countries looks at each country
+and @sec-methods explains the figures.
 ```
 :::
 ::: {.column width="52%"}
 ::: {.ph}
-Screenshot: "...at the top of Table 1; Figure 1 shows...", with links
+Screenshot: "Figure 1 compares... Section 2 looks at... Section 3 explains...", with links
 :::
 :::
 :::
 
 ::: notes
-Write \@tbl-countries in your text and Quarto writes "Table 1", with a link in HTML.
-Add a table, the numbers follow. No more "see Table 3" pointing to the old Table 3.
+Write \@fig-trend in your text and Quarto writes "Figure 1", with a link in HTML;
+\@sec-countries becomes "Section 2". Add a figure or a section, the numbers follow.
+No more "see Table 3" pointing to the old Table 3.
 :::
 
 ## Your institute's look {#brand timing-duration="25s"}
