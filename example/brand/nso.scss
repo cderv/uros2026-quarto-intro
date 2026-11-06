@@ -20,3 +20,12 @@ figure.quarto-float-kf {
   p { margin-bottom: 0.4rem; }
   figcaption { font-size: 1rem; margin-top: 0.6rem; }
 }
+
+// Title banner: stone band, horizontal logo above a burgundy rule
+.quarto-title-banner {
+  background: $brand-stone;
+  border-bottom: 3px solid $brand-burgundy;
+  .nso-logo { height: 52px; margin-bottom: 1.2rem; }
+  .title { color: $brand-burgundy; }
+  .subtitle { color: $brand-slate; }
+}

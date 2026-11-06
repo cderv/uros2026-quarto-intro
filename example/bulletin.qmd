@@ -1,6 +1,22 @@
 ---
 title: "Tourism in the European Union"
 subtitle: "Monthly bulletin of the Northbridge Statistical Office"
+author:
+  - name:
+      literal: Tourism Statistics Unit
+    affiliations:
+      - name: Northbridge Statistical Office
+date: today
+date-modified: last-modified
+license: "CC BY"
+copyright:
+  holder: Northbridge Statistical Office
+  year: 2026
+citation:
+  type: report
+  publisher: Northbridge Statistical Office
+  container-title: Monthly tourism bulletin
+  url: https://example.org/bulletins/tourism
 ---
 
 ```{r}
@@ -78,8 +94,11 @@ accommodation and campsites (NACE I55.1 to I55.3), whatever the guest's
 country of residence.
 :::
 
+## The EU as a whole {#sec-eu}
+
 `r if (record) paste("No month on record had more nights than", month) else paste(month, "stayed below the record")`.
-@fig-trend compares this year with the four previous years.
+@fig-trend compares this year with the four previous years;
+@sec-countries looks at each country and @sec-methods explains the figures.
 
 ```{r}
 #| label: fig-trend
@@ -116,10 +135,10 @@ ggplot(mapping = aes(month)) +
   theme_nso()
 ```
 
+## Countries {#sec-countries}
+
 ```{r}
-#| label: tbl-countries
-#| tbl-cap: "Nights spent at tourist accommodation by country, millions"
-#| classes: plain
+#| label: countries-data
 geos <- c("EU27_2020", "IT", "FR", "ES", "DE", "EL", "HR", "NL", "AT")
 countries <- get_eurostat("tour_occ_nim",
   filters = list(geo = geos, unit = "NR",
@@ -132,6 +151,19 @@ tab$change <- 100 * (tab$now / tab$before - 1)
 tab$Country <- label_eurostat(tab$Country, dic = "geo",
                               custom_dic = c(EU27_2020 = "European Union"))
 tab <- tab[order(-tab$change), ]
+top <- tab[1, ]
+bottom <- tab[nrow(tab), ]
+```
+
+@tbl-countries ranks the largest destinations by their change over the year:
+`r top$Country` recorded the strongest change (`r pct(top$change / 100)`) and
+`r bottom$Country` the weakest (`r pct(bottom$change / 100)`).
+@fig-map shows every country with data.
+
+```{r}
+#| label: tbl-countries
+#| tbl-cap: "Nights spent at tourist accommodation by country, millions"
+#| classes: plain
 gt(tab) |>
   fmt_number(columns = c(before, now), scale_by = 1e-6, decimals = 1) |>
   fmt_number(columns = change, decimals = 1, force_sign = TRUE) |>
@@ -177,7 +209,7 @@ map_headline <- paste(rising, "of the", sum(eu), "EU countries recorded more nig
 
 ```{r}
 #| label: fig-map
-#| fig-height: 6.6
+#| fig-height: !expr if (knitr::is_html_output()) 6.6 else 5.6
 #| fig-cap: !expr map_headline
 #| fig-alt: !expr paste("Map of Europe shading each country by the change in nights spent at tourist accommodation between", format(year_ago$time, "%B %Y"), "and", paste0(month, ","), "in five classes from burgundy for falls to gold for rises. The EU as a whole changed by", pct(change), ".")
 ggplot(europe) +
@@ -198,5 +230,34 @@ ggplot(europe) +
   theme(axis.text = element_blank(), panel.grid = element_blank())
 ```
 
-Nights rose fastest in the countries at the top of @tbl-countries;
-@fig-trend shows the seasonal pattern for the EU as a whole.
+## Methods and sources {#sec-methods}
+
+**Data.** All figures come from the Eurostat dataset *Nights spent at tourist
+accommodation establishments, monthly data* (`tour_occ_nim`), read with the R
+package eurostat when this bulletin was produced, on
+`r trimws(format(Sys.Date(), "%e %B %Y"))`. They cover hotels, holiday accommodation and
+campsites (NACE I55.1 to I55.3) and guests of every country of residence.
+Recent months are provisional and can be revised.
+
+**Comparisons.** Each month is compared with the same month a year earlier, which
+removes the seasonal pattern without any adjustment. In @fig-trend, the band shows
+the lowest and highest value of each month over `r this_year - 4` to
+`r this_year - 1`; earlier years are left out because of the Covid-19 pandemic.
+
+**Classes of change.** @tbl-countries and @fig-map share five classes of yearly
+change, in %: below -2, -2 to 0, 0 to 2, 2 to 5, and 5 or more.
+
+**Maps.** Country boundaries: GISCO, (c) EuroGeographics.
+
+## About this bulletin {.appendix .unnumbered}
+
+The Northbridge Statistical Office is a fictional institute, made up to show
+how a statistical bulletin can be produced with Quarto. The data are real.
+
+::: {.content-visible when-format="typst"}
+**Licence.** Text and figures are released under the Creative Commons
+Attribution 4.0 International licence (CC BY 4.0), unless noted otherwise.
+
+**Cite as.** Northbridge Statistical Office (2026). *Tourism in the European
+Union*. Monthly tourism bulletin. <https://example.org/bulletins/tourism>
+:::
