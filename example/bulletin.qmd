@@ -22,6 +22,12 @@ change <- latest$values / year_ago$values - 1
 millions <- label_number(accuracy = 0.1, scale = 1e-6, suffix = " million")
 pct <- label_percent(accuracy = 0.1, style_positive = "plus")
 month <- format(latest$time, "%B %Y")
+
+# Colours of the five classes of change, from the institute's _brand.yml
+brand <- read_brand_yml()
+classes <- c("below -2" = "drop", "-2 to 0" = "dip", "0 to 2" = "flat",
+             "2 to 5" = "gain", "5 or more" = "surge")
+class_colours <- vapply(classes, brand_color_pluck, "", brand = brand)
 ```
 
 Tourist accommodation in the EU recorded `r millions(latest$values)` nights
@@ -41,6 +47,7 @@ ggplot(recent, aes(time, values / 1e6)) +
 ```{r}
 #| label: tbl-countries
 #| tbl-cap: "Nights spent at tourist accommodation by country, millions"
+#| classes: plain
 geos <- c("EU27_2020", "IT", "FR", "ES", "DE", "EL", "HR", "NL", "AT")
 countries <- get_eurostat("tour_occ_nim",
   filters = list(geo = geos, unit = "NR",
@@ -59,7 +66,20 @@ gt(tab) |>
   cols_label(before = format(year_ago$time, "%b %Y"),
              now = format(latest$time, "%b %Y"),
              change = "Change, %") |>
-  theme_brand_gt()
+  data_color(columns = change, method = "bin",
+             bins = c(-Inf, -2, 0, 2, 5, Inf), palette = unname(class_colours),
+             autocolor_text = FALSE) |>
+  tab_style(style = cell_text(color = "white"),
+            locations = cells_body(columns = change, rows = change < -2)) |>
+  tab_style(style = list(cell_text(weight = "bold"),
+                         cell_borders(sides = c("top", "bottom"),
+                                      color = brand_color_pluck(brand, "primary"),
+                                      weight = px(2))),
+            locations = cells_body(rows = Country == "European Union")) |>
+  tab_source_note("Source: Eurostat (tour_occ_nim)") |>
+  theme_brand_gt() |>
+  opt_row_striping(row_striping = FALSE) |>
+  opt_table_font(font = "Source Sans 3")
 ```
 
 ```{r}
@@ -80,11 +100,11 @@ wide$change <- 100 * (wide[[3]] / wide[[2]] - 1)
 europe <- merge(europe, wide[, c("geo", "change")],
                 by = "geo", all.x = TRUE)
 europe$class <- cut(europe$change, breaks = c(-Inf, -2, 0, 2, 5, Inf),
-                    labels = c("below -2", "-2 to 0", "0 to 2", "2 to 5", "5 or more"))
+                    labels = names(class_colours))
 ggplot(europe) +
   geom_sf(aes(fill = class), colour = "white", linewidth = 0.2) +
   scale_fill_manual(
-    values = c("#7a1f3d", "#c48a9e", "#eadbb0", "#d9b95a", "#a8841c"),
+    values = class_colours,
     na.value = "grey88", na.translate = FALSE, name = "Change, %"
   ) +
   coord_sf(xlim = c(2.6e6, 6.1e6), ylim = c(1.4e6, 5.3e6), datum = NA) +

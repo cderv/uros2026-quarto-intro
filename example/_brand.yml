@@ -11,8 +11,12 @@ logo:
     mark:
       path: brand/nso-mark.svg
       alt: Northbridge Statistical Office logo, three gold bars on a burgundy square
+    full:
+      path: brand/nso-logo.svg
+      alt: Northbridge Statistical Office
   small: mark
-  medium: mark
+  medium: full
+  large: full
 
 color:
   palette:
@@ -21,6 +25,12 @@ color:
     ink: "#2b2b2b"
     stone: "#f6f3ee"
     slate: "#5f6368"
+    # Five classes of yearly change, from strongest fall (drop) to strongest rise (surge)
+    drop: "#7a1f3d"
+    dip: "#c48a9e"
+    flat: "#eadbb0"
+    gain: "#d9b95a"
+    surge: "#a8841c"
     red: burgundy
     yellow: gold
     gray: slate
