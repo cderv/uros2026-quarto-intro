@@ -8,22 +8,20 @@ subtitle: "Monthly bulletin of the Northbridge Statistical Office"
 library(eurostat)
 library(ggplot2)
 library(gt)
+library(scales)
 library(brand.yml)
 
-nights <- get_eurostat(
-  "tour_occ_nim",
+nights <- get_eurostat("tour_occ_nim",
   filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL")
-)
-nights <- nights[!is.na(nights$values), ]
-nights <- nights[order(nights$time), ]
-latest <- nights[nrow(nights), ]
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- na.omit(nights)
+latest <- nights[which.max(nights$time), ]
 year_ago <- nights[nights$time == seq(latest$time, by = "-1 year", length.out = 2)[2], ]
-change <- 100 * (latest$values / year_ago$values - 1)
+change <- latest$values / year_ago$values - 1
 
+millions <- label_number(accuracy = 0.1, scale = 1e-6, suffix = " million")
+pct <- label_percent(accuracy = 0.1, style_positive = "plus")
 month <- format(latest$time, "%B %Y")
-millions <- function(x) sprintf("%.1f million", x / 1e6)
-pct <- function(x) sprintf("%+.1f%%", x)
 ```
 
 Tourist accommodation in the EU recorded `r millions(latest$values)` nights
@@ -43,20 +41,17 @@ ggplot(recent, aes(time, values / 1e6)) +
 ```{r}
 #| label: tbl-countries
 #| tbl-cap: "Nights spent at tourist accommodation by country, millions"
-labels <- c(EU27_2020 = "European Union", IT = "Italy", FR = "France",
-            ES = "Spain", DE = "Germany", EL = "Greece", HR = "Croatia",
-            NL = "Netherlands", AT = "Austria")
-countries <- get_eurostat(
-  "tour_occ_nim",
-  filters = list(geo = names(labels), unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL")
-)
+geos <- c("EU27_2020", "IT", "FR", "ES", "DE", "EL", "HR", "NL", "AT")
+countries <- get_eurostat("tour_occ_nim",
+  filters = list(geo = geos, unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
 countries <- as.data.frame(countries[countries$time %in% c(year_ago$time, latest$time), ])
 tab <- reshape(countries[, c("geo", "time", "values")],
                idvar = "geo", timevar = "time", direction = "wide")
 names(tab) <- c("Country", "before", "now")
 tab$change <- 100 * (tab$now / tab$before - 1)
-tab$Country <- labels[tab$Country]
+tab$Country <- label_eurostat(tab$Country, dic = "geo",
+                              custom_dic = c(EU27_2020 = "European Union"))
 tab <- tab[order(-tab$change), ]
 gt(tab) |>
   fmt_number(columns = c(before, now), scale_by = 1e-6, decimals = 1) |>
