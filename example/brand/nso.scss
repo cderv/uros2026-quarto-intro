@@ -7,7 +7,7 @@
   font-weight: 600;
   font-size: 1.15rem;
   color: $brand-burgundy;
-  text-align: left;
+  text-align: left !important;
 }
 
 // Key figure: a stone box with a burgundy rule
@@ -16,7 +16,7 @@ figure.quarto-float-kf {
   border-left: 6px solid $brand-burgundy;
   border-radius: 3px;
   padding: 1rem 1.5rem;
-  text-align: left;
+  p { text-align: left; }
   p { margin-bottom: 0.4rem; }
   figcaption { font-size: 1rem; margin-top: 0.6rem; }
 }

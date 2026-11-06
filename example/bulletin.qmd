@@ -84,6 +84,9 @@ country of residence.
 ```{r}
 #| label: fig-trend
 #| column: page-right
+#| out-width: 100%
+#| fig-width: 8.5
+#| fig-height: 4.2
 #| fig-cap: !expr trend_headline
 #| fig-alt: !expr paste("Line chart of monthly nights spent at tourist accommodation in the EU in", this_year, "drawn over a shaded band showing the lowest and highest value of each month over the four previous years.", month, "is labelled with", millions(latest$values), "nights.")
 nights$year <- as.integer(format(nights$time, "%Y"))
