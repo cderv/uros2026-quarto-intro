@@ -105,6 +105,7 @@ braid holds the plan and the history of the talk; the repository holds only the 
 just preview          # live preview of the slides
 just check            # render + browser + layout checks, screenshots in _check/slides/
 just pdf              # slides-full.pdf for the organisers
+just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
 just example          # render the example bulletin in example/
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
 ```

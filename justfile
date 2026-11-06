@@ -34,6 +34,11 @@ pdf:
 
 # === example ===
 
+# Install the example's R packages from example/rproj.lock (rig proj)
+[group('example')]
+example-deps:
+    cd example && rig proj sync
+
 # Render the example bulletin (HTML, PDF and Word from one source) to example/_output/
 [group('example')]
 example:

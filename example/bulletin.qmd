@@ -18,10 +18,11 @@ hicp <- hicp[order(hicp$time), ]
 latest <- hicp[nrow(hicp), ]
 previous <- hicp[nrow(hicp) - 1, ]
 month <- format(latest$time, "%B %Y")
+pct <- function(x) sprintf("%.1f%%", x)
 ```
 
-Annual inflation in the euro area was `r latest$values`% in `r month`,
-against `r previous$values`% the month before.
+Annual inflation in the euro area was `r pct(latest$values)` in `r month`,
+against `r pct(previous$values)` the month before.
 
 ```{r}
 #| label: fig-trend
@@ -43,10 +44,14 @@ countries <- get_eurostat(
                  unit = "RCH_A", coicop18 = "TOTAL"),
   time_format = "date"
 )
-countries <- countries[countries$time %in% c(previous$time, latest$time), ]
+countries <- as.data.frame(countries[countries$time %in% c(previous$time, latest$time), ])
 tab <- reshape(countries[, c("geo", "time", "values")],
                idvar = "geo", timevar = "time", direction = "wide")
 names(tab) <- c("Country", format(previous$time, "%b %Y"), format(latest$time, "%b %Y"))
+labels <- c(EA = "Euro area", DE = "Germany", FR = "France",
+            IT = "Italy", ES = "Spain", NL = "Netherlands")
+tab$Country <- labels[tab$Country]
+tab <- tab[order(-tab[[3]]), ]
 gt(tab) |>
   fmt_number(columns = -Country, decimals = 1) |>
   theme_brand_gt()
