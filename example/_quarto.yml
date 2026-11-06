@@ -3,9 +3,14 @@ project:
 
 format:
   html:
+    theme: [brand, brand/captions.scss]
     toc: false
     embed-resources: false
   typst:
+    knitr:
+      opts_chunk:
+        dev: svglite
+    include-in-header: brand/captions.typ
     papersize: a4
     pdf-standard: [ua-1]
     logo:
@@ -17,7 +22,12 @@ format:
       y: 2cm
   docx: default
 
-tbl-cap-location: bottom
+fig-cap-location: top
+tbl-cap-location: top
+
+knitr:
+  opts_chunk:
+    dev: ragg_png
 
 execute:
   echo: false

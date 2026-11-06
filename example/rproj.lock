@@ -38,7 +38,15 @@ name = "knitr"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "marquee"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "prismatic"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "ragg"
 constraint = "*"
 
 [[targets.direct_dependencies]]
@@ -51,6 +59,14 @@ constraint = "*"
 
 [[targets.direct_dependencies]]
 name = "sf"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "svglite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "systemfonts"
 constraint = "*"
 
 [[targets.packages]]
@@ -370,6 +386,25 @@ groups = ["main"]
 metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
 
 [[targets.packages]]
+package = "svglite"
+version = "2.2.2"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "textshaping",
+    "lifecycle",
+    "base64enc",
+    "cli",
+    "rlang",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/svglite_2.2.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/svglite_2.2.2-f3a9381c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "5bf884ee031fbf3f5c60bcedc0532e4b77763e924a1508f584329aae9686187c", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
+
+[[targets.packages]]
 package = "DBI"
 version = "1.3.0"
 binary = true
@@ -422,15 +457,18 @@ groups = ["main"]
 metadata = { RemoteHash = "bdd66a02dfba08a4c644b38a6ae08f6ba915c16d6b6ab6a188ec193c35905ff2" }
 
 [[targets.packages]]
-package = "evaluate"
-version = "1.0.5"
+package = "ragg"
+version = "1.5.2"
 binary = true
 platform = "aarch64-apple-darwin"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-08-28/bin/macosx/sonoma-arm64/contrib/4.6/evaluate_1.0.5.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/evaluate_1.0.5-5d48b781.tgz"
+dependencies = [
+    "textshaping",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/ragg_1.5.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/ragg_1.5.2-21888d5b.tgz"
 groups = ["main"]
-metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
+metadata = { RemoteHash = "1dad21034a403e84a835c90260a1d9d8dc43c8d100f7fe63dd01d5e928b28f16", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
 
 [[targets.packages]]
 package = "S7"
@@ -442,6 +480,17 @@ sources = ["https://p3m.dev/cran/2026-04-23/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/S7_0.2.2-4c0c9d16.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "6f33245dde05b74265b1c4d379e034bc3a8923d41e7b52e6e75a75ce97d42af7" }
+
+[[targets.packages]]
+package = "evaluate"
+version = "1.0.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-08-28/bin/macosx/sonoma-arm64/contrib/4.6/evaluate_1.0.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/evaluate_1.0.5-5d48b781.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
 
 [[targets.packages]]
 package = "glue"
@@ -665,6 +714,29 @@ groups = ["main"]
 metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
 
 [[targets.packages]]
+package = "marquee"
+version = "1.2.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "S7",
+    "glue",
+    "png",
+    "cli",
+    "rlang",
+    "systemfonts",
+    "textshaping",
+    "jpeg",
+    "lifecycle",
+    "cpp11",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/marquee_1.2.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/marquee_1.2.1-57167560.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "4063b45896f7e32d5ef381c405a3553060aa883bd3cce6ea59d9397f053451aa", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "proxy"
 version = "0.4-29"
 binary = true
@@ -674,6 +746,17 @@ sources = ["https://p3m.dev/cran/2025-12-30/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/proxy_0.4-29-295dab26.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b" }
+
+[[targets.packages]]
+package = "png"
+version = "0.1-9"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-03-16/bin/macosx/sonoma-arm64/contrib/4.6/png_0.1-9.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/png_0.1-9-5befdf10.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "0b8502363c6f5c73cf284dee4fd1416f5adf4115b6ae9a1e09531c143b978589" }
 
 [[targets.packages]]
 package = "utf8"
@@ -779,11 +862,11 @@ metadata = { RemoteHash = "8bf048b49b2d17077138fae758bda56bbd53278d9437f2fdeaedf
 [[targets.packages]]
 package = "R.methodsS3"
 version = "1.8.2"
-binary = false
-platform = "source"
+binary = true
+platform = "aarch64-apple-darwin"
 dependencies = []
-sources = ["https://p3m.dev/cran/2022-06-14/src/contrib/R.methodsS3_1.8.2.tar.gz"]
-target = "src/R.methodsS3_1.8.2-cc759523.tar.gz"
+sources = ["https://p3m.dev/cran/2022-06-14/bin/macosx/sonoma-arm64/contrib/4.6/R.methodsS3_1.8.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/R.methodsS3_1.8.2-cc759523.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "822d5e61dad4c91e8883be2b38d7b89f87492046d0fe345704eb5d2658927c2e" }
 
@@ -938,20 +1021,31 @@ groups = ["main"]
 metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
 
 [[targets.packages]]
-package = "progress"
-version = "1.2.3"
+package = "systemfonts"
+version = "1.3.2"
 binary = true
 platform = "aarch64-apple-darwin"
 dependencies = [
-    "prettyunits",
-    "crayon",
-    "hms",
-    "R6",
+    "lifecycle",
+    "base64enc",
+    "jsonlite",
+    "cpp11",
 ]
-sources = ["https://p3m.dev/cran/2023-12-07/bin/macosx/sonoma-arm64/contrib/4.6/progress_1.2.3.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/progress_1.2.3-37446ed2.tgz"
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/systemfonts_1.3.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/systemfonts_1.3.2-1cc3009d.tgz"
 groups = ["main"]
-metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+metadata = { RemoteHash = "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "jpeg"
+version = "0.1-11"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-22/bin/macosx/sonoma-arm64/contrib/4.6/jpeg_0.1-11.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/jpeg_0.1-11-16c0d3e2.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "2139efbd48fbcc590a401e40215573f4a214432536bc8967caa163a833b03729" }
 
 [[targets.packages]]
 package = "markdown"
@@ -977,6 +1071,22 @@ sources = ["https://p3m.dev/cran/2025-08-27/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/rprojroot_2.1.1-d6aee0a5.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "473989bbef45fd9cd68f68dc317b14c9f42de5cea4b55fd6ba9011f25e0517e9" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/macosx/sonoma-arm64/contrib/4.6/progress_1.2.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/progress_1.2.3-37446ed2.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
 
 [[targets.packages]]
 package = "e1071"
@@ -1332,6 +1442,17 @@ groups = ["main"]
 metadata = { RemoteHash = "b919fb4cc495311d3c2c083c528dbf60da7d1501a10b000c1aca0cfa150f4475", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3, wk@0.9.5=b720282890f8d322ff8217bd857bab8f5549343ea2a635a3c2ada63ce1206aed" }
 
 [[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/cpp11_0.5.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/cpp11_0.5.5-73034f81.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "vctrs"
 version = "0.7.3"
 binary = true
@@ -1346,17 +1467,6 @@ sources = ["https://p3m.dev/cran/2026-04-12/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/vctrs_0.7.3-fd6ec28d.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
-
-[[targets.packages]]
-package = "cpp11"
-version = "0.5.5"
-binary = true
-platform = "aarch64-apple-darwin"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/cpp11_0.5.5.tgz"]
-target = "bin/macosx/sonoma-arm64/4.6/cpp11_0.5.5-73034f81.tgz"
-groups = ["main"]
-metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
 
 [[targets.packages]]
 package = "tidyr"
@@ -1427,6 +1537,22 @@ sources = ["https://p3m.dev/cran/2021-06-22/bin/macosx/sonoma-arm64/contrib/4.6/
 target = "bin/macosx/sonoma-arm64/4.6/regions_0.1.8-68a32b30.tgz"
 groups = ["main"]
 metadata = { RemoteHash = "24d3973b3334a0b7f6003defbd9e59d964d022db836d9c2e80dcfde46be0209a" }
+
+[[targets.packages]]
+package = "textshaping"
+version = "1.0.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "stringi",
+    "lifecycle",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/textshaping_1.0.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/textshaping_1.0.5-eac9930f.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135" }
 
 [[targets.packages]]
 package = "sass"
@@ -1580,7 +1706,15 @@ name = "knitr"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "marquee"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "prismatic"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "ragg"
 constraint = "*"
 
 [[targets.direct_dependencies]]
@@ -1593,6 +1727,14 @@ constraint = "*"
 
 [[targets.direct_dependencies]]
 name = "sf"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "svglite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "systemfonts"
 constraint = "*"
 
 [[targets.packages]]
@@ -1914,6 +2056,26 @@ groups = ["main"]
 metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
 
 [[targets.packages]]
+package = "svglite"
+version = "2.2.2"
+binary = false
+platform = "source"
+dependencies = [
+    "textshaping",
+    "lifecycle",
+    "base64enc",
+    "cli",
+    "rlang",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2025-10-22/src/contrib/svglite_2.2.2.tar.gz"]
+target = "src/svglite_2.2.2-d1b70186.tar.gz"
+groups = ["main"]
+system_requirements = "libpng"
+metadata = { RemoteHash = "5bf884ee031fbf3f5c60bcedc0532e4b77763e924a1508f584329aae9686187c", RemoteLinkingToHashes = "systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd, cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "DBI"
 version = "1.3.0"
 binary = false
@@ -1968,15 +2130,19 @@ system_requirements = "Package vignettes based on R Markdown v2 or reStructuredT
 metadata = { RemoteHash = "bdd66a02dfba08a4c644b38a6ae08f6ba915c16d6b6ab6a188ec193c35905ff2" }
 
 [[targets.packages]]
-package = "evaluate"
-version = "1.0.5"
+package = "ragg"
+version = "1.5.2"
 binary = false
 platform = "source"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-08-28/src/contrib/evaluate_1.0.5.tar.gz"]
-target = "src/evaluate_1.0.5-5d48b781.tar.gz"
+dependencies = [
+    "textshaping",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-03-24/src/contrib/ragg_1.5.2.tar.gz"]
+target = "src/ragg_1.5.2-2cb2ae54.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
+system_requirements = "freetype2, libpng, libtiff, libjpeg, libwebp, libwebpmux"
+metadata = { RemoteHash = "1dad21034a403e84a835c90260a1d9d8dc43c8d100f7fe63dd01d5e928b28f16", RemoteLinkingToHashes = "systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
 
 [[targets.packages]]
 package = "S7"
@@ -1988,6 +2154,17 @@ sources = ["https://p3m.dev/cran/2026-04-23/src/contrib/S7_0.2.2.tar.gz"]
 target = "src/S7_0.2.2-4c0c9d16.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "6f33245dde05b74265b1c4d379e034bc3a8923d41e7b52e6e75a75ce97d42af7" }
+
+[[targets.packages]]
+package = "evaluate"
+version = "1.0.5"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-08-28/src/contrib/evaluate_1.0.5.tar.gz"]
+target = "src/evaluate_1.0.5-5d48b781.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
 
 [[targets.packages]]
 package = "glue"
@@ -2213,6 +2390,29 @@ groups = ["main"]
 metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
 
 [[targets.packages]]
+package = "marquee"
+version = "1.2.1"
+binary = false
+platform = "source"
+dependencies = [
+    "S7",
+    "glue",
+    "png",
+    "cli",
+    "rlang",
+    "systemfonts",
+    "textshaping",
+    "jpeg",
+    "lifecycle",
+    "cpp11",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-09-16/src/contrib/marquee_1.2.1.tar.gz"]
+target = "src/marquee_1.2.1-ae45217f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4063b45896f7e32d5ef381c405a3553060aa883bd3cce6ea59d9397f053451aa", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "proxy"
 version = "0.4-29"
 binary = false
@@ -2222,6 +2422,18 @@ sources = ["https://p3m.dev/cran/2025-12-30/src/contrib/proxy_0.4-29.tar.gz"]
 target = "src/proxy_0.4-29-295dab26.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b" }
+
+[[targets.packages]]
+package = "png"
+version = "0.1-9"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-03-16/src/contrib/png_0.1-9.tar.gz"]
+target = "src/png_0.1-9-5befdf10.tar.gz"
+groups = ["main"]
+system_requirements = "libpng"
+metadata = { RemoteHash = "0b8502363c6f5c73cf284dee4fd1416f5adf4115b6ae9a1e09531c143b978589" }
 
 [[targets.packages]]
 package = "utf8"
@@ -2489,20 +2701,33 @@ groups = ["main"]
 metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
 
 [[targets.packages]]
-package = "progress"
-version = "1.2.3"
+package = "systemfonts"
+version = "1.3.2"
 binary = false
 platform = "source"
 dependencies = [
-    "prettyunits",
-    "crayon",
-    "hms",
-    "R6",
+    "lifecycle",
+    "base64enc",
+    "jsonlite",
+    "cpp11",
 ]
-sources = ["https://p3m.dev/cran/2023-12-07/src/contrib/progress_1.2.3.tar.gz"]
-target = "src/progress_1.2.3-37446ed2.tar.gz"
+sources = ["https://p3m.dev/cran/2026-03-06/src/contrib/systemfonts_1.3.2.tar.gz"]
+target = "src/systemfonts_1.3.2-1b340d82.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+system_requirements = "fontconfig, freetype2"
+metadata = { RemoteHash = "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "jpeg"
+version = "0.1-11"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-22/src/contrib/jpeg_0.1-11.tar.gz"]
+target = "src/jpeg_0.1-11-16c0d3e2.tar.gz"
+groups = ["main"]
+system_requirements = "libjpeg"
+metadata = { RemoteHash = "2139efbd48fbcc590a401e40215573f4a214432536bc8967caa163a833b03729" }
 
 [[targets.packages]]
 package = "markdown"
@@ -2528,6 +2753,22 @@ sources = ["https://p3m.dev/cran/2025-08-27/src/contrib/rprojroot_2.1.1.tar.gz"]
 target = "src/rprojroot_2.1.1-d6aee0a5.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "473989bbef45fd9cd68f68dc317b14c9f42de5cea4b55fd6ba9011f25e0517e9" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = false
+platform = "source"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/src/contrib/progress_1.2.3.tar.gz"]
+target = "src/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
 
 [[targets.packages]]
 package = "e1071"
@@ -2983,6 +3224,23 @@ groups = ["main"]
 metadata = { RemoteHash = "24d3973b3334a0b7f6003defbd9e59d964d022db836d9c2e80dcfde46be0209a" }
 
 [[targets.packages]]
+package = "textshaping"
+version = "1.0.5"
+binary = false
+platform = "source"
+dependencies = [
+    "cpp11",
+    "stringi",
+    "lifecycle",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-03-07/src/contrib/textshaping_1.0.5.tar.gz"]
+target = "src/textshaping_1.0.5-5b8095cc.tar.gz"
+groups = ["main"]
+system_requirements = "freetype2, harfbuzz, fribidi"
+metadata = { RemoteHash = "12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd", RemoteLinkingToHashes = "systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "sass"
 version = "0.4.10"
 binary = false
@@ -3137,7 +3395,15 @@ name = "knitr"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "marquee"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "prismatic"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "ragg"
 constraint = "*"
 
 [[targets.direct_dependencies]]
@@ -3150,6 +3416,14 @@ constraint = "*"
 
 [[targets.direct_dependencies]]
 name = "sf"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "svglite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "systemfonts"
 constraint = "*"
 
 [[targets.packages]]
@@ -3469,6 +3743,25 @@ groups = ["main"]
 metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
 
 [[targets.packages]]
+package = "svglite"
+version = "2.2.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "textshaping",
+    "lifecycle",
+    "base64enc",
+    "cli",
+    "rlang",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/svglite_2.2.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/svglite_2.2.2-f3a9381c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "5bf884ee031fbf3f5c60bcedc0532e4b77763e924a1508f584329aae9686187c", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
+
+[[targets.packages]]
 package = "DBI"
 version = "1.3.0"
 binary = true
@@ -3521,15 +3814,18 @@ groups = ["main"]
 metadata = { RemoteHash = "bdd66a02dfba08a4c644b38a6ae08f6ba915c16d6b6ab6a188ec193c35905ff2" }
 
 [[targets.packages]]
-package = "evaluate"
-version = "1.0.5"
+package = "ragg"
+version = "1.5.2"
 binary = true
 platform = "x86_64-unknown-linux-gnu"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-08-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/evaluate_1.0.5.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/evaluate_1.0.5-5d48b781.tar.gz"
+dependencies = [
+    "textshaping",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/ragg_1.5.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/ragg_1.5.2-21888d5b.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
+metadata = { RemoteHash = "1dad21034a403e84a835c90260a1d9d8dc43c8d100f7fe63dd01d5e928b28f16", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
 
 [[targets.packages]]
 package = "S7"
@@ -3541,6 +3837,17 @@ sources = ["https://p3m.dev/cran/2026-04-23/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/S7_0.2.2-4c0c9d16.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "6f33245dde05b74265b1c4d379e034bc3a8923d41e7b52e6e75a75ce97d42af7" }
+
+[[targets.packages]]
+package = "evaluate"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-08-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/evaluate_1.0.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/evaluate_1.0.5-5d48b781.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
 
 [[targets.packages]]
 package = "glue"
@@ -3764,6 +4071,29 @@ groups = ["main"]
 metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
 
 [[targets.packages]]
+package = "marquee"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "S7",
+    "glue",
+    "png",
+    "cli",
+    "rlang",
+    "systemfonts",
+    "textshaping",
+    "jpeg",
+    "lifecycle",
+    "cpp11",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/marquee_1.2.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/marquee_1.2.1-57167560.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4063b45896f7e32d5ef381c405a3553060aa883bd3cce6ea59d9397f053451aa", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "proxy"
 version = "0.4-29"
 binary = true
@@ -3773,6 +4103,17 @@ sources = ["https://p3m.dev/cran/2025-12-30/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/proxy_0.4-29-295dab26.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b" }
+
+[[targets.packages]]
+package = "png"
+version = "0.1-9"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-03-16/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/png_0.1-9.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/png_0.1-9-5befdf10.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "0b8502363c6f5c73cf284dee4fd1416f5adf4115b6ae9a1e09531c143b978589" }
 
 [[targets.packages]]
 package = "utf8"
@@ -4037,20 +4378,31 @@ groups = ["main"]
 metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
 
 [[targets.packages]]
-package = "progress"
-version = "1.2.3"
+package = "systemfonts"
+version = "1.3.2"
 binary = true
 platform = "x86_64-unknown-linux-gnu"
 dependencies = [
-    "prettyunits",
-    "crayon",
-    "hms",
-    "R6",
+    "lifecycle",
+    "base64enc",
+    "jsonlite",
+    "cpp11",
 ]
-sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/systemfonts_1.3.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/systemfonts_1.3.2-1cc3009d.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+metadata = { RemoteHash = "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "jpeg"
+version = "0.1-11"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-22/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/jpeg_0.1-11.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/jpeg_0.1-11-16c0d3e2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "2139efbd48fbcc590a401e40215573f4a214432536bc8967caa163a833b03729" }
 
 [[targets.packages]]
 package = "markdown"
@@ -4076,6 +4428,22 @@ sources = ["https://p3m.dev/cran/2025-08-27/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/rprojroot_2.1.1-d6aee0a5.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "473989bbef45fd9cd68f68dc317b14c9f42de5cea4b55fd6ba9011f25e0517e9" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
 
 [[targets.packages]]
 package = "e1071"
@@ -4431,6 +4799,17 @@ groups = ["main"]
 metadata = { RemoteHash = "b919fb4cc495311d3c2c083c528dbf60da7d1501a10b000c1aca0cfa150f4475", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3, wk@0.9.5=b720282890f8d322ff8217bd857bab8f5549343ea2a635a3c2ada63ce1206aed" }
 
 [[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "vctrs"
 version = "0.7.3"
 binary = true
@@ -4445,17 +4824,6 @@ sources = ["https://p3m.dev/cran/2026-04-12/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/vctrs_0.7.3-fd6ec28d.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
-
-[[targets.packages]]
-package = "cpp11"
-version = "0.5.5"
-binary = true
-platform = "x86_64-unknown-linux-gnu"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
-target = "bin/linux/manylinux_2_28-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
 
 [[targets.packages]]
 package = "tidyr"
@@ -4526,6 +4894,22 @@ sources = ["https://p3m.dev/cran/2021-06-22/bin/linux/manylinux_2_28-x86_64/4.6/
 target = "bin/linux/manylinux_2_28-x86_64/4.6/regions_0.1.8-68a32b30.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "24d3973b3334a0b7f6003defbd9e59d964d022db836d9c2e80dcfde46be0209a" }
+
+[[targets.packages]]
+package = "textshaping"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "stringi",
+    "lifecycle",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/textshaping_1.0.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/textshaping_1.0.5-eac9930f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135" }
 
 [[targets.packages]]
 package = "sass"
@@ -4679,7 +5063,15 @@ name = "knitr"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "marquee"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "prismatic"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "ragg"
 constraint = "*"
 
 [[targets.direct_dependencies]]
@@ -4692,6 +5084,14 @@ constraint = "*"
 
 [[targets.direct_dependencies]]
 name = "sf"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "svglite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "systemfonts"
 constraint = "*"
 
 [[targets.packages]]
@@ -5013,6 +5413,26 @@ groups = ["main"]
 metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
 
 [[targets.packages]]
+package = "svglite"
+version = "2.2.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "textshaping",
+    "lifecycle",
+    "base64enc",
+    "cli",
+    "rlang",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/svglite_2.2.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/svglite_2.2.2-f3a9381c.tar.gz"
+groups = ["main"]
+system_requirements = "libpng"
+metadata = { RemoteHash = "5bf884ee031fbf3f5c60bcedc0532e4b77763e924a1508f584329aae9686187c", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
+
+[[targets.packages]]
 package = "DBI"
 version = "1.3.0"
 binary = true
@@ -5067,15 +5487,19 @@ system_requirements = "Package vignettes based on R Markdown v2 or reStructuredT
 metadata = { RemoteHash = "bdd66a02dfba08a4c644b38a6ae08f6ba915c16d6b6ab6a188ec193c35905ff2" }
 
 [[targets.packages]]
-package = "evaluate"
-version = "1.0.5"
+package = "ragg"
+version = "1.5.2"
 binary = true
 platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-08-28/bin/linux/noble-x86_64/4.6/src/contrib/evaluate_1.0.5.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/evaluate_1.0.5-5d48b781.tar.gz"
+dependencies = [
+    "textshaping",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/ragg_1.5.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/ragg_1.5.2-21888d5b.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
+system_requirements = "freetype2, libpng, libtiff, libjpeg, libwebp, libwebpmux"
+metadata = { RemoteHash = "1dad21034a403e84a835c90260a1d9d8dc43c8d100f7fe63dd01d5e928b28f16", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
 
 [[targets.packages]]
 package = "S7"
@@ -5087,6 +5511,17 @@ sources = ["https://p3m.dev/cran/2026-04-23/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/S7_0.2.2-4c0c9d16.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "6f33245dde05b74265b1c4d379e034bc3a8923d41e7b52e6e75a75ce97d42af7" }
+
+[[targets.packages]]
+package = "evaluate"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-08-28/bin/linux/noble-x86_64/4.6/src/contrib/evaluate_1.0.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/evaluate_1.0.5-5d48b781.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
 
 [[targets.packages]]
 package = "glue"
@@ -5312,6 +5747,29 @@ groups = ["main"]
 metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
 
 [[targets.packages]]
+package = "marquee"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "S7",
+    "glue",
+    "png",
+    "cli",
+    "rlang",
+    "systemfonts",
+    "textshaping",
+    "jpeg",
+    "lifecycle",
+    "cpp11",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/marquee_1.2.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/marquee_1.2.1-57167560.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4063b45896f7e32d5ef381c405a3553060aa883bd3cce6ea59d9397f053451aa", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "proxy"
 version = "0.4-29"
 binary = true
@@ -5321,6 +5779,18 @@ sources = ["https://p3m.dev/cran/2025-12-30/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/proxy_0.4-29-295dab26.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b" }
+
+[[targets.packages]]
+package = "png"
+version = "0.1-9"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-03-16/bin/linux/noble-x86_64/4.6/src/contrib/png_0.1-9.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/png_0.1-9-5befdf10.tar.gz"
+groups = ["main"]
+system_requirements = "libpng"
+metadata = { RemoteHash = "0b8502363c6f5c73cf284dee4fd1416f5adf4115b6ae9a1e09531c143b978589" }
 
 [[targets.packages]]
 package = "utf8"
@@ -5427,11 +5897,11 @@ metadata = { RemoteHash = "8bf048b49b2d17077138fae758bda56bbd53278d9437f2fdeaedf
 [[targets.packages]]
 package = "R.methodsS3"
 version = "1.8.2"
-binary = false
-platform = "source"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
 dependencies = []
-sources = ["https://p3m.dev/cran/2022-06-14/src/contrib/R.methodsS3_1.8.2.tar.gz"]
-target = "src/R.methodsS3_1.8.2-cc759523.tar.gz"
+sources = ["https://p3m.dev/cran/2022-06-14/bin/linux/noble-x86_64/4.6/src/contrib/R.methodsS3_1.8.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/R.methodsS3_1.8.2-cc759523.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "822d5e61dad4c91e8883be2b38d7b89f87492046d0fe345704eb5d2658927c2e" }
 
@@ -5588,20 +6058,33 @@ groups = ["main"]
 metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
 
 [[targets.packages]]
-package = "progress"
-version = "1.2.3"
+package = "systemfonts"
+version = "1.3.2"
 binary = true
 platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
 dependencies = [
-    "prettyunits",
-    "crayon",
-    "hms",
-    "R6",
+    "lifecycle",
+    "base64enc",
+    "jsonlite",
+    "cpp11",
 ]
-sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/noble-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/systemfonts_1.3.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/systemfonts_1.3.2-1cc3009d.tar.gz"
 groups = ["main"]
-metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+system_requirements = "fontconfig, freetype2"
+metadata = { RemoteHash = "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "jpeg"
+version = "0.1-11"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-22/bin/linux/noble-x86_64/4.6/src/contrib/jpeg_0.1-11.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/jpeg_0.1-11-16c0d3e2.tar.gz"
+groups = ["main"]
+system_requirements = "libjpeg"
+metadata = { RemoteHash = "2139efbd48fbcc590a401e40215573f4a214432536bc8967caa163a833b03729" }
 
 [[targets.packages]]
 package = "markdown"
@@ -5627,6 +6110,22 @@ sources = ["https://p3m.dev/cran/2025-08-27/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/rprojroot_2.1.1-d6aee0a5.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "473989bbef45fd9cd68f68dc317b14c9f42de5cea4b55fd6ba9011f25e0517e9" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/noble-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
 
 [[targets.packages]]
 package = "e1071"
@@ -5985,6 +6484,17 @@ system_requirements = "cmake, OpenSSL >= 1.0.1, Abseil >= 20230802.0"
 metadata = { RemoteHash = "b919fb4cc495311d3c2c083c528dbf60da7d1501a10b000c1aca0cfa150f4475", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3, wk@0.9.5=b720282890f8d322ff8217bd857bab8f5549343ea2a635a3c2ada63ce1206aed" }
 
 [[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "vctrs"
 version = "0.7.3"
 binary = true
@@ -5999,17 +6509,6 @@ sources = ["https://p3m.dev/cran/2026-04-12/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/vctrs_0.7.3-fd6ec28d.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
-
-[[targets.packages]]
-package = "cpp11"
-version = "0.5.5"
-binary = true
-platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
-target = "bin/linux/noble-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
-groups = ["main"]
-metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
 
 [[targets.packages]]
 package = "tidyr"
@@ -6080,6 +6579,23 @@ sources = ["https://p3m.dev/cran/2021-06-22/bin/linux/noble-x86_64/4.6/src/contr
 target = "bin/linux/noble-x86_64/4.6/regions_0.1.8-68a32b30.tar.gz"
 groups = ["main"]
 metadata = { RemoteHash = "24d3973b3334a0b7f6003defbd9e59d964d022db836d9c2e80dcfde46be0209a" }
+
+[[targets.packages]]
+package = "textshaping"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "stringi",
+    "lifecycle",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/textshaping_1.0.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/textshaping_1.0.5-eac9930f.tar.gz"
+groups = ["main"]
+system_requirements = "freetype2, harfbuzz, fribidi"
+metadata = { RemoteHash = "12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135" }
 
 [[targets.packages]]
 package = "sass"
@@ -6236,7 +6752,15 @@ name = "knitr"
 constraint = "*"
 
 [[targets.direct_dependencies]]
+name = "marquee"
+constraint = "*"
+
+[[targets.direct_dependencies]]
 name = "prismatic"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "ragg"
 constraint = "*"
 
 [[targets.direct_dependencies]]
@@ -6249,6 +6773,14 @@ constraint = "*"
 
 [[targets.direct_dependencies]]
 name = "sf"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "svglite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "systemfonts"
 constraint = "*"
 
 [[targets.packages]]
@@ -6568,6 +7100,25 @@ groups = ["main"]
 metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
 
 [[targets.packages]]
+package = "svglite"
+version = "2.2.2"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "textshaping",
+    "lifecycle",
+    "base64enc",
+    "cli",
+    "rlang",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/svglite_2.2.2.zip"]
+target = "bin/windows/4.6/svglite_2.2.2-f3a9381c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "5bf884ee031fbf3f5c60bcedc0532e4b77763e924a1508f584329aae9686187c", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
+
+[[targets.packages]]
 package = "DBI"
 version = "1.3.0"
 binary = true
@@ -6620,15 +7171,18 @@ groups = ["main"]
 metadata = { RemoteHash = "bdd66a02dfba08a4c644b38a6ae08f6ba915c16d6b6ab6a188ec193c35905ff2" }
 
 [[targets.packages]]
-package = "evaluate"
-version = "1.0.5"
+package = "ragg"
+version = "1.5.2"
 binary = true
 platform = "x86_64-w64-mingw32"
-dependencies = []
-sources = ["https://p3m.dev/cran/2025-08-28/bin/windows/contrib/4.6/evaluate_1.0.5.zip"]
-target = "bin/windows/4.6/evaluate_1.0.5-5d48b781.zip"
+dependencies = [
+    "textshaping",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/ragg_1.5.2.zip"]
+target = "bin/windows/4.6/ragg_1.5.2-21888d5b.zip"
 groups = ["main"]
-metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
+metadata = { RemoteHash = "1dad21034a403e84a835c90260a1d9d8dc43c8d100f7fe63dd01d5e928b28f16", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135, textshaping@1.0.5=12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd" }
 
 [[targets.packages]]
 package = "S7"
@@ -6640,6 +7194,17 @@ sources = ["https://p3m.dev/cran/2026-04-23/bin/windows/contrib/4.6/S7_0.2.2.zip
 target = "bin/windows/4.6/S7_0.2.2-4c0c9d16.zip"
 groups = ["main"]
 metadata = { RemoteHash = "6f33245dde05b74265b1c4d379e034bc3a8923d41e7b52e6e75a75ce97d42af7" }
+
+[[targets.packages]]
+package = "evaluate"
+version = "1.0.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-08-28/bin/windows/contrib/4.6/evaluate_1.0.5.zip"]
+target = "bin/windows/4.6/evaluate_1.0.5-5d48b781.zip"
+groups = ["main"]
+metadata = { RemoteHash = "47aac79f889a828a5f8b4756cb972d7c2966bb984cbae17a4bd2389a73270794" }
 
 [[targets.packages]]
 package = "glue"
@@ -6863,6 +7428,29 @@ groups = ["main"]
 metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
 
 [[targets.packages]]
+package = "marquee"
+version = "1.2.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "S7",
+    "glue",
+    "png",
+    "cli",
+    "rlang",
+    "systemfonts",
+    "textshaping",
+    "jpeg",
+    "lifecycle",
+    "cpp11",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/marquee_1.2.1.zip"]
+target = "bin/windows/4.6/marquee_1.2.1-57167560.zip"
+groups = ["main"]
+metadata = { RemoteHash = "4063b45896f7e32d5ef381c405a3553060aa883bd3cce6ea59d9397f053451aa", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "proxy"
 version = "0.4-29"
 binary = true
@@ -6872,6 +7460,17 @@ sources = ["https://p3m.dev/cran/2025-12-30/bin/windows/contrib/4.6/proxy_0.4-29
 target = "bin/windows/4.6/proxy_0.4-29-295dab26.zip"
 groups = ["main"]
 metadata = { RemoteHash = "c6eb0e36ef2eecb1b8564f0188ca8d2c91a80865c86698386a7b5d5baa92c35b" }
+
+[[targets.packages]]
+package = "png"
+version = "0.1-9"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-03-16/bin/windows/contrib/4.6/png_0.1-9.zip"]
+target = "bin/windows/4.6/png_0.1-9-5befdf10.zip"
+groups = ["main"]
+metadata = { RemoteHash = "0b8502363c6f5c73cf284dee4fd1416f5adf4115b6ae9a1e09531c143b978589" }
 
 [[targets.packages]]
 package = "utf8"
@@ -7136,20 +7735,31 @@ groups = ["main"]
 metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
 
 [[targets.packages]]
-package = "progress"
-version = "1.2.3"
+package = "systemfonts"
+version = "1.3.2"
 binary = true
 platform = "x86_64-w64-mingw32"
 dependencies = [
-    "prettyunits",
-    "crayon",
-    "hms",
-    "R6",
+    "lifecycle",
+    "base64enc",
+    "jsonlite",
+    "cpp11",
 ]
-sources = ["https://p3m.dev/cran/2023-12-07/bin/windows/contrib/4.6/progress_1.2.3.zip"]
-target = "bin/windows/4.6/progress_1.2.3-37446ed2.zip"
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/systemfonts_1.3.2.zip"]
+target = "bin/windows/4.6/systemfonts_1.3.2-1cc3009d.zip"
 groups = ["main"]
-metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+metadata = { RemoteHash = "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "jpeg"
+version = "0.1-11"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-22/bin/windows/contrib/4.6/jpeg_0.1-11.zip"]
+target = "bin/windows/4.6/jpeg_0.1-11-16c0d3e2.zip"
+groups = ["main"]
+metadata = { RemoteHash = "2139efbd48fbcc590a401e40215573f4a214432536bc8967caa163a833b03729" }
 
 [[targets.packages]]
 package = "markdown"
@@ -7175,6 +7785,22 @@ sources = ["https://p3m.dev/cran/2025-08-27/bin/windows/contrib/4.6/rprojroot_2.
 target = "bin/windows/4.6/rprojroot_2.1.1-d6aee0a5.zip"
 groups = ["main"]
 metadata = { RemoteHash = "473989bbef45fd9cd68f68dc317b14c9f42de5cea4b55fd6ba9011f25e0517e9" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/windows/contrib/4.6/progress_1.2.3.zip"]
+target = "bin/windows/4.6/progress_1.2.3-37446ed2.zip"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
 
 [[targets.packages]]
 package = "e1071"
@@ -7530,6 +8156,17 @@ groups = ["main"]
 metadata = { RemoteHash = "b919fb4cc495311d3c2c083c528dbf60da7d1501a10b000c1aca0cfa150f4475", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3, wk@0.9.5=b720282890f8d322ff8217bd857bab8f5549343ea2a635a3c2ada63ce1206aed" }
 
 [[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/cpp11_0.5.5.zip"]
+target = "bin/windows/4.6/cpp11_0.5.5-73034f81.zip"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
 package = "vctrs"
 version = "0.7.3"
 binary = true
@@ -7544,17 +8181,6 @@ sources = ["https://p3m.dev/cran/2026-04-12/bin/windows/contrib/4.6/vctrs_0.7.3.
 target = "bin/windows/4.6/vctrs_0.7.3-fd6ec28d.zip"
 groups = ["main"]
 metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
-
-[[targets.packages]]
-package = "cpp11"
-version = "0.5.5"
-binary = true
-platform = "x86_64-w64-mingw32"
-dependencies = []
-sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/cpp11_0.5.5.zip"]
-target = "bin/windows/4.6/cpp11_0.5.5-73034f81.zip"
-groups = ["main"]
-metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
 
 [[targets.packages]]
 package = "tidyr"
@@ -7625,6 +8251,22 @@ sources = ["https://p3m.dev/cran/2021-06-22/bin/windows/contrib/4.6/regions_0.1.
 target = "bin/windows/4.6/regions_0.1.8-68a32b30.zip"
 groups = ["main"]
 metadata = { RemoteHash = "24d3973b3334a0b7f6003defbd9e59d964d022db836d9c2e80dcfde46be0209a" }
+
+[[targets.packages]]
+package = "textshaping"
+version = "1.0.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "stringi",
+    "lifecycle",
+    "cpp11",
+    "systemfonts",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/textshaping_1.0.5.zip"]
+target = "bin/windows/4.6/textshaping_1.0.5-eac9930f.zip"
+groups = ["main"]
+metadata = { RemoteHash = "12209d5535884b8b49bb56de10996cd797f806f44c691eefae2e8eb9786443dd", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, systemfonts@1.3.2=828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135" }
 
 [[targets.packages]]
 package = "sass"
