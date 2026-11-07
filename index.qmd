@@ -110,53 +110,6 @@ Talks dedicated to Quarto: zero... until this year.
 
 <!-- ===== OPENING OPTIONS UNDER REVIEW (temporary: keep one, delete the rest) ===== -->
 
-## {#v1-conversation .center}
-
-[Variant 1 · 1/2]{.opt-tag}
-
-[Friends in official statistics told me:]{.lead}
-
-[*"Quarto is not that known here."*]{.statement}
-
-. . .
-
-[That surprised me, for an R community.]{.lead}
-
-[So I read twelve years of uRos programmes, to learn how you publish.]{.lead}
-
-::: notes
-I'm here because of a conversation.
-Friends in official statistics told me: Quarto is not that known here.
-That surprised me, for an R community: you publish statistics all the time.
-So I read twelve years of uRos programmes, to learn how you publish.
-:::
-
-## Publishing statistics at uRos {#v1-timeline .smaller}
-
-[Variant 1 · 2/2]{.opt-tag}
-
-::: {.timeline}
-- **2017** Destatis: automation of publications using knitr
-- **2018** A corporate design toolbox for R · R Markdown instead of LaTeX
-- **2019** Canton of Zurich: semi-automatic reports · Ministry of Justice: corporate publications with pagedown
-- **2023** UNIDO: revamped statistical publications · Bundesbank: corporate design in R
-- **2024** Eurostat and DG TAXUD: automating Statistics Explained articles
-- **2026** OECD: country notes · Ministry of Justice: print-ready publications, from code
-:::
-
-. . .
-
-[Same need, every year. Many in-house pipelines.]{.statement}
-
-[About 530 programme items, 2014–2026. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
-
-::: notes
-Every year since 2017, at least one talk here was about publishing statistics.
-Automating a recurring publication. Your institute's look. Less copy and paste.
-And each time, a team built its own pipeline: a package, a template, a toolbox.
-(Some of them are in this room. The two talks just before mine are exactly this.)
-:::
-
 ## {#v2-conversation .center}
 
 [Variant 2 · 1/2]{.opt-tag}
@@ -202,56 +155,69 @@ automate the publication that comes back every month. Make it look like your ins
 That is exactly the problem Quarto was built for. Let me show you what that need looks like on a Thursday evening.
 :::
 
-## {#v3-conversation .center}
+## {#vf-conversation .center}
 
-[Variant 3 · 1/2]{.opt-tag}
+[Variant F (Fable) · 1/3]{.opt-tag}
 
 [Friends in official statistics told me:]{.lead}
 
-[*"Quarto is not that known here."*]{.statement}
+[*"Quarto? Not really used in our world."*]{.statement}
 
 . . .
 
-[That surprised me, for an R community.]{.lead}
+[An R community that publishes numbers every day. I wanted to understand.]{.lead}
 
-[So I read twelve years of uRos programmes, to learn how you publish.]{.lead}
+[So I went through every uRos programme, 2014 to 2026.]{.lead}
 
 ::: notes
 I'm here because of a conversation.
-Friends in official statistics told me: Quarto is not that known here.
-That surprised me, for an R community: you publish statistics all the time.
-So I read twelve years of uRos programmes, to learn how you publish.
+Friends in official statistics told me: Quarto? Not really used in our world.
+You are an R community, and publishing numbers is your job, so I wanted to understand.
+Before coming, I went through every uRos programme since 2014, about 530 talks,
+to see what you say when you talk about publishing.
 :::
 
-## What I found in the uRos programmes {#v3-chart}
+## Publishing statistics at uRos {#vf-needs .center}
 
-[Variant 3 · 2/2]{.opt-tag}
+[Variant F (Fable) · 2/3]{.opt-tag}
 
-[Every year since 2017, talks about publishing statistics.]{.lead}
+[Every edition since 2017 had a talk about publishing statistics. About 35 in all.]{.lead}
 
-[And talks touching on reproducibility, share of all talks:]{.chart-cap}
+[The same needs come back:]{.lead}
 
-```{=html}
-<div class="bars narrow">
-<div class="bar"><span class="v">16%</span><span class="b" style="height:63px"></span><span class="y">2020</span></div>
-<div class="bar"><span class="v">15%</span><span class="b" style="height:58px"></span><span class="y">2021</span></div>
-<div class="bar"><span class="v">20%</span><span class="b" style="height:80px"></span><span class="y">2023</span></div>
-<div class="bar"><span class="v">26%</span><span class="b" style="height:104px"></span><span class="y">2024</span></div>
-<div class="bar"><span class="v">21%</span><span class="b" style="height:84px"></span><span class="y">2025</span></div>
-<div class="bar hl"><span class="v">35%</span><span class="b" style="height:140px"></span><span class="y">2026</span></div>
-</div>
-```
-
-[Years with abstracts only (2022: titles only).]{.chart-cap}
+::: {.needs}
+[Recurring publications, automated]{.need}
+[Your institute's look]{.need}
+[Less manual work]{.need}
+:::
 
 . . .
 
-[You publish. You want it reproducible.]{.statement}
+[Same need, every year. Often, a pipeline built in-house.]{.statement}
+
+[532 programme items, 2014–2026; titles only before 2020 and in 2022. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
-Every year since 2017, there were talks here about publishing statistics.
-And reproducibility is rising: about one talk in six in 2020, one in three this year.
-You publish. And you want it reproducible. That is what Quarto is for.
+Every edition since 2017 had at least one talk about publishing statistics, about thirty-five in all.
+Three needs come back: automate the publication that returns every month, make it look like your institute, cut the manual work.
+And the answer is often a pipeline a team built for itself: ten of those talks present an in-house package.
+You just saw two very good ones, right before me.
+:::
+
+## {#vf-leave-code .center}
+
+[Variant F (Fable) · 3/3, replaces "the numbers leave R"]{.opt-tag}
+
+[You compute the numbers in R.]{.lead}
+
+. . .
+
+[Then the numbers [leave the code]{.hl}.]{.statement}
+
+::: notes
+And without such a pipeline? You compute the numbers in R.
+Then the numbers leave the code: into Word, into the PDF, into the press release.
+Let me show you a Thursday evening.
 :::
 
 <!-- ===== END OF OPENING OPTIONS ===== -->
