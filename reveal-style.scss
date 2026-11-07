@@ -484,3 +484,14 @@ html.print-pdf .reveal .print-only { display: block !important; }
     text-align: center;
   }
 }
+
+.reveal {
+  .timeline ul { list-style: none; margin: 0.3em 0 0 0; padding: 0; }
+  .timeline li { margin: 0.25em 0; font-size: 0.95em; }
+  .timeline strong { color: $presentation-heading-color; display: inline-block; min-width: 3em; }
+  .needs { display: flex; gap: 24px; justify-content: center; margin: 0.6em 0; }
+  .needs .need {
+    flex: 1; padding: 0.6em 0.4em; border-radius: 10px; text-align: center;
+    background: #f2f2f2; border-top: 6px solid $perso-highlight-color; font-weight: bold; font-size: 1.05em;
+  }
+}

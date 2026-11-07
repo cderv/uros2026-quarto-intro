@@ -11,9 +11,9 @@ period,tool,n,publishing_talks
 2020-2025,desktop_publishing,1,34
 2020-2025,quarto,1,34
 2020-2025,sweave_latex,1,34
-2026,other,7,19
-2026,shiny,4,19
-2026,in_house_package,3,19
-2026,quarto,2,19
-2026,word_officer,2,19
-2026,rmarkdown_knitr,1,19
+2026,other,7,18
+2026,shiny,4,18
+2026,in_house_package,3,18
+2026,word_officer,2,18
+2026,quarto,1,18
+2026,rmarkdown_knitr,1,18

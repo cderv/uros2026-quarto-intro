@@ -5,6 +5,7 @@
 # - summary-tools.csv: tools named by publishing talks, per period
 # - summary-needs.csv: needs stated by publishing talks, per period
 # - publishing-talks.csv: every talk coded publishing = central, for reading
+# The speaker's own talk (2026-075) is left out of every table.
 #
 # Usage, from analysis/: Rscript R/05-summarise.R
 
@@ -27,6 +28,10 @@ d <- talks |>
     period = case_when(year <= 2019 ~ "2014-2019", year <= 2025 ~ "2020-2025", TRUE ~ "2026")
   )
 stopifnot(nrow(d) == nrow(talks))
+
+# Leave out the speaker's own talk: the claims are about the community.
+own_talk <- "2026-075"
+d <- filter(d, id != own_talk)
 
 by_year <- d |>
   group_by(year, source_kind) |>
