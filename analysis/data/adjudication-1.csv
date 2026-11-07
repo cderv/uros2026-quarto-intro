@@ -1,0 +1,71 @@
+id,variable,value,reason
+2015-016,theme,editing_imputation,Title: 'Identification of Data Inconsistency' is data validation/editing.
+2016-010,theme,other,"Title only, 'RR by R' is ambiguous; no clear primary theme."
+2016-017,theme,methods,Title: 'A Structural Equations Model' is a statistical method.
+2017-005,theme,production,Title: 'new architecture model for cooperation using shared algorithms' concerns statistical production architecture.
+2017-025,theme,methods,Title: applied modelling 'Explaining the number of nosocomial infections' with pglm.
+2018-001,theme,methods,Title: 'Spatial Analysis in R' tutorial is about an analysis method.
+2018-003,theme,packages,Title: tutorial on the data.table package.
+2018-015,theme,production,Title: 'generalized systems and statistical tools at Statistics Canada' is about production systems.
+2018-022,theme,methods,Title: 'sampling and confidentiality' are methodological uses.
+2018-027,theme,packages,Title presents a package: 'Reclin: a package for record linkage'.
+2018-030,outputs,none,Title only; Shiny use at BLS not explicitly about outputs for readers.
+2018-030,publishing,none,"Title only, 'The Use of R Shiny' does not say the apps disseminate outputs."
+2018-030,tools,not_stated,"Publishing is none, so tools not_stated."
+2018-034,theme,packages,Title presents a package: 'rtrim - an R implementation of TRIM'.
+2018-039,theme,packages,Title: 'Introduction to flagr' presents a package.
+2018-040,reproducibility,none,"Title only, 'automated metadata documentation' does not state a reproducible pipeline."
+2018-043,theme,ml_ai,Title: 'sentiment based techniques' is text mining / ML.
+2019-009,theme,packages,Title presents 'the crrri package'.
+2019-019,theme,packages,Title: 'An R package for calculating repeat-sale price indices'.
+2019-028,reproducibility,central,Title is about 'Replicating Research Results'.
+2019-034,needs,automation_recurring,Title 'Semiautomatic Reports' names automation of report production.
+2019-037,publishing,central,Title: 'Using R and RShiny to produce official statistics' is about producing the publication.
+2019-038,needs,other,"Title names a legal-compliance concern: 'Google Analytics, Shiny apps and EU/UK law'."
+2019-041,needs,none,"Publishing is none, so needs none."
+2019-041,outputs,none,"Publishing is none, so outputs none."
+2019-041,publishing,none,Title only; 'monitoring and reporting surveys' is internal fieldwork monitoring.
+2019-041,tools,not_stated,"Publishing is none, so tools not_stated."
+2020-003,theme,packages,Talk presents a package release: 'emdi 2.0.0 ... in R'.
+2020-005,theme,packages,Title: 'mquantreg: An R package for estimating...'.
+2020-014,theme,other,"OCR, regex and stringr text structuring; no ML method named."
+2020-017,theme,methods,Focus is 'a general hierarchical computing method' via sparse matrices.
+2020-019,needs,automation_recurring;corporate_design,'automated process for generation of education indicators' and graphs that 'fully correspond to the corporate design'.
+2020-021,theme,packages,About sharing official statistics software 'such as R packages' via the awesome list.
+2020-022,needs,automation_recurring,'KOF updates its website in automated fashion'.
+2020-022,tools,not_stated,"Airflow/Docker named only in the title as infrastructure, no tool named for producing the website content."
+2020-024,needs,automation_recurring;less_manual_work,'many repetitive tasks each quarter... automated to save more time'.
+2020-024,reproducibility,partial,"Automation of scripts, not framed as reproducibility; part of the talk."
+2020-024,tools,other,'the taskscheduleR package... creating reports and visualizations... export the outputs'.
+2020-027,outputs,none,Publishing is none: validation reports and Excel file are internal for country experts.
+2020-027,publishing,none,Outputs are internal 'data validation reports' and an 'MS-Excel file... to examine and flag these cases'.
+2020-027,tools,not_stated,"Publishing is none, so tools not_stated."
+2020-028,theme,production,"Operational web service in statistical production, 'deployed via rsconnect'."
+2020-029,theme,packages,Title: 'A set of R packages to compute population count'.
+2020-037,needs,automation_recurring;less_manual_work;timeliness,"'considerable amount of manual work, repeated monthly' and 'more robust and faster standardized approach was required'."
+2020-037,reproducibility,partial,"End-to-end automation, not framed as reproducibility."
+2020-037,tools,in_house_package,"'an R tool has been developed' to produce charts, dashboard and web text."
+2021-001,needs,automation_recurring;interactivity,'compare weekly announced ... and to report the differences automatically with interactive graphs'.
+2021-004,reproducibility,partial,Scheduled automated upload scripts; reproducibility not the frame.
+2021-005,needs,automation_recurring,'The application allows the automation of the annual economic forecasting process'.
+2021-006,needs,interactivity,'The next step is creating the interactive contents: graphs and tables'.
+2021-007,theme,production,About computing skills 'to produce statistical output' and production systems.
+2021-009,theme,methods,Panel data econometric analysis of house prices with plm.
+2021-010,outputs,slides,'RMarkdown for reporting and presentation'.
+2021-010,publishing,partial,Reporting is a minor part: 'RMarkdown for reporting and presentation'.
+2021-010,tools,rmarkdown_knitr,'RMarkdown for reporting and presentation'.
+2021-011,theme,packages,"'we present a new R package, called Spatial-KWD'."
+2021-012,needs,interactivity;other,"'users can interactively dialogue with data' and share 'code, algorithms, protocols and workflows'."
+2021-012,outputs,web_html,"'interactive and portable notebooks (Jupyter, Rmarkdown and Observable)' disseminated online."
+2021-014,needs,automation_recurring;interactivity,'Due to its ease of use and interactivity' and 'periodic snapshots of key operational data'.
+2021-014,outputs,dashboard;web_html,'default dashboards consist of standard HTML documents'.
+2021-019,publishing,central,Talk is about 'graphics for presenting the results' of the survey.
+2021-026,reproducibility,partial,'{targets} that allows to implement a reproducible workflow'.
+2021-027,theme,production,Production code for an experimental statistic 'published by Eurostat'.
+2021-028,theme,packages,Title: 'reclin: a package for probabilistic record linkage'.
+2021-031,needs,none,"Publishing is none, so needs none."
+2021-031,outputs,none,"Publishing is none, so outputs none."
+2021-031,publishing,none,"Personalised mobility app for a company platform, not dissemination of statistical outputs."
+2021-031,tools,not_stated,"Publishing is none, so tools not_stated."
+2021-033,theme,packages,'we present the first functionalities of the package simviz'.
+2021-037,tools,not_stated,"Only R itself is named, no specific publishing tool."
