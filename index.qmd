@@ -67,6 +67,8 @@ X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
 
 ## {#conversation .center timing-duration="20s"}
 
+[Current · 1/2]{.opt-tag}
+
 [Friends in official statistics told me:]{.lead}
 
 [*"Quarto? Not known there."*]{.statement}
@@ -83,6 +85,8 @@ So I checked.
 :::
 
 ## {#fourteen-editions .center timing-duration="25s"}
+
+[Current · 2/2]{.opt-tag}
 
 ::: {.big-numbers}
 [14]{.num} editions of uRos
@@ -103,6 +107,209 @@ Fourteen editions. About 480 talks since 2015.
 Talks dedicated to Quarto: zero... until this year.
 (If I missed one, tell me after: I'll be happy to be wrong.)
 :::
+
+<!-- ===== OPENING OPTIONS UNDER REVIEW (temporary: keep one, delete the rest) ===== -->
+
+## {#optA-conversation .center}
+
+[Option A · 1/2]{.opt-tag}
+
+[Friends in official statistics told me:]{.lead}
+
+[*"Quarto is not that known here."*]{.statement}
+
+. . .
+
+[That surprised me: this is an R community.]{.lead}
+
+. . .
+
+[So I went through the uRos programmes.]{.lead}
+
+::: notes
+I'm here because of a conversation.
+Friends in official statistics told me: Quarto is not that known here,
+and R Markdown is not much used either.
+That surprised me: you are an R community, and you publish a lot.
+So I went through the programmes of the past uRos conferences.
+:::
+
+## What I found in the uRos programmes {#optA-chart}
+
+[Option A · 2/2]{.opt-tag}
+
+[Talks per year at uRos]{.chart-cap}
+
+```{=html}
+<div class="bars ">
+<div class="bar"><span class="v">30</span><span class="b" style="height:66.0px"></span><span class="y">2017</span></div>
+<div class="bar"><span class="v">52</span><span class="b" style="height:114.4px"></span><span class="y">2018</span></div>
+<div class="bar"><span class="v">41</span><span class="b" style="height:90.2px"></span><span class="y">2019</span></div>
+<div class="bar"><span class="v">46</span><span class="b" style="height:101.2px"></span><span class="y">2021</span></div>
+<div class="bar"><span class="v">48</span><span class="b" style="height:105.60000000000001px"></span><span class="y">2022</span></div>
+<div class="bar"><span class="v">26</span><span class="b" style="height:57.2px"></span><span class="y">2023</span></div>
+<div class="bar"><span class="v">46</span><span class="b" style="height:101.2px"></span><span class="y">2024</span></div>
+<div class="bar"><span class="v">41</span><span class="b" style="height:90.2px"></span><span class="y">2025</span></div>
+<div class="bar hl"><span class="v">113</span><span class="b" style="height:248.60000000000002px"></span><span class="y">2026</span></div>
+</div>
+```
+
+[About 480 talks since 2015 (2015, 2016 and 2020 not shown: programmes incomplete).]{.chart-cap}
+
+. . .
+
+[Talks dedicated to Quarto: **0**... until this year.]{.statement}
+
+::: notes
+Fourteen editions, about 480 talks since 2015. And this year, more than a hundred.
+Talks dedicated to Quarto: zero... until this year.
+(If I missed one, tell me after: I'll be happy to be wrong.)
+:::
+
+## {#optB-conversation .center}
+
+[Option B · 1/2]{.opt-tag}
+
+[Friends in official statistics told me:]{.lead}
+
+[*"Quarto is not that known here."*]{.statement}
+
+. . .
+
+[That surprised me: this is an R community.]{.lead}
+
+. . .
+
+[So I went through the uRos programmes.]{.lead}
+
+::: notes
+I'm here because of a conversation.
+Friends in official statistics told me: Quarto is not that known here,
+and R Markdown is not much used either.
+That surprised me: you are an R community, and you publish a lot.
+So I went through the programmes of the past uRos conferences.
+:::
+
+## What I found in the uRos programmes {#optB-chart}
+
+[Option B · 2/2]{.opt-tag}
+
+[Talks on publication or reproducibility, per year]{.chart-cap}
+
+```{=html}
+<div class="bars ">
+<div class="bar"><span class="v">1</span><span class="b" style="height:22px"></span><span class="y">2017</span></div>
+<div class="bar"><span class="v">5</span><span class="b" style="height:110px"></span><span class="y">2018</span></div>
+<div class="bar"><span class="v">5</span><span class="b" style="height:110px"></span><span class="y">2019</span></div>
+<div class="bar"><span class="v">3</span><span class="b" style="height:66px"></span><span class="y">2021</span></div>
+<div class="bar"><span class="v">3</span><span class="b" style="height:66px"></span><span class="y">2022</span></div>
+<div class="bar"><span class="v">3</span><span class="b" style="height:66px"></span><span class="y">2023</span></div>
+<div class="bar"><span class="v">3</span><span class="b" style="height:66px"></span><span class="y">2024</span></div>
+<div class="bar"><span class="v">2</span><span class="b" style="height:44px"></span><span class="y">2025</span></div>
+<div class="bar hl"><span class="v">11</span><span class="b" style="height:242px"></span><span class="y">2026</span></div>
+</div>
+```
+
+[Classified by hand from titles and abstracts; 2015, 2016 and 2020 not shown.]{.chart-cap}
+
+. . .
+
+[You care about publishing, reproducibly.]{.lead}
+
+[Talks dedicated to Quarto: **0**... until this year.]{.statement}
+
+::: notes
+Every year, a few talks are about publishing statistics, or about reproducibility.
+This year, eleven. You clearly care about this.
+And talks dedicated to Quarto, a tool built for exactly that: zero... until this year.
+(If I missed one, tell me after: I'll be happy to be wrong.)
+:::
+
+## {#optC-conversation .center}
+
+[Option C · 1/2]{.opt-tag}
+
+[Friends in official statistics told me:]{.lead}
+
+[*"Quarto is not that known here."*]{.statement}
+
+. . .
+
+[That surprised me: this is an R community.]{.lead}
+
+. . .
+
+[So I went through the uRos programmes.]{.lead}
+
+::: notes
+I'm here because of a conversation.
+Friends in official statistics told me: Quarto is not that known here,
+and R Markdown is not much used either.
+That surprised me: you are an R community, and you publish a lot.
+So I went through the programmes of the past uRos conferences.
+:::
+
+## What I found in the uRos programmes {#optC-chart}
+
+[Option C · 2/2]{.opt-tag}
+
+[uRos talks that mention Quarto, out of all talks, since its release in 2022]{.chart-cap}
+
+```{=html}
+<div class="bars narrow">
+<div class="bar"><span class="v">1</span><span class="b" style="height:24px"></span><span class="y">2022<br><small>of 48</small></span></div>
+<div class="bar"><span class="v">1</span><span class="b" style="height:24px"></span><span class="y">2023<br><small>of 26</small></span></div>
+<div class="bar"><span class="v">0</span><span class="b" style="height:3px"></span><span class="y">2024<br><small>of 46</small></span></div>
+<div class="bar"><span class="v">1</span><span class="b" style="height:24px"></span><span class="y">2025<br><small>of 41</small></span></div>
+<div class="bar hl"><span class="v">7</span><span class="b" style="height:168px"></span><span class="y">2026<br><small>of 113</small></span></div>
+</div>
+```
+
+[Before 2026: a passing mention, never the topic of a talk.]{.chart-cap}
+
+. . .
+
+[This year, Quarto is arriving.]{.lead}
+
+[The first full talk dedicated to it: this one.]{.statement}
+
+::: notes
+Quarto came out in 2022. Since then, about one uRos talk a year mentions it, in passing.
+This year: seven abstracts mention it. Yes, the conference also grew a lot: still, seven.
+So Quarto is arriving here. And this is the first full talk dedicated to it.
+(If I missed one, tell me after: I'll be happy to be wrong.)
+:::
+
+## {#optD-conversation .center}
+
+[Option D · 1/1 (no chart)]{.opt-tag}
+
+[Friends in official statistics told me:]{.lead}
+
+[*"Quarto is not that known here."*]{.statement}
+
+. . .
+
+[That surprised me, so I read the uRos programmes.]{.lead}
+
+. . .
+
+[Since Quarto came out in 2022: a few mentions, no talk about it.]{.lead}
+
+. . .
+
+[This year: seven abstracts mention it, and INSEE already publishes with it.]{.lead}
+
+::: notes
+I'm here because of a conversation.
+Friends in official statistics told me: Quarto is not that known here.
+That surprised me: you are an R community, and you publish a lot. So I read the uRos programmes.
+Since Quarto came out in 2022: a few mentions in passing, no talk about it.
+This year, seven abstracts mention it. And our host, INSEE, already publishes working papers and manuals with it.
+(If I missed one, tell me after: I'll be happy to be wrong.)
+:::
+
+<!-- ===== END OF OPENING OPTIONS ===== -->
 
 ## {#numbers-leave-r .center timing-duration="15s"}
 
