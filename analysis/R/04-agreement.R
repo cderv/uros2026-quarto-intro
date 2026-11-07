@@ -74,6 +74,20 @@ disagreements <- map(to_settle, \(v) {
 write_csv(disagreements, file.path(data_dir, "disagreements.csv"), na = "")
 message(nrow(disagreements), " disagreements over ", n_distinct(disagreements$id), " talks")
 
+
+# Keyword cross-check: a tool named in the text (step 3) that neither coder
+# recorded. Reviewed by the adjudicator together with the disagreements.
+keywords <- read_csv(file.path(data_dir, "keywords.csv"), col_types = cols(.default = "c"))
+tool_map <- c(quarto = "quarto", rmarkdown = "rmarkdown_knitr", sweave_latex = "sweave_latex",
+              word_office = "word_officer", shiny = "shiny")
+crosscheck <- imap(tool_map, \(tool, kw) {
+  flagged <- keywords$id[keywords[[kw]] == "TRUE"]
+  seen <- a$id[str_detect(a$tools, fixed(tool)) | str_detect(b$tools, fixed(tool))]
+  tibble(id = setdiff(flagged, seen), keyword = kw, tool = tool)
+}) |> list_rbind() |> arrange(match(id, talks$id))
+write_csv(crosscheck, file.path(data_dir, "keyword-crosscheck.csv"))
+message(nrow(crosscheck), " keyword flags with no matching tool in either coding")
+
 # Final coding: coder A's values where both agree, the adjudicated value otherwise.
 adj_file <- file.path(data_dir, "adjudication.csv")
 if (file.exists(adj_file)) {
