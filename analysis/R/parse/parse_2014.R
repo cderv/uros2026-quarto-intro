@@ -115,7 +115,7 @@ ro_is_aff_cont <- function(line, prev) {
 # authors sharing an institution), joined with "; ". Lines holding only names
 # are dropped; a line that is neither names nor "names, institution" continues
 # the previous institution.
-ro_affiliations <- function(lines) {
+ro_affiliations <- function(lines, need_caps = FALSE) {
   affs <- character()
   prev_aff <- FALSE
   prev_line <- ""
@@ -123,11 +123,11 @@ ro_affiliations <- function(lines) {
     l <- str_squish(str_remove_all(l, "\\S+@\\S*"))
     r <- ro_strip_names(l)
     open <- prev_aff && ro_ends_open(prev_line)
-    if (r$n > 0 && r$rest != "" && (r$caps || !open)) {
+    if (r$n > 0 && r$rest != "" && (r$caps || (!open && !need_caps))) {
       affs <- c(affs, r$rest)
     } else if (open) {
       affs[length(affs)] <- paste(affs[length(affs)], l)
-    } else if (r$n > 0 && r$rest == "") {
+    } else if (r$n > 0 && r$rest == "" && (r$caps || !need_caps)) {
       prev_aff <- FALSE
       prev_line <- l
       next
@@ -147,7 +147,9 @@ ro_affiliations <- function(lines) {
 ro_row <- function(year, session, type, title, aff, file) {
   tibble(
     year = as.integer(year), session = session, type = type,
-    title = squish(title), abstract = NA_character_, affiliations = aff,
+    # rejoin words hyphenated across lines ("2007- 2014", "non- response")
+    title = str_replace_all(squish(title), "(\\w)- (\\w)", "\\1-\\2"),
+    abstract = NA_character_, affiliations = aff,
     source_file = file
   )
 }
@@ -162,7 +164,7 @@ ro_parse_numbered <- function(lines, year, file) {
     if (!is.null(cur)) {
       rows[[length(rows) + 1]] <<- ro_row(
         year, cur$session, "talk", paste(cur$title, collapse = " "),
-        ro_affiliations(cur$authors), file
+        ro_affiliations(cur$authors, need_caps = TRUE), file
       )
     }
     cur <<- NULL
