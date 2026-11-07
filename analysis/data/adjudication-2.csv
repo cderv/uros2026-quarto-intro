@@ -1,0 +1,145 @@
+id,variable,value,reason
+2022-009,theme,other,"Title only; an applied analysis of CVT skills, not a methods contribution."
+2022-014,theme,other,"Title only; applied analysis of women homicide data, not new methods."
+2022-026,theme,other,Title only; applied use of remote sensing to rank cities.
+2022-030,publishing,none,Title only (user management in one Shiny app); no outputs for readers stated.
+2022-030,outputs,none,Title only; consistent with publishing = none.
+2022-030,tools,not_stated,Title only; consistent with publishing = none.
+2022-038,publishing,central,"Title is explicitly about ""Dynamic reports using {flexdashboard} and {crosstalk}""."
+2022-038,outputs,dashboard,Title names flexdashboard only; HTML not stated separately.
+2022-038,reproducibility,none,Title only; nothing on reproducible pipelines.
+2022-039,theme,publication,"Primary subject is ""automate data reporting for the SDGs""; automation is the means."
+2022-046,theme,production,"Title ""R in Labour Statistics"" points to use of R in statistical production."
+2023-001,needs,other,"Describes an access problem: ""There is no 'one-for-all' R-package ... a generic package would be convenient""."
+2023-004,needs,accessibility;corporate_design;less_manual_work,"""more accessible and practical"", ""uniform, common look"", ""efficiency gains""; no multi-format consistency need stated."
+2023-005,theme,production,"Speeding up ""ETL processes"" in ""statistical production process""."
+2023-009,publishing,none,An SDC package for maps; abstract does not discuss producing or disseminating publications.
+2023-009,needs,none,Consistent with publishing = none.
+2023-012,publishing,none,"Output timeliness is only context (""expected to quickly respond""); talk is about modular production systems."
+2023-012,needs,none,Consistent with publishing = none.
+2023-013,reproducibility,central,"Title and body centre on ""report automation and replication"" of repetitive reports."
+2023-013,tools,quarto,"Text names ""Integration with Quarto ... .html, .pdf, .docx or .pptx""; .docx is a format, not officer."
+2023-016,theme,editing_imputation,"Shiny is the vehicle; core is ""systematic error detection, and selective editing""."
+2023-017,theme,other,"Applied econometric study of renewables and GHG, not a methods contribution."
+2023-018,theme,packages,"""we demonstrate the R package 'accumulate'""."
+2023-020,needs,corporate_design;less_manual_work,"""automates the exact application of these requirements and enables quick and easy production""."
+2024-003,reproducibility,partial,"Imputation embedded in a coded ""generic process ... structured into distinct steps"" run iteratively."
+2024-004,needs,other,"Same access problem as part I: ""no 'one-for-all' software package for access to all official statistics""."
+2024-008,theme,packages,"Presents ""the blocking package""."
+2024-016,reproducibility,central,"""integrated code pipeline that covers everything from data ingestion to publication"" is the main point."
+2024-016,tools,not_stated,Hive/HDFS are ETL infrastructure; the dashboard tool is not named.
+2024-019,reproducibility,central,"Keynote on Git, DevOps and ""increasing project agility and reproducibility""."
+2024-020,reproducibility,partial,"""importance of automation using APIs ... together with a well-defined workflow in R""."
+2024-021,theme,packages,"Presents ""nonprobsvy package""."
+2024-022,theme,packages,"Tutorial on ""the nonprobsvy package""."
+2024-024,theme,methods,"Applied cluster analysis but ""we will introduce two original methods""."
+2024-025,publishing,none,"Shiny package for internal staff checks; Rmd reports ""saved for later analysis"", not for readers."
+2024-025,outputs,none,Consistent with publishing = none.
+2024-025,tools,not_stated,Internal Shiny/Rmd tool; consistent with publishing = none.
+2024-025,needs,none,Consistent with publishing = none.
+2024-025,reproducibility,none,No reproducible pipeline or versioning described; only automation of internal checks.
+2024-030,publishing,none,"Talk is about SDC ""computational challenges""; dissemination only context."
+2024-030,needs,none,Consistent with publishing = none.
+2024-031,publishing,none,"Internal paradata reports for staff ""across various departments"", not outputs for readers."
+2024-031,needs,none,Consistent with publishing = none.
+2024-031,tools,not_stated,Internal Shiny/RMarkdown tool; consistent with publishing = none.
+2024-036,theme,packages,"""the R Package 'Survey Data Quality' is introduced""."
+2024-039,publishing,partial,"Produces clean datasets for users: ""ready to be used by any software"", exported as SDMX csv/json and .xlsx."
+2024-039,outputs,open_data_api;spreadsheet,"""exported as SMDX flavors (csv/json) in .xlsx, .csv ..."""
+2024-039,tools,other,An R package built on tidyverse; not an institutional in-house package per text.
+2024-039,needs,other,"""Different date formats ... confusing""; untidy Excel distribution."
+2024-040,theme,other,Applied ARDL econometric study of emigration.
+2024-041,reproducibility,central,"""significance of reproducibility in statistical workflows and the role of literate programming""."
+2024-041,outputs,none,"Statistics Explained articles named, but no output format stated."
+2024-041,tools,not_stated,"No producing tool named beyond R (""literate programming"")."
+2024-042,publishing,none,SDC methods talk; dissemination portal is context.
+2024-042,needs,none,Consistent with publishing = none.
+2024-044,needs,automation_recurring;less_manual_work,"""monthly update"" and ""more efficient generation of number-embedding narrative""."
+2024-044,outputs,none,"""document generation"" with no format stated."
+2024-046,reproducibility,none,"""standardizing production processes and automatizing manual tasks""; reproducibility not addressed."
+2025-003,publishing,none,"Internal Shiny tool applying confidentiality rules ""before dissemination""; SDC, not publishing."
+2025-003,tools,not_stated,Internal Shiny app; consistent with publishing = none.
+2025-003,needs,none,Consistent with publishing = none.
+2025-004,reproducibility,partial,"""open-source tools ensures transparency and reproducibility ... replicate, validate""."
+2025-005,publishing,none,Colour choice in ggplot2; no publications or dissemination discussed.
+2025-005,tools,not_stated,Consistent with publishing = none.
+2025-008,theme,packages,"""We introduce finitization, a new R package""."
+2025-010,theme,other,"Harmonising census geographies for research comparisons, not statistical production."
+2025-011,needs,other,"Chatbot ensuring ""consistency with official publications"" and correct search of the website."
+2025-011,outputs,none,A chatbot interface is not one of the listed formats; no dashboard stated.
+2025-012,theme,other,Applied assessment of globalisation effects.
+2025-015,theme,packages,"""The NMAR package addresses this issue""."
+2025-017,theme,other,Applied network analysis of well-being indicators.
+2025-018,needs,corporate_design,"""comply with corporate design guidelines""; no multi-format consistency need."
+2025-018,outputs,spreadsheet,"""Tables can be exported to .xlsx-format""."
+2025-024,reproducibility,partial,"""with a focus on accessibility, reproducibility""."
+2025-025,theme,shiny_apps,"""an R Shiny dashboard developed to monitor and control data collection""; fieldwork monitoring, not editing."
+2025-027,theme,other,Applied spatial econometric analysis.
+2025-028,publishing,none,The Quarto report summarises variance estimates for producers; not outputs for readers.
+2025-028,tools,not_stated,Consistent with publishing = none.
+2025-028,needs,none,Consistent with publishing = none.
+2025-030,reproducibility,partial,"Open-source shift ""to enhance transparency, improve efficiency, and foster reproducibility""."
+2025-035,needs,automation_recurring;corporate_design;interactivity,"""easily updatable"", ""institutional logos, and colour schemes"", ""interactive dashboard""."
+2025-035,tools,in_house_package,"EurostatRTool, ""an open-source R package developed under the European Statistical system""."
+2026-001,reproducibility,none,Non-regression testing of a migration; reproducible workflows not addressed.
+2026-002,needs,other,"Problem described is ""area bias"" of choropleths; interactivity is a format, not a stated need."
+2026-004,needs,other,"""a detailed map may introduce disclosure of individuals""."
+2026-006,theme,packages,"""We will present the design principles behind the package""."
+2026-007,theme,other,Applied spatial econometric study.
+2026-008,reproducibility,partial,"""ensuring transparency and reproducibility""."
+2026-009,theme,methods,Mainly a mixed-mode survey and causal inference framework; AI chatbot is one mode.
+2026-010,reproducibility,partial,"""provides a reproducible and flexible environment""."
+2026-012,needs,accessibility;automation_recurring;less_manual_work,"""clear, accessible graphics"", ""scheduled scripts"", ""without requiring manual intervention""."
+2026-012,outputs,web_html,Visual updates published on the web to Bluesky.
+2026-012,reproducibility,partial,"GitHub Actions pipeline and ""reproducible template""; publication bot is the focus."
+2026-015,reproducibility,partial,"""a fully reproducible simulation-based framework""."
+2026-016,reproducibility,none,R code in an internal package; reproducibility not addressed.
+2026-017,reproducibility,partial,"""systematic introduction of version control ... CI/CD pipelines""."
+2026-018,needs,automation_recurring;corporate_design;other,"""complying with existing corporate standards"", ""fragmented pipelines, incorporating feedback from many stakeholders""."
+2026-021,theme,packages,"""created a small ecosystem of R packages""; talk on package design and governance."
+2026-026,theme,other,"SAS-to-R programming pitfalls (missing values, macro language)."
+2026-027,publishing,partial,"Visualisation tutorial whose graphics target ""print layouts like scientific journals""; publishing is one part."
+2026-035,needs,corporate_design;less_manual_work;print_quality;timeliness,"""reduces layout costs and turnaround times""."
+2026-037,reproducibility,partial,R scripts automate integration and report generation; reproducibility not developed.
+2026-039,needs,other,"""meet specific needs related to the criteria adopted by"" Istat for anonymisation."
+2026-040,publishing,none,"IDE tutorial; ""publishing Shiny apps and Quarto documents"" is a passing demonstration."
+2026-040,outputs,none,Consistent with publishing = none.
+2026-040,tools,not_stated,Consistent with publishing = none.
+2026-044,outputs,spreadsheet,"""Excel tables containing the information needed to prepare the monthly publication""."
+2026-044,tools,not_stated,"Excel is the output format, made by R; Quarto reports are internal quality checks for the producer."
+2026-046,reproducibility,partial,"""develop reproducible workflows"" and ""Challenges related to ... reproducibility""."
+2026-048,theme,other,Applied synthetic control policy evaluation.
+2026-051,reproducibility,partial,"""integrate the tasks performed by τ-Argus in a processing chain written in R""."
+2026-052,theme,ml_ai,"Shiny is the vehicle; subject is assessing ""a supervised learning model"" and confidence thresholds."
+2026-053,publishing,partial,"Mapping tutorial with ""publication-ready output""; publishing is one part."
+2026-053,reproducibility,partial,"""reusable workflow for turning their own data into clear, accessible, and reproducible maps""."
+2026-053,needs,accessibility,"""accessibility for people with color-vision deficiency""; interactive is a format, not a need."
+2026-054,theme,other,Applied spatial and DiD analysis.
+2026-055,theme,other,Applied accessibility analysis of Rome.
+2026-056,theme,other,Applied analysis of mental health survey data.
+2026-056,reproducibility,none,"Workflow in R, but reproducibility not addressed."
+2026-060,needs,accessibility;consistency_formats;corporate_design;less_manual_work,"""accessible"", ""consistently met"", ""styling ... templates"", ""reduces the duplication of effort""."
+2026-060,theme,publication,"Title: ""Standardisation and Accessibility in the Publication of Health Data""."
+2026-062,theme,packages,"""we present postlink, an R package""."
+2026-064,needs,accessibility,"""accessible and machine-readable tables""; multi-format export is a feature, not a stated need."
+2026-067,needs,none,Tutorial; no publishing need described.
+2026-068,outputs,none,"""standardized report tables"" with no format; the Shiny platform is for experts."
+2026-068,reproducibility,none,Reproducible pipelines not addressed.
+2026-072,publishing,none,"SDC package; publication is context (""before releasing the tables"")."
+2026-072,needs,none,Consistent with publishing = none.
+2026-076,theme,packages,"""we present a new R-package""."
+2026-077,publishing,none,"Quarto HTML reports for checking sample designs, internal to survey designers."
+2026-077,outputs,none,Consistent with publishing = none.
+2026-077,tools,not_stated,Consistent with publishing = none.
+2026-077,needs,none,Consistent with publishing = none.
+2026-082,theme,ml_ai,"""Conversational artificial intelligence ... for data collection""."
+2026-088,theme,other,Applied wage decomposition study.
+2026-089,theme,ml_ai,"""AI-Assisted Scientific Literature Review"" with semantic retrieval."
+2026-090,theme,shiny_apps,"""an open-source R/Shiny application ... to support the preparation of SIMS quality reports""."
+2026-090,tools,word_officer,"SIMS reports are ""long Word templates filled in manually""; the Shiny app is an internal checker."
+2026-092,reproducibility,central,"Repeated aim: ""reproducible reference model"", ""reproducible quality control"", ""auditable and reproducible""."
+2026-096,theme,other,Applied typology of business ecosystems.
+2026-102,reproducibility,central,"Fragmented scripts ""hard to review, reproduce""; aim is ""a transparent, reproducible"" auditable recipe."
+2026-103,reproducibility,partial,"One of three pillars: ""A community built on reproducibility""."
+2026-105,theme,other,Applied county-level skills mismatch study.
+2026-106,theme,packages,"Workshop on forcats, haven and ""the codelist package""."

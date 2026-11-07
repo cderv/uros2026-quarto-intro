@@ -1,0 +1,534 @@
+id,publishing,reproducibility,outputs,tools,needs,need_quote,theme,confidence
+2014-001,none,none,none,not_stated,none,,other,medium
+2014-002,none,none,none,not_stated,none,,other,medium
+2014-003,central,none,none,not_stated,none,,publication,medium
+2014-004,none,none,none,not_stated,none,,editing_imputation,high
+2014-005,none,none,none,not_stated,none,,other,medium
+2014-006,none,none,none,not_stated,none,,methods,high
+2014-007,none,none,none,not_stated,none,,other,low
+2014-008,none,none,none,not_stated,none,,methods,high
+2014-009,none,none,none,not_stated,none,,other,medium
+2014-010,none,none,none,not_stated,none,,methods,high
+2014-011,none,none,none,not_stated,none,,other,high
+2014-012,none,none,none,not_stated,none,,other,medium
+2014-013,none,none,none,not_stated,none,,other,medium
+2014-014,none,none,none,not_stated,none,,editing_imputation,high
+2014-015,none,none,none,not_stated,none,,time_series,high
+2014-016,none,none,none,not_stated,none,,time_series,medium
+2014-017,none,none,none,not_stated,none,,methods,medium
+2014-018,none,none,none,not_stated,none,,other,high
+2014-019,none,none,none,not_stated,none,,other,high
+2015-001,none,none,none,not_stated,none,,editing_imputation,high
+2015-002,central,none,web_html,other,none,,visualisation,medium
+2015-003,none,none,none,not_stated,none,,methods,high
+2015-004,none,none,none,not_stated,none,,editing_imputation,medium
+2015-005,none,none,none,not_stated,none,,methods,high
+2015-006,none,none,none,not_stated,none,,methods,high
+2015-007,none,none,none,not_stated,none,,methods,medium
+2015-008,none,none,none,not_stated,none,,methods,high
+2015-009,none,none,none,not_stated,none,,other,medium
+2015-010,none,none,none,not_stated,none,,other,medium
+2015-011,none,none,none,not_stated,none,,methods,high
+2015-012,none,none,none,not_stated,none,,other,high
+2015-013,none,none,none,not_stated,none,,methods,high
+2015-014,none,none,none,not_stated,none,,other,medium
+2015-015,none,none,none,not_stated,none,,other,medium
+2015-016,none,none,none,not_stated,none,,editing_imputation,medium
+2015-017,none,none,none,not_stated,none,,other,high
+2015-018,none,none,none,not_stated,none,,shiny_apps,medium
+2015-019,none,none,none,not_stated,none,,time_series,medium
+2015-020,none,none,none,not_stated,none,,time_series,medium
+2015-021,none,none,none,not_stated,none,,methods,high
+2015-022,none,none,none,not_stated,none,,other,medium
+2015-023,none,none,none,not_stated,none,,methods,medium
+2015-024,none,none,none,not_stated,none,,other,high
+2015-025,none,none,none,not_stated,none,,other,medium
+2015-026,none,none,none,not_stated,none,,other,high
+2015-027,none,none,none,not_stated,none,,other,medium
+2015-028,none,none,none,not_stated,none,,other,high
+2015-029,none,none,none,not_stated,none,,other,high
+2015-030,none,none,none,not_stated,none,,other,high
+2015-031,none,none,none,not_stated,none,,other,high
+2016-001,none,none,none,not_stated,none,,other,medium
+2016-002,none,none,none,not_stated,none,,methods,high
+2016-003,none,none,none,not_stated,none,,other,high
+2016-004,none,none,none,not_stated,none,,production,medium
+2016-005,none,none,none,not_stated,none,,other,medium
+2016-006,none,none,none,not_stated,none,,methods,high
+2016-007,none,none,none,not_stated,none,,methods,high
+2016-008,none,none,none,not_stated,none,,editing_imputation,high
+2016-009,none,none,none,not_stated,none,,ml_ai,high
+2016-010,none,none,none,not_stated,none,,other,low
+2016-011,none,none,none,not_stated,none,,methods,medium
+2016-012,none,none,none,not_stated,none,,other,medium
+2016-013,none,none,none,not_stated,none,,other,high
+2016-014,none,none,none,not_stated,none,,time_series,high
+2016-015,none,none,none,not_stated,none,,visualisation,medium
+2016-016,none,none,none,not_stated,none,,other,high
+2016-017,none,none,none,not_stated,none,,methods,medium
+2017-001,none,none,none,not_stated,none,,editing_imputation,high
+2017-002,none,none,none,not_stated,none,,sdc,high
+2017-003,none,none,none,not_stated,none,,editing_imputation,high
+2017-004,none,none,none,not_stated,none,,other,medium
+2017-005,none,none,none,not_stated,none,,production,medium
+2017-006,none,none,none,not_stated,none,,other,medium
+2017-007,none,none,none,not_stated,none,,production,medium
+2017-008,central,partial,none,rmarkdown_knitr,automation_recurring,Automation of publications using knitr,publication,medium
+2017-009,none,none,none,not_stated,none,,methods,high
+2017-010,none,none,none,not_stated,none,,methods,high
+2017-011,none,none,none,not_stated,none,,packages,medium
+2017-012,none,none,none,not_stated,none,,packages,high
+2017-013,none,none,none,not_stated,none,,ml_ai,high
+2017-014,none,none,none,not_stated,none,,sdc,high
+2017-015,none,none,none,not_stated,none,,methods,high
+2017-016,none,none,none,not_stated,none,,methods,high
+2017-017,none,none,none,not_stated,none,,production,medium
+2017-018,none,none,none,not_stated,none,,methods,high
+2017-019,none,none,none,not_stated,none,,methods,high
+2017-020,none,none,none,not_stated,none,,methods,high
+2017-021,none,none,none,not_stated,none,,other,medium
+2017-022,none,none,none,not_stated,none,,other,medium
+2017-023,none,none,none,not_stated,none,,other,medium
+2017-024,none,none,none,not_stated,none,,other,medium
+2017-025,none,none,none,not_stated,none,,methods,medium
+2017-026,none,none,none,not_stated,none,,other,medium
+2017-027,none,none,none,not_stated,none,,other,medium
+2017-028,none,none,none,not_stated,none,,other,high
+2017-029,none,none,none,not_stated,none,,other,high
+2017-030,none,none,none,not_stated,none,,methods,high
+2018-001,none,none,none,not_stated,none,,methods,medium
+2018-002,none,none,none,not_stated,none,,editing_imputation,high
+2018-003,none,none,none,not_stated,none,,packages,medium
+2018-004,none,none,none,not_stated,none,,visualisation,medium
+2018-005,none,none,none,not_stated,none,,methods,high
+2018-006,none,none,none,not_stated,none,,methods,high
+2018-007,none,none,none,not_stated,none,,other,high
+2018-008,none,none,none,not_stated,none,,methods,high
+2018-009,none,none,none,not_stated,none,,methods,high
+2018-010,none,none,none,not_stated,none,,methods,high
+2018-011,none,none,none,not_stated,none,,methods,high
+2018-012,none,none,none,not_stated,none,,methods,high
+2018-013,none,none,none,not_stated,none,,other,medium
+2018-014,none,none,none,not_stated,none,,other,medium
+2018-015,none,none,none,not_stated,none,,production,medium
+2018-016,none,none,none,not_stated,none,,other,medium
+2018-017,none,none,none,not_stated,none,,other,medium
+2018-018,none,none,none,not_stated,none,,ml_ai,high
+2018-019,none,none,none,not_stated,none,,editing_imputation,high
+2018-020,none,none,none,not_stated,none,,editing_imputation,medium
+2018-021,none,none,none,not_stated,none,,editing_imputation,high
+2018-022,none,none,none,not_stated,none,,methods,medium
+2018-023,none,none,none,not_stated,none,,production,medium
+2018-024,central,none,none,not_stated,none,,publication,medium
+2018-025,none,none,none,not_stated,none,,time_series,medium
+2018-026,none,none,none,not_stated,none,,sdc,high
+2018-027,none,none,none,not_stated,none,,packages,medium
+2018-028,none,none,none,not_stated,none,,methods,high
+2018-029,none,none,none,not_stated,none,,sdc,high
+2018-030,none,none,none,not_stated,none,,shiny_apps,medium
+2018-031,none,none,none,not_stated,none,,methods,medium
+2018-032,none,none,none,not_stated,none,,time_series,high
+2018-033,none,none,none,not_stated,none,,time_series,high
+2018-034,none,none,none,not_stated,none,,packages,medium
+2018-035,central,none,none,in_house_package,corporate_design,A Corporate Design Toolbox for R,publication,medium
+2018-036,central,none,none,rmarkdown_knitr,print_quality,high quality report generation,publication,medium
+2018-037,partial,none,dashboard,shiny,multilingual,Easily translatable Shiny applications,shiny_apps,medium
+2018-038,none,none,none,not_stated,none,,other,medium
+2018-039,none,none,none,not_stated,none,,packages,low
+2018-040,none,none,none,not_stated,none,,production,medium
+2018-041,none,none,none,not_stated,none,,editing_imputation,medium
+2018-042,none,none,none,not_stated,none,,methods,medium
+2018-043,none,none,none,not_stated,none,,ml_ai,medium
+2018-044,none,none,none,not_stated,none,,packages,medium
+2018-045,central,none,none,not_stated,none,,publication,medium
+2018-046,none,none,none,not_stated,none,,packages,medium
+2018-047,central,none,dashboard,shiny,none,,shiny_apps,medium
+2019-001,none,none,none,not_stated,none,,editing_imputation,high
+2019-002,none,none,none,not_stated,none,,editing_imputation,high
+2019-003,none,none,none,not_stated,none,,methods,high
+2019-004,none,none,none,not_stated,none,,packages,high
+2019-005,none,none,none,not_stated,none,,visualisation,medium
+2019-006,none,none,none,not_stated,none,,methods,medium
+2019-007,none,none,none,not_stated,none,,sdc,high
+2019-008,none,none,none,not_stated,none,,sdc,high
+2019-009,none,none,none,not_stated,none,,packages,medium
+2019-010,none,none,none,not_stated,none,,production,medium
+2019-011,central,none,none,not_stated,other,COMmunicating UNcertainty In Key Official Statistics,publication,medium
+2019-012,none,none,none,not_stated,none,,other,medium
+2019-013,none,none,none,not_stated,none,,methods,high
+2019-014,none,none,none,not_stated,none,,shiny_apps,medium
+2019-015,none,none,none,not_stated,none,,ml_ai,medium
+2019-016,none,none,none,not_stated,none,,editing_imputation,high
+2019-017,none,none,none,not_stated,none,,other,high
+2019-018,none,none,none,not_stated,none,,editing_imputation,medium
+2019-019,none,none,none,not_stated,none,,packages,medium
+2019-020,none,none,none,not_stated,none,,editing_imputation,high
+2019-021,none,none,none,not_stated,none,,time_series,high
+2019-022,none,none,none,not_stated,none,,other,high
+2019-023,none,none,none,not_stated,none,,other,medium
+2019-024,none,none,none,not_stated,none,,other,high
+2019-025,none,none,none,not_stated,none,,methods,medium
+2019-026,none,none,none,not_stated,none,,editing_imputation,high
+2019-027,none,none,none,not_stated,none,,methods,medium
+2019-028,none,central,none,not_stated,none,,reproducibility,medium
+2019-029,none,none,none,not_stated,none,,other,high
+2019-030,none,none,none,not_stated,none,,ml_ai,high
+2019-031,none,none,none,not_stated,none,,other,medium
+2019-032,none,none,none,not_stated,none,,ml_ai,medium
+2019-033,none,none,none,not_stated,none,,packages,medium
+2019-034,central,partial,none,rmarkdown_knitr,automation_recurring,Semiautomatic Reports with R Markdown,publication,medium
+2019-035,none,none,none,not_stated,none,,packages,high
+2019-036,central,central,none,pagedown_bookdown,corporate_design,Reproducible Corporate Publications using pagedown,publication,high
+2019-037,central,none,dashboard,shiny,none,,shiny_apps,medium
+2019-038,partial,none,dashboard,shiny,other,"Google Analytics, Shiny apps and EU/UK law",shiny_apps,medium
+2019-039,none,none,none,not_stated,none,,editing_imputation,high
+2019-040,none,none,none,not_stated,none,,methods,medium
+2019-041,none,none,none,not_stated,none,,shiny_apps,medium
+2020-001,none,none,none,not_stated,none,,methods,high
+2020-002,none,none,none,not_stated,none,,methods,high
+2020-003,none,none,none,not_stated,none,,packages,high
+2020-004,none,none,none,not_stated,none,,methods,high
+2020-005,none,none,none,not_stated,none,,packages,high
+2020-006,none,none,none,not_stated,none,,methods,high
+2020-007,none,none,none,not_stated,none,,packages,high
+2020-008,none,none,none,not_stated,none,,ml_ai,medium
+2020-009,none,none,none,not_stated,none,,editing_imputation,high
+2020-010,none,none,none,not_stated,none,,editing_imputation,high
+2020-011,none,none,none,not_stated,none,,sdc,high
+2020-012,none,none,none,not_stated,none,,packages,medium
+2020-013,none,none,none,not_stated,none,,ml_ai,high
+2020-014,none,none,none,not_stated,none,,other,medium
+2020-015,none,none,none,not_stated,none,,methods,high
+2020-016,none,none,none,not_stated,none,,methods,high
+2020-017,none,none,none,not_stated,none,,methods,medium
+2020-018,none,none,none,not_stated,none,,methods,medium
+2020-019,central,partial,spreadsheet;web_html,desktop_publishing;in_house_package;other,automation_recurring;corporate_design,produce graphs from a small set of templates (designed in Adobe Illustrator) that fully correspond to the corporate design,publication,high
+2020-020,none,central,none,not_stated,none,,reproducibility,high
+2020-021,none,none,none,not_stated,none,,packages,high
+2020-022,partial,partial,web_html,not_stated,automation_recurring,KOF updates its website in automated fashion,production,high
+2020-023,none,none,none,not_stated,none,,time_series,high
+2020-024,partial,partial,none,other,automation_recurring;less_manual_work,"includes many repetitive tasks each quarter. Indeed, most of these tasks can be automated to save more time",production,high
+2020-025,none,none,none,not_stated,none,,other,high
+2020-026,none,none,none,not_stated,none,,other,medium
+2020-027,none,none,none,not_stated,none,,editing_imputation,high
+2020-028,none,none,none,not_stated,none,,production,medium
+2020-029,none,none,none,not_stated,none,,packages,medium
+2020-030,none,none,none,not_stated,none,,methods,high
+2020-031,none,none,none,not_stated,none,,packages,medium
+2020-032,none,none,none,not_stated,none,,methods,high
+2020-033,none,partial,none,not_stated,none,,production,medium
+2020-034,none,none,none,not_stated,none,,shiny_apps,medium
+2020-035,none,none,none,not_stated,none,,ml_ai,high
+2020-036,none,none,none,not_stated,none,,time_series,medium
+2020-037,central,partial,dashboard;web_html,in_house_package,automation_recurring;less_manual_work;timeliness,"This procedure requires a considerable amount of manual work, repeated monthly, and occasionally results in errors due to human mistakes.",publication,high
+2020-038,none,none,none,not_stated,none,,other,high
+2021-001,central,none,dashboard,shiny,automation_recurring;interactivity,compare weekly announced provincial base number of cases per hundred thousand and to report the differences automatically with interactive graphs and reports,shiny_apps,high
+2021-002,none,none,none,not_stated,none,,ml_ai,high
+2021-003,none,none,none,not_stated,none,,ml_ai,high
+2021-004,central,partial,open_data_api,other,automation_recurring;less_manual_work;timeliness,Updating and replacing 17 files daily and over 500 data files each month manually on the platform had become unmanageable,publication,high
+2021-005,partial,none,dashboard,shiny,automation_recurring,The application allows the automation of the annual economic forecasting process,time_series,medium
+2021-006,central,partial,web_html,in_house_package;other;shiny,interactivity,The next step is creating the interactive contents: graphs and tables.,publication,high
+2021-007,none,none,none,not_stated,none,,production,medium
+2021-008,none,none,none,not_stated,none,,packages,medium
+2021-009,none,none,none,not_stated,none,,methods,high
+2021-010,partial,none,slides,rmarkdown_knitr,none,,time_series,high
+2021-011,none,none,none,not_stated,none,,packages,high
+2021-012,central,central,web_html,other;rmarkdown_knitr,interactivity;other,"users can interactively dialogue with data, explore, reuse and contribute to statistical products",reproducibility,medium
+2021-013,none,none,none,not_stated,none,,editing_imputation,high
+2021-014,partial,none,dashboard;web_html,rmarkdown_knitr,automation_recurring;interactivity,Due to its ease of use and interactivity,visualisation,medium
+2021-015,none,none,none,not_stated,none,,editing_imputation,high
+2021-016,none,none,none,not_stated,none,,methods,high
+2021-017,none,none,none,not_stated,none,,methods,high
+2021-018,none,none,none,not_stated,none,,packages,medium
+2021-019,central,none,none,other,none,,visualisation,high
+2021-020,none,none,none,not_stated,none,,editing_imputation,high
+2021-021,none,none,none,not_stated,none,,visualisation,medium
+2021-022,none,none,none,not_stated,none,,methods,high
+2021-023,none,partial,none,not_stated,none,,packages,high
+2021-024,none,none,none,not_stated,none,,methods,high
+2021-025,none,none,none,not_stated,none,,editing_imputation,high
+2021-026,none,partial,none,not_stated,none,,editing_imputation,high
+2021-027,none,none,none,not_stated,none,,production,medium
+2021-028,none,none,none,not_stated,none,,packages,high
+2021-029,none,none,none,not_stated,none,,editing_imputation,medium
+2021-030,none,none,none,not_stated,none,,editing_imputation,high
+2021-031,none,none,none,not_stated,none,,shiny_apps,medium
+2021-032,none,none,none,not_stated,none,,sdc,high
+2021-033,none,none,none,not_stated,none,,packages,medium
+2021-034,none,none,none,not_stated,none,,methods,medium
+2021-035,none,none,none,not_stated,none,,methods,high
+2021-036,none,none,none,not_stated,none,,sdc,medium
+2021-037,partial,none,none,not_stated,none,,other,medium
+2021-038,none,none,none,not_stated,none,,packages,high
+2021-039,none,partial,none,not_stated,none,,production,medium
+2021-040,none,none,none,not_stated,none,,ml_ai,medium
+2021-041,none,none,none,not_stated,none,,methods,medium
+2022-001,central,none,print_pdf;web_html,other,interactivity,from PDF format to interactive web visualisation using R,publication,medium
+2022-002,none,none,none,not_stated,none,,production,low
+2022-003,none,none,none,not_stated,none,,ml_ai,high
+2022-004,none,none,none,not_stated,none,,editing_imputation,high
+2022-005,none,none,none,not_stated,none,,editing_imputation,high
+2022-006,none,none,none,not_stated,none,,sdc,high
+2022-007,none,none,none,not_stated,none,,time_series,high
+2022-008,none,none,none,not_stated,none,,time_series,high
+2022-009,none,none,none,not_stated,none,,other,medium
+2022-010,none,none,none,not_stated,none,,methods,high
+2022-011,none,none,none,not_stated,none,,packages,high
+2022-012,none,none,none,not_stated,none,,methods,high
+2022-013,none,partial,none,not_stated,none,,production,low
+2022-014,none,none,none,not_stated,none,,other,medium
+2022-015,none,none,none,not_stated,none,,methods,high
+2022-016,none,none,none,not_stated,none,,methods,high
+2022-017,none,none,none,not_stated,none,,methods,high
+2022-018,none,none,none,not_stated,none,,editing_imputation,high
+2022-019,none,none,none,not_stated,none,,visualisation,medium
+2022-020,none,none,none,not_stated,none,,methods,high
+2022-021,none,none,none,not_stated,none,,ml_ai,high
+2022-022,none,none,none,not_stated,none,,other,low
+2022-023,none,none,none,not_stated,none,,other,medium
+2022-024,none,none,none,not_stated,none,,other,medium
+2022-025,none,none,none,not_stated,none,,methods,high
+2022-026,none,none,none,not_stated,none,,other,medium
+2022-027,none,none,none,not_stated,none,,sdc,high
+2022-028,none,none,none,not_stated,none,,sdc,high
+2022-029,none,none,none,not_stated,none,,sdc,high
+2022-030,none,none,none,not_stated,none,,shiny_apps,low
+2022-031,none,none,none,not_stated,none,,shiny_apps,medium
+2022-032,partial,none,dashboard,shiny,none,,shiny_apps,medium
+2022-033,partial,none,dashboard,shiny,none,,shiny_apps,low
+2022-034,none,none,none,not_stated,none,,sdc,high
+2022-035,none,none,none,not_stated,none,,methods,high
+2022-036,none,none,none,not_stated,none,,packages,high
+2022-037,none,partial,none,not_stated,none,,production,medium
+2022-038,central,none,dashboard,rmarkdown_knitr,interactivity,Dynamic reports using {flexdashboard} and {crosstalk},publication,medium
+2022-039,central,central,none,other,automation_recurring,Using R and Github Actions to automate data reporting,publication,medium
+2022-040,none,none,none,not_stated,none,,methods,high
+2022-041,none,none,none,not_stated,none,,sdc,high
+2022-042,none,none,none,not_stated,none,,packages,medium
+2022-043,none,none,none,not_stated,none,,other,high
+2022-044,none,none,none,not_stated,none,,visualisation,medium
+2022-045,none,none,none,not_stated,none,,methods,high
+2022-046,none,none,none,not_stated,none,,production,low
+2022-047,none,none,none,not_stated,none,,ml_ai,high
+2022-048,none,none,none,not_stated,none,,editing_imputation,high
+2023-001,partial,none,open_data_api,other,other,Providing access to output data is an essential task for Statistical Institutes.,packages,medium
+2023-002,none,partial,none,not_stated,none,,ml_ai,high
+2023-003,none,none,none,not_stated,none,,methods,high
+2023-004,central,partial,print_pdf;web_html,rmarkdown_knitr;sweave_latex,accessibility;corporate_design;less_manual_work,making statistical information more accessible and practical,publication,high
+2023-005,none,none,none,not_stated,none,,production,high
+2023-006,none,none,none,not_stated,none,,ml_ai,high
+2023-007,partial,none,none,other,other,preparing for long term preservation and dissemination,other,medium
+2023-008,none,none,none,not_stated,none,,production,high
+2023-009,none,none,none,not_stated,none,,sdc,high
+2023-010,none,none,none,not_stated,none,,ml_ai,high
+2023-011,none,none,none,not_stated,none,,other,high
+2023-012,none,none,none,not_stated,none,,production,high
+2023-013,central,central,print_pdf;slides;web_html;word,quarto,automation_recurring,Many reporting tasks are either highly repetitive,publication,high
+2023-014,none,partial,none,not_stated,none,,other,medium
+2023-015,partial,central,open_data_api,other,automation_recurring,scale productivity concerning recurring tasks,reproducibility,high
+2023-016,none,none,none,not_stated,none,,editing_imputation,high
+2023-017,none,none,none,not_stated,none,,other,high
+2023-018,none,none,none,not_stated,none,,packages,high
+2023-019,none,none,none,not_stated,none,,production,medium
+2023-020,central,none,none,in_house_package,corporate_design;less_manual_work,graphics precisely adhering to corporate design standards,visualisation,high
+2023-021,none,none,none,not_stated,none,,production,high
+2023-022,none,none,none,not_stated,none,,ml_ai,high
+2023-023,none,none,none,not_stated,none,,methods,high
+2023-024,none,none,none,not_stated,none,,methods,high
+2023-025,none,none,none,not_stated,none,,other,low
+2024-001,none,none,none,not_stated,none,,ml_ai,high
+2024-002,none,none,none,not_stated,none,,production,high
+2024-003,none,partial,none,not_stated,none,,editing_imputation,high
+2024-004,partial,none,open_data_api,other,other,Providing smooth and easy access to official statistics is of utmost importance for Statistical Institutes and their users.,packages,medium
+2024-005,none,none,none,not_stated,none,,ml_ai,high
+2024-006,none,partial,none,not_stated,none,,editing_imputation,high
+2024-007,none,partial,none,not_stated,none,,editing_imputation,high
+2024-008,none,none,none,not_stated,none,,packages,high
+2024-009,none,none,none,not_stated,none,,editing_imputation,high
+2024-010,none,none,none,not_stated,none,,other,medium
+2024-011,none,none,none,not_stated,none,,methods,high
+2024-012,none,none,none,not_stated,none,,methods,high
+2024-013,partial,none,dashboard,shiny,interactivity,building interactive dashboards and applications that can handle the complexities of large data,visualisation,medium
+2024-014,none,none,none,not_stated,none,,methods,high
+2024-015,none,none,none,not_stated,none,,methods,high
+2024-016,partial,central,dashboard,not_stated,less_manual_work;timeliness,the CSO now publishes traffic count analysis more rapidly through a newly developed transport dashboard,production,high
+2024-017,none,none,none,not_stated,none,,other,high
+2024-018,none,partial,none,not_stated,none,,time_series,high
+2024-019,none,central,none,not_stated,none,,reproducibility,medium
+2024-020,none,partial,none,not_stated,none,,production,medium
+2024-021,none,none,none,not_stated,none,,packages,high
+2024-022,none,none,none,not_stated,none,,packages,high
+2024-023,none,none,none,not_stated,none,,time_series,high
+2024-024,none,none,none,not_stated,none,,methods,high
+2024-025,none,none,none,not_stated,none,,shiny_apps,medium
+2024-026,none,none,none,not_stated,none,,ml_ai,high
+2024-027,none,none,none,not_stated,none,,other,medium
+2024-028,none,none,none,not_stated,none,,ml_ai,high
+2024-029,partial,partial,dashboard,rmarkdown_knitr,automation_recurring;less_manual_work,This automated workflow makes it easier to release a monthly report strongly reducing human time consumption,production,medium
+2024-030,none,none,none,not_stated,none,,sdc,high
+2024-031,none,partial,none,not_stated,none,,production,medium
+2024-032,none,none,none,not_stated,none,,methods,high
+2024-033,none,none,none,not_stated,none,,editing_imputation,high
+2024-034,none,none,none,not_stated,none,,time_series,high
+2024-035,none,none,none,not_stated,none,,methods,high
+2024-036,none,none,none,not_stated,none,,packages,high
+2024-037,none,none,none,not_stated,none,,ml_ai,high
+2024-038,none,none,none,not_stated,none,,time_series,high
+2024-039,partial,none,open_data_api;spreadsheet,other,other,Datasets are mostly in untidy format and it is very difficult to use them in analysis without prior heavy data-wrangling work.,production,medium
+2024-040,none,none,none,not_stated,none,,other,high
+2024-041,central,central,none,not_stated,automation_recurring,This approach helped automatise the data dissemination processes at Eurostat,publication,high
+2024-042,none,none,none,not_stated,none,,sdc,high
+2024-043,none,none,none,not_stated,none,,production,high
+2024-044,central,partial,none,rmarkdown_knitr,automation_recurring;less_manual_work,rapidly generating the elements of the monthly update of a Statistics Explained article,publication,high
+2024-045,none,partial,none,not_stated,none,,methods,high
+2024-046,none,none,none,not_stated,none,,other,medium
+2025-001,none,none,none,not_stated,none,,packages,high
+2025-002,none,none,none,not_stated,none,,editing_imputation,high
+2025-003,none,none,none,not_stated,none,,sdc,medium
+2025-004,none,partial,none,not_stated,none,,methods,high
+2025-005,none,none,none,not_stated,none,,visualisation,high
+2025-006,none,none,none,not_stated,none,,methods,high
+2025-007,none,none,none,not_stated,none,,methods,high
+2025-008,none,none,none,not_stated,none,,packages,high
+2025-009,none,none,none,not_stated,none,,methods,high
+2025-010,none,none,none,not_stated,none,,other,medium
+2025-011,partial,none,none,shiny,other,"ensuring factual correctness, validity, and consistency with official publications of Statistics Austria",ml_ai,medium
+2025-012,none,none,none,not_stated,none,,other,high
+2025-013,none,none,none,not_stated,none,,methods,high
+2025-014,none,none,none,not_stated,none,,methods,high
+2025-015,none,none,none,not_stated,none,,packages,high
+2025-016,none,central,none,not_stated,none,,reproducibility,high
+2025-017,none,none,none,not_stated,none,,other,high
+2025-018,central,partial,spreadsheet,in_house_package,corporate_design,the generation of standardised output formats that include metadata and comply with corporate design guidelines,publication,high
+2025-019,none,none,none,not_stated,none,,packages,medium
+2025-020,none,partial,none,not_stated,none,,reproducibility,high
+2025-021,none,none,none,not_stated,none,,time_series,high
+2025-022,none,none,none,not_stated,none,,sdc,high
+2025-023,none,none,none,not_stated,none,,methods,high
+2025-024,none,partial,none,not_stated,none,,packages,high
+2025-025,none,none,none,not_stated,none,,shiny_apps,high
+2025-026,none,none,none,not_stated,none,,methods,high
+2025-027,none,none,none,not_stated,none,,other,high
+2025-028,none,partial,none,not_stated,none,,methods,high
+2025-029,none,none,none,not_stated,none,,methods,high
+2025-030,none,partial,none,not_stated,none,,packages,medium
+2025-031,none,none,none,not_stated,none,,sdc,high
+2025-032,none,none,none,not_stated,none,,ml_ai,high
+2025-033,none,none,none,not_stated,none,,editing_imputation,high
+2025-034,none,none,none,not_stated,none,,methods,high
+2025-035,central,partial,dashboard;web_html,in_house_package,automation_recurring;corporate_design;interactivity,"The tool is easily updatable to incorporate the most recent data, without requiring any expertise in R",publication,high
+2025-036,none,none,none,not_stated,none,,editing_imputation,high
+2025-037,none,none,none,not_stated,none,,editing_imputation,high
+2025-038,none,none,none,not_stated,none,,production,high
+2026-001,none,none,none,not_stated,none,,production,high
+2026-002,partial,none,web_html,other,other,addresses a long-standing problem with choropleths: area bias,visualisation,medium
+2026-003,none,none,none,not_stated,none,,editing_imputation,high
+2026-004,partial,none,none,not_stated,other,"a detailed map may introduce disclosure of individuals, so it needs to be protected for that",sdc,high
+2026-005,none,central,none,not_stated,none,,reproducibility,high
+2026-006,none,partial,none,not_stated,none,,packages,high
+2026-007,none,none,none,not_stated,none,,other,high
+2026-008,none,partial,none,not_stated,none,,ml_ai,high
+2026-009,none,partial,none,not_stated,none,,methods,high
+2026-010,partial,partial,dashboard,shiny,interactivity,"an interactive nowcasting dashboard, developed using the R-Shiny package",time_series,medium
+2026-011,none,none,none,not_stated,none,,time_series,high
+2026-012,central,partial,web_html,other,accessibility;automation_recurring;less_manual_work,ensuring a continuous stream of public updates without requiring manual intervention,publication,high
+2026-013,none,none,none,not_stated,none,,ml_ai,high
+2026-014,none,partial,none,not_stated,none,,production,high
+2026-015,none,partial,none,not_stated,none,,methods,high
+2026-016,none,none,none,not_stated,none,,other,medium
+2026-017,none,partial,none,not_stated,none,,other,high
+2026-018,central,partial,word,quarto;rmarkdown_knitr;word_officer,automation_recurring;corporate_design;other,"complying with existing corporate standards and tooling, fragmented pipelines, incorporating feedback from many stakeholders",publication,high
+2026-019,none,none,none,not_stated,none,,ml_ai,high
+2026-020,none,none,none,not_stated,none,,ml_ai,high
+2026-021,none,partial,none,not_stated,none,,packages,high
+2026-022,none,none,none,not_stated,none,,packages,high
+2026-023,none,none,none,not_stated,none,,methods,high
+2026-024,none,none,none,not_stated,none,,sdc,high
+2026-025,none,none,none,not_stated,none,,packages,high
+2026-026,none,none,none,not_stated,none,,other,high
+2026-027,partial,none,print_pdf,other,print_quality,"production ready graphics, even for print layouts like scientific journals and comparable publications",visualisation,high
+2026-028,none,none,none,not_stated,none,,methods,high
+2026-029,none,none,none,not_stated,none,,packages,high
+2026-030,none,none,none,not_stated,none,,other,high
+2026-031,none,none,none,not_stated,none,,methods,high
+2026-032,none,central,none,not_stated,none,,methods,high
+2026-033,none,none,none,not_stated,none,,methods,high
+2026-034,none,partial,none,not_stated,none,,other,high
+2026-035,central,central,print_pdf,in_house_package,corporate_design;less_manual_work;print_quality;timeliness,"It produces paginated, print-ready outputs without the need for any external layout software",publication,high
+2026-036,none,none,none,not_stated,none,,ml_ai,high
+2026-037,central,partial,none,other,automation_recurring,efforts expanded to automate the analytical report generation,publication,high
+2026-038,none,partial,none,not_stated,none,,production,high
+2026-039,partial,none,none,not_stated,other,while maintaining adequate guarantees regarding statistical confidentiality,sdc,medium
+2026-040,none,none,none,not_stated,none,,other,medium
+2026-041,none,partial,none,not_stated,none,,production,high
+2026-042,none,none,none,not_stated,none,,packages,high
+2026-043,none,none,none,not_stated,none,,packages,high
+2026-044,partial,central,spreadsheet,not_stated,automation_recurring,redesigned the production process for monthly delinquency indicators to maximize automation,production,high
+2026-045,none,none,none,not_stated,none,,packages,high
+2026-046,none,partial,none,not_stated,none,,ml_ai,high
+2026-047,none,none,none,not_stated,none,,ml_ai,high
+2026-048,none,none,none,not_stated,none,,other,high
+2026-049,none,partial,none,not_stated,none,,methods,high
+2026-050,none,none,none,not_stated,none,,time_series,high
+2026-051,none,partial,none,not_stated,none,,sdc,high
+2026-052,none,none,none,not_stated,none,,ml_ai,high
+2026-053,partial,partial,web_html,other,accessibility,"it affects readability, accessibility for people with color-vision deficiency, and the trustworthiness of the message",visualisation,high
+2026-054,none,none,none,not_stated,none,,other,high
+2026-055,none,partial,none,not_stated,none,,other,high
+2026-056,none,none,none,not_stated,none,,other,high
+2026-057,none,central,none,not_stated,none,,reproducibility,high
+2026-058,none,central,none,not_stated,none,,production,high
+2026-059,none,none,none,not_stated,none,,ml_ai,high
+2026-060,central,central,dashboard,in_house_package;shiny,accessibility;consistency_formats;corporate_design;less_manual_work,"despite support through guidance and processes, dashboard quality and accessibility vary across the organisation",publication,high
+2026-061,none,none,none,not_stated,none,,time_series,high
+2026-062,none,none,none,not_stated,none,,packages,high
+2026-063,none,none,none,not_stated,none,,editing_imputation,high
+2026-064,central,partial,spreadsheet;web_html,in_house_package,accessibility,accessible and machine-readable tables are also automatically produced,publication,high
+2026-065,none,none,none,not_stated,none,,sdc,high
+2026-066,none,none,none,not_stated,none,,other,high
+2026-067,partial,none,dashboard,shiny,none,,ml_ai,medium
+2026-068,partial,none,none,shiny,automation_recurring,automated generation of standardized report tables,shiny_apps,medium
+2026-069,none,none,none,not_stated,none,,other,high
+2026-070,none,none,none,not_stated,none,,visualisation,medium
+2026-071,partial,none,web_html,other,interactivity;timeliness,an urgent need for rapid statistical insight,visualisation,medium
+2026-072,none,none,none,not_stated,none,,sdc,high
+2026-073,none,none,none,not_stated,none,,methods,high
+2026-074,none,none,none,not_stated,none,,time_series,high
+2026-075,central,central,print_pdf;web_html;word,quarto,consistency_formats;less_manual_work,Maintaining separate documents for each format is time-consuming and introduces inconsistencies when content needs to be updated,publication,high
+2026-076,none,none,none,not_stated,none,,packages,high
+2026-077,none,partial,none,not_stated,none,,methods,high
+2026-078,none,partial,none,not_stated,none,,methods,high
+2026-079,none,none,none,not_stated,none,,ml_ai,high
+2026-080,none,none,none,not_stated,none,,editing_imputation,high
+2026-081,none,none,none,not_stated,none,,methods,high
+2026-082,none,none,none,not_stated,none,,ml_ai,medium
+2026-083,none,none,none,not_stated,none,,visualisation,medium
+2026-084,none,central,none,not_stated,none,,reproducibility,high
+2026-085,none,none,none,not_stated,none,,editing_imputation,high
+2026-086,none,none,none,not_stated,none,,methods,high
+2026-087,none,partial,none,not_stated,none,,production,high
+2026-088,none,none,none,not_stated,none,,other,high
+2026-089,none,none,none,not_stated,none,,ml_ai,high
+2026-090,partial,none,word,word_officer,less_manual_work,compile SIMS reports as long Word templates filled in manually by domain authors,shiny_apps,medium
+2026-091,none,none,none,not_stated,none,,time_series,high
+2026-092,none,central,none,not_stated,none,,production,high
+2026-093,none,none,none,not_stated,none,,packages,high
+2026-094,none,none,none,not_stated,none,,methods,high
+2026-095,none,none,none,not_stated,none,,packages,high
+2026-096,none,none,none,not_stated,none,,other,high
+2026-097,none,partial,none,not_stated,none,,editing_imputation,high
+2026-098,partial,none,web_html,other,interactivity,producing interactive and informative maps,visualisation,medium
+2026-099,none,partial,none,not_stated,none,,ml_ai,high
+2026-100,none,none,none,not_stated,none,,time_series,high
+2026-101,none,none,none,not_stated,none,,editing_imputation,high
+2026-102,none,central,none,not_stated,none,,methods,high
+2026-103,none,partial,none,not_stated,none,,other,high
+2026-104,none,none,none,not_stated,none,,ml_ai,high
+2026-105,none,none,none,not_stated,none,,other,high
+2026-106,none,none,none,not_stated,none,,packages,medium
+2026-107,none,partial,none,not_stated,none,,packages,high
+2026-108,none,none,none,not_stated,none,,packages,high
+2026-109,none,none,none,not_stated,none,,time_series,high
+2026-110,none,partial,none,not_stated,none,,ml_ai,high
+2026-111,none,none,none,not_stated,none,,other,high
+2026-112,none,central,none,not_stated,none,,reproducibility,high

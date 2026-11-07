@@ -1,0 +1,14 @@
+year,source_kind,talks,publishing,publishing_central,reproducibility,publishing_and_reproducibility,publishing_share,reproducibility_share
+2014,titles only,19,1,1,0,0,0.053,0
+2015,titles only,31,1,1,0,0,0.032,0
+2016,titles only,17,0,0,0,0,0,0
+2017,titles only,30,1,1,1,1,0.033,0.033
+2018,titles only,47,6,5,0,0,0.128,0
+2019,titles only,41,5,4,3,2,0.122,0.073
+2020,abstracts,38,4,2,6,4,0.105,0.158
+2021,abstracts,41,9,5,6,3,0.22,0.146
+2022,titles only,48,5,3,3,1,0.104,0.062
+2023,abstracts,25,6,3,5,3,0.24,0.2
+2024,abstracts,46,7,2,12,4,0.152,0.261
+2025,abstracts,38,3,2,8,2,0.079,0.211
+2026,abstracts,112,19,7,40,10,0.17,0.357
