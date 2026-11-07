@@ -1,0 +1,3268 @@
+version = 7
+
+[[tool.rig.repository]]
+name = "bioc"
+metadata = "https://ppm-bioc.r-pkg.org/%v"
+
+[[tool.rig.repository]]
+name = "cran"
+metadata = "https://ppm.r-pkg.org"
+
+[[targets]]
+r_version = "4.6.2"
+platform = "aarch64-apple-darwin"
+bioc-version = "3.23"
+
+[[targets.direct_dependencies]]
+name = "dplyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "jsonlite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "pdftools"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "purrr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "readr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "rvest"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "stringr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "tidyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "xml2"
+constraint = "*"
+
+[[targets.packages]]
+package = "pdftools"
+version = "3.9.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "Rcpp",
+    "qpdf",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/macosx/sonoma-arm64/contrib/4.6/pdftools_3.9.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/pdftools_3.9.1-01c70c1e.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "b51f891f509b122fb2d3090a125c5bc1bfce6d66c672d7b2bf5bfc295b1d0621", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "openssl"
+version = "2.5.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = ["askpass"]
+sources = ["https://p3m.dev/cran/2026-11-03/bin/macosx/sonoma-arm64/contrib/4.6/openssl_2.5.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/openssl_2.5.0-89e44ad8.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "4b3adad396c62f8cec664368c713f393a9e5345f9fe7353809b8b80027392ffb" }
+
+[[targets.packages]]
+package = "glue"
+version = "1.8.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-18/bin/macosx/sonoma-arm64/contrib/4.6/glue_1.8.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/glue_1.8.1-c40aadfc.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "1c55905d3efc3d5c199ceb0bd12218e97f0d4c64df6038ff41ecef415478a122" }
+
+[[targets.packages]]
+package = "stringi"
+version = "1.8.9"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-08-05/bin/macosx/sonoma-arm64/contrib/4.6/stringi_1.8.9.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/stringi_1.8.9-226ba057.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "427fcebd281d7ea850becce75e0807576dd394a723a814b2d487419b93275a33" }
+
+[[targets.packages]]
+package = "vroom"
+version = "1.7.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "crayon",
+    "cli",
+    "tidyselect",
+    "rlang",
+    "progress",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "cpp11",
+    "vctrs",
+    "bit64",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/vroom_1.7.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/vroom_1.7.1-f9607aa3.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "7d64f6227fdac3ee64c506654bb1d919e407f92fc2d0d5a2398dbb83001e8790", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, progress@1.2.3=ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "readr"
+version = "2.2.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "vroom",
+    "crayon",
+    "cli",
+    "rlang",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "R6",
+    "clipr",
+    "cpp11",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/readr_2.2.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/readr_2.2.0-d00238a0.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "8025d797c183e12ad5ebe4af891dbcb5a8e9bd53aa4765006eb25a07f9a9f473", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "dplyr"
+version = "1.2.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "rlang",
+    "tibble",
+    "tidyselect",
+    "glue",
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "R6",
+    "generics",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-04-04/bin/macosx/sonoma-arm64/contrib/4.6/dplyr_1.2.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/dplyr_1.2.1-050cebcf.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0" }
+
+[[targets.packages]]
+package = "tidyselect"
+version = "1.2.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "withr",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2024-03-12/bin/macosx/sonoma-arm64/contrib/4.6/tidyselect_1.2.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/tidyselect_1.2.1-6c88146a.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/macosx/sonoma-arm64/contrib/4.6/progress_1.2.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/progress_1.2.3-37446ed2.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "prettyunits"
+version = "1.2.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2023-09-25/bin/macosx/sonoma-arm64/contrib/4.6/prettyunits_1.2.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/prettyunits_1.2.0-a9c78d7c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea" }
+
+[[targets.packages]]
+package = "pkgconfig"
+version = "2.0.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2019-09-23/bin/macosx/sonoma-arm64/contrib/4.6/pkgconfig_2.0.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/pkgconfig_2.0.3-279c7882.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850" }
+
+[[targets.packages]]
+package = "askpass"
+version = "1.2.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = ["sys"]
+sources = ["https://p3m.dev/cran/2024-10-05/bin/macosx/sonoma-arm64/contrib/4.6/askpass_1.2.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/askpass_1.2.1-8ea2713a.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd" }
+
+[[targets.packages]]
+package = "sys"
+version = "3.4.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-10-05/bin/macosx/sonoma-arm64/contrib/4.6/sys_3.4.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/sys_3.4.3-0a5e210c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a" }
+
+[[targets.packages]]
+package = "lifecycle"
+version = "1.0.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "rlang",
+    "cli",
+]
+sources = ["https://p3m.dev/cran/2026-01-09/bin/macosx/sonoma-arm64/contrib/4.6/lifecycle_1.0.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/lifecycle_1.0.5-fbf429a7.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
+
+[[targets.packages]]
+package = "curl"
+version = "8.1.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-10-15/bin/macosx/sonoma-arm64/contrib/4.6/curl_8.1.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/curl_8.1.0-edf1176c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/macosx/sonoma-arm64/contrib/4.6/jsonlite_2.0.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/jsonlite_2.0.0-38c76850.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
+
+[[targets.packages]]
+package = "pillar"
+version = "1.11.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "utf8",
+    "vctrs",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2025-09-18/bin/macosx/sonoma-arm64/contrib/4.6/pillar_1.11.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/pillar_1.11.1-98507d8f.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "Rcpp"
+version = "1.1.2"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/macosx/sonoma-arm64/contrib/4.6/Rcpp_1.1.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/Rcpp_1.1.2-0af8c486.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "httr"
+version = "1.4.9"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "mime",
+    "openssl",
+    "R6",
+    "curl",
+    "jsonlite",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/macosx/sonoma-arm64/contrib/4.6/httr_1.4.9.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/httr_1.4.9-a7967bfa.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "4adf8cea7a24012ec883da1723eaade26c69455e0a3200bdc12f2f9f8515982c" }
+
+[[targets.packages]]
+package = "magrittr"
+version = "2.0.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-05/bin/macosx/sonoma-arm64/contrib/4.6/magrittr_2.0.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/magrittr_2.0.5-0995a92c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
+
+[[targets.packages]]
+package = "vctrs"
+version = "0.7.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-12/bin/macosx/sonoma-arm64/contrib/4.6/vctrs_0.7.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/vctrs_0.7.3-fd6ec28d.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
+
+[[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/cpp11_0.5.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/cpp11_0.5.5-73034f81.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "mime"
+version = "0.13"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-18/bin/macosx/sonoma-arm64/contrib/4.6/mime_0.13.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/mime_0.13-1d43468f.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb" }
+
+[[targets.packages]]
+package = "hms"
+version = "1.1.4"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "rlang",
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2025-10-18/bin/macosx/sonoma-arm64/contrib/4.6/hms_1.1.4.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/hms_1.1.4-d509b7d4.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "efc525f797b62b3740d06c6fa8202593ab5aa4fc1edeefb76b6eb9be89e87b94" }
+
+[[targets.packages]]
+package = "tidyr"
+version = "1.3.2"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "glue",
+    "purrr",
+    "cli",
+    "dplyr",
+    "rlang",
+    "tidyselect",
+    "tibble",
+    "lifecycle",
+    "stringr",
+    "cpp11",
+    "vctrs",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/tidyr_1.3.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/tidyr_1.3.2-fa96568a.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "withr"
+version = "3.0.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-06-20/bin/macosx/sonoma-arm64/contrib/4.6/withr_3.0.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/withr_3.0.3-937174ff.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "d86c6454164fc85678bfc85e2a6cce42f7461d45fa9a87de71f376e7956c991e" }
+
+[[targets.packages]]
+package = "generics"
+version = "0.1.4"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-05-10/bin/macosx/sonoma-arm64/contrib/4.6/generics_0.1.4.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/generics_0.1.4-72fadd7a.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801" }
+
+[[targets.packages]]
+package = "qpdf"
+version = "1.4.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "askpass",
+    "Rcpp",
+    "curl",
+]
+sources = ["https://p3m.dev/cran/2026-07-06/bin/macosx/sonoma-arm64/contrib/4.6/qpdf_1.4.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/qpdf_1.4.1-9a2e4055.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "utf8"
+version = "1.2.6"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-06-09/bin/macosx/sonoma-arm64/contrib/4.6/utf8_1.2.6.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/utf8_1.2.6-7c454a4c.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9" }
+
+[[targets.packages]]
+package = "purrr"
+version = "1.2.2"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "magrittr",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-11/bin/macosx/sonoma-arm64/contrib/4.6/purrr_1.2.2.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/purrr_1.2.2-bec4fda3.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d", RemoteLinkingToHashes = "cli@3.6.6=b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "cli"
+version = "3.6.6"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-10/bin/macosx/sonoma-arm64/contrib/4.6/cli_3.6.6.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/cli_3.6.6-20e4b277.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "selectr"
+version = "0.8-0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-09-28/bin/macosx/sonoma-arm64/contrib/4.6/selectr_0.8-0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/selectr_0.8-0-9e3e6422.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "dc5d839559bc5d00f579ff19add013fe9f93dd5a63c78b4adbc673525dae49da" }
+
+[[targets.packages]]
+package = "rlang"
+version = "1.3.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/macosx/sonoma-arm64/contrib/4.6/rlang_1.3.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/rlang_1.3.0-cd54cc8f.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "80aa537d49e72265f443a15e8936128af583caa5e572086518b503cbf064279c" }
+
+[[targets.packages]]
+package = "crayon"
+version = "1.5.3"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-06-21/bin/macosx/sonoma-arm64/contrib/4.6/crayon_1.5.3.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/crayon_1.5.3-f2d80489.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69" }
+
+[[targets.packages]]
+package = "tibble"
+version = "3.3.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "rlang",
+    "magrittr",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2026-01-12/bin/macosx/sonoma-arm64/contrib/4.6/tibble_3.3.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/tibble_3.3.1-54804be3.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "fb309f8a1939021b237c7e85ff7ad6e8ff5acd57a6230d220a452094b492b28f" }
+
+[[targets.packages]]
+package = "xml2"
+version = "1.6.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "cli",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-06-23/bin/macosx/sonoma-arm64/contrib/4.6/xml2_1.6.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/xml2_1.6.0-f431ab66.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "b0660edab0a839866a0cccd44721c54d497000fd6577a25106a33280318bf579" }
+
+[[targets.packages]]
+package = "stringr"
+version = "1.6.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "glue",
+    "stringi",
+    "lifecycle",
+    "cli",
+    "rlang",
+    "magrittr",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-11-05/bin/macosx/sonoma-arm64/contrib/4.6/stringr_1.6.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/stringr_1.6.0-77631810.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "24f2fc5df980a7eb888659e22b9744d2316c558624015c7a7cd8c3ce3e370064" }
+
+[[targets.packages]]
+package = "tzdb"
+version = "0.5.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = ["cpp11"]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/macosx/sonoma-arm64/contrib/4.6/tzdb_0.5.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/tzdb_0.5.0-0d46c210.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "R6"
+version = "2.6.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-02-15/bin/macosx/sonoma-arm64/contrib/4.6/R6_2.6.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/R6_2.6.1-6a2d2539.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4" }
+
+[[targets.packages]]
+package = "rvest"
+version = "1.0.5"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = [
+    "tibble",
+    "glue",
+    "lifecycle",
+    "xml2",
+    "cli",
+    "selectr",
+    "rlang",
+    "httr",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2025-08-30/bin/macosx/sonoma-arm64/contrib/4.6/rvest_1.0.5.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/rvest_1.0.5-1a90083d.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "1e7c34a0b4467887195b1cd66388919989e82ca096d08df283c675d87e53bc00" }
+
+[[targets.packages]]
+package = "clipr"
+version = "0.8.1"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-26/bin/macosx/sonoma-arm64/contrib/4.6/clipr_0.8.1.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/clipr_0.8.1-4322ae0a.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "06e87a9c387da33f4ce8de91d037c090b924689b5ff487d3c0c7506bd4c3f1b6" }
+
+[[targets.packages]]
+package = "bit64"
+version = "4.8.6"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = ["bit"]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/macosx/sonoma-arm64/contrib/4.6/bit64_4.8.6.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/bit64_4.8.6-8edb959f.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "a5fcec17ba772a561a7375ca8fd966bdd5f20dd4e89b4dae07d7da933d554b45" }
+
+[[targets.packages]]
+package = "bit"
+version = "4.6.0"
+binary = true
+platform = "aarch64-apple-darwin"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-07/bin/macosx/sonoma-arm64/contrib/4.6/bit_4.6.0.tgz"]
+target = "bin/macosx/sonoma-arm64/4.6/bit_4.6.0-a639bb1d.tgz"
+groups = ["main"]
+metadata = { RemoteHash = "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08" }
+
+[[targets]]
+r_version = "4.6.2"
+platform = "source"
+bioc-version = "3.23"
+
+[[targets.direct_dependencies]]
+name = "dplyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "jsonlite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "pdftools"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "purrr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "readr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "rvest"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "stringr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "tidyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "xml2"
+constraint = "*"
+
+[[targets.packages]]
+package = "pdftools"
+version = "3.9.1"
+binary = false
+platform = "source"
+dependencies = [
+    "Rcpp",
+    "qpdf",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/src/contrib/pdftools_3.9.1.tar.gz"]
+target = "src/pdftools_3.9.1-2435d584.tar.gz"
+groups = ["main"]
+system_requirements = "Poppler C++ API: libpoppler-cpp-dev (deb) or poppler-cpp-devel (rpm), and poppler-data (rpm/deb) package."
+metadata = { RemoteHash = "b51f891f509b122fb2d3090a125c5bc1bfce6d66c672d7b2bf5bfc295b1d0621", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "openssl"
+version = "2.5.0"
+binary = false
+platform = "source"
+dependencies = ["askpass"]
+sources = ["https://p3m.dev/cran/2026-11-03/src/contrib/openssl_2.5.0.tar.gz"]
+target = "src/openssl_2.5.0-89e44ad8.tar.gz"
+groups = ["main"]
+system_requirements = "OpenSSL >= 1.0.2"
+metadata = { RemoteHash = "4b3adad396c62f8cec664368c713f393a9e5345f9fe7353809b8b80027392ffb" }
+
+[[targets.packages]]
+package = "glue"
+version = "1.8.1"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-18/src/contrib/glue_1.8.1.tar.gz"]
+target = "src/glue_1.8.1-c40aadfc.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1c55905d3efc3d5c199ceb0bd12218e97f0d4c64df6038ff41ecef415478a122" }
+
+[[targets.packages]]
+package = "stringi"
+version = "1.8.9"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-08-05/src/contrib/stringi_1.8.9.tar.gz"]
+target = "src/stringi_1.8.9-226ba057.tar.gz"
+groups = ["main"]
+system_requirements = "ICU4C (>= 61, optional)"
+metadata = { RemoteHash = "427fcebd281d7ea850becce75e0807576dd394a723a814b2d487419b93275a33" }
+
+[[targets.packages]]
+package = "vroom"
+version = "1.7.1"
+binary = false
+platform = "source"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "crayon",
+    "cli",
+    "tidyselect",
+    "rlang",
+    "progress",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "cpp11",
+    "vctrs",
+    "bit64",
+]
+sources = ["https://p3m.dev/cran/2026-04-01/src/contrib/vroom_1.7.1.tar.gz"]
+target = "src/vroom_1.7.1-0a78d83a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7d64f6227fdac3ee64c506654bb1d919e407f92fc2d0d5a2398dbb83001e8790", RemoteLinkingToHashes = "tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db, cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, progress@1.2.3=ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "readr"
+version = "2.2.0"
+binary = false
+platform = "source"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "vroom",
+    "crayon",
+    "cli",
+    "rlang",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "R6",
+    "clipr",
+    "cpp11",
+]
+sources = ["https://p3m.dev/cran/2026-02-20/src/contrib/readr_2.2.0.tar.gz"]
+target = "src/readr_2.2.0-f3da060d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "8025d797c183e12ad5ebe4af891dbcb5a8e9bd53aa4765006eb25a07f9a9f473", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "dplyr"
+version = "1.2.1"
+binary = false
+platform = "source"
+dependencies = [
+    "rlang",
+    "tibble",
+    "tidyselect",
+    "glue",
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "R6",
+    "generics",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-04-04/src/contrib/dplyr_1.2.1.tar.gz"]
+target = "src/dplyr_1.2.1-050cebcf.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0" }
+
+[[targets.packages]]
+package = "tidyselect"
+version = "1.2.1"
+binary = false
+platform = "source"
+dependencies = [
+    "withr",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2024-03-12/src/contrib/tidyselect_1.2.1.tar.gz"]
+target = "src/tidyselect_1.2.1-6c88146a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = false
+platform = "source"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/src/contrib/progress_1.2.3.tar.gz"]
+target = "src/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "prettyunits"
+version = "1.2.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2023-09-25/src/contrib/prettyunits_1.2.0.tar.gz"]
+target = "src/prettyunits_1.2.0-a9c78d7c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea" }
+
+[[targets.packages]]
+package = "pkgconfig"
+version = "2.0.3"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2019-09-23/src/contrib/pkgconfig_2.0.3.tar.gz"]
+target = "src/pkgconfig_2.0.3-279c7882.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850" }
+
+[[targets.packages]]
+package = "askpass"
+version = "1.2.1"
+binary = false
+platform = "source"
+dependencies = ["sys"]
+sources = ["https://p3m.dev/cran/2024-10-05/src/contrib/askpass_1.2.1.tar.gz"]
+target = "src/askpass_1.2.1-8ea2713a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd" }
+
+[[targets.packages]]
+package = "sys"
+version = "3.4.3"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-10-05/src/contrib/sys_3.4.3.tar.gz"]
+target = "src/sys_3.4.3-0a5e210c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a" }
+
+[[targets.packages]]
+package = "lifecycle"
+version = "1.0.5"
+binary = false
+platform = "source"
+dependencies = [
+    "rlang",
+    "cli",
+]
+sources = ["https://p3m.dev/cran/2026-01-09/src/contrib/lifecycle_1.0.5.tar.gz"]
+target = "src/lifecycle_1.0.5-fbf429a7.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
+
+[[targets.packages]]
+package = "curl"
+version = "8.1.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-10-15/src/contrib/curl_8.1.0.tar.gz"]
+target = "src/curl_8.1.0-edf1176c.tar.gz"
+groups = ["main"]
+system_requirements = "libcurl (>= 7.73): libcurl-devel (rpm) or libcurl4-openssl-dev (deb)"
+metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "src/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
+
+[[targets.packages]]
+package = "pillar"
+version = "1.11.1"
+binary = false
+platform = "source"
+dependencies = [
+    "utf8",
+    "vctrs",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2025-09-18/src/contrib/pillar_1.11.1.tar.gz"]
+target = "src/pillar_1.11.1-98507d8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "Rcpp"
+version = "1.1.2"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/src/contrib/Rcpp_1.1.2.tar.gz"]
+target = "src/Rcpp_1.1.2-0af8c486.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "httr"
+version = "1.4.9"
+binary = false
+platform = "source"
+dependencies = [
+    "mime",
+    "openssl",
+    "R6",
+    "curl",
+    "jsonlite",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/src/contrib/httr_1.4.9.tar.gz"]
+target = "src/httr_1.4.9-a7967bfa.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4adf8cea7a24012ec883da1723eaade26c69455e0a3200bdc12f2f9f8515982c" }
+
+[[targets.packages]]
+package = "magrittr"
+version = "2.0.5"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-05/src/contrib/magrittr_2.0.5.tar.gz"]
+target = "src/magrittr_2.0.5-0995a92c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
+
+[[targets.packages]]
+package = "vctrs"
+version = "0.7.3"
+binary = false
+platform = "source"
+dependencies = [
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-12/src/contrib/vctrs_0.7.3.tar.gz"]
+target = "src/vctrs_0.7.3-fd6ec28d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
+
+[[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/src/contrib/cpp11_0.5.5.tar.gz"]
+target = "src/cpp11_0.5.5-73034f81.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "mime"
+version = "0.13"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-18/src/contrib/mime_0.13.tar.gz"]
+target = "src/mime_0.13-1d43468f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb" }
+
+[[targets.packages]]
+package = "hms"
+version = "1.1.4"
+binary = false
+platform = "source"
+dependencies = [
+    "rlang",
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2025-10-18/src/contrib/hms_1.1.4.tar.gz"]
+target = "src/hms_1.1.4-d509b7d4.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "efc525f797b62b3740d06c6fa8202593ab5aa4fc1edeefb76b6eb9be89e87b94" }
+
+[[targets.packages]]
+package = "tidyr"
+version = "1.3.2"
+binary = false
+platform = "source"
+dependencies = [
+    "vctrs",
+    "tibble",
+    "cpp11",
+    "glue",
+    "lifecycle",
+    "stringr",
+    "purrr",
+    "cli",
+    "dplyr",
+    "rlang",
+    "magrittr",
+    "tidyselect",
+]
+sources = ["https://p3m.dev/cran/2025-12-20/src/contrib/tidyr_1.3.2.tar.gz"]
+target = "src/tidyr_1.3.2-de79b3f6.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "withr"
+version = "3.0.3"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-06-20/src/contrib/withr_3.0.3.tar.gz"]
+target = "src/withr_3.0.3-937174ff.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d86c6454164fc85678bfc85e2a6cce42f7461d45fa9a87de71f376e7956c991e" }
+
+[[targets.packages]]
+package = "generics"
+version = "0.1.4"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-05-10/src/contrib/generics_0.1.4.tar.gz"]
+target = "src/generics_0.1.4-72fadd7a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801" }
+
+[[targets.packages]]
+package = "qpdf"
+version = "1.4.1"
+binary = false
+platform = "source"
+dependencies = [
+    "Rcpp",
+    "curl",
+    "askpass",
+]
+sources = ["https://p3m.dev/cran/2025-07-03/src/contrib/qpdf_1.4.1.tar.gz"]
+target = "src/qpdf_1.4.1-20b93b6e.tar.gz"
+groups = ["main"]
+system_requirements = "libjpeg"
+metadata = { RemoteHash = "3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "utf8"
+version = "1.2.6"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-06-09/src/contrib/utf8_1.2.6.tar.gz"]
+target = "src/utf8_1.2.6-7c454a4c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9" }
+
+[[targets.packages]]
+package = "purrr"
+version = "1.2.2"
+binary = false
+platform = "source"
+dependencies = [
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "magrittr",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-11/src/contrib/purrr_1.2.2.tar.gz"]
+target = "src/purrr_1.2.2-76caf9ff.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d", RemoteLinkingToHashes = "cli@3.6.6=b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "cli"
+version = "3.6.6"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-10/src/contrib/cli_3.6.6.tar.gz"]
+target = "src/cli_3.6.6-20e4b277.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "selectr"
+version = "0.8-0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-09-28/src/contrib/selectr_0.8-0.tar.gz"]
+target = "src/selectr_0.8-0-9e3e6422.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "dc5d839559bc5d00f579ff19add013fe9f93dd5a63c78b4adbc673525dae49da" }
+
+[[targets.packages]]
+package = "rlang"
+version = "1.3.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/src/contrib/rlang_1.3.0.tar.gz"]
+target = "src/rlang_1.3.0-cd54cc8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "80aa537d49e72265f443a15e8936128af583caa5e572086518b503cbf064279c" }
+
+[[targets.packages]]
+package = "crayon"
+version = "1.5.3"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-06-21/src/contrib/crayon_1.5.3.tar.gz"]
+target = "src/crayon_1.5.3-f2d80489.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69" }
+
+[[targets.packages]]
+package = "tibble"
+version = "3.3.1"
+binary = false
+platform = "source"
+dependencies = [
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "rlang",
+    "magrittr",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2026-01-12/src/contrib/tibble_3.3.1.tar.gz"]
+target = "src/tibble_3.3.1-54804be3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "fb309f8a1939021b237c7e85ff7ad6e8ff5acd57a6230d220a452094b492b28f" }
+
+[[targets.packages]]
+package = "xml2"
+version = "1.6.0"
+binary = false
+platform = "source"
+dependencies = [
+    "cli",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-06-23/src/contrib/xml2_1.6.0.tar.gz"]
+target = "src/xml2_1.6.0-f431ab66.tar.gz"
+groups = ["main"]
+system_requirements = "libxml2: libxml2-dev (deb), libxml2-devel (rpm)"
+metadata = { RemoteHash = "b0660edab0a839866a0cccd44721c54d497000fd6577a25106a33280318bf579" }
+
+[[targets.packages]]
+package = "stringr"
+version = "1.6.0"
+binary = false
+platform = "source"
+dependencies = [
+    "glue",
+    "stringi",
+    "lifecycle",
+    "cli",
+    "rlang",
+    "magrittr",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-11-05/src/contrib/stringr_1.6.0.tar.gz"]
+target = "src/stringr_1.6.0-77631810.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "24f2fc5df980a7eb888659e22b9744d2316c558624015c7a7cd8c3ce3e370064" }
+
+[[targets.packages]]
+package = "tzdb"
+version = "0.5.0"
+binary = false
+platform = "source"
+dependencies = ["cpp11"]
+sources = ["https://p3m.dev/cran/2025-03-17/src/contrib/tzdb_0.5.0.tar.gz"]
+target = "src/tzdb_0.5.0-f0bce280.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "R6"
+version = "2.6.1"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-02-15/src/contrib/R6_2.6.1.tar.gz"]
+target = "src/R6_2.6.1-6a2d2539.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4" }
+
+[[targets.packages]]
+package = "rvest"
+version = "1.0.5"
+binary = false
+platform = "source"
+dependencies = [
+    "tibble",
+    "glue",
+    "lifecycle",
+    "xml2",
+    "cli",
+    "selectr",
+    "rlang",
+    "httr",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2025-08-30/src/contrib/rvest_1.0.5.tar.gz"]
+target = "src/rvest_1.0.5-1a90083d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1e7c34a0b4467887195b1cd66388919989e82ca096d08df283c675d87e53bc00" }
+
+[[targets.packages]]
+package = "clipr"
+version = "0.8.1"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-26/src/contrib/clipr_0.8.1.tar.gz"]
+target = "src/clipr_0.8.1-4322ae0a.tar.gz"
+groups = ["main"]
+system_requirements = "xclip (https://github.com/astrand/xclip) or xsel (http://www.vergenet.net/~conrad/software/xsel/) for accessing the X11 clipboard, or wl-clipboard (https://github.com/bugaevc/wl-clipboard) for systems using Wayland."
+metadata = { RemoteHash = "06e87a9c387da33f4ce8de91d037c090b924689b5ff487d3c0c7506bd4c3f1b6" }
+
+[[targets.packages]]
+package = "bit64"
+version = "4.8.6"
+binary = false
+platform = "source"
+dependencies = ["bit"]
+sources = ["https://p3m.dev/cran/2026-09-02/src/contrib/bit64_4.8.6.tar.gz"]
+target = "src/bit64_4.8.6-8edb959f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "a5fcec17ba772a561a7375ca8fd966bdd5f20dd4e89b4dae07d7da933d554b45" }
+
+[[targets.packages]]
+package = "bit"
+version = "4.6.0"
+binary = false
+platform = "source"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-07/src/contrib/bit_4.6.0.tar.gz"]
+target = "src/bit_4.6.0-a639bb1d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08" }
+
+[[targets]]
+r_version = "4.6.2"
+platform = "x86_64-unknown-linux-gnu"
+bioc-version = "3.23"
+
+[[targets.direct_dependencies]]
+name = "dplyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "jsonlite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "pdftools"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "purrr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "readr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "rvest"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "stringr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "tidyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "xml2"
+constraint = "*"
+
+[[targets.packages]]
+package = "pdftools"
+version = "3.9.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "Rcpp",
+    "qpdf",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/pdftools_3.9.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/pdftools_3.9.1-01c70c1e.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b51f891f509b122fb2d3090a125c5bc1bfce6d66c672d7b2bf5bfc295b1d0621", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "openssl"
+version = "2.5.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = ["askpass"]
+sources = ["https://p3m.dev/cran/2026-11-03/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/openssl_2.5.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/openssl_2.5.0-89e44ad8.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4b3adad396c62f8cec664368c713f393a9e5345f9fe7353809b8b80027392ffb" }
+
+[[targets.packages]]
+package = "glue"
+version = "1.8.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-18/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/glue_1.8.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/glue_1.8.1-c40aadfc.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1c55905d3efc3d5c199ceb0bd12218e97f0d4c64df6038ff41ecef415478a122" }
+
+[[targets.packages]]
+package = "stringi"
+version = "1.8.9"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-08-05/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/stringi_1.8.9.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/stringi_1.8.9-226ba057.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "427fcebd281d7ea850becce75e0807576dd394a723a814b2d487419b93275a33" }
+
+[[targets.packages]]
+package = "vroom"
+version = "1.7.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "crayon",
+    "cli",
+    "tidyselect",
+    "rlang",
+    "progress",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "cpp11",
+    "vctrs",
+    "bit64",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/vroom_1.7.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/vroom_1.7.1-f9607aa3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7d64f6227fdac3ee64c506654bb1d919e407f92fc2d0d5a2398dbb83001e8790", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, progress@1.2.3=ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "readr"
+version = "2.2.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "vroom",
+    "crayon",
+    "cli",
+    "rlang",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "R6",
+    "clipr",
+    "cpp11",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/readr_2.2.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/readr_2.2.0-d00238a0.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "8025d797c183e12ad5ebe4af891dbcb5a8e9bd53aa4765006eb25a07f9a9f473", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "dplyr"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "rlang",
+    "tibble",
+    "tidyselect",
+    "glue",
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "R6",
+    "generics",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-04-04/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/dplyr_1.2.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/dplyr_1.2.1-050cebcf.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0" }
+
+[[targets.packages]]
+package = "tidyselect"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "withr",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2024-03-12/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/tidyselect_1.2.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/tidyselect_1.2.1-6c88146a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "prettyunits"
+version = "1.2.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2023-09-25/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/prettyunits_1.2.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/prettyunits_1.2.0-a9c78d7c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea" }
+
+[[targets.packages]]
+package = "pkgconfig"
+version = "2.0.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2019-09-23/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/pkgconfig_2.0.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/pkgconfig_2.0.3-279c7882.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850" }
+
+[[targets.packages]]
+package = "askpass"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = ["sys"]
+sources = ["https://p3m.dev/cran/2024-10-05/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/askpass_1.2.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/askpass_1.2.1-8ea2713a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd" }
+
+[[targets.packages]]
+package = "sys"
+version = "3.4.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-10-05/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/sys_3.4.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/sys_3.4.3-0a5e210c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a" }
+
+[[targets.packages]]
+package = "lifecycle"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "rlang",
+    "cli",
+]
+sources = ["https://p3m.dev/cran/2026-01-09/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/lifecycle_1.0.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/lifecycle_1.0.5-fbf429a7.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
+
+[[targets.packages]]
+package = "curl"
+version = "8.1.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-10-15/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/curl_8.1.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/curl_8.1.0-edf1176c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
+
+[[targets.packages]]
+package = "pillar"
+version = "1.11.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "utf8",
+    "vctrs",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2025-09-18/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/pillar_1.11.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/pillar_1.11.1-98507d8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "Rcpp"
+version = "1.1.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/Rcpp_1.1.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/Rcpp_1.1.2-0af8c486.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "httr"
+version = "1.4.9"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "mime",
+    "openssl",
+    "R6",
+    "curl",
+    "jsonlite",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/httr_1.4.9.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/httr_1.4.9-a7967bfa.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4adf8cea7a24012ec883da1723eaade26c69455e0a3200bdc12f2f9f8515982c" }
+
+[[targets.packages]]
+package = "magrittr"
+version = "2.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-05/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/magrittr_2.0.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/magrittr_2.0.5-0995a92c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
+
+[[targets.packages]]
+package = "vctrs"
+version = "0.7.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-12/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/vctrs_0.7.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/vctrs_0.7.3-fd6ec28d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
+
+[[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "mime"
+version = "0.13"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-18/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/mime_0.13.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/mime_0.13-1d43468f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb" }
+
+[[targets.packages]]
+package = "hms"
+version = "1.1.4"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "rlang",
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2025-10-18/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/hms_1.1.4.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/hms_1.1.4-d509b7d4.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "efc525f797b62b3740d06c6fa8202593ab5aa4fc1edeefb76b6eb9be89e87b94" }
+
+[[targets.packages]]
+package = "tidyr"
+version = "1.3.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "glue",
+    "purrr",
+    "cli",
+    "dplyr",
+    "rlang",
+    "tidyselect",
+    "tibble",
+    "lifecycle",
+    "stringr",
+    "cpp11",
+    "vctrs",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/tidyr_1.3.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/tidyr_1.3.2-fa96568a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "withr"
+version = "3.0.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-06-20/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/withr_3.0.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/withr_3.0.3-937174ff.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d86c6454164fc85678bfc85e2a6cce42f7461d45fa9a87de71f376e7956c991e" }
+
+[[targets.packages]]
+package = "generics"
+version = "0.1.4"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-05-10/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/generics_0.1.4.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/generics_0.1.4-72fadd7a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801" }
+
+[[targets.packages]]
+package = "qpdf"
+version = "1.4.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "askpass",
+    "Rcpp",
+    "curl",
+]
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/qpdf_1.4.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/qpdf_1.4.1-9a2e4055.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "utf8"
+version = "1.2.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-06-09/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/utf8_1.2.6.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/utf8_1.2.6-7c454a4c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9" }
+
+[[targets.packages]]
+package = "purrr"
+version = "1.2.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "magrittr",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-11/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/purrr_1.2.2.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/purrr_1.2.2-bec4fda3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d", RemoteLinkingToHashes = "cli@3.6.6=b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "cli"
+version = "3.6.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-10/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/cli_3.6.6.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/cli_3.6.6-20e4b277.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "selectr"
+version = "0.8-0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-09-28/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/selectr_0.8-0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/selectr_0.8-0-9e3e6422.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "dc5d839559bc5d00f579ff19add013fe9f93dd5a63c78b4adbc673525dae49da" }
+
+[[targets.packages]]
+package = "rlang"
+version = "1.3.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/rlang_1.3.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/rlang_1.3.0-cd54cc8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "80aa537d49e72265f443a15e8936128af583caa5e572086518b503cbf064279c" }
+
+[[targets.packages]]
+package = "crayon"
+version = "1.5.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-06-21/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/crayon_1.5.3.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/crayon_1.5.3-f2d80489.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69" }
+
+[[targets.packages]]
+package = "tibble"
+version = "3.3.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "rlang",
+    "magrittr",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2026-01-12/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/tibble_3.3.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/tibble_3.3.1-54804be3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "fb309f8a1939021b237c7e85ff7ad6e8ff5acd57a6230d220a452094b492b28f" }
+
+[[targets.packages]]
+package = "xml2"
+version = "1.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "cli",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-06-23/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/xml2_1.6.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/xml2_1.6.0-f431ab66.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b0660edab0a839866a0cccd44721c54d497000fd6577a25106a33280318bf579" }
+
+[[targets.packages]]
+package = "stringr"
+version = "1.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "glue",
+    "stringi",
+    "lifecycle",
+    "cli",
+    "rlang",
+    "magrittr",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-11-05/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/stringr_1.6.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/stringr_1.6.0-77631810.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "24f2fc5df980a7eb888659e22b9744d2316c558624015c7a7cd8c3ce3e370064" }
+
+[[targets.packages]]
+package = "tzdb"
+version = "0.5.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = ["cpp11"]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/tzdb_0.5.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/tzdb_0.5.0-0d46c210.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "R6"
+version = "2.6.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-02-15/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/R6_2.6.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/R6_2.6.1-6a2d2539.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4" }
+
+[[targets.packages]]
+package = "rvest"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = [
+    "tibble",
+    "glue",
+    "lifecycle",
+    "xml2",
+    "cli",
+    "selectr",
+    "rlang",
+    "httr",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2025-08-30/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/rvest_1.0.5.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/rvest_1.0.5-1a90083d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1e7c34a0b4467887195b1cd66388919989e82ca096d08df283c675d87e53bc00" }
+
+[[targets.packages]]
+package = "clipr"
+version = "0.8.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-26/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/clipr_0.8.1.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/clipr_0.8.1-4322ae0a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "06e87a9c387da33f4ce8de91d037c090b924689b5ff487d3c0c7506bd4c3f1b6" }
+
+[[targets.packages]]
+package = "bit64"
+version = "4.8.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = ["bit"]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/bit64_4.8.6.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/bit64_4.8.6-8edb959f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "a5fcec17ba772a561a7375ca8fd966bdd5f20dd4e89b4dae07d7da933d554b45" }
+
+[[targets.packages]]
+package = "bit"
+version = "4.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-07/bin/linux/manylinux_2_28-x86_64/4.6/src/contrib/bit_4.6.0.tar.gz"]
+target = "bin/linux/manylinux_2_28-x86_64/4.6/bit_4.6.0-a639bb1d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08" }
+
+[[targets]]
+r_version = "4.6.2"
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+bioc-version = "3.23"
+
+[[targets.direct_dependencies]]
+name = "dplyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "jsonlite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "pdftools"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "purrr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "readr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "rvest"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "stringr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "tidyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "xml2"
+constraint = "*"
+
+[[targets.packages]]
+package = "pdftools"
+version = "3.9.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "Rcpp",
+    "qpdf",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/noble-x86_64/4.6/src/contrib/pdftools_3.9.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/pdftools_3.9.1-01c70c1e.tar.gz"
+groups = ["main"]
+system_requirements = "Poppler C++ API: libpoppler-cpp-dev (deb) or poppler-cpp-devel (rpm), and poppler-data (rpm/deb) package."
+metadata = { RemoteHash = "b51f891f509b122fb2d3090a125c5bc1bfce6d66c672d7b2bf5bfc295b1d0621", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "openssl"
+version = "2.5.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = ["askpass"]
+sources = ["https://p3m.dev/cran/2026-11-03/bin/linux/noble-x86_64/4.6/src/contrib/openssl_2.5.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/openssl_2.5.0-89e44ad8.tar.gz"
+groups = ["main"]
+system_requirements = "OpenSSL >= 1.0.2"
+metadata = { RemoteHash = "4b3adad396c62f8cec664368c713f393a9e5345f9fe7353809b8b80027392ffb" }
+
+[[targets.packages]]
+package = "glue"
+version = "1.8.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-18/bin/linux/noble-x86_64/4.6/src/contrib/glue_1.8.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/glue_1.8.1-c40aadfc.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1c55905d3efc3d5c199ceb0bd12218e97f0d4c64df6038ff41ecef415478a122" }
+
+[[targets.packages]]
+package = "stringi"
+version = "1.8.9"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-08-05/bin/linux/noble-x86_64/4.6/src/contrib/stringi_1.8.9.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/stringi_1.8.9-226ba057.tar.gz"
+groups = ["main"]
+system_requirements = "ICU4C (>= 61, optional)"
+metadata = { RemoteHash = "427fcebd281d7ea850becce75e0807576dd394a723a814b2d487419b93275a33" }
+
+[[targets.packages]]
+package = "vroom"
+version = "1.7.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "crayon",
+    "cli",
+    "tidyselect",
+    "rlang",
+    "progress",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "cpp11",
+    "vctrs",
+    "bit64",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/vroom_1.7.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/vroom_1.7.1-f9607aa3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7d64f6227fdac3ee64c506654bb1d919e407f92fc2d0d5a2398dbb83001e8790", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, progress@1.2.3=ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "readr"
+version = "2.2.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "vroom",
+    "crayon",
+    "cli",
+    "rlang",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "R6",
+    "clipr",
+    "cpp11",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/readr_2.2.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/readr_2.2.0-d00238a0.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "8025d797c183e12ad5ebe4af891dbcb5a8e9bd53aa4765006eb25a07f9a9f473", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "dplyr"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "rlang",
+    "tibble",
+    "tidyselect",
+    "glue",
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "R6",
+    "generics",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-04-04/bin/linux/noble-x86_64/4.6/src/contrib/dplyr_1.2.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/dplyr_1.2.1-050cebcf.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0" }
+
+[[targets.packages]]
+package = "tidyselect"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "withr",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2024-03-12/bin/linux/noble-x86_64/4.6/src/contrib/tidyselect_1.2.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/tidyselect_1.2.1-6c88146a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/linux/noble-x86_64/4.6/src/contrib/progress_1.2.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/progress_1.2.3-37446ed2.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "prettyunits"
+version = "1.2.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2023-09-25/bin/linux/noble-x86_64/4.6/src/contrib/prettyunits_1.2.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/prettyunits_1.2.0-a9c78d7c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea" }
+
+[[targets.packages]]
+package = "pkgconfig"
+version = "2.0.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2019-09-23/bin/linux/noble-x86_64/4.6/src/contrib/pkgconfig_2.0.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/pkgconfig_2.0.3-279c7882.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850" }
+
+[[targets.packages]]
+package = "askpass"
+version = "1.2.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = ["sys"]
+sources = ["https://p3m.dev/cran/2024-10-05/bin/linux/noble-x86_64/4.6/src/contrib/askpass_1.2.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/askpass_1.2.1-8ea2713a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd" }
+
+[[targets.packages]]
+package = "sys"
+version = "3.4.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-10-05/bin/linux/noble-x86_64/4.6/src/contrib/sys_3.4.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/sys_3.4.3-0a5e210c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a" }
+
+[[targets.packages]]
+package = "lifecycle"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "rlang",
+    "cli",
+]
+sources = ["https://p3m.dev/cran/2026-01-09/bin/linux/noble-x86_64/4.6/src/contrib/lifecycle_1.0.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/lifecycle_1.0.5-fbf429a7.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
+
+[[targets.packages]]
+package = "curl"
+version = "8.1.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-10-15/bin/linux/noble-x86_64/4.6/src/contrib/curl_8.1.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/curl_8.1.0-edf1176c.tar.gz"
+groups = ["main"]
+system_requirements = "libcurl (>= 7.73): libcurl-devel (rpm) or libcurl4-openssl-dev (deb)"
+metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/linux/noble-x86_64/4.6/src/contrib/jsonlite_2.0.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/jsonlite_2.0.0-38c76850.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
+
+[[targets.packages]]
+package = "pillar"
+version = "1.11.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "utf8",
+    "vctrs",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2025-09-18/bin/linux/noble-x86_64/4.6/src/contrib/pillar_1.11.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/pillar_1.11.1-98507d8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "Rcpp"
+version = "1.1.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/noble-x86_64/4.6/src/contrib/Rcpp_1.1.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/Rcpp_1.1.2-0af8c486.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "httr"
+version = "1.4.9"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "mime",
+    "openssl",
+    "R6",
+    "curl",
+    "jsonlite",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/noble-x86_64/4.6/src/contrib/httr_1.4.9.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/httr_1.4.9-a7967bfa.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4adf8cea7a24012ec883da1723eaade26c69455e0a3200bdc12f2f9f8515982c" }
+
+[[targets.packages]]
+package = "magrittr"
+version = "2.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-05/bin/linux/noble-x86_64/4.6/src/contrib/magrittr_2.0.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/magrittr_2.0.5-0995a92c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
+
+[[targets.packages]]
+package = "vctrs"
+version = "0.7.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-12/bin/linux/noble-x86_64/4.6/src/contrib/vctrs_0.7.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/vctrs_0.7.3-fd6ec28d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
+
+[[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/cpp11_0.5.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/cpp11_0.5.5-73034f81.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "mime"
+version = "0.13"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-18/bin/linux/noble-x86_64/4.6/src/contrib/mime_0.13.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/mime_0.13-1d43468f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb" }
+
+[[targets.packages]]
+package = "hms"
+version = "1.1.4"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "rlang",
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2025-10-18/bin/linux/noble-x86_64/4.6/src/contrib/hms_1.1.4.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/hms_1.1.4-d509b7d4.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "efc525f797b62b3740d06c6fa8202593ab5aa4fc1edeefb76b6eb9be89e87b94" }
+
+[[targets.packages]]
+package = "tidyr"
+version = "1.3.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "glue",
+    "purrr",
+    "cli",
+    "dplyr",
+    "rlang",
+    "tidyselect",
+    "tibble",
+    "lifecycle",
+    "stringr",
+    "cpp11",
+    "vctrs",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/tidyr_1.3.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/tidyr_1.3.2-fa96568a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "withr"
+version = "3.0.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-06-20/bin/linux/noble-x86_64/4.6/src/contrib/withr_3.0.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/withr_3.0.3-937174ff.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "d86c6454164fc85678bfc85e2a6cce42f7461d45fa9a87de71f376e7956c991e" }
+
+[[targets.packages]]
+package = "generics"
+version = "0.1.4"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-05-10/bin/linux/noble-x86_64/4.6/src/contrib/generics_0.1.4.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/generics_0.1.4-72fadd7a.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801" }
+
+[[targets.packages]]
+package = "qpdf"
+version = "1.4.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "askpass",
+    "Rcpp",
+    "curl",
+]
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/noble-x86_64/4.6/src/contrib/qpdf_1.4.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/qpdf_1.4.1-9a2e4055.tar.gz"
+groups = ["main"]
+system_requirements = "libjpeg"
+metadata = { RemoteHash = "3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "utf8"
+version = "1.2.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-06-09/bin/linux/noble-x86_64/4.6/src/contrib/utf8_1.2.6.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/utf8_1.2.6-7c454a4c.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9" }
+
+[[targets.packages]]
+package = "purrr"
+version = "1.2.2"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "magrittr",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-11/bin/linux/noble-x86_64/4.6/src/contrib/purrr_1.2.2.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/purrr_1.2.2-bec4fda3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d", RemoteLinkingToHashes = "cli@3.6.6=b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "cli"
+version = "3.6.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-10/bin/linux/noble-x86_64/4.6/src/contrib/cli_3.6.6.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/cli_3.6.6-20e4b277.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "selectr"
+version = "0.8-0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-09-28/bin/linux/noble-x86_64/4.6/src/contrib/selectr_0.8-0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/selectr_0.8-0-9e3e6422.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "dc5d839559bc5d00f579ff19add013fe9f93dd5a63c78b4adbc673525dae49da" }
+
+[[targets.packages]]
+package = "rlang"
+version = "1.3.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/linux/noble-x86_64/4.6/src/contrib/rlang_1.3.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/rlang_1.3.0-cd54cc8f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "80aa537d49e72265f443a15e8936128af583caa5e572086518b503cbf064279c" }
+
+[[targets.packages]]
+package = "crayon"
+version = "1.5.3"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-06-21/bin/linux/noble-x86_64/4.6/src/contrib/crayon_1.5.3.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/crayon_1.5.3-f2d80489.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69" }
+
+[[targets.packages]]
+package = "tibble"
+version = "3.3.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "rlang",
+    "magrittr",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2026-01-12/bin/linux/noble-x86_64/4.6/src/contrib/tibble_3.3.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/tibble_3.3.1-54804be3.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "fb309f8a1939021b237c7e85ff7ad6e8ff5acd57a6230d220a452094b492b28f" }
+
+[[targets.packages]]
+package = "xml2"
+version = "1.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "cli",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-06-23/bin/linux/noble-x86_64/4.6/src/contrib/xml2_1.6.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/xml2_1.6.0-f431ab66.tar.gz"
+groups = ["main"]
+system_requirements = "libxml2: libxml2-dev (deb), libxml2-devel (rpm)"
+metadata = { RemoteHash = "b0660edab0a839866a0cccd44721c54d497000fd6577a25106a33280318bf579" }
+
+[[targets.packages]]
+package = "stringr"
+version = "1.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "glue",
+    "stringi",
+    "lifecycle",
+    "cli",
+    "rlang",
+    "magrittr",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-11-05/bin/linux/noble-x86_64/4.6/src/contrib/stringr_1.6.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/stringr_1.6.0-77631810.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "24f2fc5df980a7eb888659e22b9744d2316c558624015c7a7cd8c3ce3e370064" }
+
+[[targets.packages]]
+package = "tzdb"
+version = "0.5.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = ["cpp11"]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/linux/noble-x86_64/4.6/src/contrib/tzdb_0.5.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/tzdb_0.5.0-0d46c210.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "R6"
+version = "2.6.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-02-15/bin/linux/noble-x86_64/4.6/src/contrib/R6_2.6.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/R6_2.6.1-6a2d2539.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4" }
+
+[[targets.packages]]
+package = "rvest"
+version = "1.0.5"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = [
+    "tibble",
+    "glue",
+    "lifecycle",
+    "xml2",
+    "cli",
+    "selectr",
+    "rlang",
+    "httr",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2025-08-30/bin/linux/noble-x86_64/4.6/src/contrib/rvest_1.0.5.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/rvest_1.0.5-1a90083d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "1e7c34a0b4467887195b1cd66388919989e82ca096d08df283c675d87e53bc00" }
+
+[[targets.packages]]
+package = "clipr"
+version = "0.8.1"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-26/bin/linux/noble-x86_64/4.6/src/contrib/clipr_0.8.1.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/clipr_0.8.1-4322ae0a.tar.gz"
+groups = ["main"]
+system_requirements = "xclip (https://github.com/astrand/xclip) or xsel (http://www.vergenet.net/~conrad/software/xsel/) for accessing the X11 clipboard, or wl-clipboard (https://github.com/bugaevc/wl-clipboard) for systems using Wayland."
+metadata = { RemoteHash = "06e87a9c387da33f4ce8de91d037c090b924689b5ff487d3c0c7506bd4c3f1b6" }
+
+[[targets.packages]]
+package = "bit64"
+version = "4.8.6"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = ["bit"]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/linux/noble-x86_64/4.6/src/contrib/bit64_4.8.6.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/bit64_4.8.6-8edb959f.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "a5fcec17ba772a561a7375ca8fd966bdd5f20dd4e89b4dae07d7da933d554b45" }
+
+[[targets.packages]]
+package = "bit"
+version = "4.6.0"
+binary = true
+platform = "x86_64-unknown-linux-gnu-ubuntu-24.04"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-07/bin/linux/noble-x86_64/4.6/src/contrib/bit_4.6.0.tar.gz"]
+target = "bin/linux/noble-x86_64/4.6/bit_4.6.0-a639bb1d.tar.gz"
+groups = ["main"]
+metadata = { RemoteHash = "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08" }
+
+[[targets]]
+r_version = "4.6.2"
+platform = "x86_64-w64-mingw32"
+bioc-version = "3.23"
+
+[[targets.direct_dependencies]]
+name = "dplyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "jsonlite"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "pdftools"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "purrr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "readr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "rvest"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "stringr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "tidyr"
+constraint = "*"
+
+[[targets.direct_dependencies]]
+name = "xml2"
+constraint = "*"
+
+[[targets.packages]]
+package = "pdftools"
+version = "3.9.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "Rcpp",
+    "qpdf",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/windows/contrib/4.6/pdftools_3.9.1.zip"]
+target = "bin/windows/4.6/pdftools_3.9.1-01c70c1e.zip"
+groups = ["main"]
+metadata = { RemoteHash = "b51f891f509b122fb2d3090a125c5bc1bfce6d66c672d7b2bf5bfc295b1d0621", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "openssl"
+version = "2.5.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = ["askpass"]
+sources = ["https://p3m.dev/cran/2026-11-03/bin/windows/contrib/4.6/openssl_2.5.0.zip"]
+target = "bin/windows/4.6/openssl_2.5.0-89e44ad8.zip"
+groups = ["main"]
+metadata = { RemoteHash = "4b3adad396c62f8cec664368c713f393a9e5345f9fe7353809b8b80027392ffb" }
+
+[[targets.packages]]
+package = "glue"
+version = "1.8.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-18/bin/windows/contrib/4.6/glue_1.8.1.zip"]
+target = "bin/windows/4.6/glue_1.8.1-c40aadfc.zip"
+groups = ["main"]
+metadata = { RemoteHash = "1c55905d3efc3d5c199ceb0bd12218e97f0d4c64df6038ff41ecef415478a122" }
+
+[[targets.packages]]
+package = "stringi"
+version = "1.8.9"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-08-05/bin/windows/contrib/4.6/stringi_1.8.9.zip"]
+target = "bin/windows/4.6/stringi_1.8.9-226ba057.zip"
+groups = ["main"]
+metadata = { RemoteHash = "427fcebd281d7ea850becce75e0807576dd394a723a814b2d487419b93275a33" }
+
+[[targets.packages]]
+package = "vroom"
+version = "1.7.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "crayon",
+    "cli",
+    "tidyselect",
+    "rlang",
+    "progress",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "cpp11",
+    "vctrs",
+    "bit64",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/vroom_1.7.1.zip"]
+target = "bin/windows/4.6/vroom_1.7.1-f9607aa3.zip"
+groups = ["main"]
+metadata = { RemoteHash = "7d64f6227fdac3ee64c506654bb1d919e407f92fc2d0d5a2398dbb83001e8790", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, progress@1.2.3=ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "readr"
+version = "2.2.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "hms",
+    "glue",
+    "withr",
+    "vroom",
+    "crayon",
+    "cli",
+    "rlang",
+    "tibble",
+    "lifecycle",
+    "tzdb",
+    "R6",
+    "clipr",
+    "cpp11",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/readr_2.2.0.zip"]
+target = "bin/windows/4.6/readr_2.2.0-d00238a0.zip"
+groups = ["main"]
+metadata = { RemoteHash = "8025d797c183e12ad5ebe4af891dbcb5a8e9bd53aa4765006eb25a07f9a9f473", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4, tzdb@0.5.0=380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db" }
+
+[[targets.packages]]
+package = "dplyr"
+version = "1.2.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "rlang",
+    "tibble",
+    "tidyselect",
+    "glue",
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "R6",
+    "generics",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-04-04/bin/windows/contrib/4.6/dplyr_1.2.1.zip"]
+target = "bin/windows/4.6/dplyr_1.2.1-050cebcf.zip"
+groups = ["main"]
+metadata = { RemoteHash = "18d66fe2f24cda8b619c177326d39dd015229ab99695fa67d3fa31e4569390e0" }
+
+[[targets.packages]]
+package = "tidyselect"
+version = "1.2.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "withr",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2024-03-12/bin/windows/contrib/4.6/tidyselect_1.2.1.zip"]
+target = "bin/windows/4.6/tidyselect_1.2.1-6c88146a.zip"
+groups = ["main"]
+metadata = { RemoteHash = "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c" }
+
+[[targets.packages]]
+package = "progress"
+version = "1.2.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "prettyunits",
+    "crayon",
+    "hms",
+    "R6",
+]
+sources = ["https://p3m.dev/cran/2023-12-07/bin/windows/contrib/4.6/progress_1.2.3.zip"]
+target = "bin/windows/4.6/progress_1.2.3-37446ed2.zip"
+groups = ["main"]
+metadata = { RemoteHash = "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276" }
+
+[[targets.packages]]
+package = "prettyunits"
+version = "1.2.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2023-09-25/bin/windows/contrib/4.6/prettyunits_1.2.0.zip"]
+target = "bin/windows/4.6/prettyunits_1.2.0-a9c78d7c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea" }
+
+[[targets.packages]]
+package = "pkgconfig"
+version = "2.0.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2019-09-23/bin/windows/contrib/4.6/pkgconfig_2.0.3.zip"]
+target = "bin/windows/4.6/pkgconfig_2.0.3-279c7882.zip"
+groups = ["main"]
+metadata = { RemoteHash = "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850" }
+
+[[targets.packages]]
+package = "askpass"
+version = "1.2.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = ["sys"]
+sources = ["https://p3m.dev/cran/2024-10-05/bin/windows/contrib/4.6/askpass_1.2.1.zip"]
+target = "bin/windows/4.6/askpass_1.2.1-8ea2713a.zip"
+groups = ["main"]
+metadata = { RemoteHash = "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd" }
+
+[[targets.packages]]
+package = "sys"
+version = "3.4.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-10-05/bin/windows/contrib/4.6/sys_3.4.3.zip"]
+target = "bin/windows/4.6/sys_3.4.3-0a5e210c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a" }
+
+[[targets.packages]]
+package = "lifecycle"
+version = "1.0.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "rlang",
+    "cli",
+]
+sources = ["https://p3m.dev/cran/2026-01-09/bin/windows/contrib/4.6/lifecycle_1.0.5.zip"]
+target = "bin/windows/4.6/lifecycle_1.0.5-fbf429a7.zip"
+groups = ["main"]
+metadata = { RemoteHash = "61841e3e6edba056a88355a3f1d6698ab8d5d9cb3c05f2af0ec5a44ab516f8ee" }
+
+[[targets.packages]]
+package = "curl"
+version = "8.1.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-10-15/bin/windows/contrib/4.6/curl_8.1.0.zip"]
+target = "bin/windows/4.6/curl_8.1.0-edf1176c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "ab3907ac4f063d614c778b8540d7e2e7b108dc6ab82c42e471cff2a1ca21205b" }
+
+[[targets.packages]]
+package = "jsonlite"
+version = "2.0.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-28/bin/windows/contrib/4.6/jsonlite_2.0.0.zip"]
+target = "bin/windows/4.6/jsonlite_2.0.0-38c76850.zip"
+groups = ["main"]
+metadata = { RemoteHash = "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d" }
+
+[[targets.packages]]
+package = "pillar"
+version = "1.11.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "utf8",
+    "vctrs",
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2025-09-18/bin/windows/contrib/4.6/pillar_1.11.1.zip"]
+target = "bin/windows/4.6/pillar_1.11.1-98507d8f.zip"
+groups = ["main"]
+metadata = { RemoteHash = "056ce154238c9b5b8d5dcbcb52e1bc51d33870ce08c8a9ca9496478bd59f4653" }
+
+[[targets.packages]]
+package = "Rcpp"
+version = "1.1.2"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/windows/contrib/4.6/Rcpp_1.1.2.zip"]
+target = "bin/windows/4.6/Rcpp_1.1.2-0af8c486.zip"
+groups = ["main"]
+metadata = { RemoteHash = "2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "httr"
+version = "1.4.9"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "mime",
+    "openssl",
+    "R6",
+    "curl",
+    "jsonlite",
+]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/windows/contrib/4.6/httr_1.4.9.zip"]
+target = "bin/windows/4.6/httr_1.4.9-a7967bfa.zip"
+groups = ["main"]
+metadata = { RemoteHash = "4adf8cea7a24012ec883da1723eaade26c69455e0a3200bdc12f2f9f8515982c" }
+
+[[targets.packages]]
+package = "magrittr"
+version = "2.0.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-05/bin/windows/contrib/4.6/magrittr_2.0.5.zip"]
+target = "bin/windows/4.6/magrittr_2.0.5-0995a92c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "3f5b5b1d4e6d12807a95c50b6c88cb1d8af2c5eb5213f08bfe58f278eca2ed23" }
+
+[[targets.packages]]
+package = "vctrs"
+version = "0.7.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "cli",
+    "glue",
+    "lifecycle",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-12/bin/windows/contrib/4.6/vctrs_0.7.3.zip"]
+target = "bin/windows/4.6/vctrs_0.7.3-fd6ec28d.zip"
+groups = ["main"]
+metadata = { RemoteHash = "b45078413e06ac624dddb7221a3a43908b405c8abec09822cb86638d30b0435b" }
+
+[[targets.packages]]
+package = "cpp11"
+version = "0.5.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/cpp11_0.5.5.zip"]
+target = "bin/windows/4.6/cpp11_0.5.5-73034f81.zip"
+groups = ["main"]
+metadata = { RemoteHash = "72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "mime"
+version = "0.13"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-18/bin/windows/contrib/4.6/mime_0.13.zip"]
+target = "bin/windows/4.6/mime_0.13-1d43468f.zip"
+groups = ["main"]
+metadata = { RemoteHash = "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb" }
+
+[[targets.packages]]
+package = "hms"
+version = "1.1.4"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "rlang",
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2025-10-18/bin/windows/contrib/4.6/hms_1.1.4.zip"]
+target = "bin/windows/4.6/hms_1.1.4-d509b7d4.zip"
+groups = ["main"]
+metadata = { RemoteHash = "efc525f797b62b3740d06c6fa8202593ab5aa4fc1edeefb76b6eb9be89e87b94" }
+
+[[targets.packages]]
+package = "tidyr"
+version = "1.3.2"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "glue",
+    "purrr",
+    "cli",
+    "dplyr",
+    "rlang",
+    "tidyselect",
+    "tibble",
+    "lifecycle",
+    "stringr",
+    "cpp11",
+    "vctrs",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/tidyr_1.3.2.zip"]
+target = "bin/windows/4.6/tidyr_1.3.2-fa96568a.zip"
+groups = ["main"]
+metadata = { RemoteHash = "04c0e6daf0af682af73763a42c027d7171761cdbdbf9ff7a77a0e421343d665a", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "withr"
+version = "3.0.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-06-20/bin/windows/contrib/4.6/withr_3.0.3.zip"]
+target = "bin/windows/4.6/withr_3.0.3-937174ff.zip"
+groups = ["main"]
+metadata = { RemoteHash = "d86c6454164fc85678bfc85e2a6cce42f7461d45fa9a87de71f376e7956c991e" }
+
+[[targets.packages]]
+package = "generics"
+version = "0.1.4"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-05-10/bin/windows/contrib/4.6/generics_0.1.4.zip"]
+target = "bin/windows/4.6/generics_0.1.4-72fadd7a.zip"
+groups = ["main"]
+metadata = { RemoteHash = "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801" }
+
+[[targets.packages]]
+package = "qpdf"
+version = "1.4.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "askpass",
+    "Rcpp",
+    "curl",
+]
+sources = ["https://p3m.dev/cran/2026-07-06/bin/windows/contrib/4.6/qpdf_1.4.1.zip"]
+target = "bin/windows/4.6/qpdf_1.4.1-9a2e4055.zip"
+groups = ["main"]
+metadata = { RemoteHash = "3ab2c6f099b7f17e383ccb0c4fdd8c27a657ba629967d2edb3c768fc3dc315c6", RemoteLinkingToHashes = "Rcpp@1.1.2=2746cf2fb188e5f0a84dbf5c8f68915b54564ed33e5754572f174e7b32e7f4f3" }
+
+[[targets.packages]]
+package = "utf8"
+version = "1.2.6"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-06-09/bin/windows/contrib/4.6/utf8_1.2.6.zip"]
+target = "bin/windows/4.6/utf8_1.2.6-7c454a4c.zip"
+groups = ["main"]
+metadata = { RemoteHash = "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9" }
+
+[[targets.packages]]
+package = "purrr"
+version = "1.2.2"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "vctrs",
+    "cli",
+    "lifecycle",
+    "magrittr",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-04-11/bin/windows/contrib/4.6/purrr_1.2.2.zip"]
+target = "bin/windows/4.6/purrr_1.2.2-bec4fda3.zip"
+groups = ["main"]
+metadata = { RemoteHash = "ac3bc0fc0e789510042522e6c4294336c71447be8f6921b5ef78b9a9fb86617d", RemoteLinkingToHashes = "cli@3.6.6=b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "cli"
+version = "3.6.6"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-04-10/bin/windows/contrib/4.6/cli_3.6.6.zip"]
+target = "bin/windows/4.6/cli_3.6.6-20e4b277.zip"
+groups = ["main"]
+metadata = { RemoteHash = "b2b58d6dd82f5798b335e39c00591686a01fd3e94399ef898e146173e36f18f9" }
+
+[[targets.packages]]
+package = "selectr"
+version = "0.8-0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-09-28/bin/windows/contrib/4.6/selectr_0.8-0.zip"]
+target = "bin/windows/4.6/selectr_0.8-0-9e3e6422.zip"
+groups = ["main"]
+metadata = { RemoteHash = "dc5d839559bc5d00f579ff19add013fe9f93dd5a63c78b4adbc673525dae49da" }
+
+[[targets.packages]]
+package = "rlang"
+version = "1.3.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-07-06/bin/windows/contrib/4.6/rlang_1.3.0.zip"]
+target = "bin/windows/4.6/rlang_1.3.0-cd54cc8f.zip"
+groups = ["main"]
+metadata = { RemoteHash = "80aa537d49e72265f443a15e8936128af583caa5e572086518b503cbf064279c" }
+
+[[targets.packages]]
+package = "crayon"
+version = "1.5.3"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2024-06-21/bin/windows/contrib/4.6/crayon_1.5.3.zip"]
+target = "bin/windows/4.6/crayon_1.5.3-f2d80489.zip"
+groups = ["main"]
+metadata = { RemoteHash = "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69" }
+
+[[targets.packages]]
+package = "tibble"
+version = "3.3.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "vctrs",
+    "lifecycle",
+    "pillar",
+    "cli",
+    "rlang",
+    "magrittr",
+    "pkgconfig",
+]
+sources = ["https://p3m.dev/cran/2026-01-12/bin/windows/contrib/4.6/tibble_3.3.1.zip"]
+target = "bin/windows/4.6/tibble_3.3.1-54804be3.zip"
+groups = ["main"]
+metadata = { RemoteHash = "fb309f8a1939021b237c7e85ff7ad6e8ff5acd57a6230d220a452094b492b28f" }
+
+[[targets.packages]]
+package = "xml2"
+version = "1.6.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "cli",
+    "rlang",
+]
+sources = ["https://p3m.dev/cran/2026-06-23/bin/windows/contrib/4.6/xml2_1.6.0.zip"]
+target = "bin/windows/4.6/xml2_1.6.0-f431ab66.zip"
+groups = ["main"]
+metadata = { RemoteHash = "b0660edab0a839866a0cccd44721c54d497000fd6577a25106a33280318bf579" }
+
+[[targets.packages]]
+package = "stringr"
+version = "1.6.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "glue",
+    "stringi",
+    "lifecycle",
+    "cli",
+    "rlang",
+    "magrittr",
+    "vctrs",
+]
+sources = ["https://p3m.dev/cran/2025-11-05/bin/windows/contrib/4.6/stringr_1.6.0.zip"]
+target = "bin/windows/4.6/stringr_1.6.0-77631810.zip"
+groups = ["main"]
+metadata = { RemoteHash = "24f2fc5df980a7eb888659e22b9744d2316c558624015c7a7cd8c3ce3e370064" }
+
+[[targets.packages]]
+package = "tzdb"
+version = "0.5.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = ["cpp11"]
+sources = ["https://p3m.dev/cran/2026-05-07/bin/windows/contrib/4.6/tzdb_0.5.0.zip"]
+target = "bin/windows/4.6/tzdb_0.5.0-0d46c210.zip"
+groups = ["main"]
+metadata = { RemoteHash = "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db", RemoteLinkingToHashes = "cpp11@0.5.5=72486beb0605c1229bf3d422cd536224af8dc09bd389a3116f62f4c7705c62f4" }
+
+[[targets.packages]]
+package = "R6"
+version = "2.6.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-02-15/bin/windows/contrib/4.6/R6_2.6.1.zip"]
+target = "bin/windows/4.6/R6_2.6.1-6a2d2539.zip"
+groups = ["main"]
+metadata = { RemoteHash = "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4" }
+
+[[targets.packages]]
+package = "rvest"
+version = "1.0.5"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = [
+    "tibble",
+    "glue",
+    "lifecycle",
+    "xml2",
+    "cli",
+    "selectr",
+    "rlang",
+    "httr",
+    "magrittr",
+]
+sources = ["https://p3m.dev/cran/2025-08-30/bin/windows/contrib/4.6/rvest_1.0.5.zip"]
+target = "bin/windows/4.6/rvest_1.0.5-1a90083d.zip"
+groups = ["main"]
+metadata = { RemoteHash = "1e7c34a0b4467887195b1cd66388919989e82ca096d08df283c675d87e53bc00" }
+
+[[targets.packages]]
+package = "clipr"
+version = "0.8.1"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2026-05-26/bin/windows/contrib/4.6/clipr_0.8.1.zip"]
+target = "bin/windows/4.6/clipr_0.8.1-4322ae0a.zip"
+groups = ["main"]
+metadata = { RemoteHash = "06e87a9c387da33f4ce8de91d037c090b924689b5ff487d3c0c7506bd4c3f1b6" }
+
+[[targets.packages]]
+package = "bit64"
+version = "4.8.6"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = ["bit"]
+sources = ["https://p3m.dev/cran/2026-09-02/bin/windows/contrib/4.6/bit64_4.8.6.zip"]
+target = "bin/windows/4.6/bit64_4.8.6-8edb959f.zip"
+groups = ["main"]
+metadata = { RemoteHash = "a5fcec17ba772a561a7375ca8fd966bdd5f20dd4e89b4dae07d7da933d554b45" }
+
+[[targets.packages]]
+package = "bit"
+version = "4.6.0"
+binary = true
+platform = "x86_64-w64-mingw32"
+dependencies = []
+sources = ["https://p3m.dev/cran/2025-03-07/bin/windows/contrib/4.6/bit_4.6.0.zip"]
+target = "bin/windows/4.6/bit_4.6.0-a639bb1d.zip"
+groups = ["main"]
+metadata = { RemoteHash = "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08" }

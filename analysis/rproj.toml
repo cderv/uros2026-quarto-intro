@@ -1,0 +1,16 @@
+[project]
+name = "uros-programmes"
+version = "0.1.0"
+type = "project"
+
+[dependencies]
+R = ">= 4.6"
+readr = "*"
+dplyr = "*"
+tidyr = "*"
+stringr = "*"
+purrr = "*"
+jsonlite = "*"
+pdftools = "*"
+xml2 = "*"
+rvest = "*"
