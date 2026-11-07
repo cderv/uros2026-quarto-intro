@@ -112,21 +112,22 @@ You just saw two very good ones, right before me.
 
 ## {#numbers-leave-code .center timing-duration="15s"}
 
-[You compute the numbers in R.]{.lead}
+[No pipeline? You compute the numbers in R.]{.lead}
 
 . . .
 
-[Then the numbers [leave the code]{.hl}.]{.statement}
+[Then they [leave the code]{.hl}:\
+copied into Word, the PDF, the chart, the web page.]{.statement}
 
 ::: notes
 And without such a pipeline? You compute the numbers in R.
-Then the numbers leave the code: into Word, into the PDF, into the press release.
+Then they leave the code: copied by hand into Word, the PDF, the chart, the web page, the press release.
 Let me show you a Thursday evening.
 :::
 
 ## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
 
-[Release tomorrow. One number in Table 3 is wrong.]{.lead}
+[Release tomorrow. The headline number is wrong.]{.lead}
 
 ::: {.cards}
 ::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
@@ -154,7 +155,7 @@ Let me show you a Thursday evening.
 :::
 
 ::: notes
-Thursday, ten to six. Release tomorrow. One number in Table 3 is wrong: 245.0 million nights instead of 514.7.
+Thursday, ten to six. Release tomorrow. The headline number is wrong: 245.0 million nights instead of 514.7.
 You fix the R code. (click) Then the Word file. (click) The PDF. (click) The chart.
 (click) The web page. Done? Hands up if you know this evening...
 (click) Which one did you forget?
@@ -529,7 +530,7 @@ PDF/UA for a tagged PDF that screen readers can follow. With veraPDF installed, 
 
 ## Thursday, 17:50. Again. {#again .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
 
-[One number in Table 3 is wrong.]{.lead}
+[The headline number is wrong.]{.lead}
 
 ::: magic-move
 
@@ -548,7 +549,7 @@ nights <- get_eurostat("tour_occ_nim",
 :::
 
 ::: notes
-Back to Thursday, ten to six. One number in Table 3 is wrong.
+Back to Thursday, ten to six. The headline number is wrong, again.
 Someone kept the foreign guests only. You fix the R code: one line, one word.
 :::
 
