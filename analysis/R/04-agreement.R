@@ -3,7 +3,7 @@
 # Inputs: data/coding-a-*.csv and data/coding-b-*.csv (step 4a, coders A and
 # B). Outputs: data/coding-a.csv, data/coding-b.csv (merged), data/agreement.csv
 # (per-variable agreement), data/disagreements.csv (rows for the adjudicator).
-# After adjudication, data/adjudication.csv holds the settled values; this
+# After adjudication, data/adjudication-*.csv hold the settled values; this
 # script then writes data/coding-final.csv.
 #
 # Usage, from analysis/: Rscript R/04-agreement.R
@@ -89,9 +89,10 @@ write_csv(crosscheck, file.path(data_dir, "keyword-crosscheck.csv"))
 message(nrow(crosscheck), " keyword flags with no matching tool in either coding")
 
 # Final coding: coder A's values where both agree, the adjudicated value otherwise.
-adj_file <- file.path(data_dir, "adjudication.csv")
-if (file.exists(adj_file)) {
-  adj <- read_csv(adj_file, col_types = cols(.default = "c"), na = "")
+adj_files <- list.files(data_dir, pattern = "^adjudication-\\d+\\.csv$", full.names = TRUE)
+if (length(adj_files) > 0) {
+  adj <- map(adj_files, \(f) read_csv(f, col_types = cols(.default = "c"), na = "")) |> list_rbind()
+  adj$value[adj$variable %in% multi] <- norm_set(adj$value[adj$variable %in% multi])
   stopifnot(!anyDuplicated(adj[c("id", "variable")]))
   missing <- anti_join(disagreements, adj, by = c("id", "variable"))
   if (nrow(missing) > 0) stop(nrow(missing), " disagreements not adjudicated yet")
@@ -103,6 +104,8 @@ if (file.exists(adj_file)) {
   only_b <- final$needs != a$needs & final$needs == b$needs
   final$need_quote[only_b] <- b$need_quote[only_b]
   final$need_quote[final$needs %in% c("", "none")] <- NA
+  incoherent <- filter(final, publishing == "none" & (tools != "not_stated" | outputs != "none" | needs != "none"))
+  if (nrow(incoherent) > 0) warning(nrow(incoherent), " talks coded publishing = none but with tools, outputs or needs: ", paste(incoherent$id, collapse = ", "))
   write_csv(final, file.path(data_dir, "coding-final.csv"), na = "")
   message("Wrote data/coding-final.csv")
 }
