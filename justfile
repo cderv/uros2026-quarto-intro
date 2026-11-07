@@ -106,3 +106,15 @@ publish target="gh": check (_publish target)
 [group('publish')]
 [confirm("Publish the slides (no re-check)?")]
 publish-only target="gh": (_publish target)
+
+# === programme analysis ===
+
+# Install the R packages of the uRos programme analysis (rig proj, analysis/rproj.lock)
+[group('analysis')]
+analysis-deps:
+    cd analysis && rig proj sync
+
+# Rebuild the uRos programme data: fetch sources, parse, keyword flags, agreement and summaries
+[group('analysis')]
+analysis:
+    cd analysis && Rscript R/01-fetch.R && Rscript R/02-extract.R && Rscript R/03-keywords.R && Rscript R/04-agreement.R && Rscript R/05-summarise.R
