@@ -65,70 +65,29 @@ room has just seen.
 
 ## Themes across editions
 
-### Talk-by-talk classification, 2015–2026
+Rebuilt reproducibly on 2026-11-07 in `analysis/` (R scripts, data, method in
+`analysis/README.md`; claims used in the talk, with their numbers and caveats, in
+`analysis/claims.md`). It replaces an earlier one-off classification (about 480 talks, single
+coder) whose figures should no longer be quoted.
 
-479 programme entries classified by primary theme (abstracts for 2018, 2019, 2021–2025; titles
-only for 2015–2017 and 2026; 2020 partial; 2013–2014 not found). Single coder, keyword-assisted
-and checked by hand: read the counts as orders of magnitude.
+- 532 programme items, 2014–2026 (the speaker's own talk left out); abstracts for 2020–2021 and
+  2023–2026, titles only for 2014–2019 and 2022 (2018, 2019 and 2022 books of abstracts not
+  archived). Sources: Common Crawl copies of r-project.ro and the uRosConf GitHub repositories.
+- Classification by two independent language-model coders, an adjudicator and an independent
+  fact-check; agreement 96% on "publishing or not" (kappa 0.85).
+- Every edition since 2017 had at least one talk centred on publishing statistics, about 35 in
+  all (66 counting talks where publishing is a part).
+- The needs that come back: automating recurring publications, the institute's corporate design,
+  less manual work. Ten publishing talks present an in-house package (Statistics Austria,
+  Bundesbank, Destatis, Eurostat, Ministry of Justice, Public Health Scotland...).
+- Reproducibility: in years with abstracts, about 1 talk in 6 (2020) to about 1 in 3 (2026), not
+  a steady rise, mostly partial.
+- Quarto before 2026: one abstract for producing publications (2023, a university) and one for an
+  internal report (2025). R Markdown-family publishing talks cluster in 2017–2019 and 2023–2024.
+- No past tutorial was on R Markdown or Quarto.
 
-| Year | Talks | Methods | Editing | SDC | Time series | Production | Viz | Shiny | Publication | Reproducibility | Packages | ML/AI |
-|------|------:|--------:|--------:|----:|------------:|-----------:|----:|------:|------------:|----------------:|---------:|------:|
-| 2017 | 30 | 9 | 2 | 2 | 0 | 5 | 0 | 0 | 1 | 0 | 3 | 1 |
-| 2018 | 52 | 14 | 6 | 2 | 3 | 7 | 3 | 6 | 5 | 0 | 4 | 1 |
-| 2019 | 41 | 6 | 8 | 2 | 1 | 0 | 1 | 3 | 4 | 1 | 4 | 3 |
-| 2021 | 46 | 9 | 9 | 2 | 3 | 4 | 3 | 2 | 3 | 0 | 3 | 2 |
-| 2022 | 48 | 8 | 4 | 6 | 2 | 7 | 2 | 5 | 2 | 1 | 4 | 3 |
-| 2023 | 26 | 3 | 1 | 1 | 0 | 5 | 1 | 1 | 2 | 1 | 2 | 4 |
-| 2024 | 46 | 9 | 7 | 2 | 4 | 8 | 1 | 1 | 3 | 0 | 1 | 5 |
-| 2025 | 41 | 14 | 5 | 4 | 1 | 2 | 1 | 2 | 0 | 2 | 3 | 2 |
-| 2026 | 113 | 20 | 7 | 6 | 8 | 10 | 9 | 1 | 6 | 5 | 9 | 14 |
-
-Facts:
-
-- National statistical institutes give about 60% of past talks. Survey methods and estimation lead,
-  then data editing and imputation, then R in production and organisation. Content is mostly
-  package presentations and institutional case studies.
-- Publication and dissemination is a steady minority theme: 0 to 5 talks a year.
-- R Markdown (counting knitr, flexdashboard, pagedown, `.Rmd`) appears in about 20 talks from 2015
-  to 2025, mostly as a passing mention. Talks centred on it:
-  - 2017, NSI: automation of publications using knitr
-  - 2018, NSI: a corporate design toolbox for R
-  - 2018, ministry: an alternative to LaTeX for high-quality reports with rmarkdown
-  - 2019, French Ministry of Justice: reproducible corporate publications using pagedown
-  - 2019, NSI: semi-automatic reports with R Markdown
-  - 2021–2024: flexdashboard flash reports, R Markdown reports inside Shiny, Statistics Explained
-    content production
-- Quarto appears in 3 talks before 2026, always as a side mention (2022 interactive plots, 2023
-  report automation from a university, 2025 an automated variance-estimation report). No past talk
-  was dedicated to Quarto.
-- No past tutorial was on R Markdown or Quarto. Tutorials covered data.table, spatial data,
-  validation, sampling, record linkage, package development, JDemetra+, Git (2025).
-- 2026 is the first edition with sessions named after reproducible production pipelines and
-  automated, accessible outputs. Reproducibility and ML/AI rise strongly in 2025–2026.
-
-*Inference:* uRos is a practitioners' conference about methods and production; publishing tools are
-a side topic. R Markdown peaked in 2018–2019 with corporate-publication case studies (the French
-Ministry of Justice, now in our session again, was one of them) and came back mostly as
-dashboards. This talk is the first one dedicated to Quarto at uRos.
-
-### Keyword counts, 2023–2025
-
-Keyword counts in the 2023–2025 books of abstracts (lines, not talks):
-
-| Keyword | 2023 | 2024 | 2025 |
-|---------|-----:|-----:|-----:|
-| R Markdown | 0 | 4 | 0 |
-| Quarto | 1 | 0 | 1 |
-| reproducib* | 1 | 4 | 7 |
-| Shiny | 6 | 14 | 13 |
-| dashboard | 0 | 6 | 14 |
-| SAS | 10 | 16 | 1 |
-| git / GitHub / GitLab | 5 | 7 | 17 |
-| Typst | 0 | 0 | 0 |
-
-*Trend (inference):* Shiny dashboards and version control grow, reproducibility is a rising theme
-(a "Reproducibility and Open Science" session in 2025, a reproducible pipelines session in 2026),
-SAS migration fades, document publishing with R Markdown or Quarto stays marginal.
+*Inference:* publishing is a steady minority topic, and the same needs keep being solved with
+in-house pipelines; uRos remains a practitioners' conference about methods and production.
 
 ## Quarto already in use in official statistics
 
