@@ -65,31 +65,24 @@ X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
 
 <!-- ============================ INTRO (2:00) ============================ -->
 
-## {#conversation .center timing-duration="20s"}
+## {#conversation .center auto-animate="true" auto-animate-id="opening" timing-duration="15s"}
 
-[Friends in official statistics told me:]{.lead}
+[Friends in official statistics:]{.lead data-id="quote-who"}
 
-[*"Quarto? Not really used in our world."*]{.statement}
-
-. . .
-
-[An R community that publishes numbers every day. I wanted to understand.]{.lead}
-
-[So I went through every uRos programme, 2014 to 2026.]{.lead}
+[*"Quarto? Not really used in our world."*]{.statement data-id="quote"}
 
 ::: notes
-I'm here because of a conversation.
-Friends in official statistics told me: Quarto? Not really used in our world.
-You are an R community, and publishing numbers is your job, so I wanted to understand.
-Before coming, I went through every uRos programme since 2014, about 530 talks,
-to see what you say when you talk about publishing.
+Friends said it. You are an R community that publishes numbers every day: I wanted to understand.
 :::
 
-## Publishing statistics at uRos {#publishing-needs .center timing-duration="30s"}
+## {#publishing-needs auto-animate="true" auto-animate-id="opening" timing-duration="20s"}
 
-[Every edition since 2017 had a talk about publishing statistics. About 35 in all.]{.lead}
+[Friends in official statistics:]{.lead .quote-who-top data-id="quote-who"}
 
-[The same needs come back:]{.lead}
+[*"Quarto? Not really used in our world."*]{.statement .quote-top data-id="quote"}
+
+[Every uRos since 2017:\
+a talk about publishing statistics]{.statement .needs-head}
 
 ::: {.needs}
 [Recurring publications, automated]{.need}
@@ -97,32 +90,12 @@ to see what you say when you talk about publishing.
 [Less manual work]{.need}
 :::
 
-. . .
-
-[Same need, every year. Often, a pipeline built in-house.]{.statement}
-
-[532 programme items, 2014–2026; titles only before 2020 and in 2022. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
+[About 35 talks in 532 program items, 2014 to 2026. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
-Every edition since 2017 had at least one talk about publishing statistics, about thirty-five in all.
-Three needs come back: automate the publication that returns every month, make it look like your institute, cut the manual work.
-And the answer is often a pipeline a team built for itself: ten of those talks present an in-house package.
-You just saw two very good ones, right before me.
-:::
-
-## {#numbers-leave-code .center timing-duration="15s"}
-
-[No pipeline? You compute the numbers in R.]{.lead}
-
-. . .
-
-[Then they [leave the code]{.hl}:\
-copied into Word, the PDF, the chart, the web page.]{.statement}
-
-::: notes
-And without such a pipeline? You compute the numbers in R.
-Then they leave the code: copied by hand into Word, the PDF, the chart, the web page, the press release.
-Let me show you a Thursday evening.
+Read every uRos program since 2014: the same three needs, often a pipeline built in-house.
+Without one, the numbers leave the code: copied by hand into Word, the PDF, the web page.
+Bridge: a Thursday evening.
 :::
 
 ## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
@@ -196,7 +169,45 @@ What if you only had to fix it once?
 
 <!-- ============================ X1 (2:30) ============================ -->
 
-## The R code you already have {#r-code .magic-move .tall-code .timing-section timing-title="X1 · Every number computed" timing-duration="30s"}
+## Quarto renders text and R code into this bulletin {#rendered auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
+
+::: {.shots-v data-id="result-shots"}
+![](images/bulletin/html-key-figure.png){.shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+
+![](images/bulletin/html-trend.png){.shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
+:::
+
+::: notes
+First time the name is said. Quarto: your text and your R code in one file, rendered to this page.
+:::
+
+## Quarto renders text and R code into this bulletin {#rendered-walk auto-animate="true" auto-animate-id="result" timing-duration="20s"}
+
+::: {.columns}
+::: {.column width="58%"}
+::: {.shots-v data-id="result-shots"}
+![](images/bulletin/html-key-figure.png){.shot width="500px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+
+![](images/bulletin/html-trend.png){.shot height="300px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
+:::
+:::
+::: {.column width="42%" .side-steps}
+[bulletin.html, August 2026]{.k}
+
+[Key figure: 514.7 million nights]{.fragment}
+
+[Chart and caption: from the same R code]{.fragment}
+
+[Nobody typed 514.7]{.fragment}
+:::
+:::
+
+::: notes
+Point at 514.7 in the box, then in the chart.
+Bridge: "Let's open the source file."
+:::
+
+## The R code you already have {#r-code .magic-move .tall-code timing-duration="30s"}
 
 ```r
 library(eurostat)
@@ -317,19 +328,6 @@ ggplot(nights, aes(time, values)) + geom_line()
 
 ::: notes
 Step four, the important one: the number in the sentence is not typed. It is computed.
-:::
-
-## Every number comes from your code {#rendered timing-duration="25s"}
-
-::: {.shots-v}
-![](images/bulletin/html-key-figure.png){.shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
-
-![](images/bulletin/html-trend.png){.shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
-:::
-
-::: notes
-And this is what the reader gets. The sentence, the chart, the caption.
-Nobody typed 514.7. Every number your reader sees comes from your R code.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
