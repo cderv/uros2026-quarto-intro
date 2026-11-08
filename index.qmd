@@ -380,14 +380,16 @@ Print and the archive, from the same file.
 
 <!-- ============================ X3 (1:45) ============================ -->
 
-## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="35s"}
+## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="30s"}
 
 ::: {.columns}
 ::: {.column width="55%"}
 ```` markdown
 ```{r}
 #| label: tbl-countries
-#| tbl-cap: "Nights by country, millions"
+#| tbl-cap: >
+#|   Nights spent at tourist accommodation
+#|   by country, millions
 gt(tab) |>
   fmt_number(columns = c(before, now),
              scale_by = 1e-6, decimals = 1) |>
@@ -398,19 +400,27 @@ gt(tab) |>
 :::
 ::: {.column width="45%"}
 ::: {.r-stack}
-![](images/bulletin/html-table.png){.shot .fragment .fade-out .print-hide fragment-index="1" width="500px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
+::: {.fragment .fade-out .print-hide fragment-index="1"}
+![](images/bulletin/html-table.png){.shot width="500px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
 
-![](images/bulletin/pdf-table.png){.shot .fragment fragment-index="1" width="500px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
+[bulletin.html]{.shot-label}
+:::
+
+::: {.fragment fragment-index="1"}
+![](images/bulletin/pdf-table.png){.shot width="500px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
+
+[bulletin.pdf]{.shot-label}
+:::
 :::
 :::
 :::
 
 ::: notes
-Publications are tables. Your R table package, gt or another one, renders the table in HTML and in PDF.
-The label and caption make it Table 1, numbered for you.
+Same gt code, one table in bulletin.html and in bulletin.pdf.
+Table 1 comes from label + tbl-cap, numbered for you.
 :::
 
-## Captions and cross-references {#crossref kicker="Ready to publish" timing-duration="25s"}
+## Cross-references: numbered for you {#crossref kicker="Ready to publish" timing-duration="25s"}
 
 ```markdown
 @fig-trend compares this year
@@ -422,12 +432,11 @@ and @sec-methods explains the figures.
 ![](images/bulletin/html-crossref.png){.shot width="1100px" fig-align="center" fig-alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures."}
 
 ::: notes
-Write \@fig-trend in your text and Quarto writes "Figure 1", with a link in HTML;
-\@sec-countries becomes "Section 2". Add a figure or a section, the numbers follow.
-No more "see Table 3" pointing to the old Table 3.
+Write \@fig-trend, read "Figure 1", a link in HTML; \@sec-countries, "Section 2".
+Add a figure, every number follows.
 :::
 
-## Your institute's look {#brand kicker="Ready to publish" timing-duration="25s"}
+## Your institute's look: one `_brand.yml` for every format {#brand kicker="Ready to publish" timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -454,11 +463,11 @@ typography:
 :::
 
 ::: notes
-And your institute's look: colours, logo, fonts, written once in _brand.yml.
-HTML, PDF, even these slides pick it up. Here, a fictional institute.
+Colors, logo, fonts: written once in _brand.yml; HTML, PDF and Word read it.
+A fictional institute, real Eurostat data.
 :::
 
-## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="20s"}
+## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="25s"}
 
 ```{.yaml filename="_quarto.yml"}
 format:
@@ -472,11 +481,11 @@ $ quarto render bulletin.qmd
 [verapdf]: Validating bulletin.pdf against PDF/UA1... PASSED
 ```
 
-[Docs: [quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards](https://quarto.org/docs/output-formats/typst.html#pdf-accessibility-standards)]{.small-cap}
+[PDF/A: for the archive. PDF/UA: tagged, for screen readers. veraPDF: the checker, run by Quarto.]{.lead}
 
 ::: notes
-Your PDF must be accessible too, and archived. One line asks for both: PDF/A for the archive,
-PDF/UA for a tagged PDF that screen readers can follow. With veraPDF installed, Quarto checks them at every render.
+One line asks for both standards; veraPDF installed, Quarto checks them at every render.
+PDF/A keeps the file readable in 20 years; PDF/UA is a tagged PDF a screen reader can follow.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
