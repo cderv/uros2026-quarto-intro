@@ -372,10 +372,28 @@ Web: readable on a phone, chart and table inside.
 
 ## For print {#pdf kicker="One source, every format" timing-duration="20s"}
 
-![](images/bulletin/pdf-p1.png){.shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
+<!-- the two PDF pages scroll slowly while the slide is shown; the PDF export shows them side by side -->
+::: {.page-scroll .print-hide .no-overflow-check}
+::: {.pages}
+![](images/bulletin/pdf-p1.png){fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
+
+![](images/bulletin/pdf-p2.png){fig-alt="Page 2 of the PDF bulletin: Table 1 of nights by country, the map of the yearly change, and the methods section."}
+:::
+:::
+
+::: {.print-only}
+::: {.columns}
+::: {.column width="50%"}
+![](images/bulletin/pdf-p1.png){.shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin."}
+:::
+::: {.column width="50%"}
+![](images/bulletin/pdf-p2.png){.shot height="540px" fig-align="center" fig-alt="Page 2 of the PDF bulletin."}
+:::
+:::
+:::
 
 ::: notes
-Print and the archive, from the same file.
+Print and the archive, from the same file. (The pages scroll by themselves.)
 :::
 
 <!-- ============================ X3 (1:45) ============================ -->
@@ -383,7 +401,7 @@ Print and the archive, from the same file.
 ## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="30s"}
 
 ::: {.columns}
-::: {.column width="55%"}
+::: {.column width="50%"}
 ```` markdown
 ```{r}
 #| label: tbl-countries
@@ -398,16 +416,16 @@ gt(tab) |>
 ```
 ````
 :::
-::: {.column width="45%"}
+::: {.column width="50%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out .print-hide fragment-index="1"}
-![](images/bulletin/html-table.png){.shot width="500px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
+![](images/bulletin/html-table.png){.shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
 
 [bulletin.html]{.shot-label}
 :::
 
 ::: {.fragment fragment-index="1"}
-![](images/bulletin/pdf-table.png){.shot width="500px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
+![](images/bulletin/pdf-table.png){.shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
 
 [bulletin.pdf]{.shot-label}
 :::
@@ -422,17 +440,19 @@ Table 1 comes from label + tbl-cap, numbered for you.
 
 ## Cross-references: numbered for you {#crossref kicker="Ready to publish" timing-duration="25s"}
 
-```markdown
-@fig-trend compares this year
-with the four previous years;
-@sec-countries looks at each country
-and @sec-methods explains the figures.
+```{.markdown .wrap-code}
+No month on record had more nights than August 2026. @fig-trend compares this year with the four previous years; @sec-countries looks at each country and @sec-methods explains the figures.
 ```
 
 ![](images/bulletin/html-crossref.png){.shot width="1100px" fig-align="center" fig-alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures."}
 
+<!-- frames on the @ references, positions measured on the rendered slide -->
+[]{.xr-box .absolute .fragment fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"}
+[]{.xr-box .absolute .fragment fragment-index="1" style="left: 447px; top: 131px; width: 220px; height: 40px;"}
+[]{.xr-box .absolute .fragment fragment-index="1" style="left: 1052px; top: 131px; width: 191px; height: 40px;"}
+
 ::: notes
-Write \@fig-trend, read "Figure 1", a link in HTML; \@sec-countries, "Section 2".
+(click) The references. Write \@fig-trend, read "Figure 1", a link in HTML; \@sec-countries, "Section 2".
 Add a figure, every number follows.
 :::
 
@@ -535,7 +555,7 @@ Cause: someone kept the guests from abroad only. (click) One word in the R code.
 ::: {.columns}
 ::: {.column width="50%"}
 ::: {.hl-shot}
-![](images/bulletin/html-key-figure.png){.shot fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/html-key-figure.png){.shot height="180px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
 
 []{.hl-box .fragment fragment-index="1" style="left: 3.5%; top: 9%; width: 42%; height: 28%;"}
 :::
@@ -543,7 +563,7 @@ Cause: someone kept the guests from abroad only. (click) One word in the R code.
 :::
 ::: {.column width="50%"}
 ::: {.hl-shot}
-![](images/bulletin/pdf-key-figure.png){.shot fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/pdf-key-figure.png){.shot height="180px" fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."}
 
 []{.hl-box .fragment fragment-index="1" style="left: 4%; top: 13%; width: 46%; height: 30%;"}
 :::
