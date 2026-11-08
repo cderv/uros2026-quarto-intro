@@ -50,6 +50,7 @@ the first session, then keep it current.
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
+| `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition) and three reviewers, `talk-reviewer-story`, `-voice`, `-audience`. Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 | `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |
