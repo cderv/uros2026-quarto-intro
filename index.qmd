@@ -532,7 +532,7 @@ PDF/UA for a tagged PDF that screen readers can follow. With veraPDF installed, 
 
 [The headline number is wrong.]{.lead}
 
-::: magic-move
+::: {.magic-move .print-hide}
 
 ```r
 nights <- get_eurostat("tour_occ_nim",
@@ -546,6 +546,15 @@ nights <- get_eurostat("tour_occ_nim",
                  nace_r2 = "I551-I553", c_resid = "TOTAL"))
 ```
 
+:::
+
+<!-- PDF export: the magic-move above is captured mid-animation, show its final state instead -->
+::: {.print-only}
+```r
+nights <- get_eurostat("tour_occ_nim",
+  filters = list(geo = "EU27_2020", unit = "NR",
+                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+```
 :::
 
 ::: notes
