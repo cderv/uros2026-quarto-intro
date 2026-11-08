@@ -667,15 +667,17 @@ Same idea, any language, more formats
 
 The bulletin, the gallery, these slides
 :::
-::: {.event .fragment data-label="Next"}
-**Next generation**
+::: {.event .fragment data-label="In development"}
+**Quarto 2**
 
-Faster engine, writing together in the browser (in development)
+Faster, and writing together in the browser
 :::
 :::
 
 ::: notes
-R Markdown before, Quarto today, and the next generation is in the works.
+Quarto 2, the next generation: Quarto rewritten in Rust, public on GitHub (quarto-dev/q2), experimental nightly builds, not for production, no date.
+Two gains: a much faster engine, and Quarto Hub, several people writing the same document in the browser at once.
+Bridge: from the tool's timeline to the conference's, every edition since 2017.
 :::
 
 ## {#next-year .center timing-duration="30s"}
