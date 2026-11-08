@@ -2,14 +2,20 @@
 
 Rules for helping Chris (cderv) prepare talks. Apply when drafting slides, suggesting structure, or reviewing content in this folder.
 
+This file covers structure. For **wording** (hooks, bridges, slide text, notes, closings), read
+`.claude/references/talk-voice.md` before drafting: it starts with Christophe's own statements
+(notes are memory aids he does not read; short spoken intro; he concludes by speaking) and holds
+the evidence from his decks. It extends the workshop profile `cderv/raukr-2026-quarto`, `.claude/references/house-voice.md` (not yet copied into this repository).
+
 ---
 
 ## Talk Format
 
-All talks since 2023 use **Quarto RevealJS** with the `clean-revealjs` extension (Grant McDermott's `grantmcdermott/clean`). Earlier talks (2021–2022) used **xaringan**. The canonical format since 2023 is `clean-revealjs`.
+All talks since 2023 use **Quarto RevealJS** with the `clean-revealjs` extension (Grant McDermott's `grantmcdermott/clean`). Earlier talks (2021–2022) used **xaringan**. The canonical format since 2023 is `clean-revealjs`. Exception: posit::conf 2025 (Lua filters) and its 2026 FR version were made in Google Slides.
 
-**Two talk types:**
+**Three talk types:**
 - **Intro/overview talk** (40–60 min, 40–60 slides) — full "What / Why / How / Features" arc
+- **Short intro talk** (15–20 min) — two models: definition-first (useR! 2024: "What is Quarto?" / "Why Quarto?" / "How to use Quarto?", picked features, about 18 visible slides) and story-driven (PyData Paris 2025, posit::conf 2025: situation first, tool named after the first result). For 15 min, plan about 12 to 15 visible slides (estimate, durations are not on disk)
 - **Topic-specific talk** (20 min, 15–50 slides) — 1–2 context slides then straight to topic
 
 ---
@@ -17,8 +23,8 @@ All talks since 2023 use **Quarto RevealJS** with the `clean-revealjs` extension
 ## Narrative Arc
 
 ### Full intro talk arc (EN):
-1. Custom title slide (raw HTML, not YAML `title:`)
-2. `# What is Quarto?` section — italic framing subtitle
+1. Custom title slide (raw HTML, not YAML `title:`). This is the convention since 2024; the Raukr 2023/2025 intro decks still used YAML `title:`
+2. `# What is Quarto?` section — italic framing subtitle (the only divider that always has one)
 3. Definition slide: "...is an open-source, scientific, and technical publishing system"
 4. Allison Horst schematic (`horst_quarto_schematic.png`)
 5. Progressive build with `auto-animate`: "unifies + extends" (3 slides)
@@ -31,40 +37,48 @@ All talks since 2023 use **Quarto RevealJS** with the `clean-revealjs` extension
 
 ### Full intro talk arc (FR):
 Same arc, but section headings in French:
-- `# Qu'est-ce que Quarto?` with subtitle `*C'est comme R Markdown non ?*`
-- `# Des questions ?` + `Merci!` section slide as final (replaces "Learning More")
+- `# Qu'est-ce que Quarto ?` (French typography keeps the space before `?` and `!` in FR decks) with an italic framing line, e.g. `*Quarto est la nouvelle génération de R Markdown.*` (2024). The topic talk RR 2023 used the plain line `C'est comme R Markdown non ?` instead
+- `# Des questions ?` + `Merci!` section slide as final (replaces "Learning More"), or "Learning More" with FR labels and `#### Questions?` (2024 intro)
 - Icons: `{{< fa tv >}}` for slides link, `{{< fa brands github >}}` for repo
 
 ### Topic-specific talk arc (short, FR or EN):
 1. Title slide
-2. 1–2 Quarto context slides (very brief, audience already knows Quarto)
-3. Problem statement ("Déjà bien, mais..." / "But what about X?")
-4. Solution sections
-5. Summary/recap
+2. 1–2 Quarto context slides (very brief, audience already knows Quarto). Variant: situation first, tool named after (posit::conf 2025: a user persona says "I am stuck !"; PyData 2025: a real report and the notebook, then `## Let's use Quarto for this`; RR 2025: `# Produire des HTML` before the turn)
+3. Problem statement, stated mildly: a plain connector (`On the other hand,` / `D'un autre côté,`), a question heading (`# What about theming ?`), or the user's own words (a persona bubble or blockquote). `Déjà bien, mais...` was used once (RR 2025). "But what about X?" does not occur in the Quarto-era decks
+4. Solution sections (same action before/after, one line of YAML or one command, result shown, mechanism after)
+5. Summary/recap (topic talks only; the intro talks end on "Learning More" with no recap), or a call to action that calls back the opening problem (posit::conf 2025)
 6. Questions + slide URL
 
 ---
 
 ## Signature Phrases (EN) — use verbatim
 
+Most of these are shared Quarto-project formulas (quarto.org, the 2022 "Hello, Quarto" material)
+that he reuses in intro talks; he does not read them out. Use them verbatim where the arc calls
+for them, never as a model for new sentences. His own wording is in `talk-voice.md`.
+
 | Phrase | Where |
 |--------|-------|
 | `"Quarto is the next generation of R Markdown: It unifies and extends it"` | `#` section subtitle (italic) |
-| `"...is an open-source, scientific, and technical publishing system"` | First definition slide |
-| `"you can weave together narrative text and code to produce elegantly formatted output"` | Second content slide |
-| `"just like R Markdown... but not just like it, there's more to it"` | `. . .` fragment build |
-| `"Posit's attempt to bring 10-years experience of R Markdown to everyone"` | Why section |
-| `"A lot more can be done with [**Quarto**]{.hl}"` | Closing (recent EN) |
+| `"...is an open-source, scientific, and technical publishing system"` | First definition slide (2023 had "a new,"; dropped in 2025) |
+| `"Quarto is a [command line interface (CLI)]{.hl} that renders ..."` | "How to use Quarto?" slide (4 decks, 3 talks) |
+| `"... you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more."` | "With Quarto..." slide (Raukr intro; in notes in useR! 2024) |
+| `"*just like R Markdown...*"` then `"but not *just like* it, there's more to it..."` | `. . .` fragment build (Raukr intro only) |
+| `"**unifies** + **extends** the R Markdown ecosystem"` | `auto-animate` build, bold (not `{.hl}`) |
+| `"Quarto is Posit's attempt to bring 10-years experience of [R Markdown to everyone]{.hl}!"` | Why section |
+| `"A lot more can be done with [**Quarto**]{.hl}"` + `"Deep dive at <https://quarto.org>"` | Closing (PyData 2024 and 2025; his own wording) |
 
 ## Signature Phrases (FR) — use verbatim
 
 | Phrase | Where |
 |--------|-------|
-| `"C'est comme R Markdown non ?"` | Section subtitle opener |
-| `"...est un nouveau système de publication scientifique et technique à code source ouvert"` | Definition |
-| `"unifie et étend l'écosystème R Markdown"` | Build slide |
-| `"Déjà bien, mais..."` | Problem statement transition |
-| `"Prenons un exemple"` | Demo slide intro |
+| `"système de publication scientifique et technique"` | Definition; stable core in 3 talks, the rest varies: `"...est un nouveau système de publication scientifique et technique à code source ouvert"` (2024), `"Un système de publication scientifique et technique open-source, intégrant l'exécution de code."` (2025) |
+| `"**unifie** + **étend** l'écosystème R Markdown"` | Build slide (2024); `"Quarto unifie + étend R Markdown"` (2023 heading) |
+| `"... vous pouvez "tisser" ensemble du texte narratif et du code"` | "Avec Quarto..." slide |
+
+Seen once (one talk each, use only when the situation fits): `"C'est comme R Markdown non ?"`
+(RR 2023 opener line), `"Déjà bien, mais..."` (RR 2025 problem turn), `"Prenons un exemple"`
+(RR 2025 example intro).
 
 ---
 
@@ -89,7 +103,7 @@ Christophe Dervieux
 {{< meta date >}}
 ````
 
-**Section divider (`#` level)** — always include italic framing line:
+**Section divider (`#` level)** — the opening divider carries an italic framing line; other dividers carry an agenda list, one plain sentence, or nothing (PyData 2025: most dividers have no body). posit::conf 2025 has no divider slides: a small section label above each heading changes at section boundaries. For the opening divider:
 ```markdown
 # What is Quarto?
 
@@ -97,7 +111,7 @@ Christophe Dervieux
 It unifies and extends it*
 ```
 
-**Progressive build** — use `auto-animate="true"` across 3 consecutive slides for the "unifies + extends" sequence. Also used for R Markdown → Quarto syntax comparison with `data-id` on divs.
+**Progressive build** — use `auto-animate="true"` across 3 consecutive slides for the "unifies + extends" sequence, with `**bold**` on the two verbs (every deck; the opening template in `presentation-config.md` uses `{.hl}` there, which no deck does). Also used for R Markdown → Quarto syntax comparison with `data-id` on divs.
 
 **IDE tools r-stack** — sequential reveal of VSCode → JupyterLab → RStudio/Positron screenshots using `.fragment .fade-in-then-out` with `fragment-index`.
 
@@ -134,9 +148,13 @@ code example
 
 ## Opening Formula
 
-EN: Title → `# What is Quarto?` (with signature italic framing) → definition + schematic → `. . .` reveals → "weave together" paragraph
+EN: Title → `# What is Quarto?` (with signature italic framing) → definition + schematic → "weave together" paragraph with its `. . .` reveals → `auto-animate` build
 
-FR: Title → `# Qu'est-ce que Quarto?` (with `*C'est comme R Markdown non ?*`) → definition → `auto-animate` build
+EN, story-driven (posit::conf 2025, PyData 2025): Title → the situation (a persona's problem in their own words, or a real artefact) → a bridge from what the audience already does → one line or one command → result shown → mechanism → one definition line at most
+
+FR: Title → `# Qu'est-ce que Quarto ?` (italic framing line) → definition → `auto-animate` build
+
+Spoken, he keeps the intro short: "welcome everyone", a quick hook on why he is here, then the topic hook slide. No opening slide has a bio, a personal anecdote, or a question that waits for an answer from the room.
 
 ---
 
@@ -176,16 +194,20 @@ Merci!
 [Merci!]{.fg}
 ```
 
-**PyData / newer EN:** fragment-animated closing with social icons, then `[Thank You !]{.hl}` in large absolute-positioned text.
+**PyData / newer EN:** `A lot more can be done with [**Quarto**]{.hl}` / `Deep dive at <https://quarto.org>`, then a fragment-animated closing with social icons, then `[Thank You !]{.hl}` in large absolute-positioned text (write `Thank You!` without the space in EN).
 
-Always put slide URL **first** in the closing. Never omit it.
+**posit::conf 2025:** a call to action that calls back the opening word (`Do consider Lua filters next time you are stuck!`), then `Thank you!` + handles + slide URL.
+
+Always put slide URL **first** in the closing. Never omit it. (Kept as the rule although four 2024–2025 decks had it only in the "Follow along at" footer.)
+
+The last slide is for resources; Christophe concludes by speaking. A closing line or slogan goes in the notes as a spoken line, not on a slide; no hand-written deck has a slogan slide.
 
 ---
 
 ## Text Emphasis
 
-- `[text]{.hl}` — primary highlight (colored background/text). Use for key terms: "multi-language", "multi-engine", "R Markdown", technical terms being introduced
-- `**bold**` — secondary emphasis
+- `[text]{.hl}` — primary highlight (colored background/text). Use for key terms: "multi-language", "multi-engine", "R Markdown", technical terms being introduced. Sparse: about 5 per deck, on a phrase inside a sentence (`[R Markdown to everyone]{.hl}`, `[command line interface (CLI)]{.hl}`)
+- `**bold**` — secondary emphasis; also the two verbs of the "unifies + extends" build
 - `*italic*` — framing lines on section slides
 - `[text]{.small-cap}` — image attribution captions
 
@@ -217,6 +239,12 @@ Always put slide URL **first** in the closing. Never omit it.
 - `::: {.fragment}` — block fragment
 - `{.fragment .fade-in-then-out fragment-index="N"}` — sequential swap in r-stack
 - `auto-animate="true"` — morphing between slides (key pattern)
+
+Builds, fragments and `code-line-numbers` steps do the pacing (posit::conf 2025: one bubble or one code callout per build); `. . .` is rare (only on the "With Quarto..." slide in two talks).
+
+## Presenter Notes
+
+`::: notes` are memory aids, not a script: Christophe does not read them. They hold the transition to the next section, the "why" that the slide leaves to an image or code, and stage cues ("Click on the link to show example"). The attested spoken bridges are few and one line long ("Next, let's focus on ..."): never fill notes with paragraphs. The slide never narrates the transition; it shows where we are in the story (a section label that changes, a diagram or image that comes back with the current step marked). Details: `.claude/references/talk-voice.md`.
 
 ## Attribution Pattern
 
@@ -255,3 +283,4 @@ Author name: **Christophe Dervieux**, affiliation: **Posit PBC**
 - Do NOT use `---` slide separators — use `##` headings
 - Do NOT omit the slide URL in the closing slide
 - Do NOT use bio/profile-photo slide (dropped in Quarto era)
+- Do NOT write em-dash asides on slides (`---` appears only as a heading separator in three decks), and do NOT ask the room for a show of hands (no talk does): see `.claude/references/talk-voice.md`

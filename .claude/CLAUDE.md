@@ -46,6 +46,7 @@ the first session, then keep it current.
 | File | Contents |
 |------|----------|
 | `.claude/rules/presentation-style.md` | Narrative arc, slide types, signature phrases, opening and closing formulas, CSS classes, code display |
+| `.claude/references/talk-voice.md` | Not auto-loaded, read it before writing or reviewing slide text, bridges, hooks, notes or closings. How Christophe words a talk: his own statements first, then patterns from 12 past talks with quotes, machine tells to avoid, what to keep for a 15-min story-driven talk |
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
