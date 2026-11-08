@@ -50,6 +50,11 @@ example-deps:
 example:
     quarto render example
 
+# Rebuild the Word reference document (styles, logo, page) from example/_brand.yml
+[group('example')]
+reference-doc:
+    cd example && Rscript brand/reference-doc.R
+
 # Live preview of the example bulletin
 [group('example')]
 example-preview:

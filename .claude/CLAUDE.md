@@ -120,6 +120,7 @@ just pdf              # slides-full.pdf for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide
 just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
 just example          # render the example bulletin in example/
+just reference-doc    # rebuild example/brand/nso-reference.docx (Word styles) from _brand.yml
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
 just publish connect  # same, to the preview on Posit Connect Cloud (after the one-time setup)
 ```
