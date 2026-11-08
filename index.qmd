@@ -591,9 +591,9 @@ The number people read is the number your code produced.
 
 <!-- ============================ Z (2:30) ============================ -->
 
-## Already published with Quarto {#products kicker="Already in official statistics" .timing-section timing-title="Z · And next" timing-duration="50s"}
+## Already published with Quarto {#products kicker="Already in official statistics" .timing-section timing-title="Z · And next" timing-duration="45s"}
 
-[France · Norway · United Kingdom · international bodies]{.gallery-count}
+[France · Norway · United Kingdom · OECD]{.gallery-count}
 
 <!-- Screenshots: just gallery (scripts/capture-gallery.mjs), which also checks each page is made with Quarto -->
 
@@ -606,8 +606,6 @@ The number people read is the number your code produced.
 ![NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey](images/gallery/04-nisra-childcare.png)
 ![Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no](images/gallery/05-ssb-documentation.png)
 ![OECD: Regional Outlook 2023 country profiles · oecd-cfe-eds.github.io/ro2023-country-pages](images/gallery/06-oecd-regional-profiles.png)
-![UNECE HLG-MOS: open source principles · unece.github.io/OSS](images/gallery/07-unece-oss.png)
-![JDemetra+: software documentation · jdemetra-new-documentation.netlify.app](images/gallery/08-jdemetra-docs.png)
 ```
 :::
 
@@ -618,8 +616,6 @@ The number people read is the number your code produced.
 [![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made with Quarto"}](https://nisra-explore.github.io/childcare-survey/)
 [![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){fig-alt="Top of the page: Statistics Norway: documentation report with an ISBN, made with Quarto"}](https://doc.ameld.ssb.no/)
 [![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png){fig-alt="Top of the page: OECD: Regional Outlook 2023 country profiles, made with Quarto"}](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
-[![UNECE HLG-MOS: open source principles](images/gallery/07-unece-oss.png){fig-alt="Top of the page: UNECE HLG-MOS: open source principles, made with Quarto"}](https://unece.github.io/OSS/)
-[![JDemetra+: software documentation](images/gallery/08-jdemetra-docs.png){fig-alt="Top of the page: JDemetra+: software documentation, made with Quarto"}](https://jdemetra-new-documentation.netlify.app/)
 :::
 :::
 
@@ -628,19 +624,9 @@ The number people read is the number your code produced.
 :::
 
 ::: notes
-These are already published with Quarto, in official statistics: a working paper at Insee, in HTML and PDF from one source; a dataviz catalogue at Agreste; dashboards at the ONS; a survey report at NISRA; documentation at Statistics Norway; the OECD, UNECE, JDemetra+...
-Some of you are already in this picture. This is a map, not a ranking.
-(click: the grid) (click) And these slides are Quarto too.
-:::
-
-## {#number-people-read .center timing-duration="25s"}
-
-[The number people read\
-is the number [your code produced]{.hl}.]{.statement}
-
-::: notes
-That is what reproducible means for a publication:
-the number people read is the number your code produced.
+Already published with Quarto, in official statistics: Insee, Agreste, ONS, NISRA, Statistics Norway, OECD.
+Some of you are already in this picture: a map, not a ranking.
+(click: grid) (click) These slides are Quarto too.
 :::
 
 ## From R Markdown to Quarto, and next {#quarto-today timing-duration="25s"}
@@ -672,47 +658,35 @@ Faster engine, writing together in the browser (in development)
 R Markdown before, Quarto today, and the next generation is in the works.
 :::
 
-## {#next-year .center timing-duration="35s"}
+## {#next-year .center timing-duration="30s"}
 
-[Every year, a talk about publishing statistics.]{.lead}
+[Every edition since 2017: a talk about publishing statistics.]{.lead}
 
 . . .
 
-[Next year, make it [one of yours]{.hl}.]{.statement}
+[Next year, bring yours.]{.statement}
 
-::: notes
-Every year since 2017, someone here talked about publishing statistics.
-Next year, make it one of yours: show us what you published, from one source.
-:::
-
-## {#closing .center timing-duration="40s"}
-
-::: {.incremental .closing-lines}
-- You already do R.
-- You already publish.
-- Quarto makes it [reproducible]{.hl}, from [one source]{.hl}, [ready to publish]{.hl}.
+::: {.fragment}
+[The publication that comes back every month, rendered from one source.]{.lead}
 :::
 
 ::: notes
-You already do R. You already publish.
-Quarto makes it reproducible, from one source, ready to publish.
-Thank you.
+Every year since 2017, someone here talked about publishing statistics. Next year, bring yours.
+Pick the one that comes back every month, render it from one source, tell us what you learned.
 :::
 
 <!-- ============================ END (0:30) ============================ -->
 
-## Learning More {#learning-more .smaller .timing-section timing-title="End" timing-duration="30s"}
+## Learning More {#learning-more .timing-section timing-title="End" timing-duration="40s"}
 
 ::: {.columns}
 ::: {.column width="62%"}
 #### Slides: <https://cderv.github.io/uros2026-quarto-intro/> {.bottom-pad}
 
-#### Example: [https://github.com/cderv/EXAMPLE-REPO]{.draft-inline} {.bottom-pad}
+#### Example bulletin, source and outputs: [https://github.com/cderv/EXAMPLE-REPO]{.draft-inline} {.bottom-pad}
 
 - Getting started: <https://quarto.org/docs/get-started/>
-- User guide: <https://quarto.org/docs/guide/>
 - Gallery: <https://quarto.org/docs/gallery/>
-- Awesome Quarto: <https://github.com/mcanouil/awesome-quarto>
 
 #### Questions? {.top-pad}
 :::
@@ -726,6 +700,7 @@ Slides
 :::
 
 ::: notes
-The slides and the example bulletin are online: take a picture of the QR code.
-Questions?
+You already do R and you already publish; Quarto is the step between the two, so next Thursday at 17:50 you fix one line and render.
+Slides and the example bulletin: the QR code.
+Thank you. Questions?
 :::
