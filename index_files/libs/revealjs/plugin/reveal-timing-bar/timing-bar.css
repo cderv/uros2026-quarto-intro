@@ -1,0 +1,165 @@
+#timing-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  height: 30px;
+  padding: 3px 8px;
+  background: rgba(20, 20, 20, 0.92);
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 11px;
+  box-sizing: border-box;
+}
+
+#timing-bar.timing-bar-top {
+  top: 0;
+  bottom: auto;
+}
+
+.timing-bar-segments {
+  position: relative;
+  display: flex;
+  flex: 1;
+  gap: 2px;
+}
+
+.timing-bar-segment {
+  position: relative;
+  flex-basis: 0;
+  min-width: 12px;
+  overflow: hidden;
+  background: #3a3a3a;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.timing-bar-segment.timing-bar-current {
+  outline: 2px solid #4a90d9;
+  outline-offset: -2px;
+}
+
+.timing-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: #4a90d9;
+  opacity: 0.55;
+}
+
+.timing-bar-label {
+  position: relative;
+  display: block;
+  padding: 0 6px;
+  line-height: 24px;
+  color: #eee;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.timing-bar-marker {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 0;
+  border-left: 3px solid #fff;
+  pointer-events: none;
+  transition: left 0.5s linear;
+}
+
+.timing-bar-marker.timing-bar-ahead {
+  border-left-color: #3fb950;
+}
+
+.timing-bar-marker.timing-bar-behind {
+  border-left-color: #f85149;
+}
+
+.timing-bar-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #eee;
+}
+
+.timing-bar-clock {
+  font-variant-numeric: tabular-nums;
+  padding: 0 4px;
+}
+
+.timing-bar-btn {
+  border: none;
+  border-radius: 3px;
+  background: #3a3a3a;
+  color: #eee;
+  cursor: pointer;
+  height: 22px;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.timing-bar-btn:hover {
+  background: #555;
+}
+
+.timing-bar-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.timing-bar-modal-inner {
+  max-height: 80vh;
+  overflow: auto;
+  background: #1e1e1e;
+  color: #eee;
+  border-radius: 8px;
+  padding: 20px 28px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+}
+
+.timing-bar-modal-inner h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.timing-bar-modal-inner table {
+  border-collapse: collapse;
+}
+
+.timing-bar-modal-inner th,
+.timing-bar-modal-inner td {
+  padding: 3px 14px 3px 0;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.timing-bar-row-section td {
+  font-weight: 600;
+  border-top: 1px solid #444;
+}
+
+.timing-bar-over {
+  color: #f85149;
+}
+
+.timing-bar-under {
+  color: #3fb950;
+}
+
+.timing-bar-modal-hint {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: #999;
+}

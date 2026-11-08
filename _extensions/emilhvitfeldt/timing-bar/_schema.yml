@@ -1,0 +1,47 @@
+$schema: https://m.canouil.dev/quarto-wizard/assets/schema/v1/extension-schema.json
+
+options:
+  duration:
+    type: string
+    description: >-
+      Total presentation duration, e.g. "20m", "1h30m", "90s", "4m30s".
+      Slides without an explicit timing-duration split the leftover of this
+      budget evenly.
+  position:
+    type: string
+    default: bottom
+    enum: [bottom, top]
+    description: "Where the timing bar sits in the speaker view."
+
+attributes:
+  Header:
+    timing-duration:
+      type: string
+      description: >-
+        Planned duration for this one slide, e.g. "4m", "90s". On a section
+        title slide it covers only the title slide itself.
+    timing-title:
+      type: string
+      description: >-
+        Override the label shown for this section's segment in the timing
+        bar without changing the slide heading.
+  timing:
+    duration:
+      type: string
+      description: 'Planned duration for the slide containing this div, e.g. "90s".'
+    title:
+      type: string
+      description: "Override the timing-bar label for the enclosing section."
+    section:
+      type: boolean
+      description: "Mark the enclosing slide as the start of a section."
+
+classes:
+  timing:
+    description: >-
+      Empty marker div carrying timing metadata for slides without a heading;
+      it is removed from the rendered output.
+  timing-section:
+    description: >-
+      Mark a slide as the start of a timing-bar section (slides with a level-1
+      heading are sections automatically).
