@@ -12,7 +12,8 @@ the first session, then keep it current.
   Statistical Outputs" (11:30–13:00, 4th of 5 talks), room Bloch-Lainé 2, Centre de conférences
   Pierre Mendès France, 139 rue de Bercy, Paris. Conference site: <https://urosconf.org/>
 - **Language:** EN
-- **Duration:** 15 min
+- **Duration:** 15 min, strict maximum: the chair enforces it (about 3 min after each talk for
+  questions and switching). Aim at 12:30 spoken, the rest is margin.
 - **Audience:** international official statisticians (national statistical institutes, Eurostat,
   international organisations, central banks, some academia). They know R; most know the R Markdown
   name, few use Quarto. Details and evidence in `.claude/audience.md`.
@@ -31,6 +32,14 @@ the first session, then keep it current.
   URL first.
 - **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
 - **Work tracking:** braid, label `uros2026`
+- **Organisers' guidelines (presenters' email, 29 Sept 2026):**
+  - upload the slides to the organisers' folder for session C1 by **11 November 2026**; updated
+    versions can be uploaded until the day of the talk (upload the PDF from `just pdf`);
+  - the chair introduces speakers by name and institution only: no bio, no self-introduction slide;
+  - diverse scientific audience: briefly introduce any term that is not common R knowledge (Quarto,
+    Typst, PDF/UA, `_brand.yml`, cross-reference...);
+  - focus on the main question and message, not every detail;
+  - slides clear and readable (figures, tables, code), each slide's main message understood quickly.
 
 ## Context files
 
