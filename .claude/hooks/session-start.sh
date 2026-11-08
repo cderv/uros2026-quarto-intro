@@ -15,6 +15,12 @@ if ! dpkg -s libpoppler-cpp0t64 >/dev/null 2>&1; then
   apt-get install -y -qq libpoppler-cpp0t64
 fi
 
+# System libraries sf and units load for the bulletin map (CRAN binaries for Windows and macOS bundle them)
+if ! dpkg -s libudunits2-0 libgdal34t64 libgeos-c1t64 libproj25 >/dev/null 2>&1; then
+  apt-get update -qq
+  apt-get install -y -qq libudunits2-0 libgdal34t64 libgeos-c1t64 libproj25
+fi
+
 # veraPDF: Quarto checks the PDF/A and PDF/UA standards with it at every render
 if [ ! -d "$HOME/.local/share/quarto/verapdf" ]; then
   quarto install verapdf --no-prompt
