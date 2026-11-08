@@ -519,9 +519,13 @@ nights <- get_eurostat("tour_occ_nim",
 ```
 :::
 
+[]{.word-box .absolute}
+
+[Country of residence: `FOR` = guests from abroad only → `TOTAL` = all guests]{.lead .fragment}
+
 ::: notes
-Back to Thursday, ten to six. The headline number is wrong, again.
-Someone kept the foreign guests only. You fix the R code: one line, one word.
+Back to Thursday, ten to six. Wrong again.
+Cause: someone kept the guests from abroad only. (click) One word in the R code.
 :::
 
 ## One render {#one-render kicker="Fixed once" timing-duration="35s"}
@@ -548,8 +552,8 @@ Someone kept the foreign guests only. You fix the R code: one line, one word.
 :::
 
 ::: notes
-One render. The table, the sentence, the chart, the HTML, the PDF, the Word file:
-the same corrected number, everywhere.
+One render. (click) 514.7 in the HTML, 514.7 in the PDF.
+Table, chart, caption and the Word file come from the same render.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -578,12 +582,11 @@ the same corrected number, everywhere.
 :::
 :::
 
-[Fix it once. Render. Which one did you forget? [None.]{.payoff .fragment}]{.payoff-line}
+[Which one did you forget? [None.]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-Thursday, 17:51. Fix it once. Render. Which one did you forget?
-(Pause.)
-None.
+Thursday, 17:51. Which one did you forget? (Pause.) None.
+The number people read is the number your code produced.
 :::
 
 <!-- ============================ Z (2:30) ============================ -->

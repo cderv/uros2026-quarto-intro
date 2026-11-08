@@ -393,6 +393,12 @@ section#diagrams {
   }
 
   // magic-move X1 steps: keep the full .qmd on screen
+  // #again: a frame around the word that changes (FOR -> TOTAL), position measured
+  section#again .word-box {
+    left: 678px; top: 221px; width: 108px; height: 46px;
+    border: 5px solid $perso-highlight-color; border-radius: 8px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
+  }
   // #inline: a frame over the sentence with inline code, on click (magic-move breaks code-line-numbers)
   section#inline .line-box {
     left: 0; top: 413px; width: 860px; height: 44px;
