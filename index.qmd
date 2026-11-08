@@ -703,7 +703,7 @@ Pick the one that comes back every month, render it from one source, tell us wha
 ::: {.column width="62%"}
 #### Slides: <https://cderv.github.io/uros2026-quarto-intro/> {.bottom-pad}
 
-#### Example bulletin, source and outputs: [https://github.com/cderv/EXAMPLE-REPO]{.draft-inline} {.bottom-pad}
+#### Example bulletin, source and outputs: <https://github.com/cderv/uros2026-quarto-example> {.bottom-pad}
 
 - Getting started: <https://quarto.org/docs/get-started/>
 - Gallery: <https://quarto.org/docs/gallery/>
