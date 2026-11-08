@@ -451,6 +451,11 @@ html.print-pdf .reveal .print-only { display: block !important; }
   .timeline li { margin: 0.25em 0; font-size: 0.95em; }
   .timeline strong { color: $presentation-heading-color; display: inline-block; min-width: 3em; }
   .needs { display: flex; gap: 24px; justify-content: center; margin: 0.6em 0; }
+  // section label above the heading: `## Heading {kicker="..."}` (position cue, talk-voice F7)
+  .slides section[data-kicker]::before {
+    content: attr(data-kicker); position: absolute; top: -18px; left: 0;
+    font-size: 0.5em; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a8a;
+  }
   // opening: the quote shrinks to the top (auto-animate), the uRos line takes the big place
   .quote-who-top { font-size: 0.7em; color: #999; margin: 0; }
   .statement.quote-top { font-size: 0.9em; font-weight: normal; color: #777; }

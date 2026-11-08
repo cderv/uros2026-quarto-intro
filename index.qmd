@@ -61,7 +61,8 @@ X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
 -->
 
 ::: notes
-(No words on the title. Walk to the centre, wait, then start with the story.)
+Welcome everyone.
+Why here: I work on Quarto at Posit, and this room publishes numbers with R every day.
 :::
 
 <!-- ============================ INTRO (2:00) ============================ -->
@@ -129,10 +130,9 @@ Bridge: a Thursday evening.
 :::
 
 ::: notes
-Thursday, ten to six. Release tomorrow. The headline number is wrong: 245.0 million nights instead of 514.7.
-You fix the R code. (click) Then the Word file. (click) The PDF. (click) The chart.
-(click) The web page. Done? Hands up if you know this evening...
-(click) Which one did you forget?
+Thursday, ten to six. Release tomorrow. The headline number is wrong: 245.0 instead of 514.7.
+One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). Then: "Done?"
+(6) Which one did you forget? Pause, let the red card answer.
 :::
 
 ## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
@@ -164,13 +164,13 @@ You fix the R code. (click) Then the Word file. (click) The PDF. (click) The cha
 [What if you only had to fix it [once]{.hl}?]{.statement}
 
 ::: notes
-What if you only had to fix it once?
-(Do not answer. Pause. Then: "Let me show you with a real publication.")
+What if you only had to fix it once? Pause, no answer.
+Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 :::
 
 <!-- ============================ X1 (2:30) ============================ -->
 
-## Quarto renders text and R code into this bulletin {#rendered auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
+## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
 
 ::: {.shots-v data-id="result-shots"}
 ![](images/bulletin/html-key-figure.png){.shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
@@ -182,7 +182,7 @@ What if you only had to fix it once?
 First time the name is said. Quarto: your text and your R code in one file, rendered to this page.
 :::
 
-## Quarto renders text and R code into this bulletin {#rendered-walk auto-animate="true" auto-animate-id="result" timing-duration="20s"}
+## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
 
 ::: {.columns}
 ::: {.column width="58%"}
@@ -208,7 +208,7 @@ Point at 514.7 in the box, then in the chart.
 Bridge: "Let's open the source file."
 :::
 
-## The R code you already have {#r-code .magic-move .tall-code timing-duration="25s"}
+## The R code you already have {#r-code kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
 ```r
 library(eurostat)
@@ -230,7 +230,7 @@ Eurostat data, latest month, one chart.
 Everything that works in R works here: packages, charts, tables, models. Nothing to rewrite.
 :::
 
-## Put it in code cells, write the text around them {#cells-text .magic-move .tall-code timing-duration="25s"}
+## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
@@ -257,7 +257,7 @@ One .qmd file: code cells, text between them.
 The comment and the method note live next to the code that makes the numbers.
 :::
 
-## Tell Quarto what each cell is {#options .magic-move .tall-code timing-duration="20s"}
+## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
 
 ```` markdown
 ```{r}
@@ -284,7 +284,7 @@ ggplot(nights, aes(time, values)) + geom_line()
 `#|` lines are options for Quarto: hide the code; name the chart and caption it (the "Figure 1" you saw).
 :::
 
-## The number in the sentence: computed {#inline .magic-move .tall-code timing-duration="25s"}
+## The number in the sentence: computed {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
@@ -316,7 +316,7 @@ Change the data, the sentence follows.
 
 <!-- ============================ X2 (1:45) ============================ -->
 
-## One header, every format {#formats .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
+## One header, every format {#formats kicker="One source, every format" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
 
 ```yaml
 ---
@@ -326,33 +326,32 @@ format: html
 ```
 
 ::: notes
-The formats are one line each, in the header of the same file.
-HTML for the web.
+Formats: one line each, in the header of the same file. HTML for the web first.
 :::
 
-## One header, every format {#formats-pdf .magic-move timing-duration="10s"}
+## One header, every format {#formats-pdf kicker="One source, every format" .magic-move timing-duration="15s"}
 
 ```yaml
 ---
 title: "Tourism in the EU"
 format:
   html: default
-  typst: default
+  typst: default   # PDF, no LaTeX to install
 ---
 ```
 
 ::: notes
-Typst for the PDF: print-ready, and no LaTeX to install or learn.
+Typst: makes the PDF inside Quarto, nothing to install, nothing to learn.
 :::
 
-## One header, every format {#formats-docx .magic-move timing-duration="15s"}
+## One header, every format {#formats-docx kicker="One source, every format" .magic-move timing-duration="15s"}
 
 ```yaml
 ---
 title: "Tourism in the EU"
 format:
   html: default
-  typst: default
+  typst: default   # PDF, no LaTeX to install
   docx: default
 ---
 ```
@@ -360,56 +359,28 @@ format:
 `quarto render bulletin.qmd` → `bulletin.html` · `bulletin.pdf` · `bulletin.docx`
 
 ::: notes
-Word, for the colleague who wants Word.
-One command renders all of them.
+Word, for the colleague who asks for Word. One command, three files.
 :::
 
-## For the web {#html timing-duration="25s"}
+## For the web {#html kicker="One source, every format" timing-duration="20s"}
 
 ![](images/bulletin/html-page.png){.shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
 
 ::: notes
-For the web: an accessible HTML page, readable on a phone, the chart and the table inside.
+Web: readable on a phone, chart and table inside.
 :::
 
-## For print {#pdf timing-duration="25s"}
+## For print {#pdf kicker="One source, every format" timing-duration="20s"}
 
 ![](images/bulletin/pdf-p1.png){.shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
 
 ::: notes
-For print and for the archive: the PDF. Same text, same numbers, same chart. From the same file.
-:::
-
-## Each format for its reader {#each-reader timing-duration="20s"}
-
-::: {.carousel-live}
-```{.carousel #formats-carousel autoplay="3500" effect="scale" slides="1" height="470px" loop="false" dots="false" arrows="false" fragment="false"}
-![bulletin.html, for the web](images/bulletin/html-page.png)
-![bulletin.pdf, for print and the archive](images/bulletin/pdf-p1.png)
-![bulletin.html: the map](images/bulletin/html-map.png)
-![bulletin.pdf: page 2, the table and the map](images/bulletin/pdf-p2.png)
-```
-:::
-
-::: {.print-only}
-::: {.columns}
-::: {.column width="60%"}
-![](images/bulletin/html-page.png){.shot fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
-:::
-::: {.column width="40%"}
-![](images/bulletin/pdf-p1.png){.shot height="520px" fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
-:::
-:::
-:::
-
-::: notes
-The web reader and the print reader each get the format they need, from one file,
-and they all read the same numbers. (Word too, if a colleague asks for it.)
+Print and the archive, from the same file.
 :::
 
 <!-- ============================ X3 (1:45) ============================ -->
 
-## Tables ready to publish {#table .timing-section timing-title="X3 · Ready to publish" timing-duration="35s"}
+## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="35s"}
 
 ::: {.columns}
 ::: {.column width="55%"}
@@ -439,7 +410,7 @@ Publications are tables. Your R table package, gt or another one, renders the ta
 The label and caption make it Table 1, numbered for you.
 :::
 
-## Captions and cross-references {#crossref timing-duration="25s"}
+## Captions and cross-references {#crossref kicker="Ready to publish" timing-duration="25s"}
 
 ```markdown
 @fig-trend compares this year
@@ -456,7 +427,7 @@ Write \@fig-trend in your text and Quarto writes "Figure 1", with a link in HTML
 No more "see Table 3" pointing to the old Table 3.
 :::
 
-## Your institute's look {#brand timing-duration="25s"}
+## Your institute's look {#brand kicker="Ready to publish" timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -487,7 +458,7 @@ And your institute's look: colours, logo, fonts, written once in _brand.yml.
 HTML, PDF, even these slides pick it up. Here, a fictional institute.
 :::
 
-## Accessible PDF, checked {#pdf-ua timing-duration="20s"}
+## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="20s"}
 
 ```{.yaml filename="_quarto.yml"}
 format:
@@ -510,7 +481,7 @@ PDF/UA for a tagged PDF that screen readers can follow. With veraPDF installed, 
 
 <!-- ============================ Y (1:30) ============================ -->
 
-## Thursday, 17:50. Again. {#again .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
+## Thursday, 17:50. Again. {#again kicker="Fixed once" .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
 
 [The headline number is wrong.]{.lead}
 
@@ -544,7 +515,7 @@ Back to Thursday, ten to six. The headline number is wrong, again.
 Someone kept the foreign guests only. You fix the R code: one line, one word.
 :::
 
-## One render {#one-render timing-duration="35s"}
+## One render {#one-render kicker="Fixed once" timing-duration="35s"}
 
 `quarto render bulletin.qmd`
 
@@ -572,7 +543,7 @@ One render. The table, the sentence, the chart, the HTML, the PDF, the Word file
 the same corrected number, everywhere.
 :::
 
-## Thursday, 17:51 {#none timing-duration="25s"}
+## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
 
 ::: {.cards-fan}
 ::: {.card .is-right .is-code data-id="card-src"}
@@ -608,7 +579,7 @@ None.
 
 <!-- ============================ Z (2:30) ============================ -->
 
-## Already published with Quarto {#products .timing-section timing-title="Z · And next" timing-duration="50s"}
+## Already published with Quarto {#products kicker="Already in official statistics" .timing-section timing-title="Z · And next" timing-duration="50s"}
 
 [France · Norway · United Kingdom · international bodies]{.gallery-count}
 
