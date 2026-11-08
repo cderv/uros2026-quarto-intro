@@ -68,6 +68,7 @@ extensions-update:
     quarto update grantmcdermott/clean --no-prompt
     quarto update quarto-ext/attribution --no-prompt
     quarto update emilhvitfeldt/quarto-revealjs-magic-move --no-prompt
+    quarto update emilhvitfeldt/quarto-timeline --no-prompt
     quarto update emilhvitfeldt/quarto-revealjs-timing-bar --no-prompt
     quarto update jmbuhr/quarto-qrcode --no-prompt
     quarto update mcanouil/quarto-iconify --no-prompt

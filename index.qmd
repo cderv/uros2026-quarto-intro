@@ -25,6 +25,7 @@ format:
 filters:
   - timing-bar
   - easycarousel
+  - timeline
 revealjs-plugins:
   - attribution
   - magic-move
@@ -207,7 +208,7 @@ Point at 514.7 in the box, then in the chart.
 Bridge: "Let's open the source file."
 :::
 
-## The R code you already have {#r-code .magic-move .tall-code timing-duration="30s"}
+## The R code you already have {#r-code .magic-move .tall-code timing-duration="25s"}
 
 ```r
 library(eurostat)
@@ -222,36 +223,14 @@ latest <- nights[which.max(nights$time), ]
 ggplot(nights, aes(time, values)) + geom_line()
 ```
 
-::: notes
-Here is a monthly tourism bulletin. It starts with the R code you already have:
-get the data from Eurostat, take the latest month, draw the chart.
-Everything that works in R works in Quarto: your packages, your charts, your tables, your models.
-Nothing to rewrite.
-:::
-
-## Put it in code cells {#cells .magic-move .tall-code timing-duration="20s"}
-
-```` markdown
-```{r}
-library(eurostat)
-library(ggplot2)
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
-nights <- na.omit(nights)
-latest <- nights[which.max(nights$time), ]
-```
-
-```{r}
-ggplot(nights, aes(time, values)) + geom_line()
-```
-````
+[Shortened for the slide. Full source: the example repository, link on the last slide.]{.chart-cap}
 
 ::: notes
-Step one: put that code in code cells, in a plain text file, a .qmd.
+Eurostat data, latest month, one chart.
+Everything that works in R works here: packages, charts, tables, models. Nothing to rewrite.
 :::
 
-## Write the text around it {#text .magic-move .tall-code timing-duration="25s"}
+## Put it in code cells, write the text around them {#cells-text .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
@@ -271,12 +250,14 @@ ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
+[A .qmd file: plain text. R code in code cells, your text in Markdown between them.]{.chart-cap}
+
 ::: notes
-Step two: write your text around the code, in plain Markdown.
-The comment, the method note: they live next to the code that makes the numbers.
+One .qmd file: code cells, text between them.
+The comment and the method note live next to the code that makes the numbers.
 :::
 
-## Tell Quarto what each cell is {#options .magic-move .tall-code timing-duration="25s"}
+## Tell Quarto what each cell is {#options .magic-move .tall-code timing-duration="20s"}
 
 ```` markdown
 ```{r}
@@ -300,10 +281,10 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-Step three: options on each cell. Hide the code from the reader. Give the chart a label and a caption.
+`#|` lines are options for Quarto: hide the code; name the chart and caption it (the "Figure 1" you saw).
 :::
 
-## Put the number in the sentence {#inline .magic-move .tall-code timing-duration="25s"}
+## The number in the sentence: computed {#inline .magic-move .tall-code timing-duration="25s"}
 
 ```` markdown
 ```{r}
@@ -326,8 +307,11 @@ ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
+[]{.line-box .fragment .absolute}
+
 ::: notes
-Step four, the important one: the number in the sentence is not typed. It is computed.
+(click) Inline code: R inside the sentence. Nobody types 514.7; R computes it at render.
+Change the data, the sentence follows.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
@@ -674,6 +658,35 @@ is the number [your code produced]{.hl}.]{.statement}
 ::: notes
 That is what reproducible means for a publication:
 the number people read is the number your code produced.
+:::
+
+## From R Markdown to Quarto, and next {#quarto-today timing-duration="25s"}
+
+::: timeline
+::: {.event .fragment data-label="2014"}
+**R Markdown**
+
+R code and text, to HTML, PDF, Word
+:::
+::: {.event .fragment data-label="2022"}
+**Quarto 1.0**
+
+Same idea, any language, more formats
+:::
+::: {.event .fragment data-label="Today"}
+**Quarto**
+
+The bulletin, the gallery, these slides
+:::
+::: {.event .fragment data-label="Next"}
+**Next generation**
+
+Faster engine, writing together in the browser (in development)
+:::
+:::
+
+::: notes
+R Markdown before, Quarto today, and the next generation is in the works.
 :::
 
 ## {#next-year .center timing-duration="35s"}
