@@ -2,6 +2,15 @@
 
 Technical setup for new Quarto RevealJS talks using Chris's canonical stack.
 
+## Quarto and RevealJS documentation
+
+For Quarto's RevealJS syntax and options, consult the official documentation through
+<https://quarto.org/llms.txt>. Follow the relevant `.llms.md` pages for RevealJS
+basics, advanced features, and the format reference. For underlying RevealJS behavior
+or raw HTML/JavaScript features not covered by Quarto, consult
+<https://revealjs.com/llms.txt>. Context7's official Quarto library can help with
+targeted searches. Project rules remain authoritative for this deck's conventions.
+
 ---
 
 ## File Structure
