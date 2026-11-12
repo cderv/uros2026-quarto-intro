@@ -405,6 +405,10 @@ section#diagrams {
     border: 5px solid $perso-highlight-color; border-radius: 8px;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
   }
+  // #options: the #| cell options are the point of the slide, not comment grey
+  section#options pre code span.co {
+    color: $perso-highlight-color; font-weight: 700; font-style: normal;
+  }
   section#cells-text, section#options, section#inline, section#r-code {
     div.sourceCode { margin-top: 0.3em; }
     pre code { font-size: 0.95em; line-height: 1.3; }

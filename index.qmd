@@ -172,6 +172,7 @@ Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 
 ::: notes
 First time the name is said. Quarto: your text and your R code in one file, rendered to this page.
+Free and open source; comes with RStudio and Positron, a Render button.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -566,6 +567,7 @@ Cause: someone kept the guests from abroad only. (click) One word in the R code.
 ::: notes
 One render. (click) 514.7 in the HTML, 514.7 in the PDF.
 Table, chart, caption and the Word file come from the same render.
+Press release: same code, same number.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -679,10 +681,6 @@ Bridge: from the tool's timeline to the conference's, every edition since 2017.
 . . .
 
 [Next year, bring yours.]{.statement}
-
-::: {.fragment}
-[The publication that comes back every month, rendered from one source.]{.lead}
-:::
 
 ::: notes
 Every year since 2017, someone here talked about publishing statistics. Next year, bring yours.
