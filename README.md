@@ -1,43 +1,63 @@
-# Quarto talk template
+# Reproducible Statistical Publications with Quarto
 
-Starter for Christophe Dervieux's Quarto talks: `clean-revealjs` slides with the usual theme,
-plugins and Claude Code context.
+Slides and supporting material for a talk at [uRos2026](https://urosconf.org/), the 14th International Conference on the Use of R in Official Statistics, in Paris on 19 November 2026.
 
-## Start a new talk
+**Slides:** <https://cderv.github.io/uros2026-quarto-intro/>
+
+This 15-minute introduction shows how Quarto turns text and R code into reproducible statistical publications.
+A Eurostat tourism bulletin illustrates one source producing HTML, PDF and Word, with computed figures and tables, cross-references and an institute's branding.
+
+## What is inside
+
+- `index.qmd`: the RevealJS slides, using the `clean-revealjs` theme.
+- `example/`: the example bulletin and its HTML, Typst PDF and Word configuration.
+- `analysis/`: data, code and methodology for the analysis of uRos programmes from 2014 to 2026 used in the opening slides; see `analysis/README.md` for sources and limitations.
+- `images/`: the conference logo and screenshots used in the slides.
+- `scripts/check-slides.mjs`: browser-based slide checks, screenshots and PDF export.
+- `justfile`: build, check, example, analysis and publishing commands.
+- `.github/workflows/check-slides.yml`: the deck check and PDF export run on every push.
+
+## Work on the slides
+
+Install [Quarto](https://quarto.org/docs/get-started/) and [just](https://just.systems/man/en/packages.html).
+Run `just` to list all available commands.
 
 ```bash
-gh repo create cderv/<talk-repo> --public --template cderv/quarto-talk-template --clone
+just preview  # live preview with auto-reload
+just render   # render index.qmd to index.html
+just check    # render, check in Chromium and screenshot every slide
+just pdf      # export slides-full.pdf for the organisers
 ```
 
-Then fill in **This talk** in `.claude/CLAUDE.md`, replace `REPO-NAME` and the placeholders in
-`index.qmd`, and add the conference logo to `images/`.
-
-## Check the deck and export the PDF
-
-`scripts/check-slides.mjs` renders the deck, walks every slide in Chromium and reports render
-warnings, console errors, failed requests, broken images and content outside the 1280x720 slide,
-with one screenshot per slide in `_check/slides/`. The same walk exports the PDF, without Docker.
+The slide check requires Node.js 18 or later.
+Install its browser dependencies once per clone:
 
 ```bash
-# once per clone (not needed in Claude cloud sessions, where Playwright is preinstalled)
 npm install --no-save playwright
 npx playwright install chromium
 ```
 
+`just check` writes screenshots and reports to `_check/`.
+The GitHub Actions workflow runs the same strict check, exports the PDF and uploads both as the `check-slides` artifact.
+
+## Build the supporting material
+
+The example bulletin uses R packages pinned in `example/rproj.lock`:
+
 ```bash
-node scripts/check-slides.mjs --strict --pdf
+just example-deps  # install the example's R packages with rig
+just example       # render HTML, PDF and Word to example/_output/
+just captures      # screenshot the rendered bulletin for the slides
 ```
 
-Exit code 0 means no error, 1 errors in the deck, 2 a tool problem. `--pdf-only` exports the PDF
-without the checks; `--help` lists every option. On GitHub, `.github/workflows/check-slides.yml`
-runs the same command on every push and uploads screenshots, reports and `slides-full.pdf` as the
-`check-slides` artifact. Details in `.claude/CLAUDE.md`, section **Checking the deck**.
+Other supporting commands are `just gallery` for the publication screenshots on the gallery slide, `just reference-doc` to rebuild the Word reference document from the example's branding, and `just analysis` to rebuild the scripted programme-analysis outputs after `just analysis-deps`.
 
-## What is inside
+## Publish
 
-- `index.qmd`: title slide, EN Quarto opening and closing ("Learning More")
-- `reveal-style.scss`, `revealjs-tweak.html`: theme overrides and title-slide logo tweak
-- `_extensions/`: `grantmcdermott/clean` and `quarto-ext/attribution`
-- `scripts/check-slides.mjs`, `.github/workflows/check-slides.yml`: deck check and PDF export,
-  locally and on every push
-- `.claude/`: talk context, style and configuration rules, inventory of previous talks
+```bash
+just publish          # check, then publish to GitHub Pages
+just publish connect  # check, then update the Posit Connect Cloud preview
+```
+
+Both publishing commands ask for confirmation.
+`just publish-only` skips the check when it has already run.
