@@ -1,6 +1,7 @@
 # Quarto talk project context
 
 @.claude/CLAUDE.md
+@.claude/rules/deck-structure.md
 @.claude/rules/presentation-style.md
 @.claude/rules/presentation-config.md
 @.claude/rules/public-repo.md

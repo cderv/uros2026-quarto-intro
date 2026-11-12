@@ -52,14 +52,6 @@ Christophe Dervieux
 
 {{< meta date >}}
 
-<!--
-STORYBOARD, low fidelity. Rhythm, titles, scripted lines and transitions are real;
-boxes with a dashed border (.ph) are placeholders for screenshots of the example
-repository; code marked "draft" will be replaced by the code of that repository.
-Timing (timing-duration) follows the timed outline: intro 2:00, X1 2:30, X2 1:45,
-X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
--->
-
 ::: notes
 Welcome everyone.
 Why here: I work on Quarto at Posit, and this room publishes numbers with R every day.
