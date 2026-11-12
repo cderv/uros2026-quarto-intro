@@ -25,7 +25,7 @@ function loadPlaywright() {
       try { return createRequire(base)(name); } catch { /* try next */ }
     }
   }
-  throw new Error('Playwright not found. Run `npm install --no-save playwright` then `npx playwright install chromium`.');
+  throw new Error('Playwright not found. Run `just setup`.');
 }
 
 const { chromium } = loadPlaywright();

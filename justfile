@@ -67,6 +67,12 @@ captures:
 
 # === dev ===
 
+# Install Playwright and Chromium for slide checks and PDF export (once per clone)
+[group('dev')]
+setup:
+    npm ci
+    npx playwright install chromium
+
 # Update the Quarto extensions in _extensions/ from their GitHub sources
 [group('dev')]
 extensions-update:

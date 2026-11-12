@@ -29,12 +29,11 @@ just check    # render, check in Chromium and screenshot every slide
 just pdf      # export slides-full.pdf for the organisers
 ```
 
-The slide check requires Node.js 18 or later.
+The slide check uses Node.js 24 (see `.nvmrc`; with nvm, run `nvm use`).
 Install its browser dependencies once per clone:
 
 ```bash
-npm install --no-save playwright
-npx playwright install chromium
+just setup
 ```
 
 `just check` writes screenshots and reports to `_check/`.

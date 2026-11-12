@@ -12,8 +12,8 @@
 // The PDF export (--pdf, --pdf-only) reuses the same walk: background iframes are
 // captured during the walk, then the deck is printed with revealjs `?print-pdf`.
 //
-// Requirements: Quarto, Node.js >= 18, and Playwright with Chromium
-// (`npm install --no-save playwright` then `npx playwright install chromium`).
+// Requirements: Quarto, Node.js 24 (see .nvmrc), and Playwright with Chromium
+// (`just setup`).
 // Run `node scripts/check-slides.mjs --help` for the options.
 
 import { createRequire } from 'node:module';
@@ -170,14 +170,14 @@ function serve(root) {
 
 function loadPlaywright() {
   // createRequire honours NODE_PATH (global install in Claude cloud sessions) and the
-  // repository's node_modules (`npm install --no-save playwright`), which ESM import does not.
+  // repository's node_modules (`npm ci`), which ESM import does not.
   const bases = [import.meta.url, path.join(process.cwd(), 'noop.js')];
   for (const base of bases) {
     for (const name of ['playwright', 'playwright-core']) {
       try { return createRequire(base)(name); } catch { /* try next */ }
     }
   }
-  const err = new Error('Playwright not found. Run `npm install --no-save playwright` then `npx playwright install chromium`.');
+  const err = new Error('Playwright not found. Run `just setup`.');
   err.environment = true;
   throw err;
 }

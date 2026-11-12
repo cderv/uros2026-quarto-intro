@@ -1,0 +1,7 @@
+{
+  "name": "uros2026-quarto-intro",
+  "private": true,
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}

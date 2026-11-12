@@ -160,8 +160,7 @@ Setup:
 
 - Claude cloud sessions: nothing to install; Playwright and Chromium are preinstalled. Do not
   install another Playwright version and do not use Docker.
-- Locally (Windows, macOS, Linux), once per clone: `npm install --no-save playwright`, then
-  `npx playwright install chromium`. Needs Node.js 18 or later.
+- Locally (Windows, macOS, Linux), once per clone: `just setup`. Uses Node.js 24 (see `.nvmrc`).
 - GitHub: `.github/workflows/check-slides.yml` runs the check with `--strict --pdf` on every push
   and uploads screenshots, reports and PDF as the `check-slides` artifact.
 
