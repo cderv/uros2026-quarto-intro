@@ -59,21 +59,21 @@ Why here: I work on Quarto at Posit, and this room publishes numbers with R ever
 
 <!-- ============================ INTRO (2:00) ============================ -->
 
-## {#conversation .center auto-animate="true" auto-animate-id="opening" timing-duration="15s"}
+## {#conversation .center timing-duration="15s"}
 
-[Friends in official statistics:]{.lead data-id="quote-who"}
+[Friends in official statistics:]{.lead}
 
-[*"Quarto? Not really used in our world."*]{.statement data-id="quote"}
+[*"Quarto? I haven't seen it used much in official statistics."*]{.statement}
 
 ::: notes
 Friends said it. You are an R community that publishes numbers every day: I wanted to understand.
 :::
 
-## {#publishing-needs auto-animate="true" auto-animate-id="opening" timing-duration="20s"}
+## {#publishing-needs timing-duration="20s"}
 
-[Friends in official statistics:]{.lead .quote-who-top data-id="quote-who"}
+[Friends in official statistics:]{.lead .quote-who-top}
 
-[*"Quarto? Not really used in our world."*]{.statement .quote-top data-id="quote"}
+[*"Quarto? I haven't seen it used much in official statistics."*]{.statement .quote-top}
 
 [Every uRos since 2017:\
 a talk about publishing statistics]{.statement .needs-head}
