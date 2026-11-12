@@ -1,0 +1,11 @@
+{
+  "skills": {
+    "paths": [
+      "~/.agents/skills",
+      "~/.posit/assistant/skills",
+      ".agents/skills",
+      ".posit/assistant/skills",
+      ".claude/skills"
+    ]
+  }
+}
