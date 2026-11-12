@@ -13,7 +13,8 @@ the first session, then keep it current.
   Pierre Mendès France, 139 rue de Bercy, Paris. Conference site: <https://urosconf.org/>
 - **Language:** EN
 - **Duration:** 15 min, strict maximum: the chair enforces it (about 3 min after each talk for
-  questions and switching). Aim at 12:30 spoken, the rest is margin.
+  questions and switching). The deck is timed at 10:35 spoken (per-part budgets in
+  `.claude/rules/deck-structure.md`); 12:30 is the ceiling, the rest is margin.
 - **Audience:** international official statisticians (national statistical institutes, Eurostat,
   international organisations, central banks, some academia). They know R; most know the R Markdown
   name, few use Quarto. Details and evidence in `.claude/audience.md`.
@@ -50,7 +51,7 @@ the first session, then keep it current.
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
-| `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition) and three reviewers, `talk-reviewer-story`, `-voice`, `-audience`. Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions |
+| `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition), three reviewers, `talk-reviewer-story`, `-voice`, `-audience`, then `talk-coach` (Fable: adversarial verdict on their reports, or on a rehearsal transcript) and `talk-fact-checker` (public claims, gallery sites, links). Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions; add the list of decisions already made so they are not reopened |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 | `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |

@@ -12,13 +12,12 @@ wording. Form your own view from the sources; the launch brief gives paths, not 
 Read first:
 
 1. `.claude/CLAUDE.md`, section **This talk**: the core message is the **governing idea**; the
-   duration is 15 min strict, **12:30 spoken** is the target.
+   duration is 15 min strict, the spoken target and the per-part budgets are in
+   `.claude/rules/deck-structure.md` (10:35 spoken, 12:30 ceiling).
 2. `.claude/references/talk-voice.md`: F1-F9, §12 (posit::conf 2025, the story-driven model),
    §16 (15-minute adaptations), §17 (time and organisers' guidelines).
-3. The timed plan. If the launch brief does not give it, read it in braid: `braid list --label
-   uros2026 --all`, task "Écrire le plan du talk de 15 min", comment starting with `PLAN MINUTÉ`
-   and the later `HANDOFF` that adjusts the times (intro 2:00, X1 2:30, X2 1:45, X3 1:45, Y 1:30,
-   Z 2:30, end 0:30 at the last check). Report the plan you used.
+3. The timed plan: `.claude/rules/deck-structure.md`. If the launch brief gives another plan, use
+   the brief and say so. Report the plan you used.
 4. `index.qmd` (slides, `timing-duration`, `timing-section`, `visibility="hidden"`, notes) and the
    screenshots in `_check/slides/` (one PNG per slide with all fragments shown, from `just check`).
 
@@ -38,9 +37,10 @@ proof (the opening problem solved), Z opening, resources. Then flag:
 - **weak transitions**: between each pair of slides, does the screen show where we are (F7:
   section label, a visual that comes back with the step marked)? Is the spoken bridge findable in
   the notes in one line? A slide that narrates its own transition is a flag;
-- **time**: sum `timing-duration` per plan part and in total; compare with the plan and with
-  12:30. Say where the deck is over and what is cheapest to cut (§17: cut middle sections first,
-  keep the hook and the resource slide). Flag a slide whose content cannot be said in its time;
+- **time**: sum `timing-duration` per plan part and in total; compare with the plan, with 10:35
+  and with the 12:30 ceiling. Say where the deck is over and what is cheapest to cut (§17: cut
+  middle sections first, keep the hook and the resource slide). Flag a slide whose content cannot
+  be said in its time;
 - dependence on the talks before it in the session (the talk must stand alone).
 
 # Evidence
@@ -52,7 +52,7 @@ Cite `index.qmd:line` and the slide id. Read a slide's screenshot before judging
 
 Write one report to the path in the launch brief:
 
-1. Verdict in 3 lines (does the deck carry the governing idea in 12:30?)
+1. Verdict in 3 lines (does the deck carry the governing idea in 10:35?)
 2. The slide table
 3. P0 (breaks the story or the time), P1 (weakens it), P2 (polish), each with slide id, problem,
    smallest fix (cut, move, merge, rewrite)
