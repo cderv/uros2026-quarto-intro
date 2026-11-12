@@ -334,7 +334,7 @@ format:
 ```
 
 ::: notes
-Typst: makes the PDF inside Quarto, nothing to install, nothing to learn.
+Typst: makes the PDF inside Quarto, nothing to install, nothing to learn for a default PDF.
 :::
 
 ## One header, every format {#formats-docx kicker="One source, every format" .magic-move timing-duration="15s"}
@@ -412,13 +412,13 @@ gt(tab) |>
 ::: {.column width="50%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out .print-hide fragment-index="1"}
-![](images/bulletin/html-table.png){.shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls."}
+![](images/bulletin/html-table.png){.shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells colored from gold for rises to pink for falls."}
 
 [bulletin.html]{.shot-label}
 :::
 
 ::: {.fragment fragment-index="1"}
-![](images/bulletin/pdf-table.png){.shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours."}
+![](images/bulletin/pdf-table.png){.shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colors."}
 
 [bulletin.pdf]{.shot-label}
 :::
@@ -468,15 +468,15 @@ typography:
 :::
 ::: {.column width="55%"}
 ::: {.shot-pair}
-![](images/bulletin/html-page.png){.shot .pair-back fig-alt="The HTML bulletin in the institute's colours: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."}
+![](images/bulletin/html-page.png){.shot .pair-back fig-alt="The HTML bulletin in the institute's colors: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."}
 
-![](images/bulletin/pdf-p1.png){.shot .pair-front fig-alt="Page 1 of the PDF bulletin laid over it, with the same logo, colours and fonts."}
+![](images/bulletin/pdf-p1.png){.shot .pair-front fig-alt="Page 1 of the PDF bulletin laid over it, with the same logo, colors and fonts."}
 :::
 :::
 :::
 
 ::: notes
-Colors, logo, fonts: written once in _brand.yml; HTML, PDF and Word read it.
+Colors, logo, fonts: written once in _brand.yml; HTML and PDF read it; Word gets it through a reference document built from it.
 A fictional institute, real Eurostat data.
 :::
 
@@ -615,7 +615,7 @@ The number people read is the number your code produced.
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
 ```{.carousel #gallery autoplay="5000" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
 ![Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef](images/gallery/01-insee-working-paper.png)
-![Agreste (SSM Agriculture): dataviz catalogue · ssm-agriculture.github.io/site-DataViz](images/gallery/02-agreste-dataviz.png)
+![Agreste (SSM Agriculture): dataviz catalog · ssm-agriculture.github.io/site-DataViz](images/gallery/02-agreste-dataviz.png)
 ![ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer](images/gallery/03-ons-weekly-deaths.png)
 ![NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey](images/gallery/04-nisra-childcare.png)
 ![Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no](images/gallery/05-ssb-documentation.png)
@@ -625,7 +625,7 @@ The number people read is the number your code produced.
 
 ::: {.gallery-grid .fragment fragment-index="1"}
 [![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){fig-alt="Top of the page: Insee: working paper, HTML + PDF, made with Quarto"}](https://inseefrlab.github.io/DT-tvcoef/)
-[![Agreste (SSM Agriculture): dataviz catalogue](images/gallery/02-agreste-dataviz.png){fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalogue, made with Quarto"}](https://ssm-agriculture.github.io/site-DataViz/)
+[![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png){fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalog, made with Quarto"}](https://ssm-agriculture.github.io/site-DataViz/)
 [![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){fig-alt="Top of the page: ONS: weekly deaths data explorer (prototype), made with Quarto"}](https://onsdigital.github.io/weekly_deaths_data_explorer/)
 [![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made with Quarto"}](https://nisra-explore.github.io/childcare-survey/)
 [![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){fig-alt="Top of the page: Statistics Norway: documentation report with an ISBN, made with Quarto"}](https://doc.ameld.ssb.no/)
@@ -674,7 +674,7 @@ Two gains: a much faster engine, and Quarto Hub, several people writing the same
 Bridge: from the tool's timeline to the conference's, every edition since 2017.
 :::
 
-## {#next-year .center timing-duration="30s"}
+## {#next-year .center timing-duration="40s"}
 
 [Every edition since 2017: a talk about publishing statistics.]{.lead}
 
@@ -685,11 +685,13 @@ Bridge: from the tool's timeline to the conference's, every edition since 2017.
 ::: notes
 Every year since 2017, someone here talked about publishing statistics. Next year, bring yours.
 Pick the one that comes back every month, render it from one source, tell us what you learned.
+You already do R. You already publish.
+Quarto is the step between: next Thursday at 17:50, fix one line and render.
 :::
 
 <!-- ============================ END (0:30) ============================ -->
 
-## Learning More {#learning-more .timing-section timing-title="End" timing-duration="40s"}
+## Learning More {#learning-more .timing-section timing-title="End" timing-duration="30s"}
 
 ::: {.columns}
 ::: {.column width="62%"}
@@ -712,7 +714,6 @@ Slides
 :::
 
 ::: notes
-You already do R and you already publish; Quarto is the step between the two, so next Thursday at 17:50 you fix one line and render.
-Slides and the example bulletin: the QR code.
+Slides: the QR code; the example is linked from the slides.
 Thank you. Questions?
 :::
