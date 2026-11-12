@@ -224,7 +224,7 @@ Everything that works in R works here: packages, charts, tables, models. Nothing
 
 ## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-```` markdown
+```` {.markdown code-line-numbers="1,9,11,13,15"}
 ```{r}
 library(eurostat)
 library(ggplot2)
@@ -251,7 +251,7 @@ The comment and the method note live next to the code that makes the numbers.
 
 ## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
 
-```` markdown
+```` {.markdown code-line-numbers="2,15,16"}
 ```{r}
 #| echo: false
 library(eurostat)
@@ -278,7 +278,7 @@ ggplot(nights, aes(time, values)) + geom_line()
 
 ## The number in the sentence: computed {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-```` markdown
+```` {.markdown code-line-numbers="12"}
 ```{r}
 #| echo: false
 library(eurostat)
@@ -299,10 +299,8 @@ ggplot(nights, aes(time, values)) + geom_line()
 ```
 ````
 
-[]{.line-box .fragment .absolute}
-
 ::: notes
-(click) Inline code: R inside the sentence. Nobody types 514.7; R computes it at render.
+Inline code: R inside the sentence. Nobody types 514.7; R computes it at render.
 Change the data, the sentence follows.
 :::
 
@@ -341,7 +339,7 @@ Bridge: same command, more formats.
 
 ## One header, every format {#formats kicker="One source, every format" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
 
-```yaml
+```{.yaml code-line-numbers="3"}
 ---
 title: "Tourism in the EU"
 format: html
@@ -354,7 +352,7 @@ Formats: one line each, in the header of the same file. HTML for the web first.
 
 ## One header, every format {#formats-pdf kicker="One source, every format" .magic-move timing-duration="15s"}
 
-```yaml
+```{.yaml code-line-numbers="5"}
 ---
 title: "Tourism in the EU"
 format:
@@ -369,7 +367,7 @@ Typst: makes the PDF inside Quarto, nothing to install, nothing to learn for a d
 
 ## One header, every format {#formats-docx kicker="One source, every format" .magic-move timing-duration="15s"}
 
-```yaml
+```{.yaml code-line-numbers="6"}
 ---
 title: "Tourism in the EU"
 format:
