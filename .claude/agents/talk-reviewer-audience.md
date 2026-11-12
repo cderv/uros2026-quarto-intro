@@ -1,6 +1,6 @@
 ---
 name: talk-reviewer-audience
-description: Use to read the talk deck in order as a member of the uRos audience (an official statistician who knows R, not Quarto) and say where they get lost. Checks the organisers' guidelines: undefined terms, readability at 1280x720, one message per slide. Do not use for wording against the voice profile.
+description: "Use to read the talk deck in order as a member of the uRos audience (an official statistician who knows R, not Quarto) and say where they get lost. Checks the organisers' guidelines: undefined terms, readability at 1280x720, one message per slide. Do not use for wording against the voice profile."
 tools: Read, Grep, Bash, Write
 ---
 
