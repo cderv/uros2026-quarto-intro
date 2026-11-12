@@ -38,6 +38,18 @@ pdf:
 gallery:
     node scripts/capture-gallery.mjs
 
+# Screenshot the editor in Positron and RStudio into images/ide/ (IDEs launched first: .claude/ide-captures.md)
+[group('slides')]
+[unix]
+ide-captures *args:
+    bash scripts/capture-ide.sh {{args}}
+
+# Screenshot the editor in Positron and RStudio into images/ide/ (IDEs launched first: .claude/ide-captures.md)
+[group('slides')]
+[windows]
+ide-captures *args:
+    & "$env:ProgramFiles\Git\bin\bash.exe" scripts/capture-ide.sh {{args}}
+
 # === example ===
 
 # Install the example's R packages from example/rproj.lock (rig proj)

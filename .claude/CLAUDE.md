@@ -53,6 +53,7 @@ the first session, then keep it current.
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
+| `.claude/ide-captures.md` | Not auto-loaded, read it before redoing the Positron and RStudio screenshots of the CLI slide: launching both IDEs with a debug port, `just ide-captures`, copying the frame positions, pitfalls |
 | `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition), three reviewers, `talk-reviewer-story`, `-voice`, `-audience`, then `talk-coach` (Fable: adversarial verdict on their reports, or on a rehearsal transcript) and `talk-fact-checker` (public claims, gallery sites, links). Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions; add the list of decisions already made so they are not reopened |
 | `.claude/prompts/wording-review.md` | Wording review by a model outside the Claude family (lines that sound machine-written). Run it locally, not in cloud sessions: `roborev run --agent codex --reasoning thorough --wait < .claude/prompts/wording-review.md` (`roborev review` only reviews diffs). Compare its report with `talk-reviewer-voice` and keep what both flag |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
@@ -122,6 +123,7 @@ just preview          # live preview of the slides
 just check            # render + browser + layout checks, screenshots in _check/slides/
 just pdf              # slides-full.pdf for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide
+just ide-captures     # Positron and RStudio editor screenshots for the CLI slide (.claude/ide-captures.md)
 just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
 just example          # render the example bulletin in example/
 just reference-doc    # rebuild example/brand/nso-reference.docx (Word styles) from _brand.yml

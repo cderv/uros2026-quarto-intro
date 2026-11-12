@@ -312,12 +312,21 @@ quarto render bulletin.qmd
 ::: {.fragment}
 ::: {.columns}
 ::: {.column width="50%"}
-![](images/ide/positron-render-crop.png){.shot width="560px" fig-alt="Top of the Positron editor with bulletin.qmd open: the tab name and the toolbar with the Quarto Preview button circled."}
+<!-- screenshots and frame positions: just ide-captures (scripts/capture-ide.sh) -->
+::: {.hl-shot}
+![](images/ide/positron-render-crop.png){.shot fig-alt="Top of the Positron editor with bulletin.qmd open: the tab, the toolbar with the Preview button, and the first lines of the YAML header."}
+
+[]{.hl-box style="left: 0.7%; top: 27.7%; width: 25.7%; height: 19.0%;"}
+:::
 
 [Positron]{.shot-label}
 :::
 ::: {.column width="50%"}
-![](images/ide/rstudio-render-crop.png){.shot width="560px" fig-alt="Top of the RStudio editor with bulletin.qmd open: the tab name and the toolbar with the Render button circled."}
+::: {.hl-shot}
+![](images/ide/rstudio-render-crop.png){.shot fig-alt="Top of the RStudio editor with bulletin.qmd open: the tab, the toolbar with the Render button, and the first lines of the YAML header."}
+
+[]{.hl-box style="left: 63.1%; top: 18.7%; width: 15.7%; height: 16.5%;"}
+:::
 
 [RStudio]{.shot-label}
 :::

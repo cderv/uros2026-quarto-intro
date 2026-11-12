@@ -468,6 +468,10 @@ html.print-pdf .reveal .print-only { display: block !important; }
   // #one-render: both crops at the same height, so the two frames line up
   section#one-render .hl-shot { display: inline-block; img { width: auto; height: 180px; } }
   section#one-render .column { text-align: center; }
+  // #render-cli: the two editor crops at the same width (same 1200x440 ratio, so same height)
+  section#render-cli .hl-shot { width: 560px; max-width: 100%; margin: 0 auto; }
+  // small buttons: a thinner frame, drawn inside the measured box so it stays off the code
+  section#render-cli .hl-shot .hl-box { box-sizing: border-box; border-width: 3px; border-radius: 6px; }
   section#table pre code { font-size: 0.9em; }
   // #pdf: the PDF pages scroll slowly while the slide is shown (no JS)
   .page-scroll {
