@@ -172,7 +172,6 @@ Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 
 ::: notes
 First time the name is said. Quarto: your text and your R code in one file, rendered to this page.
-Free and open source; comes with RStudio and Positron, a Render button.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -305,6 +304,37 @@ ggplot(nights, aes(time, values)) + geom_line()
 ::: notes
 (click) Inline code: R inside the sentence. Nobody types 514.7; R computes it at render.
 Change the data, the sentence follows.
+:::
+
+## Quarto: a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="20s"}
+
+```bash
+quarto render bulletin.qmd
+```
+
+::: {.fragment}
+::: {.columns}
+::: {.column width="50%"}
+![](images/ide/positron-render-crop.png){.shot width="560px" fig-alt="Top of the Positron editor with bulletin.qmd open: the tab name and the toolbar with the Quarto Preview button circled."}
+
+[Positron]{.shot-label}
+:::
+::: {.column width="50%"}
+![](images/ide/rstudio-render-crop.png){.shot width="560px" fig-alt="Top of the RStudio editor with bulletin.qmd open: the tab name and the toolbar with the Render button circled."}
+
+[RStudio]{.shot-label}
+:::
+:::
+
+[Or one button: Positron, RStudio, VS Code]{.statement}
+:::
+
+[Free and open source]{.chart-cap}
+
+::: notes
+One command: R runs, the numbers are computed, the page is written.
+(click) Free, open source. Comes with Positron and RStudio; VS Code: one extension.
+Bridge: same command, more formats.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
