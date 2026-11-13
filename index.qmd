@@ -189,7 +189,7 @@ Bridge: "The tool for this is Quarto."
 ...is an open-source, scientific, and technical publishing system
 
 ![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.]{.small-cap}](images/horst_quarto_schematic.png){
-  width="900px" fig-align="center" fig-alt="Schematic: on the left, the languages R, Python, Observable and Julia, plus more; an arrow goes into Quarto in the middle; an arrow goes out to HTML, PDF and Word documents, plus more."
+  width="900px" fig-align="center" fig-alt="Schematic: R, Python, Observable, Julia and other languages go into Quarto, which makes HTML, PDF, Word and other documents."
 }
 
 ::: notes
@@ -206,7 +206,7 @@ talk, a statistical bulletin."
 }
 
 ![](images/bulletin/html-trend.png){
-  .shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."
+  .shot height="370px" fig-alt="Figure 1 of the HTML bulletin, titled 'August 2026 set a new record'. Line chart of monthly nights in the EU, the 2026 line above the 2022-2025 range, August labelled 514.7 million."
 }
 :::
 
@@ -224,7 +224,7 @@ Monthly bulletin, Eurostat tourism data.
 }
 
 ![](images/bulletin/html-trend.png){
-  .shot height="300px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."
+  .shot height="300px" fig-alt="Figure 1 of the HTML bulletin, titled 'August 2026 set a new record'. Line chart of monthly nights in the EU, the 2026 line above the 2022-2025 range, August labelled 514.7 million."
 }
 :::
 :::
@@ -269,8 +269,8 @@ ggplot(nights, aes(time, values)) + geom_line()
 [Shortened for the slide. Full source in [cderv/uros2026-quarto-example](https://github.com/cderv/uros2026-quarto-example).]{.chart-cap}
 
 ::: notes
-Eurostat data, latest month, one chart. Everything that works in R works
-here: packages, charts, tables, models. Nothing to rewrite.
+Eurostat data, latest month, one chart. Your R code and packages stay as
+they are.
 :::
 
 ## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
@@ -336,8 +336,8 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-`#|` lines are options for Quarto: hide the code; name the chart and
-caption it (the "Figure 1" you saw).
+`#|` lines are options for Quarto. Hide the code, name and caption the
+chart (the "Figure 1" you saw).
 :::
 
 ## Write R code inside the sentence {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
@@ -562,7 +562,7 @@ gt(tab) |>
 ::: {.r-stack}
 ::: {.fragment .fade-out .print-hide fragment-index="1"}
 ![](images/bulletin/html-table.png){
-  .shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells colored from gold for rises to pink for falls."
+  .shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy lines, the change cells colored from gold for rises to pink for falls."
 }
 
 [bulletin.html]{.shot-label}
@@ -570,7 +570,7 @@ gt(tab) |>
 
 ::: {.fragment fragment-index="1"}
 ![](images/bulletin/pdf-table.png){
-  .shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colors."
+  .shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, lines and colors."
 }
 
 [bulletin.pdf]{.shot-label}
@@ -602,8 +602,8 @@ country and @sec-methods explains the figures.
 []{.xr-box .absolute .fragment fragment-index="1" style="left: 180px; top: 171px; width: 191px; height: 40px;"}
 
 ::: notes
-(click) The references. Write \@fig-trend, read "Figure 1", a link in
-HTML; \@sec-countries, "Section 2". When you add a figure, Quarto
+(click) The references. \@fig-trend becomes "Figure 1", a link in HTML.
+\@sec-countries becomes "Section 2". When you add a figure, Quarto
 renumbers.
 :::
 
@@ -671,8 +671,8 @@ For the HTML pages, `axe: true` checks accessibility with [axe-core](
 
 ::: notes
 One line asks for both standards. With veraPDF installed
-(`quarto install verapdf`), Quarto checks at each render. PDF/A keeps
-the file readable in 20 years. The bulletin does not set axe today. axe
+(`quarto install verapdf`), Quarto checks at each render. The bulletin
+does not set axe today. axe
 runs when the page opens: results in the browser console, or on the page
 with output: document.
 :::
@@ -754,8 +754,7 @@ One word in the R code. (click) TOTAL keeps all guests.
 
 ::: notes
 (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart, caption and
-the Word file come from the same render. Anything that reads the same R
-code gets the same number.
+the Word file come from the same render.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -822,28 +821,22 @@ code gets the same number.
 
 ::: {.gallery-grid .fragment fragment-index="1"}
 [![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){
-  fig-alt="Top of the page: Insee: working paper, HTML + PDF, made with
-Quarto"
+  fig-alt="Insee working paper, HTML and PDF."
 }](https://inseefrlab.github.io/DT-tvcoef/)
 [![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png){
-  fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalog,
-made with Quarto"
+  fig-alt="Agreste (SSM Agriculture) dataviz catalog."
 }](https://ssm-agriculture.github.io/site-DataViz/)
 [![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){
-  fig-alt="Top of the page: ONS: weekly deaths data explorer
-(prototype), made with Quarto"
+  fig-alt="ONS weekly deaths data explorer (prototype)."
 }](https://onsdigital.github.io/weekly_deaths_data_explorer/)
 [![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){
-  fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made
-with Quarto"
+  fig-alt="NISRA Childcare Survey 2024 results."
 }](https://nisra-explore.github.io/childcare-survey/)
 [![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){
-  fig-alt="Top of the page: Statistics Norway: documentation report with
-an ISBN, made with Quarto"
+  fig-alt="Statistics Norway documentation report, with an ISBN."
 }](https://doc.ameld.ssb.no/)
 [![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png){
-  fig-alt="Top of the page: OECD: Regional Outlook 2023 country
-profiles, made with Quarto"
+  fig-alt="OECD Regional Outlook 2023 country profiles."
 }](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
 
 [Insee, Agreste (France) · ONS, NISRA (United Kingdom) · Statistics Norway · OECD]{.gallery-count}
