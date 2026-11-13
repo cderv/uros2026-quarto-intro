@@ -874,9 +874,9 @@ Same idea, more languages and formats
 :::
 
 ::: {.event .fragment data-label="Today"}
-**Quarto**
+**Quarto 1**
 
-The bulletin, the gallery, these slides
+The bulletin and the gallery
 :::
 
 ::: {.event .fragment data-label="In development"}
