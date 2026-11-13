@@ -193,9 +193,9 @@ Bridge: "The tool for this is Quarto."
 }
 
 ::: notes
-If you know R Markdown, same idea.
-For you, R on the left. On the right, the documents from Thursday.
-Bridge: "One example for the rest of the talk, a statistical bulletin."
+If you know R Markdown, same idea. For you, R on the left. On the right,
+the documents from Thursday. Bridge: "One example for the rest of the
+talk, a statistical bulletin."
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="10s"}
@@ -417,9 +417,10 @@ YAML header."
 
 
 ::: notes
-With one command, R computes the numbers and Quarto writes the page. Free to install.
-(click) Comes with Positron (Preview button) and RStudio (Render button). In VS Code, install one extension.
-Bridge: same command, more formats.
+With one command, R computes the numbers and Quarto writes the page.
+Free to install. (click) Comes with Positron (Preview button) and
+RStudio (Render button). In VS Code, install one extension. Bridge: same
+command, more formats.
 :::
 
 <!-- ============================ X2 (1:20) ============================ -->
@@ -475,9 +476,8 @@ quarto render bulletin.qmd
 :::
 
 ::: notes
-Word, for the colleague who asks for Word.
-(click) Same command as on the CLI slide.
-Bridge: the web page, then the PDF.
+Word, for the colleague who asks for Word. (click) Same command as on
+the CLI slide. Bridge: the web page, then the PDF.
 :::
 
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
@@ -665,13 +665,16 @@ $ quarto render bulletin.qmd
 
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
 
-For the HTML pages, `axe: true` checks accessibility with [axe-core](https://quarto.org/docs/output-formats/html-accessibility.html).
+For the HTML pages, `axe: true` checks accessibility with [axe-core](
+  https://quarto.org/docs/output-formats/html-accessibility.html
+).
 
 ::: notes
-One line asks for both standards. With veraPDF installed (`quarto install verapdf`), Quarto checks at each render.
-PDF/A keeps the file readable in 20 years.
-The bulletin does not set axe today.
-axe runs when the page opens: results in the browser console, or on the page with output: document.
+One line asks for both standards. With veraPDF installed
+(`quarto install verapdf`), Quarto checks at each render. PDF/A keeps
+the file readable in 20 years. The bulletin does not set axe today. axe
+runs when the page opens: results in the browser console, or on the page
+with output: document.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
@@ -695,8 +698,8 @@ nights <- get_eurostat(
 [Country of residence: `FOR` = guests from abroad only]{.lead .fragment}
 
 ::: notes
-Back to Thursday, ten to six. Wrong again.
-(click) Cause: someone kept the guests from abroad only.
+Back to Thursday, ten to six. Wrong again. (click) Cause: someone kept
+the guests from abroad only.
 :::
 
 ## Thursday, 17:50. Again. {#again-fix kicker="Fixed once" .magic-move timing-duration="10s"}
@@ -750,9 +753,9 @@ One word in the R code. (click) TOTAL keeps all guests.
 :::
 
 ::: notes
-(click) 514.7 in the HTML, 514.7 in the PDF. Table, chart,
-caption and the Word file come from the same render. Anything that
-reads the same R code gets the same number.
+(click) 514.7 in the HTML, 514.7 in the PDF. Table, chart, caption and
+the Word file come from the same render. Anything that reads the same R
+code gets the same number.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -925,8 +928,8 @@ Quarto 1 is what you install today.
 :::
 
 ::: notes
-You already do R. You already publish. Quarto is the step between.
-Next Thursday at 17:50, fix one line and render.
+You already do R. You already publish. Quarto is the step between. Next
+Thursday at 17:50, fix one line and render.
 :::
 
 <!-- ============================ END (0:30) ============================ -->
