@@ -13,7 +13,7 @@ the first session, then keep it current.
   Pierre Mendès France, 139 rue de Bercy, Paris. Conference site: <https://urosconf.org/>
 - **Language:** EN
 - **Duration:** 15 min, strict maximum: the chair enforces it (about 3 min after each talk for
-  questions and switching). The deck is timed at 10:55 spoken (per-part budgets in
+  questions and switching). The deck is timed at 11:00 spoken (per-part budgets in
   `.claude/rules/deck-structure.md`); 12:30 is the ceiling, the rest is margin.
 - **Audience:** international official statisticians (national statistical institutes, Eurostat,
   international organisations, central banks, some academia). They know R; most know the R Markdown

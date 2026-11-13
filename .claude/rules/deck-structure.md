@@ -11,11 +11,11 @@ accepted on 8 November):
 | Intro | 1:35 |
 | X1 — Every number computed | 2:25 |
 | X2 — Same source, multiple formats | 1:20 |
-| X3 — Ready to publish | 1:45 |
+| X3 — Ready to publish | 1:50 |
 | Y — Fix it once | 1:30 |
 | Z — And next | 1:50 |
 | End | 0:30 |
 
-The spoken deck totals 10:55. 12:30 is the ceiling (the timing bar is set to it); the rest of the
+The spoken deck totals 11:00. 12:30 is the ceiling (the timing bar is set to it); the rest of the
 15-minute slot is margin. If a timed rehearsal comes in under 11:00, give time back to existing
 slides; never restore a cut slide.
