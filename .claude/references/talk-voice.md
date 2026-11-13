@@ -23,7 +23,7 @@ These outrank every inferred pattern below.
 - **F3. He does not read the formula lines** (the recurring Quarto definitions); they support what
   he says.
 - **F4. The last slide is for resources; he concludes by speaking.** A closing line such as the
-  candidate in CLAUDE.md belongs in the notes as a spoken line, not on a slide.
+  one in CLAUDE.md belongs in the notes as a spoken line, not on a slide.
 - **F5. His most prepared talk is posit::conf 2025 (Lua filters)**: the closest model for a
   story-driven conference talk (section 12).
 - **F6. Recordings exist on YouTube.** They are not in this corpus (section 15).
@@ -36,6 +36,9 @@ These outrank every inferred pattern below.
   after the first result.
 - **F9. Banned in his talks:** dramatic hooks, "X isn't just Y" flips, three-beat slogans,
   show-of-hands questions (section 14). Closing as F4, a callback to the opening is allowed.
+- **F10. Colons (2026-11-13).** Label + colon stays his form, but never as a reveal that replaces
+  the verb, and sparingly: about one colon device every five slides, a few in the notes (limits of
+  S4, §14 items 13 to 17).
 
 ## Evidence base and how to read the counts
 
@@ -236,6 +239,27 @@ slides, consistent with house-voice's colon.
 - `Going further: See the [`js` engine]` (`raukr-2021-rmd-boost/slides/slides.Rmd:551`)
 - FR `## Objectif: Publication avec données calculées` (`2024-quarto-evolution-rmd/index.qmd:88`); `Exemple: Rectangle avec la couleur primaire` (`rr2025-quarto-brand-yml/index.qmd:549`)
 
+**Limits of S4 (measured 2026-11-13; Christophe agreed).** The colon is his habit, not a machine
+tell; its *form* and its *density* can be. Counted on the `index.qmd` of four past decks (useR!
+2024, PyData Paris 2024 and 2025, Raukr 2025), against the uRos 2026 draft that over-used it:
+
+- **Form.** In his decks the colon is followed by a name: a topic, a term, a list, a link
+  (`Focus: HTML Theming`, `Examples: HTML`). The label on the left is generic and could head
+  several slides (`Focus:`, `Goal:`, `Layout:`). Never a colon that replaces the verb or stages a
+  reveal, a claim then its payoff: `The number in the sentence: computed`, `Cross-references:
+  numbered for you`, `All six: 514.7`, `Quarto is the step between: next Thursday...`. 0 of the
+  59 on-screen colon lines in the four decks have this form. Write the verb (`R computes the number
+  in the sentence`, `All six show 514.7`) or a full stop.
+- **Density on screen.** 0.16 to 0.22 colons used as a sentence device per slide (link labels,
+  list intros, quote attributions and image credits not counted); 0 in PyData 2025. The draft had
+  0.75. Never colon titles on consecutive slides; 4 colon titles per deck at most.
+- **Density in notes.** 8 to 12% of note lines carry a colon in his decks. The draft had 56%;
+  after review, 29%, all cue labels (`Bridge:`, `(click)`) or list intros, which is acceptable.
+  The kind matters more than the count: no colon that replaces a verb.
+- **Not a rewrite recipe.** When removing an em-dash or a verbless fragment, prefer a verb or a
+  full stop; a label + colon only while the deck stays inside the densities above. Applied as the
+  default fix, S4 made the colon take over the em-dash's job.
+
 **S5. Headings: noun phrases first; gerunds and imperatives under a label.** 12/12. In the .qmd
 decks 33 of 42 `##` headings are noun phrases (Raukr 2023), 13 of 17 (useR 2024), 17 of 18 (RR
 2025). EN gerunds: 4/12 (T3, T4, T8, T12; T12 has six, each under a section label). FR section
@@ -386,7 +410,8 @@ Spoken, he says why he is here (F2). Tutorials differ (`I'm going to **assume** 
 
 **N1. Notes are short, unlabelled memory aids.** 9/12 talks have notes (none in T7, T9, T12).
 Length: 10 to 35 words (xaringan), 1 to 5 short bullets (Raukr 2025), one line (PyData 2025), 4 to
-17 words (T10). No Say/Do/Ask labels. He does not read them (F1).
+17 words (T10). No Say/Do/Ask labels. He does not read them (F1). A one-line `Bridge:` or `Next:`
+cue to the next slide is fine (kept in the uRos 2026 deck after the coach review of 2026-11-12).
 
 - `Click on the link to show example` (`raukr-2023-quarto/index.qmd:389`); `Cliquez sur le lien pour voir l'exemple` (`2024-quarto-evolution-rmd/index.qmd:485`)
 - `Pandoc feature. R Markdown knows and extend it. ` (`raukr-2021-rmd-boost/slides/slides.Rmd:780`)
@@ -566,8 +591,26 @@ Each is **invented** unless marked real. Rewrites use his own forms, not the sha
 10. **Dashed voice-over in notes** (real outlier): `Instead of handing over a raw .ipynb, Quarto lets you ship production‑quality HTML and paginated PDFs — polished, brandable, and ready for stakeholders — all from the same source document.` (`pydata-paris-2025-quarto-publish/index.qmd:105`).
     Rewrite: `Quarto renders the notebook to HTML and PDF from the same source. Both can use the organisation's brand.`
 11. **Bold-lead + em-dash bullets** (real, 2026 tutorial only, e.g. `**Rien à installer** —`, `tuto-quarto-typst-rr-2026/1-quarto-typst/1-quarto-typst.qmd:179`).
-    Rewrite: a label + colon (S4), `- Nothing to install: Typst is part of Quarto`.
+    Rewrite: a verb first (`- Typst comes with Quarto, nothing to install`); a label + colon (S4) only within its limits.
 12. **Script-length notes** (2026 tutorial notes average about 85 words). Rewrite: one memory aid per line (N1, F1).
+
+Found in the assisted uRos 2026 draft by the wording reviews of 2026-11-13 (real, assisted; all
+removed with Christophe's agreement):
+
+13. **Reveal colon** (`The number in the sentence: computed`, `All six: 514.7`): see the limits of S4.
+    Rewrite: `Write R code inside the sentence`, `All six show 514.7`.
+14. **Refrain across slides**: one parallel formula repeated as titles and section labels
+    (`One header, every format` under the label `One source, every format`, 9 slides). Each line
+    alone is fine; repeated, it becomes the slogan of item 4. Rewrite: his own wording, once (W3,
+    `Same source, multiple formats`), and a plain heading.
+15. **Maxim in notes** (`Change the data, the sentence follows.`, `The number people read is the
+    number your code produced.`, `a map, not a ranking`): an aphorism to deliver, not a cue.
+    Rewrite: the plain fact (`The sentence updates with new data.`) or nothing.
+16. **Question set up for a one-word answer on the slide** (`Which one did you forget? None.`):
+    a question to the room (item 7) used as a punch line. Rewrite: show the state (`One is still
+    wrong.`, then `All six show 514.7`).
+17. **Notes that repeat the slide or stage the delivery** (`What if you only had to fix it once?
+    Pause, no answer.`): drop the repeat, keep only what the slide does not say (N2).
 
 ## 15. Where the corpus is silent or contradictory
 
@@ -582,7 +625,7 @@ Absence is information. In 12 hand-written talks there is:
   It calls back the opening word; it is not a slogan.
 - **No three-beat slogan on any slide.** Three-beat lines appear only in 2026 speaker documents
   (`Une ligne. PDF généré. Pas d'install LaTeX.`, `tuto-quarto-typst-rr-2026/_speaker/pilotage.qmd:87`).
-  The CLAUDE.md candidate closing line has this shape; per F4 it goes in the notes as a spoken line.
+  The first candidate closing line in CLAUDE.md had this shape; it was replaced and, per F4, lives in the notes as a spoken line.
 - **No emoji in Quarto-era EN slide text** (xaringan used `emo::ji()`; T11 and T12 use icons).
 - **No domain vocabulary on every slide.** The talk for official statisticians (T10) never says
   "statistique" or "official statistics" on a slide; the framing is in the title (`Pour des travaux

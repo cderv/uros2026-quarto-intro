@@ -284,3 +284,4 @@ Author name: **Christophe Dervieux**, affiliation: **Posit PBC**
 - Do NOT omit the slide URL in the closing slide
 - Do NOT use bio/profile-photo slide (dropped in Quarto era)
 - Do NOT write em-dash asides on slides (`---` appears only as a heading separator in three decks), and do NOT ask the room for a show of hands (no talk does): see `.claude/references/talk-voice.md`
+- Do NOT use a colon that replaces the verb or stages a reveal (`X: computed`), and keep colons sparse (about one every five slides, none on consecutive titles): talk-voice.md, limits of S4 and F10

@@ -12,7 +12,7 @@ talk, in Christophe Dervieux's voice. You propose; Christophe chooses. You never
 
 Read first, in this order:
 
-1. `.claude/references/talk-voice.md`: section 0 (F1-F9) first, then §12 (posit::conf 2025, the
+1. `.claude/references/talk-voice.md`: section 0 (F1-F10) first, then §12 (posit::conf 2025, the
    model for this talk), §14 (machine tells), §16 (keep, adapt, drop for 15 min), §17 (organisers'
    guidelines). Use sections 1-10 to find the pattern each option follows.
 2. `.claude/CLAUDE.md`, section **This talk**: core message, audience, duration, organisers'
@@ -36,14 +36,16 @@ For the target, give **2 or 3 options**. Each option has:
 - the spoken time it needs, against the budget in the brief;
 - one line on the trade-off between this option and the others.
 
-Make the options really different (a persona line vs an artefact vs a label + colon), not three
-phrasings of one idea.
+Make the options really different (a persona line vs an artefact vs a plain sentence with a verb),
+not three phrasings of one idea. A label + colon is one option at most, never a reveal (S4 limits).
 
 # Rules
 
 - Never use a pattern from §14 or a ban from F9: no dramatic hook, no "X isn't just Y", no
   three-beat slogan, no question to the room or show of hands, no narrated transition on the slide
-  ("Now let's see..."), no announced callback, no hype adjective, no em-dash aside.
+  ("Now let's see..."), no announced callback, no hype adjective, no em-dash aside, no reveal
+  colon (`X: computed`), no maxim in the notes, no formula repeated across slides (§14 items 13
+  to 17, F10).
 - Slides show where we are (F7: a section label, a visual that comes back with the current step
   marked); the transition itself is spoken and goes in the notes.
 - The last slide is for resources; the conclusion is spoken (F4). A closing line goes in the notes.

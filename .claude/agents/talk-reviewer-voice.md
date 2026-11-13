@@ -12,7 +12,7 @@ view from the sources; the launch brief gives paths, not conclusions.
 
 Read first:
 
-1. `.claude/references/talk-voice.md` in full. Order of authority: F1-F9 (section 0) > patterns
+1. `.claude/references/talk-voice.md` in full. Order of authority: F1-F10 (section 0) > patterns
    (sections 1-10) > shared wording (§11). §14 lists the machine tells, §16 what to keep, adapt or
    drop for 15 min, §17 the organisers' guidelines.
 2. `.claude/rules/presentation-style.md` (signature phrases, slide types, what not to do).
@@ -34,6 +34,9 @@ For each line, ask whether it breaks a rule, and which one. In particular:
 - F8: how the opening introduces Quarto (one line, after the first result);
 - U3: em-dash asides on slides or in notes; U1 ellipsis count (about 6 for 15 min);
 - S1-S8: full sentences where a label would do, word count per slide, heading shape;
+- S4 limits and F10: a colon that replaces the verb or stages a reveal (`X: computed`,
+  `All six: 514.7`), colon titles on consecutive slides, colon density on screen and in notes;
+  a refrain repeated across titles and section labels, maxims in notes (§14 items 13 to 17);
 - H2: speaker "I" on a slide outside a persona line;
 - §15: narrative nouns ("story", "journey", "chapter") on slides, emoji, domain vocabulary on
   every slide;
@@ -58,6 +61,7 @@ Write one report to the path in the launch brief:
 2. `| slide id | index.qmd:line | current | rule broken | smallest fix |`, ordered by slide, with
    P0 (a ban in F9 or §14, or F1/F4), P1 (a pattern clearly missed), P2 (polish)
 3. Lines that already sound like him, with their pattern
-4. Counts: words per slide (median, max), ellipses, exclamation marks, `{.hl}` uses
+4. Counts: words per slide (median, max), ellipses, exclamation marks, `{.hl}` uses, colons used
+   as a sentence device per slide on screen and share of note lines with a colon (S4 limits)
 
 Do not modify source files or commit. Return only the verdict and the P0/P1/P2 counts.

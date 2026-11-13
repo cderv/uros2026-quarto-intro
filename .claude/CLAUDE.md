@@ -27,10 +27,12 @@ the first session, then keep it current.
   website; publication-ready tooling: figures, tables, cross-references, your institute's look),
   you get publications that stay correct and consistent everywhere and update in one run, for
   statistics you communicate faster, to every audience, with confidence.
-- **Candidate closing line:** "You already do R. You already publish. Quarto makes it
-  reproducible, from one source, ready to publish."
-- **Closing:** standard EN "Learning More" (Getting started, guide, gallery, Awesome Quarto), slide
-  URL first.
+- **Closing line:** spoken, in the notes of the last story slide, never on screen (talk-voice F4):
+  "You already do R. You already publish. Quarto is the step between. Next Thursday at 17:50, fix
+  one line and render." (The first candidate ended on a three-beat slogan, "reproducible, from one
+  source, ready to publish", banned by F9.)
+- **Closing:** a short "Learning More": slides URL first, the example bulletin repository, Getting
+  started, Gallery, `#### Questions?` and a QR code to the slides; no `.smaller`.
 - **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
 - **Work tracking:** braid, label `uros2026`
 - **Organisers' guidelines (presenters' email, 29 Sept 2026):**
@@ -52,6 +54,7 @@ the first session, then keep it current.
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
 | `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition), three reviewers, `talk-reviewer-story`, `-voice`, `-audience`, then `talk-coach` (Fable: adversarial verdict on their reports, or on a rehearsal transcript) and `talk-fact-checker` (public claims, gallery sites, links). Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions; add the list of decisions already made so they are not reopened |
+| `.claude/prompts/wording-review.md` | Wording review by a model outside the Claude family (lines that sound machine-written). Run it locally, not in cloud sessions: `roborev run --agent codex --reasoning thorough --wait < .claude/prompts/wording-review.md` (`roborev review` only reviews diffs). Compare its report with `talk-reviewer-voice` and keep what both flag |
 | `.claude/rules/public-repo.md` | What must never be committed to this public repository |
 | `.claude/audience.md` | uRos audience, our session and its neighbours, themes of past editions, material to reuse from previous talks |
 | `.claude/skills/braid/` | braid skill (managed by `braid agents-info --install`; do not edit) |

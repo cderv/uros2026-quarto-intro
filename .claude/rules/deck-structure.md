@@ -10,7 +10,7 @@ accepted on 8 November):
 |---------|--------|
 | Intro | 1:35 |
 | X1 — Every number computed | 2:25 |
-| X2 — One source, every format | 1:20 |
+| X2 — Same source, multiple formats | 1:20 |
 | X3 — Ready to publish | 1:45 |
 | Y — Fix it once | 1:30 |
 | Z — And next | 1:50 |

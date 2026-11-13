@@ -14,7 +14,7 @@ Read first:
 1. `.claude/CLAUDE.md`, section **This talk**: the core message is the **governing idea**; the
    duration is 15 min strict, the spoken target and the per-part budgets are in
    `.claude/rules/deck-structure.md` (10:55 spoken, 12:30 ceiling).
-2. `.claude/references/talk-voice.md`: F1-F9, §12 (posit::conf 2025, the story-driven model),
+2. `.claude/references/talk-voice.md`: F1-F10, §12 (posit::conf 2025, the story-driven model),
    §16 (15-minute adaptations), §17 (time and organisers' guidelines).
 3. The timed plan: `.claude/rules/deck-structure.md`. If the launch brief gives another plan, use
    the brief and say so. Report the plan you used.

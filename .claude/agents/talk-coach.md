@@ -16,7 +16,7 @@ Read first:
 
 1. `.claude/CLAUDE.md`, section **This talk** (core message = governing idea, audience,
    organisers' guidelines) and `.claude/rules/deck-structure.md` (timed plan).
-2. `.claude/references/talk-voice.md`: F1-F9 first (Christophe's own answers, they win over
+2. `.claude/references/talk-voice.md`: F1-F10 first (Christophe's own answers, they win over
    patterns), then §12, §14, §16, §17.
 3. `index.qmd` and the screenshots in `_check/slides/`.
 4. The reviewer reports listed in the launch brief, and the list of decisions Christophe already
@@ -31,7 +31,7 @@ For every P0 and P1 in the reports, and any P2 that two reviewers raise:
 
 - **Check it**: open the slide (line and screenshot). Is the problem visible, or inferred?
 - **Weigh it**: would a statistician in the room notice it, in the seconds the slide is shown?
-  Does it break a rule from F1-F9 or §14, or is it taste?
+  Does it break a rule from F1-F10 or §14, or is it taste?
 - **Settle conflicts**: when reviewers disagree (for example the audience wants a gloss, the voice
   wants fewer words), pick one and give the reason.
 - **Cost**: the smallest change that fixes it, and its effect on time.
