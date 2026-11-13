@@ -66,7 +66,7 @@ Why here: I work on Quarto at Posit, and this room publishes numbers with R ever
 [*"Quarto? I haven't seen it used much in official statistics."*]{.statement}
 
 ::: notes
-Friends said it. You are an R community that publishes numbers every day: I wanted to understand.
+Friends said it. I wanted to understand why.
 :::
 
 ## {#publishing-needs timing-duration="20s"}
@@ -118,13 +118,13 @@ Bridge: a Thursday evening.
 :::
 
 ::: {.fragment fragment-index="6"}
-[Which one did you forget?]{.statement .question}
+[One is still wrong.]{.statement .question}
 :::
 
 ::: notes
-Thursday, ten to six. Release tomorrow. The headline number is wrong: 245.0 instead of 514.7.
+245.0 instead of 514.7.
 One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). Then: "Done?"
-(6) Which one did you forget? Pause, let the red card answer.
+(6) Press release: still red.
 :::
 
 ## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
@@ -153,10 +153,9 @@ One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). Then:
 :::
 :::
 
-[What if you only had to fix it [once]{.hl}?]{.statement}
+[One source: fix it [once]{.hl}]{.statement}
 
 ::: notes
-What if you only had to fix it once? Pause, no answer.
 Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 :::
 
@@ -301,7 +300,7 @@ ggplot(nights, aes(time, values)) + geom_line()
 
 ::: notes
 Inline code: R inside the sentence. Nobody types 514.7; R computes it at render.
-Change the data, the sentence follows.
+New data: the sentence updates.
 :::
 
 ## Quarto: a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="20s"}
@@ -330,14 +329,14 @@ quarto render bulletin.qmd
 [Free and open source]{.chart-cap}
 
 ::: notes
-One command: R runs, the numbers are computed, the page is written.
-(click) Free, open source. Comes with Positron and RStudio; VS Code: one extension.
+One command: R computes the numbers, Quarto writes the page.
+(click) Free, open source. Comes with Positron and RStudio. VS Code: one extension.
 Bridge: same command, more formats.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
 
-## One header, every format {#formats kicker="One source, every format" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
+## Formats: one line each in the header {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
 
 ```{.yaml code-line-numbers="3"}
 ---
@@ -347,10 +346,10 @@ format: html
 ```
 
 ::: notes
-Formats: one line each, in the header of the same file. HTML for the web first.
+Same file. HTML for the web first.
 :::
 
-## One header, every format {#formats-pdf kicker="One source, every format" .magic-move timing-duration="15s"}
+## Formats: one line each in the header {#formats-pdf kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
 
 ```{.yaml code-line-numbers="5"}
 ---
@@ -362,10 +361,10 @@ format:
 ```
 
 ::: notes
-Typst: makes the PDF inside Quarto, nothing to install, nothing to learn for a default PDF.
+Typst: comes with Quarto, makes the PDF. No LaTeX.
 :::
 
-## One header, every format {#formats-docx kicker="One source, every format" .magic-move timing-duration="15s"}
+## Formats: one line each in the header {#formats-docx kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
 
 ```{.yaml code-line-numbers="6"}
 ---
@@ -383,7 +382,7 @@ format:
 Word, for the colleague who asks for Word. One command, three files.
 :::
 
-## For the web {#html kicker="One source, every format" timing-duration="20s"}
+## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
 
 ![](images/bulletin/html-page.png){.shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
 
@@ -391,7 +390,7 @@ Word, for the colleague who asks for Word. One command, three files.
 Web: readable on a phone, chart and table inside.
 :::
 
-## For print {#pdf kicker="One source, every format" timing-duration="20s"}
+## For print {#pdf kicker="Same source, multiple formats" timing-duration="20s"}
 
 <!-- the two PDF pages scroll slowly while the slide is shown; the PDF export shows them side by side -->
 ::: {.page-scroll .print-hide .no-overflow-check}
@@ -474,10 +473,10 @@ No month on record had more nights than August 2026. @fig-trend compares this ye
 
 ::: notes
 (click) The references. Write \@fig-trend, read "Figure 1", a link in HTML; \@sec-countries, "Section 2".
-Add a figure, every number follows.
+Add a figure: Quarto renumbers.
 :::
 
-## Your institute's look: one `_brand.yml` for every format {#brand kicker="Ready to publish" timing-duration="25s"}
+## Your institute's look: one `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -504,7 +503,7 @@ typography:
 :::
 
 ::: notes
-Colors, logo, fonts: written once in _brand.yml; HTML and PDF read it; Word gets it through a reference document built from it.
+Colors, logo, fonts: once, in _brand.yml. HTML and PDF read it. Word: through a reference document.
 A fictional institute, real Eurostat data.
 :::
 
@@ -525,8 +524,8 @@ $ quarto render bulletin.qmd
 [PDF/A: for the archive. PDF/UA: tagged, for screen readers. veraPDF: the checker, run by Quarto.]{.lead}
 
 ::: notes
-One line asks for both standards; veraPDF installed, Quarto checks them at every render.
-PDF/A keeps the file readable in 20 years; PDF/UA is a tagged PDF a screen reader can follow.
+One line asks for both standards. With veraPDF installed, Quarto checks them at each render.
+PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reader can follow.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
@@ -624,10 +623,10 @@ Press release: same code, same number.
 :::
 :::
 
-[Which one did you forget? [None.]{.payoff .fragment}]{.payoff-line}
+[All six: [514.7]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-Thursday, 17:51. Which one did you forget? (Pause.) None.
+(click) 514.7 on all six, press release too.
 The number people read is the number your code produced.
 :::
 
@@ -667,7 +666,7 @@ The number people read is the number your code produced.
 
 ::: notes
 Already published with Quarto, in official statistics: Insee, Agreste, ONS, NISRA, Statistics Norway, OECD.
-Some of you are already in this picture: a map, not a ranking.
+Some of you made these. Examples, in no order.
 (click: grid) (click) These slides are Quarto too.
 :::
 
@@ -711,8 +710,7 @@ Bridge: from the tool's timeline to the conference's, every edition since 2017.
 [Next year, bring yours.]{.statement}
 
 ::: notes
-Every year since 2017, someone here talked about publishing statistics. Next year, bring yours.
-Pick the one that comes back every month, render it from one source, tell us what you learned.
+Try it on one monthly publication. Come and tell us.
 You already do R. You already publish.
 Quarto is the step between: next Thursday at 17:50, fix one line and render.
 :::
