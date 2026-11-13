@@ -13,7 +13,7 @@ Read first:
 
 1. `.claude/CLAUDE.md`, section **This talk**: the core message is the **governing idea**; the
    duration is 15 min strict, the spoken target and the per-part budgets are in
-   `.claude/rules/deck-structure.md` (10:55 spoken, 12:30 ceiling).
+   `.claude/rules/deck-structure.md` (11:00 spoken, 12:30 ceiling).
 2. `.claude/references/talk-voice.md`: F1-F10, §12 (posit::conf 2025, the story-driven model),
    §16 (15-minute adaptations), §17 (time and organisers' guidelines).
 3. The timed plan: `.claude/rules/deck-structure.md`. If the launch brief gives another plan, use
@@ -37,7 +37,7 @@ proof (the opening problem solved), Z opening, resources. Then flag:
 - **weak transitions**: between each pair of slides, does the screen show where we are (F7:
   section label, a visual that comes back with the step marked)? Is the spoken bridge findable in
   the notes in one line? A slide that narrates its own transition is a flag;
-- **time**: sum `timing-duration` per plan part and in total; compare with the plan, with 10:55
+- **time**: sum `timing-duration` per plan part and in total; compare with the plan, with 11:00
   and with the 12:30 ceiling. Say where the deck is over and what is cheapest to cut (§17: cut
   middle sections first, keep the hook and the resource slide). Flag a slide whose content cannot
   be said in its time;
@@ -52,7 +52,7 @@ Cite `index.qmd:line` and the slide id. Read a slide's screenshot before judging
 
 Write one report to the path in the launch brief:
 
-1. Verdict in 3 lines (does the deck carry the governing idea in 10:55?)
+1. Verdict in 3 lines (does the deck carry the governing idea in 11:00?)
 2. The slide table
 3. P0 (breaks the story or the time), P1 (weakens it), P2 (polish), each with slide id, problem,
    smallest fix (cut, move, merge, rewrite)
