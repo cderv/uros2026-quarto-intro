@@ -62,7 +62,7 @@ Welcome everyone. Why here: I work on Quarto at Posit, and this room
 publishes numbers with R every day.
 :::
 
-<!-- ============================ INTRO (2:00) ============================ -->
+<!-- ============================ INTRO (1:35) ============================ -->
 
 ## {#conversation .center timing-duration="15s"}
 
@@ -181,7 +181,7 @@ red.
 Bridge: "The tool for this is Quarto."
 :::
 
-<!-- ============================ X1 (2:30) ============================ -->
+<!-- ============================ X1 (2:25) ============================ -->
 
 ## Quarto ... {#what-is-quarto .timing-section timing-title="X1 · Every number computed" timing-duration="15s"}
 
@@ -210,8 +210,7 @@ Bridge: "One example for the rest of the talk, a statistical bulletin."
 :::
 
 ::: notes
-The example for today is a monthly bulletin, Eurostat tourism data.
-Text and R code in one file, Quarto renders this page.
+Monthly bulletin, Eurostat tourism data.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -381,7 +380,7 @@ quarto render bulletin.qmd
 ```
 
 ::: {.fragment}
-[Or one button in ![](images/ide/positron-logo.png){.tool-logo fig-alt="Positron logo"} Positron, ![](images/ide/rstudio-logo.png){.tool-logo fig-alt="RStudio logo"} RStudio, ![](images/ide/vscode-logo.png){.tool-logo fig-alt="VS Code logo"} VS Code]{.statement}
+[Or one button in ![](images/ide/positron-logo.png){.tool-logo fig-alt="Positron logo"} Positron, ![](images/ide/rstudio-logo.png){.tool-logo fig-alt="RStudio logo"} RStudio, ![](images/ide/vscode-logo.png){.tool-logo fig-alt="VS Code logo"} VS Code]{.lead}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -418,12 +417,12 @@ YAML header."
 
 
 ::: notes
-With one command, R computes the numbers and Quarto writes the page.
-(click) Free, open source. Comes with Positron and RStudio. In VS Code,
-install one extension. Bridge: same command, more formats.
+With one command, R computes the numbers and Quarto writes the page. Free to install.
+(click) Comes with Positron (Preview button) and RStudio (Render button). In VS Code, install one extension.
+Bridge: same command, more formats.
 :::
 
-<!-- ============================ X2 (1:45) ============================ -->
+<!-- ============================ X2 (1:20) ============================ -->
 
 ## Output formats at the top of the file {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
 
@@ -530,7 +529,7 @@ Print and the archive, from the same file. (The pages scroll by
 themselves.)
 :::
 
-<!-- ============================ X3 (1:45) ============================ -->
+<!-- ============================ X3 (1:50) ============================ -->
 
 ## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="30s"}
 
@@ -693,9 +692,11 @@ nights <- get_eurostat(
 )
 ```
 
+[Country of residence: `FOR` = guests from abroad only]{.lead .fragment}
+
 ::: notes
 Back to Thursday, ten to six. Wrong again.
-Cause: someone kept the guests from abroad only.
+(click) Cause: someone kept the guests from abroad only.
 :::
 
 ## Thursday, 17:50. Again. {#again-fix kicker="Fixed once" .magic-move timing-duration="10s"}
@@ -714,10 +715,10 @@ nights <- get_eurostat(
 )
 ```
 
-[Country of residence: `FOR` = guests from abroad only → `TOTAL` = all guests]{.lead .fragment}
+[Country of residence: `FOR` = guests from abroad only [→ `TOTAL` = all guests]{.fragment}]{.lead}
 
 ::: notes
-One word in the R code. (click) What the code means.
+One word in the R code. (click) TOTAL keeps all guests.
 :::
 
 ## One render {#one-render kicker="Fixed once" timing-duration="35s"}
@@ -796,7 +797,7 @@ uses the same code, so the same number.
 (click) 514.7 on all six, press release too.
 :::
 
-<!-- ============================ Z (2:30) ============================ -->
+<!-- ============================ Z (1:50) ============================ -->
 
 ## Already published with Quarto {#products kicker="Already in official statistics" .timing-section timing-title="Z · And next" timing-duration="45s"}
 
@@ -807,12 +808,12 @@ uses the same code, so the same number.
 ::: {.r-stack}
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
 ```{.carousel #gallery autoplay="2500" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
-![Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef](images/gallery/01-insee-working-paper.png)
-![Agreste (SSM Agriculture): dataviz catalog · ssm-agriculture.github.io/site-DataViz](images/gallery/02-agreste-dataviz.png)
-![ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer](images/gallery/03-ons-weekly-deaths.png)
-![NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey](images/gallery/04-nisra-childcare.png)
-![Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no](images/gallery/05-ssb-documentation.png)
-![OECD: Regional Outlook 2023 country profiles · oecd-cfe-eds.github.io/ro2023-country-pages](images/gallery/06-oecd-regional-profiles.png)
+![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
+![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png)
+![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png)
+![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png)
+![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png)
+![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png)
 ```
 :::
 
@@ -841,6 +842,8 @@ an ISBN, made with Quarto"
   fig-alt="Top of the page: OECD: Regional Outlook 2023 country
 profiles, made with Quarto"
 }](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
+
+[Insee, Agreste (France) · ONS, NISRA (United Kingdom) · Statistics Norway · OECD]{.gallery-count}
 :::
 :::
 

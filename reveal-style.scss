@@ -419,7 +419,8 @@ section#diagrams {
   .gallery-grid {
     background: white;
     width: 100%;
-    p {
+    // the thumbnails; the names line under them stays a plain paragraph
+    > p:first-child {
       display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0.4em auto 0;
       max-width: 860px;
       img { width: 100%; height: auto; margin: 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); border-radius: 4px; }
