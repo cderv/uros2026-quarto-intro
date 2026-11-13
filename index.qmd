@@ -624,7 +624,7 @@ typography:
   headings: Source Serif 4
 ```
 
-[[brand.yml](https://posit-dev.github.io/brand-yml/) · [Brand in Quarto](https://quarto.org/docs/authoring/brand.html) · [Logos](https://quarto.org/docs/authoring/brand.html#logo)]{.chart-cap}
+[![](images/brand/brand-yml-icon.svg){.tool-logo fig-alt="brand.yml logo"} [brand.yml](https://posit-dev.github.io/brand-yml/) · [Brand in Quarto](https://quarto.org/docs/authoring/brand.html) · [Logos](https://quarto.org/docs/authoring/brand.html#logo)]{.chart-cap}
 :::
 
 ::: {.column width="55%"}
