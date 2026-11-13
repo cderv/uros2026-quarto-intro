@@ -393,12 +393,6 @@ section#diagrams {
   }
 
   // magic-move X1 steps: keep the full .qmd on screen
-  // #again: a frame around the word that changes (FOR -> TOTAL), position measured
-  section#again .word-box {
-    left: 187px; top: 355px; width: 112px; height: 46px;
-    border: 5px solid $perso-highlight-color; border-radius: 8px;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
-  }
   // code slides: Quarto line highlight (code-line-numbers) marks the new lines and dims the rest;
   // hide the line-number gutter it switches on, or the code jumps sideways during magic-move
   section.magic-move pre.numberSource {

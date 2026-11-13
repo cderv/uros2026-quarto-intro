@@ -639,13 +639,11 @@ is a tagged PDF a screen reader can follow.
 
 <!-- ============================ Y (1:30) ============================ -->
 
-## Thursday, 17:50. Again. {#again kicker="Fixed once" .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
+## Thursday, 17:50. Again. {#again kicker="Fixed once" .magic-move .timing-section timing-title="Y · Fix it once" timing-duration="20s"}
 
 [The key figure is wrong.]{.lead}
 
-::: {.magic-move .print-hide}
-
-```r
+```{.r code-line-numbers="7"}
 nights <- get_eurostat(
   "tour_occ_nim",
   filters = list(
@@ -657,7 +655,16 @@ nights <- get_eurostat(
 )
 ```
 
-```r
+::: notes
+Back to Thursday, ten to six. Wrong again.
+Cause: someone kept the guests from abroad only.
+:::
+
+## Thursday, 17:50. Again. {#again-fix kicker="Fixed once" .magic-move timing-duration="10s"}
+
+[The key figure is wrong.]{.lead}
+
+```{.r code-line-numbers="7"}
 nights <- get_eurostat(
   "tour_occ_nim",
   filters = list(
@@ -668,31 +675,11 @@ nights <- get_eurostat(
   )
 )
 ```
-
-:::
-
-<!-- PDF export: the magic-move above is captured mid-animation, show its final state instead -->
-::: {.print-only}
-```r
-nights <- get_eurostat(
-  "tour_occ_nim",
-  filters = list(
-    geo = "EU27_2020",
-    unit = "NR",
-    nace_r2 = "I551-I553",
-    c_resid = "TOTAL"
-  )
-)
-```
-:::
-
-[]{.word-box .absolute}
 
 [Country of residence: `FOR` = guests from abroad only → `TOTAL` = all guests]{.lead .fragment}
 
 ::: notes
-Back to Thursday, ten to six. Wrong again. Cause: someone kept the
-guests from abroad only. (click) One word in the R code.
+One word in the R code. (click) What the code means.
 :::
 
 ## One render {#one-render kicker="Fixed once" timing-duration="35s"}
