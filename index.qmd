@@ -753,8 +753,8 @@ One word in the R code. (click) TOTAL keeps all guests.
 
 ::: notes
 One render. (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart,
-caption and the Word file come from the same render. The press release
-uses the same code, so the same number.
+caption and the Word file come from the same render. Anything that
+reads the same R code gets the same number.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -859,7 +859,7 @@ ONS, NISRA, Statistics Norway, OECD. Some of you made these. Examples,
 in no order. (click: grid) (click) These slides are Quarto too.
 :::
 
-## From R Markdown to Quarto, and next {#quarto-today timing-duration="25s"}
+## From R Markdown to Quarto, and next {#quarto-today kicker="And next" timing-duration="35s"}
 
 ::: timeline
 ::: {.event .fragment data-label="2014"}
@@ -888,20 +888,46 @@ Faster, and writing together in the browser
 :::
 
 ::: notes
-Quarto 2 is Quarto rewritten in Rust. Public on GitHub (quarto-dev/q2).
-Experimental nightly builds, not for production, no date. Two gains: a
-much faster engine, and Quarto Hub, several people writing the same
-document in the browser at once. Bridge: from the tool's timeline to the
-conference's, every edition since 2017.
+Quarto 2: Quarto rewritten, faster, with Quarto Hub to write together
+in the browser. Experimental, no date.
+It aims to keep your projects working.
+Quarto 1 is what you install today.
 :::
 
-## {#next-year .center timing-duration="40s"}
+## Start with one monthly publication {#next-year kicker="And next" timing-duration="30s"}
 
-[Every uRos since 2017 has a talk about publishing statistics.]{.lead}
+::: {.cards-fan}
+::: {.card .is-blank .is-code}
+[{{< iconify mdi file-document-edit-outline >}}]{.ico}
+[Your .qmd file]{.kind}
+:::
+
+::: {.cards}
+::: {.card .is-blank}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind}
+:::
+
+::: {.card .is-blank}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind}
+:::
+
+::: {.card .is-blank}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind}
+:::
+
+::: {.card .is-blank}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind}
+:::
+
+::: {.card .is-blank}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico}
+[Press release]{.kind}
+:::
+:::
+:::
 
 ::: notes
-Next year, bring yours. Try it on one monthly publication. Come and tell
-us. You already do R. You already publish. Quarto is the step between.
+You already do R. You already publish. Quarto is the step between.
 Next Thursday at 17:50, fix one line and render.
 :::
 
