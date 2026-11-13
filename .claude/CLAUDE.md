@@ -119,7 +119,8 @@ braid holds the plan and the history of the talk; the repository holds only the 
 `just` (<https://just.systems>) runs every task; `just` alone lists the recipes.
 
 ```bash
-just preview          # live preview of the slides
+just preview          # live preview of the slides, as presented (no review toolbar)
+just preview annotate # same, with the annotate review toolbar (notes server of the editor extension)
 just check            # render + browser + layout checks, screenshots in _check/slides/
 just pdf              # slides-full.pdf for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide

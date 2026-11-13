@@ -18,10 +18,10 @@ default:
 render:
     quarto render index.qmd
 
-# Live preview of the slides with auto-reload
+# Live preview of the slides with auto-reload; `just preview annotate` adds the review toolbar (blairj09/annotate)
 [group('slides')]
-preview:
-    quarto preview index.qmd
+preview mode="":
+    quarto preview index.qmd -M annotate:{{ if mode == "annotate" { "true" } else if mode == "" { "false" } else { error("Unknown mode: '" + mode + "', use 'annotate' or nothing") } }}
 
 # Check the deck: render (warnings are errors), browser errors, overflow; screenshots in _check/slides/
 [group('slides')]
