@@ -30,7 +30,7 @@ talk-name/
 │   │   └── clean/         # clean-revealjs format
 │   ├── quarto-ext/
 │   │   └── attribution/   # attribution corner plugin
-│   └── (editable/)        # optional: for PyData-style editable presentations
+│   └── ...                # optional ones; this deck's list: .claude/extensions.md
 └── images/
     ├── conference-logo.png
     └── horst_quarto_schematic.png   # Required for Quarto intro talks
@@ -240,11 +240,14 @@ quarto add quarto-ext/attribution
 
 # Add fontawesome shortcodes (FR talks, social handles)
 quarto add quarto-ext/fontawesome
-
-# Add editable plugin (optional, PyData-style)
-quarto add martinomagnifico/quarto-revealjs-simplemenu  # not this one
-# Actually for editable: it ships with RevealJS natively as a plugin
 ```
+
+Optional extensions used by the uRos 2026 deck (code morphing, timing bar, carousel, timeline,
+icons, QR code, review toolbar): see `.claude/extensions.md` for what each does, how it is used and
+its pitfalls. Once installed, `just extensions-update` updates them all; add any new extension to
+that recipe.
+
+The editable plugin of the PyData decks is not set up here; check its source before adding it.
 
 ---
 

@@ -231,6 +231,7 @@ The last slide is for resources; Christophe concludes by speaking. A closing lin
 - `{logo=false}` — hide logo on demo slides
 - `{visibility="hidden"}` — backup/hidden slides (kept in source, not shown)
 - `{.demo}` — marks live demo placeholder slide
+- `{kicker="..."}` — small section label above the heading (uRos 2026 deck CSS): shows where we are in the story (talk-voice F7); see `.claude/extensions.md`
 
 ## Fragments & Animation
 
@@ -263,6 +264,10 @@ The `attribution` plugin renders this in the corner. Always include for Allison 
 - Per-block line highlighting: `{.bash code-line-numbers="|1|4|17|18"}` — pipe-separated steps; `|` at start shows all first
 - Long code blocks: wrap in `::: {.make-smaller}` or use `::: {.r-fit-text}`
 - Filename labels: `` ```{.yaml filename="_quarto.yml"} `` — use for config file demos
+- Code that changes step by step (uRos 2026): magic-move on the slide (`## Title {.magic-move}`,
+  one block per slide) keeps `code-line-numbers` highlights; a `::: {.magic-move}` div with
+  several blocks loses them. Line numbers count the code as written, so recount after the editor
+  reformats it. Details: `.claude/extensions.md`
 - Languages by frequency: bash, yaml, r, markdown, python, scss, lua
 
 ---

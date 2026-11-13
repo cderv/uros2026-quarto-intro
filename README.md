@@ -10,6 +10,7 @@ A Eurostat tourism bulletin illustrates one source producing HTML, PDF and Word,
 ## What is inside
 
 - `index.qmd`: the RevealJS slides, using the `clean-revealjs` theme.
+- `_extensions/`: the Quarto extensions the slides use (theme, code animation, timing bar, carousel, timeline, icons, QR code, review toolbar); `.claude/extensions.md` explains each one. Update them with `just extensions-update`.
 - `example/`: the example bulletin and its HTML, Typst PDF and Word configuration.
 - `analysis/`: data, code and methodology for the analysis of uRos programmes from 2014 to 2026 used in the opening slides; see `analysis/README.md` for sources and limitations.
 - `images/`: the conference logo and screenshots used in the slides.
@@ -23,10 +24,11 @@ Install [Quarto](https://quarto.org/docs/get-started/) and [just](https://just.s
 Run `just` to list all available commands.
 
 ```bash
-just preview  # live preview with auto-reload
-just render   # render index.qmd to index.html
-just check    # render, check in Chromium and screenshot every slide
-just pdf      # export slides-full.pdf for the organisers
+just preview           # live preview with auto-reload
+just preview annotate  # same, with the annotate review toolbar (comments sent to the editor)
+just render            # render index.qmd to index.html
+just check             # render, check in Chromium and screenshot every slide
+just pdf               # export slides-full.pdf for the organisers
 ```
 
 The slide check uses Node.js 24 (see `.nvmrc`; with nvm, run `nvm use`).
@@ -59,4 +61,4 @@ just publish connect  # check, then update the Posit Connect Cloud preview
 ```
 
 Both publishing commands ask for confirmation.
-`just publish-only` skips the check when it has already run.
+`just publish-only` skips the check when it has already run; it still re-renders `index.html` first.

@@ -53,6 +53,7 @@ the first session, then keep it current.
 | `.claude/rules/presentation-config.md` | YAML boilerplate, file structure, extensions, opening and closing templates |
 | `.claude/talk-inventory.md` | Not auto-loaded, read it for the Material step. Christophe's previous talks: event, year, language, published URL, GitHub repo. Reuse material from them instead of starting from scratch |
 | `.claude/connect-cloud-preview.md` | Not auto-loaded, read it when publishing a preview or when the CI publish step fails. How every push publishes the deck to Posit Connect Cloud, one-time setup, token secrets, renewal |
+| `.claude/extensions.md` | Not auto-loaded, read it before using or changing an extension's markup (magic-move, timing bar, carousel, timeline, icons, QR code, annotate). What each extension does in this deck, its pitfalls, and the deck's own additions (section label, frames, `revealjs-tweak.html`) |
 | `.claude/ide-captures.md` | Not auto-loaded, read it before redoing the Positron and RStudio screenshots of the CLI slide: launching both IDEs with a debug port, `just ide-captures`, copying the frame positions, pitfalls |
 | `.claude/agents/` | `talk-writer` (Fable: 2-3 tagged wording options for one slide or transition), three reviewers, `talk-reviewer-story`, `-voice`, `-audience`, then `talk-coach` (Fable: adversarial verdict on their reports, or on a rehearsal transcript) and `talk-fact-checker` (public claims, gallery sites, links). Give reviewers `index.qmd` and `_check/slides/` after `just check`, never your own conclusions; add the list of decisions already made so they are not reopened |
 | `.claude/prompts/wording-review.md` | Wording review by a model outside the Claude family (lines that sound machine-written). Run it locally, not in cloud sessions: `roborev run --agent codex --reasoning thorough --wait < .claude/prompts/wording-review.md` (`roborev review` only reviews diffs). Compare its report with `talk-reviewer-voice` and keep what both flag |
@@ -112,7 +113,9 @@ braid holds the plan and the history of the talk; the repository holds only the 
 - Use `pagetitle:`, not `title:`; the title slide is the custom HTML block in `index.qmd`.
 - One idea per slide. `{.hl}` for key terms. `{footer=false}` on full-bleed image or iframe slides.
 - Every meaningful image has alt text (`fig-alt`).
-- Do not edit `_extensions/` by hand; update with `quarto add` or `quarto update`.
+- Do not edit `_extensions/` by hand; update them all with `just extensions-update`, then `just check`.
+- The annotate review toolbar is off by default (`annotate: false` in `index.qmd`); turn it on
+  for a review with `just preview annotate`, never in the YAML.
 
 ## Commands
 
