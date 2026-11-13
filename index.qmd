@@ -84,7 +84,7 @@ a talk about publishing statistics]{.statement .needs-head}
 [Less manual work]{.need}
 :::
 
-[About 35 talks in 532 program items, 2014 to 2026. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
+[Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
 Read every uRos program since 2014: the same three needs, often a pipeline built in-house.
@@ -94,7 +94,7 @@ Bridge: a Thursday evening.
 
 ## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
 
-[Release tomorrow. The headline number is wrong.]{.lead}
+[Release tomorrow. The key figure is wrong.]{.lead}
 
 ::: {.cards}
 ::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
@@ -532,7 +532,7 @@ PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reade
 
 ## Thursday, 17:50. Again. {#again kicker="Fixed once" .timing-section timing-title="Y · Fix it once" timing-duration="30s"}
 
-[The headline number is wrong.]{.lead}
+[The key figure is wrong.]{.lead}
 
 ::: {.magic-move .print-hide}
 
@@ -681,7 +681,7 @@ R code and text, to HTML, PDF, Word
 ::: {.event .fragment data-label="2022"}
 **Quarto 1.0**
 
-Same idea, any language, more formats
+Same idea, more languages and formats
 :::
 ::: {.event .fragment data-label="Today"}
 **Quarto**
@@ -705,11 +705,8 @@ Bridge: from the tool's timeline to the conference's, every edition since 2017.
 
 [Every edition since 2017: a talk about publishing statistics.]{.lead}
 
-. . .
-
-[Next year, bring yours.]{.statement}
-
 ::: notes
+Next year, bring yours.
 Try it on one monthly publication. Come and tell us.
 You already do R. You already publish.
 Quarto is the step between: next Thursday at 17:50, fix one line and render.
