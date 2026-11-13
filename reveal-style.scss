@@ -467,7 +467,7 @@ html.print-pdf .reveal .print-only { display: block !important; }
   section#render-cli .hl-shot { width: 560px; max-width: 100%; margin: 0 auto; }
   // small buttons: a thinner frame, drawn inside the measured box so it stays off the code
   section#render-cli .hl-shot .hl-box { box-sizing: border-box; border-width: 3px; border-radius: 6px; }
-  section#table pre code { font-size: 0.9em; }
+  section#table pre code { font-size: 0.85em; }
   // #pdf: the PDF pages scroll slowly while the slide is shown (no JS)
   .page-scroll {
     width: 900px; height: 560px; margin: 0 auto; overflow: hidden;
@@ -480,7 +480,7 @@ html.print-pdf .reveal .print-only { display: block !important; }
   .slides section.present .page-scroll .pages { animation: page-scroll 17s ease-in-out 1.5s forwards; }
   // section label above the heading: `## Heading {kicker="..."}` (position cue, talk-voice F7)
   .slides section[data-kicker]::before {
-    content: attr(data-kicker); position: absolute; top: -18px; left: 0;
+    content: attr(data-kicker); position: absolute; top: -30px; left: 0;
     font-size: 0.5em; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a8a;
   }
   // opening: the quote shrinks to the top (auto-animate), the uRos line takes the big place
@@ -503,4 +503,10 @@ html.print-pdf .reveal .print-only { display: block !important; }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal .slides section.present .page-scroll .pages { animation: none; }
+}
+
+// #render-cli: editor logos inside the statement line
+.reveal img.tool-logo {
+  height: 0.9em; width: auto; vertical-align: -0.12em; margin: 0 0.1em;
+  border: 0; box-shadow: none;
 }

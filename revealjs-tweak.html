@@ -10,6 +10,9 @@
     // In an r-vstack made only of image paragraphs, lift the images out of
     // their <p> so the stack sizes them.
     var slides = Reveal.getSlidesElement();
+    // auto-animate (#rendered -> #rendered-walk): Reveal pairs the empty <p> around each
+    // screenshot as well as the image, and the two moves add up. Lift the images out.
+    slides.querySelectorAll('.shots-v > p').forEach((p) => p.replaceWith(...p.childNodes));
     slides.querySelectorAll('div.r-vstack').forEach((vstack) => {
       var isAllP = Array.from(vstack.children).every((child) => child.tagName === 'P');
       var isAllImg = Array.from(vstack.children).every((child) => Array.from(child.children).every((child) => child.tagName === 'IMG'));

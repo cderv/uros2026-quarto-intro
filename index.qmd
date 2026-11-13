@@ -185,7 +185,7 @@ Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 
 ## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
 
-::: {.shots-v data-id="result-shots"}
+::: {.shots-v}
 ![](images/bulletin/html-key-figure.png){
   .shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
 }
@@ -204,7 +204,7 @@ one file and renders this page.
 
 ::: {.columns}
 ::: {.column width="58%"}
-::: {.shots-v data-id="result-shots"}
+::: {.shots-v}
 ![](images/bulletin/html-key-figure.png){
   .shot width="500px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
 }
@@ -252,7 +252,7 @@ latest <- nights[which.max(nights$time), ]
 ggplot(nights, aes(time, values)) + geom_line()
 ```
 
-[Shortened for the slide. Full source: the example repository, link on the last slide.]{.chart-cap}
+[Shortened for the slide. Full source in [cderv/uros2026-quarto-example](https://github.com/cderv/uros2026-quarto-example).]{.chart-cap}
 
 ::: notes
 Eurostat data, latest month, one chart. Everything that works in R works
@@ -367,6 +367,8 @@ quarto render bulletin.qmd
 ```
 
 ::: {.fragment}
+[Or one button in ![](images/ide/positron-logo.png){.tool-logo fig-alt="Positron logo"} Positron, ![](images/ide/rstudio-logo.png){.tool-logo fig-alt="RStudio logo"} RStudio, ![](images/ide/vscode-logo.png){.tool-logo fig-alt="VS Code logo"} VS Code]{.statement}
+
 ::: {.columns}
 ::: {.column width="50%"}
 <!-- screenshots and frame positions: just ide-captures (scripts/capture-ide.sh) -->
@@ -398,7 +400,6 @@ YAML header."
 :::
 :::
 
-[Or one button in Positron, RStudio, VS Code]{.statement}
 :::
 
 [Free and open source]{.chart-cap}
@@ -520,8 +521,16 @@ themselves.)
 #|   Nights spent at tourist accommodation
 #|   by country, millions
 gt(tab) |>
-  fmt_number(columns = c(before, now), scale_by = 1e-6, decimals = 1) |>
-  fmt_number(columns = change, decimals = 1, force_sign = TRUE)
+  fmt_number(
+    columns = c(before, now),
+    scale_by = 1e-6,
+    decimals = 1
+  ) |>
+  fmt_number(
+    columns = change,
+    decimals = 1,
+    force_sign = TRUE
+  )
 ```
 ````
 :::
@@ -591,6 +600,8 @@ typography:
   base: Source Sans 3
   headings: Source Serif 4
 ```
+
+[[brand.yml](https://posit-dev.github.io/brand-yml/) · [Brand in Quarto](https://quarto.org/docs/authoring/brand.html) · [Logos](https://quarto.org/docs/authoring/brand.html#logo)]{.chart-cap}
 :::
 
 ::: {.column width="55%"}
@@ -769,7 +780,7 @@ the number your code produced.
 
 ::: {.r-stack}
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
-```{.carousel #gallery autoplay="5000" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
+```{.carousel #gallery autoplay="2500" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
 ![Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef](images/gallery/01-insee-working-paper.png)
 ![Agreste (SSM Agriculture): dataviz catalog · ssm-agriculture.github.io/site-DataViz](images/gallery/02-agreste-dataviz.png)
 ![ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer](images/gallery/03-ons-weekly-deaths.png)
