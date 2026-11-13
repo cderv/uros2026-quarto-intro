@@ -107,7 +107,10 @@ const ANSI = /\u001b\[[0-9;]*m/g;
 // ---------------------------------------------------------------- level 1: render
 
 function quartoRender(qmd, logFile, strict) {
-  const args = ['render', qmd, '--log', logFile, '--log-format', 'json-stream'];
+  // annotate:false turns off the review toolbar of the annotate filter (blairj09/annotate):
+  // it calls a local notes server that only runs in the editor, and this render is the one
+  // that gets published and exported to PDF. `quarto preview` keeps the toolbar.
+  const args = ['render', qmd, '-M', 'annotate:false', '--log', logFile, '--log-format', 'json-stream'];
   const win = process.platform === 'win32';
   const quote = (s) => (win && /\s/.test(s) ? `"${s}"` : s);
   console.log(`> quarto ${args.join(' ')}`);
