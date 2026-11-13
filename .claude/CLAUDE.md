@@ -129,7 +129,7 @@ just example-deps     # install the example's R packages (rig proj sync, example
 just example          # render the example bulletin in example/
 just reference-doc    # rebuild example/brand/nso-reference.docx (Word styles) from _brand.yml
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
-just publish-only     # publish without the checks (re-renders first, still without the review toolbar)
+just publish-only     # publish without the checks (re-renders first)
 just publish connect  # same, to the preview on Posit Connect Cloud (after the one-time setup)
 ```
 

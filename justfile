@@ -13,15 +13,15 @@ default:
 
 # === slides ===
 
-# Render the slides to index.html, without the annotate review toolbar (as published)
+# Render the slides to index.html
 [group('slides')]
 render:
-    quarto render index.qmd -M annotate:false
+    quarto render index.qmd
 
 # Live preview of the slides with auto-reload; `just preview annotate` adds the review toolbar (blairj09/annotate)
 [group('slides')]
 preview mode="":
-    quarto preview index.qmd -M annotate:{{ if mode == "annotate" { "true" } else if mode == "" { "false" } else { error("Unknown mode: '" + mode + "', use 'annotate' or nothing") } }}
+    quarto preview index.qmd {{ if mode == "annotate" { "-M annotate:true" } else if mode == "" { "" } else { error("Unknown mode: '" + mode + "', use 'annotate' or nothing") } }}
 
 # Check the deck: render (warnings are errors), browser errors, overflow; screenshots in _check/slides/
 [group('slides')]
@@ -127,7 +127,7 @@ _publish target:
 [confirm("Publish the slides? This checks the deck, then publishes to the chosen target.")]
 publish target="gh": check (_publish target)
 
-# Publish without checking again (when `just check` already ran); re-renders first so no review toolbar ships
+# Publish without checking again (when `just check` already ran); re-renders first so index.html matches index.qmd
 [group('publish')]
 [confirm("Publish the slides (no re-check)?")]
 publish-only target="gh": render (_publish target)

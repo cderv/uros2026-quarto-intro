@@ -29,6 +29,8 @@ filters:
   - easycarousel
   - timeline
   - annotate
+# review toolbar (blairj09/annotate): off by default, `just preview annotate` turns it on
+annotate: false
 revealjs-plugins:
   - attribution
   - magic-move
