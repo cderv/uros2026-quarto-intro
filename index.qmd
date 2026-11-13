@@ -183,7 +183,7 @@ Bridge: "The tool for this is Quarto."
 
 <!-- ============================ X1 (2:30) ============================ -->
 
-## Quarto ... {#what-is-quarto kicker="Every number computed" .timing-section timing-title="X1 · Every number computed" timing-duration="15s"}
+## Quarto ... {#what-is-quarto .timing-section timing-title="X1 · Every number computed" timing-duration="15s"}
 
 ...is an open-source, scientific, and technical publishing system
 
@@ -192,8 +192,8 @@ Bridge: "The tool for this is Quarto."
 }
 
 ::: notes
-Left side: for you it is R. Python and Julia work the same way.
-Right side: the six cards from Thursday.
+If you know R Markdown, same idea.
+For you, R on the left. On the right, the documents from Thursday.
 Bridge: "One example for the rest of the talk, a statistical bulletin."
 :::
 
@@ -477,8 +477,8 @@ quarto render bulletin.qmd
 
 ::: notes
 Word, for the colleague who asks for Word.
-(click) Same command as on the CLI slide. Three files now.
-Bridge: open the three files.
+(click) Same command as on the CLI slide.
+Bridge: the web page, then the PDF.
 :::
 
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
@@ -555,6 +555,8 @@ gt(tab) |>
   )
 ```
 ````
+
+[Shortened for the slide. Colors and the bold EU row are in the full source.]{.chart-cap}
 :::
 
 ::: {.column width="50%"}
@@ -650,7 +652,7 @@ Eurostat data.
 
 ## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
 
-```{.yaml filename="_quarto.yml"}
+```{.yaml}
 format:
   typst:
     pdf-standard: [a-2b, ua-1]
@@ -664,12 +666,12 @@ $ quarto render bulletin.qmd
 
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
 
-For the HTML pages, `axe: true` runs the [axe-core checker](https://quarto.org/docs/output-formats/html-accessibility.html).
+For the HTML pages, `axe: true` checks accessibility with [axe-core](https://quarto.org/docs/output-formats/html-accessibility.html).
 
 ::: notes
-One line asks for both standards. With veraPDF installed, Quarto checks at each render.
-PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reader can follow.
-HTML has its own check, axe-core on the page. Not set in the bulletin today.
+One line asks for both standards. With veraPDF installed (`quarto install verapdf`), Quarto checks at each render.
+PDF/A keeps the file readable in 20 years.
+The bulletin does not set axe today.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
@@ -790,8 +792,7 @@ uses the same code, so the same number.
 [All six show [514.7]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-(click) 514.7 on all six, press release too. The number people read is
-the number your code produced.
+(click) 514.7 on all six, press release too.
 :::
 
 <!-- ============================ Z (2:30) ============================ -->
