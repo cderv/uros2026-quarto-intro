@@ -660,8 +660,8 @@ format:
 
 ```{.bash}
 $ quarto render bulletin.qmd
-[verapdf]: Validating bulletin.pdf against PDF/2B... PASSED
-[verapdf]: Validating bulletin.pdf against PDF/UA1... PASSED
+[verapdf]: Validating bulletin.pdf against PDF/2B...PASSED
+[verapdf]: Validating bulletin.pdf against PDF/UA1...PASSED
 ```
 
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
@@ -672,6 +672,7 @@ For the HTML pages, `axe: true` checks accessibility with [axe-core](https://qua
 One line asks for both standards. With veraPDF installed (`quarto install verapdf`), Quarto checks at each render.
 PDF/A keeps the file readable in 20 years.
 The bulletin does not set axe today.
+axe runs when the page opens: results in the browser console, or on the page with output: document.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
