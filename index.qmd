@@ -261,7 +261,7 @@ here: packages, charts, tables, models. Nothing to rewrite.
 
 ## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-````{.markdown code-line-numbers="1,9,11,13,15"}
+````{.markdown code-line-numbers="1,15,17,19,21"}
 ```{r}
 library(eurostat)
 library(ggplot2)
@@ -294,7 +294,7 @@ method note live next to the code that makes the numbers.
 
 ## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
 
-````{.markdown code-line-numbers="2,15,16"}
+````{.markdown code-line-numbers="2,21,22"}
 ```{r}
 #| echo: false
 library(eurostat)
@@ -328,7 +328,7 @@ caption it (the "Figure 1" you saw).
 
 ## Write R code inside the sentence {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-````{.markdown code-line-numbers="12"}
+````{.markdown code-line-numbers="18"}
 ```{r}
 #| echo: false
 library(eurostat)
@@ -566,8 +566,8 @@ country and @sec-methods explains the figures.
 
 <!-- frames on the @ references, positions measured on the rendered slide -->
 []{.xr-box .absolute .fragment fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"}
-[]{.xr-box .absolute .fragment fragment-index="1" style="left: 447px; top: 131px; width: 220px; height: 40px;"}
-[]{.xr-box .absolute .fragment fragment-index="1" style="left: 1052px; top: 131px; width: 191px; height: 40px;"}
+[]{.xr-box .absolute .fragment fragment-index="1" style="left: 594px; top: 134px; width: 221px; height: 40px;"}
+[]{.xr-box .absolute .fragment fragment-index="1" style="left: 180px; top: 171px; width: 191px; height: 40px;"}
 
 ::: notes
 (click) The references. Write \@fig-trend, read "Figure 1", a link in

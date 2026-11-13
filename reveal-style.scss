@@ -395,7 +395,7 @@ section#diagrams {
   // magic-move X1 steps: keep the full .qmd on screen
   // #again: a frame around the word that changes (FOR -> TOTAL), position measured
   section#again .word-box {
-    left: 678px; top: 221px; width: 108px; height: 46px;
+    left: 187px; top: 355px; width: 112px; height: 46px;
     border: 5px solid $perso-highlight-color; border-radius: 8px;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7);
   }
@@ -403,11 +403,12 @@ section#diagrams {
   // hide the line-number gutter it switches on, or the code jumps sideways during magic-move
   section.magic-move pre.numberSource {
     code > span { left: 0; }
-    code > span > a:first-child::before { display: none; }
+    // the hidden number anchor still takes line height: remove it, or tall blocks scroll
+    code > span > a:first-child { display: none; }
   }
   section#cells-text, section#options, section#inline, section#r-code {
     div.sourceCode { margin-top: 0.3em; }
-    pre code { font-size: 0.95em; line-height: 1.3; }
+    pre code { font-size: 0.85em; line-height: 1.15; }
   }
 }
 
