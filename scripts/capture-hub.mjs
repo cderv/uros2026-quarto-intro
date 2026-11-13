@@ -6,9 +6,9 @@
 // copy in _check/hub/ (example/ is never touched). Each patch works around a q2 gap:
 //   - `brand: _brand.yml` added: q2 does not find _brand.yml on its own (Q-14-1 with theme: brand);
 //   - `date-modified: last-modified` dropped: the live preview cannot resolve it (render can);
-//   - inline `r expr` written `{r} expr` (the bulletin already uses it): the live preview only
-//     evaluates the brace spelling;
 //   - a comment `[>> ...]` added after the key figure sentence: what the slide shows.
+// Inline R must use the brace spelling `{r} expr`: the live preview does not evaluate knitr's
+// `r expr` (the key figure would then show no number and the script stops).
 //
 // Needs q2 on the PATH (https://github.com/quarto-dev/q2, or Q2=/path/to/q2) and the example's
 // R packages (just example-deps). Usage: node scripts/capture-hub.mjs [--comment "text"]
@@ -53,7 +53,6 @@ const qy = path.join(dir, '_quarto.yml');
 fs.writeFileSync(qy, 'brand: _brand.yml\n' + fs.readFileSync(qy, 'utf8'));
 let qmd = fs.readFileSync(path.join(dir, 'bulletin.qmd'), 'utf8');
 qmd = qmd.replace(/^date-modified:.*\n/m, '');
-qmd = qmd.replace(/`r /g, '`{r} ');
 const anchor = 'compared with a year earlier.';
 if (!qmd.includes(anchor)) throw new Error(`Key figure sentence not found ("${anchor}")`);
 qmd = qmd.replace(anchor, `${anchor}[>> ${comment}]`);
