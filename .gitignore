@@ -1,6 +1,7 @@
 /.quarto/
 /*.html
 !revealjs-tweak.html
+/*.annotations.json
 /*-speaker.html
 *_files/
 *_cache/

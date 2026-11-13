@@ -96,6 +96,7 @@ extensions-update:
     quarto update jmbuhr/quarto-qrcode --no-prompt
     quarto update mcanouil/quarto-iconify --no-prompt
     quarto update emilhvitfeldt/quarto-easycarousel --no-prompt
+    quarto update blairj09/annotate --no-prompt
 
 # Update the agent skills listed in skills-lock.json
 [group('dev')]

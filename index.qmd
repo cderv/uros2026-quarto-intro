@@ -1,5 +1,5 @@
 ---
-pagetitle: "Reproducible Statistical Publications with Quarto - uRos2026"
+pagetitle: Reproducible Statistical Publications with Quarto - uRos2026
 date: 11/19/2026
 engine: markdown
 # `quarto publish --no-render` bundles only index.html, index_files/ and these resources:
@@ -11,7 +11,9 @@ format:
     width: 1280
     height: 720
     theme: [default, reveal-style.scss]
-    footer: Follow along at <https://cderv.github.io/uros2026-quarto-intro/> and <https://quarto.org>
+    footer: >-
+      Follow along at <https://cderv.github.io/uros2026-quarto-intro/> and
+      <https://quarto.org>
     code-line-numbers: false
     slide-number: true
     mermaid-format: png
@@ -26,6 +28,7 @@ filters:
   - timing-bar
   - easycarousel
   - timeline
+  - annotate
 revealjs-plugins:
   - attribution
   - magic-move
@@ -39,7 +42,9 @@ revealjs-plugins:
 <h1 class='title'>Reproducible Statistical Publications with Quarto</h1>
 ```
 
-![](images/uros2026-logo.jpg){.absolute bottom='60px' right='100px' width='220px' fig-alt="uRos 2026 logo: a pink hexagon with the Eiffel Tower and an R flag, urosconf.org"}
+![](images/uros2026-logo.jpg){
+  .absolute bottom='60px' right='100px' width='220px' fig-alt="uRos 2026 logo: a pink hexagon with the Eiffel Tower and an R flag, urosconf.org"
+}
 
 ::: {.quarto-title-authors}
 ::: {.quarto-title-author}
@@ -53,8 +58,8 @@ Christophe Dervieux
 {{< meta date >}}
 
 ::: notes
-Welcome everyone.
-Why here: I work on Quarto at Posit, and this room publishes numbers with R every day.
+Welcome everyone. Why here: I work on Quarto at Posit, and this room
+publishes numbers with R every day.
 :::
 
 <!-- ============================ INTRO (2:00) ============================ -->
@@ -80,16 +85,16 @@ has a talk about publishing statistics]{.statement .needs-head}
 
 ::: {.needs}
 [Recurring publications, automated]{.need}
-[Your institute's look]{.need}
-[Less manual work]{.need}
+[Your institute's look]{.need} [Less manual work]{.need}
 :::
 
 [Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
-I read every uRos program since 2014. The same three needs come back, often with a pipeline built in-house.
-Without one, someone copies the numbers by hand into Word, the PDF, the web page.
-Bridge: a Thursday evening.
+I read every uRos program since 2014. The same three needs come back,
+often with a pipeline built in-house. Without one, someone copies the
+numbers by hand into Word, the PDF, the web page. Bridge: a Thursday
+evening.
 :::
 
 ## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
@@ -98,22 +103,33 @@ Bridge: a Thursday evening.
 
 ::: {.cards}
 ::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
-[{{< iconify mdi language-r >}}]{.ico} [R code]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi language-r >}}]{.ico} [R code]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .fragment .custom .fix data-id="card-word" fragment-index="2"}
-[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .fragment .custom .fix data-id="card-pdf" fragment-index="3"}
-[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .fragment .custom .fix data-id="card-chart" fragment-index="4"}
-[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .fragment .custom .fix data-id="card-web" fragment-index="5"}
-[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card data-id="card-press"}
-[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico}
+[Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 :::
 
@@ -122,33 +138,39 @@ Bridge: a Thursday evening.
 :::
 
 ::: notes
-245.0 instead of 514.7.
-One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). Then: "Done?"
-(6) Press release: still red.
+245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF
+(3), chart (4), web page (5). Then: "Done?" (6) Press release: still
+red.
 :::
 
 ## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
 
 ::: {.cards-fan}
 ::: {.card .is-blank .is-code data-id="card-src"}
-[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} 
+[{{< iconify mdi file-document-edit-outline >}}]{.ico}
+[One source]{.kind}
 :::
 
 ::: {.cards}
 ::: {.card .is-blank data-id="card-word"}
-[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} 
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind}
 :::
+
 ::: {.card .is-blank data-id="card-pdf"}
-[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} 
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind}
 :::
+
 ::: {.card .is-blank data-id="card-chart"}
-[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} 
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind}
 :::
+
 ::: {.card .is-blank data-id="card-web"}
-[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} 
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind}
 :::
+
 ::: {.card .is-blank data-id="card-press"}
-[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} 
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico}
+[Press release]{.kind}
 :::
 :::
 :::
@@ -164,13 +186,18 @@ Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 ## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
 
 ::: {.shots-v data-id="result-shots"}
-![](images/bulletin/html-key-figure.png){.shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/html-key-figure.png){
+  .shot width="560px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
+}
 
-![](images/bulletin/html-trend.png){.shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
+![](images/bulletin/html-trend.png){
+  .shot height="370px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."
+}
 :::
 
 ::: notes
-First time the name is said. Quarto takes your text and your R code in one file and renders this page.
+First time the name is said. Quarto takes your text and your R code in
+one file and renders this page.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -178,11 +205,16 @@ First time the name is said. Quarto takes your text and your R code in one file 
 ::: {.columns}
 ::: {.column width="58%"}
 ::: {.shots-v data-id="result-shots"}
-![](images/bulletin/html-key-figure.png){.shot width="500px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/html-key-figure.png){
+  .shot width="500px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
+}
 
-![](images/bulletin/html-trend.png){.shot height="300px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."}
+![](images/bulletin/html-trend.png){
+  .shot height="300px" fig-alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million."
+}
 :::
 :::
+
 ::: {.column width="42%" .side-steps}
 [bulletin.html, August 2026]{.k}
 
@@ -195,8 +227,8 @@ First time the name is said. Quarto takes your text and your R code in one file 
 :::
 
 ::: notes
-Point at 514.7 in the box, then in the chart.
-Bridge: "Let's open the source file."
+Point at 514.7 in the box, then in the chart. Bridge: "Let's open the
+source file."
 :::
 
 ## The R code you already have {#r-code kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
@@ -205,9 +237,15 @@ Bridge: "Let's open the source file."
 library(eurostat)
 library(ggplot2)
 
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 nights <- na.omit(nights)
 latest <- nights[which.max(nights$time), ]
 
@@ -217,19 +255,25 @@ ggplot(nights, aes(time, values)) + geom_line()
 [Shortened for the slide. Full source: the example repository, link on the last slide.]{.chart-cap}
 
 ::: notes
-Eurostat data, latest month, one chart.
-Everything that works in R works here: packages, charts, tables, models. Nothing to rewrite.
+Eurostat data, latest month, one chart. Everything that works in R works
+here: packages, charts, tables, models. Nothing to rewrite.
 :::
 
 ## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-```` {.markdown code-line-numbers="1,9,11,13,15"}
+````{.markdown code-line-numbers="1,9,11,13,15"}
 ```{r}
 library(eurostat)
 library(ggplot2)
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 nights <- na.omit(nights)
 latest <- nights[which.max(nights$time), ]
 ```
@@ -244,20 +288,26 @@ ggplot(nights, aes(time, values)) + geom_line()
 [A .qmd file is plain text. R code in code cells, your text in Markdown between them.]{.chart-cap}
 
 ::: notes
-A .qmd file has code cells and text between them.
-The comment and the method note live next to the code that makes the numbers.
+A .qmd file has code cells and text between them. The comment and the
+method note live next to the code that makes the numbers.
 :::
 
 ## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
 
-```` {.markdown code-line-numbers="2,15,16"}
+````{.markdown code-line-numbers="2,15,16"}
 ```{r}
 #| echo: false
 library(eurostat)
 library(ggplot2)
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 nights <- na.omit(nights)
 latest <- nights[which.max(nights$time), ]
 ```
@@ -272,19 +322,26 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-`#|` lines are options for Quarto: hide the code; name the chart and caption it (the "Figure 1" you saw).
+`#|` lines are options for Quarto: hide the code; name the chart and
+caption it (the "Figure 1" you saw).
 :::
 
 ## Write R code inside the sentence {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
 
-```` {.markdown code-line-numbers="12"}
+````{.markdown code-line-numbers="12"}
 ```{r}
 #| echo: false
 library(eurostat)
 library(ggplot2)
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 nights <- na.omit(nights)
 latest <- nights[which.max(nights$time), ]
 ```
@@ -299,8 +356,8 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-Inline code is R inside the sentence. Nobody types 514.7; R computes it at render.
-The sentence updates with new data.
+Inline code is R inside the sentence. Nobody types 514.7; R computes it
+at render. The sentence updates with new data.
 :::
 
 ## Quarto is a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="20s"}
@@ -314,16 +371,25 @@ quarto render bulletin.qmd
 ::: {.column width="50%"}
 <!-- screenshots and frame positions: just ide-captures (scripts/capture-ide.sh) -->
 ::: {.hl-shot}
-![](images/ide/positron-render-crop.png){.shot fig-alt="Top of the Positron editor with bulletin.qmd open: the tab, the toolbar with the Preview button, and the first lines of the YAML header."}
+![](images/ide/positron-render-crop.png){
+  .shot fig-alt="Top of the Positron editor with bulletin.qmd open: the
+tab, the toolbar with the Preview button, and the first lines of the
+YAML header."
+}
 
 []{.hl-box style="left: 0.7%; top: 27.7%; width: 25.7%; height: 19.0%;"}
 :::
 
 [Positron]{.shot-label}
 :::
+
 ::: {.column width="50%"}
 ::: {.hl-shot}
-![](images/ide/rstudio-render-crop.png){.shot fig-alt="Top of the RStudio editor with bulletin.qmd open: the tab, the toolbar with the Render button, and the first lines of the YAML header."}
+![](images/ide/rstudio-render-crop.png){
+  .shot fig-alt="Top of the RStudio editor with bulletin.qmd open: the
+tab, the toolbar with the Render button, and the first lines of the
+YAML header."
+}
 
 []{.hl-box style="left: 63.1%; top: 18.7%; width: 15.7%; height: 16.5%;"}
 :::
@@ -339,8 +405,8 @@ quarto render bulletin.qmd
 
 ::: notes
 With one command, R computes the numbers and Quarto writes the page.
-(click) Free, open source. Comes with Positron and RStudio. In VS Code, install one extension.
-Bridge: same command, more formats.
+(click) Free, open source. Comes with Positron and RStudio. In VS Code,
+install one extension. Bridge: same command, more formats.
 :::
 
 <!-- ============================ X2 (1:45) ============================ -->
@@ -349,7 +415,7 @@ Bridge: same command, more formats.
 
 ```{.yaml code-line-numbers="3"}
 ---
-title: "Tourism in the EU"
+title: Tourism in the EU
 format: html
 ---
 ```
@@ -362,10 +428,10 @@ Same file. HTML for the web first.
 
 ```{.yaml code-line-numbers="5"}
 ---
-title: "Tourism in the EU"
+title: Tourism in the EU
 format:
   html: default
-  typst: default   # PDF, no LaTeX to install
+  typst: default # PDF, no LaTeX to install
 ---
 ```
 
@@ -377,15 +443,16 @@ Typst comes with Quarto and makes the PDF. No LaTeX.
 
 ```{.yaml code-line-numbers="6"}
 ---
-title: "Tourism in the EU"
+title: Tourism in the EU
 format:
   html: default
-  typst: default   # PDF, no LaTeX to install
+  typst: default # PDF, no LaTeX to install
   docx: default
 ---
 ```
 
-`quarto render bulletin.qmd` → `bulletin.html` · `bulletin.pdf` · `bulletin.docx`
+`quarto render bulletin.qmd` → `bulletin.html` · `bulletin.pdf` ·
+`bulletin.docx`
 
 ::: notes
 Word, for the colleague who asks for Word. One command, three files.
@@ -393,7 +460,9 @@ Word, for the colleague who asks for Word. One command, three files.
 
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
 
-![](images/bulletin/html-page.png){.shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."}
+![](images/bulletin/html-page.png){
+  .shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."
+}
 
 ::: notes
 The web page is readable on a phone, chart and table inside.
@@ -404,25 +473,38 @@ The web page is readable on a phone, chart and table inside.
 <!-- the two PDF pages scroll slowly while the slide is shown; the PDF export shows them side by side -->
 ::: {.page-scroll .print-hide .no-overflow-check}
 ::: {.pages}
-![](images/bulletin/pdf-p1.png){fig-alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."}
+![](images/bulletin/pdf-p1.png){
+  fig-alt="Page 1 of the PDF bulletin: the logo, the title, the
+contents, the key figure 514.7 million in a box, and Figure 1, the line
+chart of nights in 2026 against the 2022-2025 range."
+}
 
-![](images/bulletin/pdf-p2.png){fig-alt="Page 2 of the PDF bulletin: Table 1 of nights by country, the map of the yearly change, and the methods section."}
+![](images/bulletin/pdf-p2.png){
+  fig-alt="Page 2 of the PDF bulletin: Table 1 of nights by country, the
+map of the yearly change, and the methods section."
+}
 :::
 :::
 
 ::: {.print-only}
 ::: {.columns}
 ::: {.column width="50%"}
-![](images/bulletin/pdf-p1.png){.shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin."}
+![](images/bulletin/pdf-p1.png){
+  .shot height="540px" fig-align="center" fig-alt="Page 1 of the PDF bulletin."
+}
 :::
+
 ::: {.column width="50%"}
-![](images/bulletin/pdf-p2.png){.shot height="540px" fig-align="center" fig-alt="Page 2 of the PDF bulletin."}
+![](images/bulletin/pdf-p2.png){
+  .shot height="540px" fig-align="center" fig-alt="Page 2 of the PDF bulletin."
+}
 :::
 :::
 :::
 
 ::: notes
-Print and the archive, from the same file. (The pages scroll by themselves.)
+Print and the archive, from the same file. (The pages scroll by
+themselves.)
 :::
 
 <!-- ============================ X3 (1:45) ============================ -->
@@ -438,23 +520,26 @@ Print and the archive, from the same file. (The pages scroll by themselves.)
 #|   Nights spent at tourist accommodation
 #|   by country, millions
 gt(tab) |>
-  fmt_number(columns = c(before, now),
-             scale_by = 1e-6, decimals = 1) |>
-  fmt_number(columns = change, decimals = 1,
-             force_sign = TRUE)
+  fmt_number(columns = c(before, now), scale_by = 1e-6, decimals = 1) |>
+  fmt_number(columns = change, decimals = 1, force_sign = TRUE)
 ```
 ````
 :::
+
 ::: {.column width="50%"}
 ::: {.r-stack}
 ::: {.fragment .fade-out .print-hide fragment-index="1"}
-![](images/bulletin/html-table.png){.shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells colored from gold for rises to pink for falls."}
+![](images/bulletin/html-table.png){
+  .shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells colored from gold for rises to pink for falls."
+}
 
 [bulletin.html]{.shot-label}
 :::
 
 ::: {.fragment fragment-index="1"}
-![](images/bulletin/pdf-table.png){.shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colors."}
+![](images/bulletin/pdf-table.png){
+  .shot width="600px" fig-alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colors."
+}
 
 [bulletin.pdf]{.shot-label}
 :::
@@ -463,17 +548,21 @@ gt(tab) |>
 :::
 
 ::: notes
-Same gt code, one table in bulletin.html and in bulletin.pdf.
-Table 1 comes from label + tbl-cap, numbered for you.
+Same gt code, one table in bulletin.html and in bulletin.pdf. Table 1
+comes from label + tbl-cap, numbered for you.
 :::
 
 ## Cross-references are numbered for you {#crossref kicker="Ready to publish" timing-duration="25s"}
 
 ```{.markdown .wrap-code}
-No month on record had more nights than August 2026. @fig-trend compares this year with the four previous years; @sec-countries looks at each country and @sec-methods explains the figures.
+No month on record had more nights than August 2026. @fig-trend compares
+this year with the four previous years; @sec-countries looks at each
+country and @sec-methods explains the figures.
 ```
 
-![](images/bulletin/html-crossref.png){.shot width="1100px" fig-align="center" fig-alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures."}
+![](images/bulletin/html-crossref.png){
+  .shot width="1100px" fig-align="center" fig-alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures."
+}
 
 <!-- frames on the @ references, positions measured on the rendered slide -->
 []{.xr-box .absolute .fragment fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"}
@@ -481,8 +570,9 @@ No month on record had more nights than August 2026. @fig-trend compares this ye
 []{.xr-box .absolute .fragment fragment-index="1" style="left: 1052px; top: 131px; width: 191px; height: 40px;"}
 
 ::: notes
-(click) The references. Write \@fig-trend, read "Figure 1", a link in HTML; \@sec-countries, "Section 2".
-When you add a figure, Quarto renumbers.
+(click) The references. Write \@fig-trend, read "Figure 1", a link in
+HTML; \@sec-countries, "Section 2". When you add a figure, Quarto
+renumbers.
 :::
 
 ## Your institute's look: one `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
@@ -502,18 +592,27 @@ typography:
   headings: Source Serif 4
 ```
 :::
+
 ::: {.column width="55%"}
 ::: {.shot-pair}
-![](images/bulletin/html-page.png){.shot .pair-back fig-alt="The HTML bulletin in the institute's colors: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."}
+![](images/bulletin/html-page.png){
+  .shot .pair-back fig-alt="The HTML bulletin in the institute's colors:
+a stone banner, the burgundy logo and title in Source Serif 4, body
+text in Source Sans 3."
+}
 
-![](images/bulletin/pdf-p1.png){.shot .pair-front fig-alt="Page 1 of the PDF bulletin laid over it, with the same logo, colors and fonts."}
+![](images/bulletin/pdf-p1.png){
+  .shot .pair-front fig-alt="Page 1 of the PDF bulletin laid over it,
+with the same logo, colors and fonts."
+}
 :::
 :::
 :::
 
 ::: notes
-Colors, logo, fonts: once, in _brand.yml. HTML and PDF read it. Word reads it through a reference document.
-A fictional institute, real Eurostat data.
+Colors, logo, fonts: once, in _brand.yml. HTML and PDF read it. Word
+reads it through a reference document. A fictional institute, real
+Eurostat data.
 :::
 
 ## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="25s"}
@@ -533,8 +632,9 @@ $ quarto render bulletin.qmd
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs veraPDF to check both.]{.lead}
 
 ::: notes
-One line asks for both standards. With veraPDF installed, Quarto checks them at each render.
-PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reader can follow.
+One line asks for both standards. With veraPDF installed, Quarto checks
+them at each render. PDF/A keeps the file readable in 20 years. PDF/UA
+is a tagged PDF a screen reader can follow.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
@@ -546,15 +646,27 @@ PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reade
 ::: {.magic-move .print-hide}
 
 ```r
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "FOR"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "FOR"
+  )
+)
 ```
 
 ```r
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 ```
 
 :::
@@ -562,9 +674,15 @@ nights <- get_eurostat("tour_occ_nim",
 <!-- PDF export: the magic-move above is captured mid-animation, show its final state instead -->
 ::: {.print-only}
 ```r
-nights <- get_eurostat("tour_occ_nim",
-  filters = list(geo = "EU27_2020", unit = "NR",
-                 nace_r2 = "I551-I553", c_resid = "TOTAL"))
+nights <- get_eurostat(
+  "tour_occ_nim",
+  filters = list(
+    geo = "EU27_2020",
+    unit = "NR",
+    nace_r2 = "I551-I553",
+    c_resid = "TOTAL"
+  )
+)
 ```
 :::
 
@@ -573,8 +691,8 @@ nights <- get_eurostat("tour_occ_nim",
 [Country of residence: `FOR` = guests from abroad only → `TOTAL` = all guests]{.lead .fragment}
 
 ::: notes
-Back to Thursday, ten to six. Wrong again.
-Cause: someone kept the guests from abroad only. (click) One word in the R code.
+Back to Thursday, ten to six. Wrong again. Cause: someone kept the
+guests from abroad only. (click) One word in the R code.
 :::
 
 ## One render {#one-render kicker="Fixed once" timing-duration="35s"}
@@ -584,15 +702,20 @@ Cause: someone kept the guests from abroad only. (click) One word in the R code.
 ::: {.columns}
 ::: {.column width="50%"}
 ::: {.hl-shot}
-![](images/bulletin/html-key-figure.png){.shot height="180px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/html-key-figure.png){
+  .shot height="180px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
+}
 
 []{.hl-box .fragment fragment-index="1" style="left: 3.5%; top: 9%; width: 42%; height: 28%;"}
 :::
 [bulletin.html]{.shot-label}
 :::
+
 ::: {.column width="50%"}
 ::: {.hl-shot}
-![](images/bulletin/pdf-key-figure.png){.shot height="180px" fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."}
+![](images/bulletin/pdf-key-figure.png){
+  .shot height="180px" fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."
+}
 
 []{.hl-box .fragment fragment-index="1" style="left: 4%; top: 13%; width: 46%; height: 30%;"}
 :::
@@ -601,33 +724,43 @@ Cause: someone kept the guests from abroad only. (click) One word in the R code.
 :::
 
 ::: notes
-One render. (click) 514.7 in the HTML, 514.7 in the PDF.
-Table, chart, caption and the Word file come from the same render.
-The press release uses the same code, so the same number.
+One render. (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart,
+caption and the Word file come from the same render. The press release
+uses the same code, so the same number.
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
 
 ::: {.cards-fan}
 ::: {.card .is-right .is-code data-id="card-src"}
-[{{< iconify mdi file-document-edit-outline >}}]{.ico} [One source]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi file-document-edit-outline >}}]{.ico}
+[One source]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 
 ::: {.cards}
 ::: {.card .is-right data-id="card-word"}
-[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi file-word-box >}}]{.ico} [Word report]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .is-right data-id="card-pdf"}
-[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi file-pdf-box >}}]{.ico} [PDF]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .is-right data-id="card-chart"}
-[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi chart-bar >}}]{.ico} [Chart]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .is-right data-id="card-web"}
-[{{< iconify mdi web >}}]{.ico} [Web page]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi web >}}]{.ico} [Web page]{.kind}
+[245.0]{.num .wrong}[514.7]{.num .right}
 :::
+
 ::: {.card .is-right data-id="card-press"}
-[{{< iconify mdi newspaper-variant-outline >}}]{.ico} [Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[{{< iconify mdi newspaper-variant-outline >}}]{.ico}
+[Press release]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 :::
 :::
@@ -635,8 +768,8 @@ The press release uses the same code, so the same number.
 [All six show [514.7]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-(click) 514.7 on all six, press release too.
-The number people read is the number your code produced.
+(click) 514.7 on all six, press release too. The number people read is
+the number your code produced.
 :::
 
 <!-- ============================ Z (2:30) ============================ -->
@@ -660,12 +793,30 @@ The number people read is the number your code produced.
 :::
 
 ::: {.gallery-grid .fragment fragment-index="1"}
-[![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){fig-alt="Top of the page: Insee: working paper, HTML + PDF, made with Quarto"}](https://inseefrlab.github.io/DT-tvcoef/)
-[![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png){fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalog, made with Quarto"}](https://ssm-agriculture.github.io/site-DataViz/)
-[![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){fig-alt="Top of the page: ONS: weekly deaths data explorer (prototype), made with Quarto"}](https://onsdigital.github.io/weekly_deaths_data_explorer/)
-[![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made with Quarto"}](https://nisra-explore.github.io/childcare-survey/)
-[![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){fig-alt="Top of the page: Statistics Norway: documentation report with an ISBN, made with Quarto"}](https://doc.ameld.ssb.no/)
-[![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png){fig-alt="Top of the page: OECD: Regional Outlook 2023 country profiles, made with Quarto"}](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
+[![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){
+  fig-alt="Top of the page: Insee: working paper, HTML + PDF, made with
+Quarto"
+}](https://inseefrlab.github.io/DT-tvcoef/)
+[![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png){
+  fig-alt="Top of the page: Agreste (SSM Agriculture): dataviz catalog,
+made with Quarto"
+}](https://ssm-agriculture.github.io/site-DataViz/)
+[![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){
+  fig-alt="Top of the page: ONS: weekly deaths data explorer
+(prototype), made with Quarto"
+}](https://onsdigital.github.io/weekly_deaths_data_explorer/)
+[![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){
+  fig-alt="Top of the page: NISRA: Childcare Survey 2024 results, made
+with Quarto"
+}](https://nisra-explore.github.io/childcare-survey/)
+[![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){
+  fig-alt="Top of the page: Statistics Norway: documentation report with
+an ISBN, made with Quarto"
+}](https://doc.ameld.ssb.no/)
+[![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png){
+  fig-alt="Top of the page: OECD: Regional Outlook 2023 country
+profiles, made with Quarto"
+}](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
 :::
 :::
 
@@ -674,9 +825,9 @@ The number people read is the number your code produced.
 :::
 
 ::: notes
-Already published with Quarto, in official statistics: Insee, Agreste, ONS, NISRA, Statistics Norway, OECD.
-Some of you made these. Examples, in no order.
-(click: grid) (click) These slides are Quarto too.
+Already published with Quarto, in official statistics: Insee, Agreste,
+ONS, NISRA, Statistics Norway, OECD. Some of you made these. Examples,
+in no order. (click: grid) (click) These slides are Quarto too.
 :::
 
 ## From R Markdown to Quarto, and next {#quarto-today timing-duration="25s"}
@@ -687,16 +838,19 @@ Some of you made these. Examples, in no order.
 
 R code and text, to HTML, PDF, Word
 :::
+
 ::: {.event .fragment data-label="2022"}
 **Quarto 1.0**
 
 Same idea, more languages and formats
 :::
+
 ::: {.event .fragment data-label="Today"}
 **Quarto**
 
 The bulletin, the gallery, these slides
 :::
+
 ::: {.event .fragment data-label="In development"}
 **Quarto 2**
 
@@ -705,9 +859,11 @@ Faster, and writing together in the browser
 :::
 
 ::: notes
-Quarto 2 is Quarto rewritten in Rust. Public on GitHub (quarto-dev/q2). Experimental nightly builds, not for production, no date.
-Two gains: a much faster engine, and Quarto Hub, several people writing the same document in the browser at once.
-Bridge: from the tool's timeline to the conference's, every edition since 2017.
+Quarto 2 is Quarto rewritten in Rust. Public on GitHub (quarto-dev/q2).
+Experimental nightly builds, not for production, no date. Two gains: a
+much faster engine, and Quarto Hub, several people writing the same
+document in the browser at once. Bridge: from the tool's timeline to the
+conference's, every edition since 2017.
 :::
 
 ## {#next-year .center timing-duration="40s"}
@@ -715,10 +871,9 @@ Bridge: from the tool's timeline to the conference's, every edition since 2017.
 [Every uRos since 2017 has a talk about publishing statistics.]{.lead}
 
 ::: notes
-Next year, bring yours.
-Try it on one monthly publication. Come and tell us.
-You already do R. You already publish.
-Quarto is the step between. Next Thursday at 17:50, fix one line and render.
+Next year, bring yours. Try it on one monthly publication. Come and tell
+us. You already do R. You already publish. Quarto is the step between.
+Next Thursday at 17:50, fix one line and render.
 :::
 
 <!-- ============================ END (0:30) ============================ -->
@@ -736,6 +891,7 @@ Quarto is the step between. Next Thursday at 17:50, fix one line and render.
 
 #### Questions? {.top-pad}
 :::
+
 ::: {.column width="38%"}
 ::: {.qr-block}
 {{< qrcode https://cderv.github.io/uros2026-quarto-intro/ width=200 height=200 >}}
@@ -746,6 +902,6 @@ Slides
 :::
 
 ::: notes
-Slides: the QR code; the example is linked from the slides.
-Thank you. Questions?
+Slides: the QR code; the example is linked from the slides. Thank you.
+Questions?
 :::
