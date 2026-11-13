@@ -141,8 +141,7 @@ evening.
 
 ::: notes
 245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF
-(3), chart (4), web page (5). Then: "Done?" (6) Press release: still
-red.
+(3), chart (4), web page (5). (6) Press release still red.
 :::
 
 ## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
@@ -177,7 +176,7 @@ red.
 :::
 :::
 
-[One source: fix it [once]{.hl}]{.statement}
+[Fix it [once]{.hl}]{.statement}
 
 ::: notes
 Bridge: "The tool for this is Quarto."
@@ -303,8 +302,8 @@ ggplot(nights, aes(time, values)) + geom_line()
 [A .qmd file is plain text. R code in code cells, your text in Markdown between them.]{.chart-cap}
 
 ::: notes
-A .qmd file has code cells and text between them. The comment and the
-method note live next to the code that makes the numbers.
+The comment and the method note live next to the code that makes the
+numbers.
 :::
 
 ## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
@@ -371,8 +370,7 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-Inline code is R inside the sentence. Nobody types 514.7; R computes it
-at render. The sentence updates with new data.
+R computes 514.7 at render. The sentence updates with new data.
 :::
 
 ## Quarto is a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="15s"}
@@ -609,7 +607,7 @@ HTML; \@sec-countries, "Section 2". When you add a figure, Quarto
 renumbers.
 :::
 
-## Your institute's look: one `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
+## Your institute's look in one `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -646,9 +644,9 @@ with the same logo, colors and fonts."
 :::
 
 ::: notes
-Colors, logo, fonts: once, in _brand.yml. HTML and PDF read it. Word
-reads it through a reference document. A fictional institute, real
-Eurostat data.
+Colors, logo and fonts are set once, in _brand.yml. HTML and PDF read
+it. Word reads it through a reference document. A fictional institute,
+real Eurostat data.
 :::
 
 ## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
@@ -854,9 +852,7 @@ profiles, made with Quarto"
 :::
 
 ::: notes
-Already published with Quarto, in official statistics: Insee, Agreste,
-ONS, NISRA, Statistics Norway, OECD. Some of you made these. Examples,
-in no order. (click: grid) (click) These slides are Quarto too.
+Some of you made these. Examples, in no order. (click: grid) (click)
 :::
 
 ## From R Markdown to Quarto 2 {#quarto-today kicker="And next" timing-duration="35s"}
@@ -959,6 +955,6 @@ Slides
 :::
 
 ::: notes
-Slides: the QR code; the example is linked from the slides. Thank you.
+QR code for the slides, the example is linked there. Thank you.
 Questions?
 :::
