@@ -178,12 +178,26 @@ red.
 [One source: fix it [once]{.hl}]{.statement}
 
 ::: notes
-Bridge: "Let me show you a bulletin built this way, with Eurostat data."
+Bridge: "The tool for this is Quarto."
 :::
 
 <!-- ============================ X1 (2:30) ============================ -->
 
-## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" .timing-section timing-title="X1 · Every number computed" timing-duration="10s"}
+## Quarto ... {#what-is-quarto kicker="Every number computed" .timing-section timing-title="X1 · Every number computed" timing-duration="15s"}
+
+...is an open-source, scientific, and technical publishing system
+
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.]{.small-cap}](images/horst_quarto_schematic.png){
+  width="900px" fig-align="center" fig-alt="Schematic: on the left, the languages R, Python, Observable and Julia, plus more; an arrow goes into Quarto in the middle; an arrow goes out to HTML, PDF and Word documents, plus more."
+}
+
+::: notes
+Left side: for you it is R. Python and Julia work the same way.
+Right side: the six cards from Thursday.
+Bridge: "One example for the rest of the talk, a statistical bulletin."
+:::
+
+## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="10s"}
 
 ::: {.shots-v}
 ![](images/bulletin/html-key-figure.png){
@@ -196,8 +210,8 @@ Bridge: "Let me show you a bulletin built this way, with Eurostat data."
 :::
 
 ::: notes
-First time the name is said. Quarto takes your text and your R code in
-one file and renders this page.
+The example for today is a monthly bulletin, Eurostat tourism data.
+Text and R code in one file, Quarto renders this page.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -231,7 +245,7 @@ Point at 514.7 in the box, then in the chart. Bridge: "Let's open the
 source file."
 :::
 
-## The R code you already have {#r-code kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
+## The R code you already have {#r-code kicker="Every number computed" .magic-move .tall-code timing-duration="15s"}
 
 ```r
 library(eurostat)
@@ -360,7 +374,7 @@ Inline code is R inside the sentence. Nobody types 514.7; R computes it
 at render. The sentence updates with new data.
 :::
 
-## Quarto is a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="20s"}
+## Quarto is a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="15s"}
 
 ```bash
 quarto render bulletin.qmd
@@ -402,7 +416,6 @@ YAML header."
 
 :::
 
-[Free and open source]{.chart-cap}
 
 ::: notes
 With one command, R computes the numbers and Quarto writes the page.
@@ -412,7 +425,7 @@ install one extension. Bridge: same command, more formats.
 
 <!-- ============================ X2 (1:45) ============================ -->
 
-## One line each in the header {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
+## Output formats at the top of the file {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
 
 ```{.yaml code-line-numbers="3"}
 ---
@@ -422,10 +435,10 @@ format: html
 ```
 
 ::: notes
-Same file. HTML for the web first.
+Same file. This block at the top is the YAML header. HTML first.
 :::
 
-## One line each in the header {#formats-pdf kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
+## Output formats at the top of the file {#formats-pdf kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
 
 ```{.yaml code-line-numbers="5"}
 ---
@@ -440,7 +453,7 @@ format:
 Typst comes with Quarto and makes the PDF. No LaTeX.
 :::
 
-## One line each in the header {#formats-docx kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
+## Output formats at the top of the file {#formats-docx kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
 
 ```{.yaml code-line-numbers="6"}
 ---
@@ -452,11 +465,20 @@ format:
 ---
 ```
 
-`quarto render bulletin.qmd` → `bulletin.html` · `bulletin.pdf` ·
-`bulletin.docx`
+::: {.fragment}
+The same command...
+
+```bash
+quarto render bulletin.qmd
+```
+
+... now writes `bulletin.html`, `bulletin.pdf` and `bulletin.docx`
+:::
 
 ::: notes
-Word, for the colleague who asks for Word. One command, three files.
+Word, for the colleague who asks for Word.
+(click) Same command as on the CLI slide. Three files now.
+Bridge: open the three files.
 :::
 
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
@@ -626,7 +648,7 @@ reads it through a reference document. A fictional institute, real
 Eurostat data.
 :::
 
-## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="25s"}
+## Accessible PDF, checked {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
 
 ```{.yaml filename="_quarto.yml"}
 format:
@@ -640,12 +662,14 @@ $ quarto render bulletin.qmd
 [verapdf]: Validating bulletin.pdf against PDF/UA1... PASSED
 ```
 
-[PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs veraPDF to check both.]{.lead}
+[PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
+
+For the HTML pages, `axe: true` runs the [axe-core checker](https://quarto.org/docs/output-formats/html-accessibility.html).
 
 ::: notes
-One line asks for both standards. With veraPDF installed, Quarto checks
-them at each render. PDF/A keeps the file readable in 20 years. PDF/UA
-is a tagged PDF a screen reader can follow.
+One line asks for both standards. With veraPDF installed, Quarto checks at each render.
+PDF/A keeps the file readable in 20 years. PDF/UA is a tagged PDF a screen reader can follow.
+HTML has its own check, axe-core on the page. Not set in the bulletin today.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
