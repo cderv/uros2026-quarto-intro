@@ -752,7 +752,7 @@ One word in the R code. (click) TOTAL keeps all guests.
 :::
 
 ::: notes
-One render. (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart,
+(click) 514.7 in the HTML, 514.7 in the PDF. Table, chart,
 caption and the Word file come from the same render. Anything that
 reads the same R code gets the same number.
 :::
@@ -859,7 +859,7 @@ ONS, NISRA, Statistics Norway, OECD. Some of you made these. Examples,
 in no order. (click: grid) (click) These slides are Quarto too.
 :::
 
-## From R Markdown to Quarto, and next {#quarto-today kicker="And next" timing-duration="35s"}
+## From R Markdown to Quarto 2 {#quarto-today kicker="And next" timing-duration="35s"}
 
 ::: timeline
 ::: {.event .fragment data-label="2014"}
@@ -888,9 +888,11 @@ Faster, and writing together in the browser
 :::
 
 ::: notes
-Quarto 2: Quarto rewritten, faster, with Quarto Hub to write together
+Quarto 2 is Quarto rewritten, faster, with Quarto Hub to write together
 in the browser. Experimental, no date.
+
 It aims to keep your projects working.
+
 Quarto 1 is what you install today.
 :::
 

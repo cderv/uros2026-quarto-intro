@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Screenshot of the example bulletin open in the Quarto Hub editor, served locally by q2
-// (`q2 preview --ui editor`), for the Quarto 2 step of the "From R Markdown to Quarto" slide.
+// (`q2 preview --ui editor`), for a possible backup slide on Quarto 2 (not in the deck).
 //
 // q2 is experimental: the bulletin is written for Quarto 1, so the script renders a patched
 // copy in _check/hub/ (example/ is never touched). Each patch works around a q2 gap:
