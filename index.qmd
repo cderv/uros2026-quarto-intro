@@ -361,7 +361,7 @@ nights <- na.omit(nights)
 latest <- nights[which.max(nights$time), ]
 ```
 
-The EU recorded `r round(latest$values / 1e6, 1)` million nights.
+The EU recorded `{r} round(latest$values / 1e6, 1)` million nights.
 
 ```{r}
 #| label: fig-trend
