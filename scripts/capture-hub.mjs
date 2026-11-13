@@ -12,7 +12,8 @@
 //
 // Needs q2 on the PATH (https://github.com/quarto-dev/q2, or Q2=/path/to/q2) and the example's
 // R packages (just example-deps). Usage: node scripts/capture-hub.mjs [--comment "text"]
-//   (or: just hub). Output: images/hub/editor.png
+//   (or: just hub). Output: _check/hub-editor.png (gitignored). Quarto Hub is not open to the
+//   public yet: keep this image out of images/, which is published with the deck.
 import { createRequire } from 'node:module';
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -120,10 +121,9 @@ await page.waitForTimeout(1000);
 await preview().locator('.q2-comment-bubble').first().click();
 await page.waitForTimeout(1500);
 
-const out = path.join('images', 'hub');
-fs.mkdirSync(out, { recursive: true });
-await page.screenshot({ path: path.join(out, 'editor.png') });
-console.log(`ok   ${path.join(out, 'editor.png')}  (${await page.evaluate(() => navigator.userAgent.match(/Chrome\/[\d.]+/)?.[0])})`);
+const shot = path.join('_check', 'hub-editor.png');
+await page.screenshot({ path: shot });
+console.log(`ok   ${shot}  (${await page.evaluate(() => navigator.userAgent.match(/Chrome\/[\d.]+/)?.[0])})`);
 await browser.close();
 stop();
 process.exit(0);
