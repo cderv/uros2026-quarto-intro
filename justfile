@@ -13,10 +13,10 @@ default:
 
 # === slides ===
 
-# Render the slides to index.html
+# Render the slides to index.html, without the annotate review toolbar (as published)
 [group('slides')]
 render:
-    quarto render index.qmd
+    quarto render index.qmd -M annotate:false
 
 # Live preview of the slides with auto-reload; `just preview annotate` adds the review toolbar (blairj09/annotate)
 [group('slides')]
@@ -127,10 +127,10 @@ _publish target:
 [confirm("Publish the slides? This checks the deck, then publishes to the chosen target.")]
 publish target="gh": check (_publish target)
 
-# Publish without checking again (when `just check` already ran)
+# Publish without checking again (when `just check` already ran); re-renders first so no review toolbar ships
 [group('publish')]
 [confirm("Publish the slides (no re-check)?")]
-publish-only target="gh": (_publish target)
+publish-only target="gh": render (_publish target)
 
 # === programme analysis ===
 
