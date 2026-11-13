@@ -50,7 +50,7 @@ ide-captures *args:
 ide-captures *args:
     & "$env:ProgramFiles\Git\bin\bash.exe" scripts/capture-ide.sh {{args}}
 
-# Screenshot the example bulletin in the Quarto Hub editor (q2 preview --ui editor) into _check/ (not published); needs q2 and just example-deps
+# Screenshot the example bulletin in the Quarto Hub editor (q2 preview --ui editor) into captures/ (committed, not published); needs q2 and just example-deps
 [group('slides')]
 hub *args:
     node scripts/capture-hub.mjs {{args}}
