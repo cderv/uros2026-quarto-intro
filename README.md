@@ -51,6 +51,27 @@ just example       # render HTML, PDF and Word to example/_output/
 just captures      # screenshot the rendered bulletin for the slides
 ```
 
+### Change the example
+
+`example/` is a git submodule: the source of the bulletin is the public repository
+[cderv/uros2026-quarto-example](https://github.com/cderv/uros2026-quarto-example), and this
+repository pins the commit the slides were made from. `just setup` sets git so that `git pull`
+also updates `example/` and `git push` refuses a pin of an example commit that is not public.
+
+```bash
+just example-pull    # start here: example/ on main at the latest public commit, pin committed
+# edit, render (just example), then commit inside example/:
+git -C example commit -am "Describe the change"
+just example-push    # push example/ to the public repository, commit the new pin here
+git push             # push this repository
+```
+
+`just example-status` lists what is not committed, not pushed or not pinned yet.
+Both recipes stop without changing anything when `example/` has uncommitted changes or is not on
+`main`, and say what to do.
+If the slides show the bulletin (code, numbers, screenshots), check them after a change:
+`just captures` updates `images/bulletin/`.
+
 Other supporting commands are `just gallery` for the publication screenshots on the gallery slide, `just reference-doc` to rebuild the Word reference document from the example's branding, and `just analysis` to rebuild the scripted programme-analysis outputs after `just analysis-deps`.
 
 ## Publish

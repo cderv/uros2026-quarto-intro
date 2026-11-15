@@ -67,17 +67,22 @@ example-init:
 [group('example')]
 example-status:
     git -C example fetch -q origin
-    @echo "Local changes in example/:"
+    @echo "Local changes in example/ (commit them, then just example-push):"
     git -C example status --short
-    @echo "Commits in example/ not pushed to the public repository:"
+    @echo "Commits in example/ not in the public repository (just example-push):"
     git -C example log --oneline origin/main..HEAD
-    @echo "Public commits the talk does not pin yet (just example-update):"
+    @echo "Public commits the talk does not pin yet (just example-pull):"
     git -C example log --oneline HEAD..origin/main
 
-# Move the pinned example to the latest public commit (then commit the example/ change)
+# Bring in the latest public example: example/ on main, new pin committed here (then git push)
 [group('example')]
-example-update:
-    git submodule update --init --remote example
+example-pull:
+    node scripts/example-sync.mjs pull
+
+# Publish the commits made in example/ to the public repository, then commit the new pin here
+[group('example')]
+example-push:
+    node scripts/example-sync.mjs push
 
 # Install the example's R packages from example/rproj.lock (rig proj)
 [group('example')]
@@ -106,11 +111,14 @@ captures:
 
 # === dev ===
 
-# Install Playwright and Chromium for slide checks and PDF export (once per clone)
+# Once per clone: Playwright and Chromium for slide checks and PDF export, git settings and the example submodule
 [group('dev')]
 setup:
     npm ci
     npx playwright install chromium
+    git config submodule.recurse true
+    git config push.recurseSubmodules check
+    git submodule update --init example
 
 # Update the Quarto extensions in _extensions/ from their GitHub sources
 [group('dev')]

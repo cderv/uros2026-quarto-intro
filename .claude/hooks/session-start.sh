@@ -30,6 +30,9 @@ fi
 
 # The example is a git submodule (cderv/uros2026-quarto-example): check it out
 git submodule update --init example
+# git pull updates example/ too; git push refuses a pin of an example commit that is not public
+git config submodule.recurse true
+git config push.recurseSubmodules check
 
 # R packages of the example, from example/rproj.lock, into example/.rvenv (gitignored).
 # Only when the lock file changed since the last install that succeeded.

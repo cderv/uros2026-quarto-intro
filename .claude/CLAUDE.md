@@ -129,7 +129,8 @@ just pdf              # slides-full.pdf for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide
 just ide-captures     # Positron and RStudio editor screenshots for the CLI slide (.claude/ide-captures.md)
 just example-status   # example submodule: local edits, unpushed commits, new public commits
-just example-update   # pin the example to the latest public commit (then commit example/)
+just example-pull     # latest public example into example/, new pin committed here
+just example-push     # publish the commits made in example/, new pin committed here
 just example-deps     # check out the example submodule, install its R packages (rig proj sync)
 just example          # render the example bulletin in example/
 just reference-doc    # rebuild example/brand/nso-reference.docx (Word styles) from _brand.yml
@@ -188,9 +189,8 @@ preinstalled Chromium.
 
 The example bulletin lives in its own public repository, cderv/uros2026-quarto-example, which is
 the source; `example/` is a git submodule of it, pinned to the commit the slides were made from.
-To change the bulletin: `git -C example switch main`, edit, commit and push in `example/`, then
-commit the new `example/` pin in this repository. `just example-status` shows what is not pushed
-or not pinned yet.
+How to change it: README.md, section **Change the example** (`just example-pull`, edit and commit
+in `example/`, `just example-push`, then push this repository).
 
 Fallback if the PDF looks wrong: decktape through npx, still without Docker (slower, renders live
 iframes). In cloud sessions, point it to the preinstalled Chromium and skip Puppeteer's download:
