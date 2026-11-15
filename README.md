@@ -67,6 +67,8 @@ git push             # push this repository
 ```
 
 `just example-status` lists what is not committed, not pushed or not pinned yet.
+`example-pull` and `example-push` run `scripts/example-sync.mjs` with Node.js (the same Node the
+slide check uses; the script only calls `git` and needs no npm package).
 Both recipes stop without changing anything when `example/` has uncommitted changes or is not on
 `main`, and say what to do.
 If the slides show the bulletin (code, numbers, screenshots), check them after a change:

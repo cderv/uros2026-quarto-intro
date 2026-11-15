@@ -74,12 +74,12 @@ example-status:
     @echo "Public commits the talk does not pin yet (just example-pull):"
     git -C example log --oneline HEAD..origin/main
 
-# Bring in the latest public example: example/ on main, new pin committed here (then git push)
+# Bring in the latest public example: example/ on main, new pin committed here (Node script; then git push)
 [group('example')]
 example-pull:
     node scripts/example-sync.mjs pull
 
-# Publish the commits made in example/ to the public repository, then commit the new pin here
+# Publish the commits made in example/ to the public repository, then commit the new pin here (Node script)
 [group('example')]
 example-push:
     node scripts/example-sync.mjs push

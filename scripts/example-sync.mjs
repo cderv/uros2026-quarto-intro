@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Keep example/ (git submodule) and the public repository cderv/uros2026-quarto-example in sync.
 // The public repository is the source; the talk repository pins one of its commits.
+// Runs with Node.js (node scripts/example-sync.mjs), built-in modules only: it calls the git CLI.
 //
 //   node scripts/example-sync.mjs pull   (just example-pull)
 //     Bring in the latest public commit: example/ on main at origin/main, new pin committed here.
