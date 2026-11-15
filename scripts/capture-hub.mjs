@@ -13,7 +13,8 @@
 // Needs q2 on the PATH (https://github.com/quarto-dev/q2, or Q2=/path/to/q2) and the example's
 // R packages (just example-deps). Usage: node scripts/capture-hub.mjs [--comment "text"]
 //   (or: just hub). Output: captures/hub-editor.png, committed but outside images/: only
-//   images/ is published with the deck, and Quarto Hub is not open to the public yet.
+//   images/ is published with the deck, and the screenshot is not on a slide. It shows the
+//   editor of the public q2 CLI on this machine, not the hosted Quarto Hub service.
 import { createRequire } from 'node:module';
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
