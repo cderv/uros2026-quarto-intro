@@ -22,9 +22,14 @@ if ! dpkg -s libudunits2-0 libgdal34t64 libgeos-c1t64 libproj25 >/dev/null 2>&1;
 fi
 
 # veraPDF: Quarto checks the PDF/A and PDF/UA standards with it at every render
-if [ ! -d "$HOME/.local/share/quarto/verapdf" ]; then
+# (test the program, not the folder: a failed download leaves an empty folder)
+if [ ! -x "$HOME/.local/share/quarto/verapdf/verapdf" ]; then
+  rm -rf "$HOME/.local/share/quarto/verapdf"
   quarto install verapdf --no-prompt
 fi
+
+# The example is a git submodule (cderv/uros2026-quarto-example): check it out
+git submodule update --init example
 
 # R packages of the example, from example/rproj.lock, into example/.rvenv (gitignored).
 # Only when the lock file changed since the last install that succeeded.

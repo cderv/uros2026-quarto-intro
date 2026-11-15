@@ -128,7 +128,9 @@ just check            # render + browser + layout checks, screenshots in _check/
 just pdf              # slides-full.pdf for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide
 just ide-captures     # Positron and RStudio editor screenshots for the CLI slide (.claude/ide-captures.md)
-just example-deps     # install the example's R packages (rig proj sync, example/rproj.lock)
+just example-status   # example submodule: local edits, unpushed commits, new public commits
+just example-update   # pin the example to the latest public commit (then commit example/)
+just example-deps     # check out the example submodule, install its R packages (rig proj sync)
 just example          # render the example bulletin in example/
 just reference-doc    # rebuild example/brand/nso-reference.docx (Word styles) from _brand.yml
 just publish          # check, then publish the slides to gh-pages (asks for confirmation)
@@ -175,13 +177,20 @@ Setup:
 - GitHub: `.github/workflows/check-slides.yml` runs the check with `--strict --pdf` on every push
   and uploads screenshots, reports and PDF as the `check-slides` artifact.
 
-Bulletin screenshots (`just captures`, script `example/captures.R`): webshot2 drives Chrome for the
+Bulletin screenshots (`just captures`, script `scripts/captures.R`): webshot2 drives Chrome for the
 HTML, pdftools reads the PDF; both are dev dependencies in `example/rproj.toml`, installed by
 `just example-deps`. Locally, an installed Chrome is enough (chromote looks in the standard
 install locations); on Linux, pdftools also needs the Poppler library (`libpoppler-cpp`).
 In Claude cloud sessions, the SessionStart hook `.claude/hooks/session-start.sh` (cloud only)
-installs Poppler and veraPDF, runs `rig proj sync` in `example/` when `rproj.lock` changed, and
-sets `CHROMOTE_CHROME` to the preinstalled Chromium.
+installs Poppler, the sf libraries and veraPDF, checks out the `example/` submodule, runs
+`rig proj sync` in `example/` when `rproj.lock` changed, and sets `CHROMOTE_CHROME` to the
+preinstalled Chromium.
+
+The example bulletin lives in its own public repository, cderv/uros2026-quarto-example, which is
+the source; `example/` is a git submodule of it, pinned to the commit the slides were made from.
+To change the bulletin: `git -C example switch main`, edit, commit and push in `example/`, then
+commit the new `example/` pin in this repository. `just example-status` shows what is not pushed
+or not pinned yet.
 
 Fallback if the PDF looks wrong: decktape through npx, still without Docker (slower, renders live
 iframes). In cloud sessions, point it to the preinstalled Chromium and skip Puppeteer's download:

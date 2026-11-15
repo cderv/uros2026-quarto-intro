@@ -1,0 +1,4 @@
+[submodule "example"]
+	path = example
+	url = https://github.com/cderv/uros2026-quarto-example.git
+	branch = main

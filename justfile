@@ -56,10 +56,32 @@ hub *args:
     node scripts/capture-hub.mjs {{args}}
 
 # === example ===
+# example/ is a git submodule: the public repository cderv/uros2026-quarto-example is the source.
+
+# Check out the example at the commit the talk pins (after a clone without --recurse-submodules)
+[group('example')]
+example-init:
+    git submodule update --init example
+
+# Show local edits, unpushed commits and new public commits of the example
+[group('example')]
+example-status:
+    git -C example fetch -q origin
+    @echo "Local changes in example/:"
+    git -C example status --short
+    @echo "Commits in example/ not pushed to the public repository:"
+    git -C example log --oneline origin/main..HEAD
+    @echo "Public commits the talk does not pin yet (just example-update):"
+    git -C example log --oneline HEAD..origin/main
+
+# Move the pinned example to the latest public commit (then commit the example/ change)
+[group('example')]
+example-update:
+    git submodule update --init --remote example
 
 # Install the example's R packages from example/rproj.lock (rig proj)
 [group('example')]
-example-deps:
+example-deps: example-init
     cd example && rig proj sync
 
 # Render the example bulletin (HTML, PDF and Word from one source) to example/_output/
@@ -80,7 +102,7 @@ example-preview:
 # Screenshot the rendered bulletin for the slides into images/bulletin/ (run `just example` first)
 [group('example')]
 captures:
-    cd example && Rscript captures.R
+    cd example && Rscript ../scripts/captures.R
 
 # === dev ===
 

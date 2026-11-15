@@ -1,5 +1,6 @@
 # Screenshots of the rendered bulletin for the slides.
-# Run after `quarto render` (just example), from example/: Rscript captures.R
+# Run after `quarto render` (just example), from example/: Rscript ../scripts/captures.R
+# (just captures), so that the example's R library (example/.rvenv) is used.
 # Writes images/bulletin/ at the root of the talk repository.
 library(webshot2)
 library(pdftools)

@@ -11,7 +11,7 @@ A Eurostat tourism bulletin illustrates one source producing HTML, PDF and Word,
 
 - `index.qmd`: the RevealJS slides, using the `clean-revealjs` theme.
 - `_extensions/`: the Quarto extensions the slides use (theme, code animation, timing bar, carousel, timeline, icons, QR code, review toolbar); `.claude/extensions.md` explains each one. Update them with `just extensions-update`.
-- `example/`: the example bulletin and its HTML, Typst PDF and Word configuration.
+- `example/`: the example bulletin and its HTML, Typst PDF and Word configuration, a git submodule of [cderv/uros2026-quarto-example](https://github.com/cderv/uros2026-quarto-example). Clone with `git clone --recurse-submodules`, or run `just example-init` afterwards.
 - `analysis/`: data, code and methodology for the analysis of uRos programmes from 2014 to 2026 used in the opening slides; see `analysis/README.md` for sources and limitations.
 - `images/`: the conference logo and screenshots used in the slides.
 - `scripts/check-slides.mjs`: browser-based slide checks, screenshots and PDF export.
@@ -46,7 +46,7 @@ The GitHub Actions workflow runs the same strict check, exports the PDF and uplo
 The example bulletin uses R packages pinned in `example/rproj.lock`:
 
 ```bash
-just example-deps  # install the example's R packages with rig
+just example-deps  # check out the example submodule, install its R packages with rig
 just example       # render HTML, PDF and Word to example/_output/
 just captures      # screenshot the rendered bulletin for the slides
 ```
