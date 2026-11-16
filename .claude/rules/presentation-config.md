@@ -179,21 +179,21 @@ Just like R Markdown...
 
 ## Quarto ... {.center auto-animate="true"}
 
-[**unifies**]{.hl} + **extends** the R Markdown ecosystem
+**unifies** + **extends** the R Markdown ecosystem
 
 ## Quarto ... {.center auto-animate="true"}
 
-[**unifies**]{.hl} + **extends** the R Markdown ecosystem
+**unifies** + **extends** the R Markdown ecosystem
 
-[**unifies**]{.hl} for people who love R Markdown
+**unifies** for people who love R Markdown
 
 ## Quarto ... {.center auto-animate="true"}
 
-[**unifies**]{.hl} + **extends** the R Markdown ecosystem
+**unifies** + **extends** the R Markdown ecosystem
 
-[**unifies**]{.hl} for people who love R Markdown
+**unifies** for people who love R Markdown
 
-[**extends**]{.hl} for people who don't know R Markdown
+**extends** for people who don't know R Markdown
 ```
 
 ---

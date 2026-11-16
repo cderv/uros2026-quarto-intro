@@ -111,7 +111,7 @@ Christophe Dervieux
 It unifies and extends it*
 ```
 
-**Progressive build** — use `auto-animate="true"` across 3 consecutive slides for the "unifies + extends" sequence, with `**bold**` on the two verbs (every deck; the opening template in `presentation-config.md` uses `{.hl}` there, which no deck does). Also used for R Markdown → Quarto syntax comparison with `data-id` on divs.
+**Progressive build** — use `auto-animate="true"` across 3 consecutive slides for the "unifies + extends" sequence, with `**bold**` on the two verbs, never `{.hl}` (every deck). Also used for R Markdown → Quarto syntax comparison with `data-id` on divs.
 
 **IDE tools r-stack** — sequential reveal of VSCode → JupyterLab → RStudio/Positron screenshots using `.fragment .fade-in-then-out` with `fragment-index`.
 
