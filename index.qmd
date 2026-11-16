@@ -959,14 +959,20 @@ Thursday at 17:50, fix one line and render.
 
 ::: {.column width="38%"}
 ::: {.qr-block}
-{{< qrcode https://cderv.github.io/uros2026-quarto-intro/ width=200 height=200 >}}
+{{< qrcode https://cderv.github.io/uros2026-quarto-intro/ width=170 height=170 >}}
 
 Slides
+:::
+
+::: {.qr-block}
+{{< qrcode https://cderv.github.io/uros2026-quarto-example/ width=170 height=170 >}}
+
+Example bulletin
 :::
 :::
 :::
 
 ::: notes
-QR code for the slides, the example is linked there. Thank you.
+Two QR codes: the slides, and the bulletin itself. Thank you.
 Questions?
 :::

@@ -13,7 +13,7 @@ use the extension.
 | `emilhvitfeldt/quarto-timeline` (1.0.0) | filter | a horizontal timeline built one event at a time | `#quarto-today` |
 | `emilhvitfeldt/quarto-easycarousel` (0.1.0) | filter | an autoplaying carousel of screenshots | `#products` (gallery) |
 | `mcanouil/quarto-iconify` (4.2.2) | shortcode | icons by name | Thursday cards (`mdi` set) |
-| `jmbuhr/quarto-qrcode` (0.0.1) | shortcode | a QR code to the slides | Learning More |
+| `jmbuhr/quarto-qrcode` (0.0.1) | shortcode | QR codes to the slides and the example bulletin | Learning More |
 | `quarto-ext/attribution` (0.1.1) | revealjs plugin | a credit in the slide corner (`::: attribution`) | loaded, not used: the schematic credit is a `.small-cap` caption |
 | `blairj09/annotate` (0.3.0) | filter | a review toolbar: comments pinned on slides, sent to the editor | off by default, `just preview annotate` |
 
@@ -92,8 +92,10 @@ Check without network: block every request outside localhost in Playwright and c
 
 ### qrcode
 
-`{{< qrcode https://cderv.github.io/uros2026-quarto-intro/ width=200 height=200 >}}` on the
-Learning More slide.
+Two codes on the Learning More slide, stacked in the right column at 170 px, each in its own
+`.qr-block` with a label: the slides (`https://cderv.github.io/uros2026-quarto-intro/`) and the
+rendered example bulletin (`https://cderv.github.io/uros2026-quarto-example/`). Keep a gap between
+them so a phone camera does not catch the wrong one.
 
 ### attribution
 
