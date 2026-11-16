@@ -105,7 +105,7 @@ evening.
 
 ## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
 
-[Release tomorrow. The key figure is wrong.]{.lead}
+[The key figure is wrong, and the release is tomorrow.]{.lead}
 
 ::: {.cards}
 ::: {.card .fragment .custom .fix .is-code data-id="card-src" fragment-index="1"}
@@ -153,7 +153,7 @@ evening.
 ::: {.cards-fan}
 ::: {.card .is-blank .is-code data-id="card-src"}
 [{{< iconify mdi file-document-edit-outline >}}]{.ico}
-[One source]{.kind}
+[One source file]{.kind}
 :::
 
 ::: {.cards}
@@ -429,7 +429,7 @@ command, more formats.
 
 <!-- ============================ X2 (1:20) ============================ -->
 
-## Output formats at the top of the file {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · One source" timing-duration="10s"}
+## Output formats at the top of the file {#formats kicker="Same source, multiple formats" .magic-move .timing-section timing-title="X2 · Same source, multiple formats" timing-duration="10s"}
 
 ```{.yaml code-line-numbers="3"}
 ---
@@ -535,7 +535,7 @@ themselves.)
 
 <!-- ============================ X3 (1:50) ============================ -->
 
-## Tables ready to publish {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="30s"}
+## A gt table in HTML and PDF {#table kicker="Ready to publish" .timing-section timing-title="X3 · Ready to publish" timing-duration="30s"}
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -611,7 +611,7 @@ country and @sec-methods explains the figures.
 renumbers.
 :::
 
-## Your institute's look in one `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
+## Your institute's look in `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
 
 ::: {.columns}
 ::: {.column width="45%"}
@@ -649,7 +649,8 @@ with the same logo, colors and fonts."
 
 ::: notes
 Colors, logo and fonts are set once, in _brand.yml. HTML and PDF read
-it. Word reads it through a reference document. A fictional institute,
+it. Word reads it through a reference document. The page layout adds a
+few small files. A fictional institute,
 real Eurostat data.
 :::
 
@@ -657,6 +658,8 @@ real Eurostat data.
 
 ```{.yaml}
 format:
+  html:
+    axe: true # accessibility check in the browser
   typst:
     pdf-standard: [a-2b, ua-1]
 ```
@@ -669,20 +672,16 @@ $ quarto render bulletin.qmd
 
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
 
-For the HTML pages, `axe: true` checks accessibility with [axe-core](
-  https://quarto.org/docs/output-formats/html-accessibility.html
-).
-
 ::: notes
-One line asks for both standards. With veraPDF installed
-(`quarto install verapdf`), Quarto checks at each render. It checks the
-tags, the alt text you still write. The bulletin runs axe too, and
-passes.
+One line asks for both PDF standards. With veraPDF installed
+(`quarto install verapdf`), Quarto checks the PDF at each render.
+veraPDF checks that the tags are there; you still write the alt text.
+axe checks the web page when it opens; the bulletin passes.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
 
-## Thursday, 17:50. Again. {#again kicker="Fixed once" .magic-move .timing-section timing-title="Y · Fix it once" timing-duration="20s"}
+## Thursday, 17:50, again {#again kicker="Fix it once" .magic-move .timing-section timing-title="Y · Fix it once" timing-duration="20s"}
 
 [The key figure is wrong.]{.lead}
 
@@ -705,7 +704,7 @@ Back to Thursday, ten to six. Wrong again. (click) Cause: someone kept
 the guests from abroad only.
 :::
 
-## Thursday, 17:50. Again. {#again-fix kicker="Fixed once" .magic-move timing-duration="10s"}
+## Thursday, 17:50, again {#again-fix kicker="Fix it once" .magic-move timing-duration="10s"}
 
 [The key figure is wrong.]{.lead}
 
@@ -727,15 +726,15 @@ nights <- get_eurostat(
 One word in the R code. (click) TOTAL keeps all guests.
 :::
 
-## One render {#one-render kicker="Fixed once" timing-duration="35s"}
+## One render {#one-render kicker="Fix it once" timing-duration="35s"}
 
 `quarto render bulletin.qmd`
 
 ::: {.columns}
-::: {.column width="50%"}
+::: {.column width="33%"}
 ::: {.hl-shot}
 ![](images/bulletin/html-key-figure.png){
-  .shot height="180px" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
+  .shot width="100%" fig-alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."
 }
 
 []{.hl-box .fragment fragment-index="1" style="left: 3.5%; top: 9%; width: 42%; height: 28%;"}
@@ -743,30 +742,40 @@ One word in the R code. (click) TOTAL keeps all guests.
 [bulletin.html]{.shot-label}
 :::
 
-::: {.column width="50%"}
+::: {.column width="33%"}
 ::: {.hl-shot}
 ![](images/bulletin/pdf-key-figure.png){
-  .shot height="180px" fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."
+  .shot width="100%" fig-alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."
 }
 
 []{.hl-box .fragment fragment-index="1" style="left: 4%; top: 13%; width: 46%; height: 30%;"}
 :::
 [bulletin.pdf]{.shot-label}
 :::
+
+::: {.column width="33%"}
+::: {.hl-shot}
+![](images/bulletin/docx-key-figure.png){
+  .shot width="100%" fig-alt="The same key figure box in the Word bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."
+}
+
+[]{.hl-box .fragment fragment-index="1" style="left: 3%; top: 15%; width: 36%; height: 26%;"}
+:::
+[bulletin.docx]{.shot-label}
+:::
 :::
 
 ::: notes
-(click) 514.7 in the HTML, 514.7 in the PDF. Table, chart, caption and
-the Word file come from the same render. Press release: one more file
-that reads the same R code (not in the example).
+(click) 514.7 in the HTML, the PDF and the Word file. Table, chart and
+caption come from the same render.
 :::
 
-## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
+## Thursday, 17:51 {#none kicker="Fix it once" timing-duration="25s"}
 
 ::: {.cards-fan}
 ::: {.card .is-right .is-code data-id="card-src"}
 [{{< iconify mdi file-document-edit-outline >}}]{.ico}
-[One source]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
+[One source file]{.kind} [245.0]{.num .wrong}[514.7]{.num .right}
 :::
 
 ::: {.cards}
@@ -800,12 +809,13 @@ that reads the same R code (not in the example).
 [All six show [514.7]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-(click) 514.7 on all six, press release too.
+(click) 514.7 on all six. Press release: one more file that reads the
+same R code (not in the example).
 :::
 
 <!-- ============================ Z (1:50) ============================ -->
 
-## Already published with Quarto {#products kicker="Already in official statistics" .timing-section timing-title="Z · And next" timing-duration="45s"}
+## Already published with Quarto {#products kicker="In official statistics" .timing-section timing-title="Z · In official statistics, and next" timing-duration="45s"}
 
 [France · Norway · United Kingdom · OECD]{.gallery-count}
 
@@ -813,7 +823,7 @@ that reads the same R code (not in the example).
 
 ::: {.r-stack}
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
-```{.carousel #gallery autoplay="2500" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
+```{.carousel #gallery autoplay="2000" effect="scale" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
 ![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
 ![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png)
 ![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png)

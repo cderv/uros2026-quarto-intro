@@ -50,7 +50,8 @@ find_phrase <- function(words, phrase) {
 # Crop from the line where `from` starts to the first line below it where `to`
 # starts, across the body column only (left of the margin notes);
 # pad: points kept above and below
-pdf_crop <- function(page, from, to, file, pad = c(10, 10), left = 40, right = 420) {
+pdf_crop <- function(page, from, to, file, pad = c(10, 10), left = 40, right = 420,
+                     pdf = get("pdf", envir = globalenv())) {
   words <- pdf_data(pdf)[[page]]
   top <- min(find_phrase(words, from)$y)
   below <- find_phrase(words, to)
@@ -69,5 +70,22 @@ pdf_page(2, "pdf-p2.png")
 pdf_crop(1, "514.7 million", "Key figure 1:", "pdf-key-figure.png", pad = c(22, 22))
 # Table 1: from its caption to its source note
 pdf_crop(2, "Table 1:", "Source: Eurostat", "pdf-table.png", pad = c(4, 10))
+
+# Word: LibreOffice turns bulletin.docx into a PDF, then the same crop as above.
+# Fonts missing on the machine are replaced, so install the brand fonts first.
+soffice <- Sys.which(c("soffice", "libreoffice"))
+soffice <- unname(soffice[nzchar(soffice)][1])
+if (is.na(soffice)) {
+  warning("LibreOffice not found: docx-key-figure.png not updated")
+} else {
+  tmp <- tempfile("docx-")
+  dir.create(tmp)
+  system2(soffice, c("--headless", "--convert-to", "pdf", "--outdir", shQuote(tmp),
+                     shQuote(file.path("_output", "bulletin.docx"))),
+          # R's own library path makes soffice load the wrong shared libraries
+          env = "LD_LIBRARY_PATH=", stdout = FALSE)
+  pdf_crop(1, "514.7 million", "Key figure 1:", "docx-key-figure.png", pad = c(22, 6),
+           left = 55, right = 540, pdf = file.path(tmp, "bulletin.pdf"))
+}
 
 message("Screenshots written to ", normalizePath(out))
