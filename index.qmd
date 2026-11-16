@@ -674,7 +674,8 @@ For the HTML pages, `axe: true` checks accessibility with [axe-core](
 ::: notes
 One line asks for both standards. With veraPDF installed
 (`quarto install verapdf`), Quarto checks at each render. It checks the
-tags, the alt text you still write. The bulletin does not set axe today.
+tags, the alt text you still write. The bulletin runs axe too, and
+passes.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
