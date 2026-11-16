@@ -670,7 +670,7 @@ $ quarto render bulletin.qmd
 [verapdf]: Validating bulletin.pdf against PDF/UA1...PASSED
 ```
 
-[PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto runs [veraPDF](https://verapdf.org/) to check both.]{.lead}
+[PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto checks both with [veraPDF](https://verapdf.org/), and the web page with [axe-core](https://quarto.org/docs/output-formats/html-accessibility.html).]{.lead}
 
 ::: notes
 One line asks for both PDF standards. With veraPDF installed
