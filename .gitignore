@@ -14,3 +14,5 @@ slides-*.pdf
 .braid.toml
 _check/
 node_modules/
+
+/.luarc.json
