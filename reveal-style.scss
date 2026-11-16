@@ -462,8 +462,9 @@ html.print-pdf .reveal .print-only { display: block !important; }
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
   }
   section#crossref div.sourceCode { margin-top: 1.2em; margin-bottom: 0.8em; }
-  // #one-render: both crops at the same height, so the two frames line up
-  section#one-render .hl-shot { display: inline-block; img { width: auto; height: 180px; } }
+  // #one-render: HTML, PDF and Word crops, each the full width of its column
+  section#one-render .columns { align-items: center; }
+  section#one-render .hl-shot { display: block; img { width: 100%; height: auto; } }
   section#one-render .column { text-align: center; }
   // #render-cli: the two editor crops at the same width (same 1200x440 ratio, so same height)
   section#render-cli .hl-shot { width: 560px; max-width: 100%; margin: 0 auto; }
@@ -479,11 +480,11 @@ html.print-pdf .reveal .print-only { display: block !important; }
     img { display: block; width: 100%; height: auto; margin: 0 0 20px 0; max-height: none; max-width: none; }
   }
   // two pages of 900 x 1273 px + 20 px gap, minus the 560 px window
-  .slides section.present .page-scroll .pages { animation: page-scroll 17s ease-in-out 1.5s forwards; }
+  .slides section.present .page-scroll .pages { animation: page-scroll 10s ease-in-out 1s forwards; }
   // section label above the heading: `## Heading {kicker="..."}` (position cue, talk-voice F7)
   .slides section[data-kicker]::before {
     content: attr(data-kicker); position: absolute; top: -30px; left: 0;
-    font-size: 0.5em; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8a8a;
+    font-size: 0.62em; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #595959;
   }
   // opening: the quote shrinks to the top (auto-animate), the uRos line takes the big place
   .quote-who-top { font-size: 0.7em; color: #767676; margin: 0; }
