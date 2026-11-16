@@ -111,7 +111,10 @@ function quartoRender(qmd, logFile, strict) {
   const win = process.platform === 'win32';
   const quote = (s) => (win && /\s/.test(s) ? `"${s}"` : s);
   console.log(`> quarto ${args.join(' ')}`);
-  const res = spawnSync('quarto', args.map(quote), { stdio: ['ignore', 'inherit', 'inherit'], shell: win });
+  // With a shell, Node 24 deprecates an args array (DEP0190): pass one command string instead.
+  const res = win
+    ? spawnSync(['quarto', ...args.map(quote)].join(' '), { stdio: ['ignore', 'inherit', 'inherit'], shell: true })
+    : spawnSync('quarto', args, { stdio: ['ignore', 'inherit', 'inherit'] });
   if (res.error) {
     const err = new Error(`cannot run quarto: ${res.error.message}`);
     err.environment = true;
