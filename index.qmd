@@ -875,7 +875,7 @@ R code and text, to HTML, PDF, Word
 :::
 
 ::: {.event .fragment data-label="2022"}
-**Quarto 1.0**
+**Quarto**
 
 Same idea, more languages and formats
 :::
@@ -883,7 +883,7 @@ Same idea, more languages and formats
 ::: {.event .fragment data-label="Today"}
 **Quarto 1**
 
-The bulletin and the gallery
+The version you install
 :::
 
 ::: {.event .fragment data-label="In development"}
@@ -899,7 +899,7 @@ in the browser. Experimental, no date.
 
 It aims to keep your projects working.
 
-Quarto 1 is what you install today.
+Bridge: so, where to start.
 :::
 
 ## Start with one monthly publication {#next-year kicker="And next" timing-duration="30s"}
