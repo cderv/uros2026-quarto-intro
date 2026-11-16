@@ -99,6 +99,16 @@ example:
 reference-doc:
     cd example && Rscript brand/reference-doc.R
 
+# Format analysis/ and example/ with yamark (index.qmd is left alone on purpose)
+[group('format')]
+format:
+    yamark format analysis example
+
+# Fail if analysis/ or example/ are not formatted
+[group('format')]
+format-check:
+    yamark format --check analysis example
+
 # Live preview of the example bulletin
 [group('example')]
 example-preview:
