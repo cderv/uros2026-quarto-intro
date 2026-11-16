@@ -2,8 +2,6 @@
 pagetitle: Reproducible Statistical Publications with Quarto - uRos2026
 date: 11/19/2026
 engine: markdown
-# `quarto publish --no-render` bundles only index.html, index_files/ and these resources:
-# without it, the screenshots would be missing from the published deck.
 resources:
   - images/
 format:
