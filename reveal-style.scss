@@ -407,9 +407,9 @@ section#diagrams {
   }
 }
 
-// Z gallery: easycarousel (flat scale effect), then a static grid of the same thumbnails
+// Z gallery: easycarousel (crossfade), then a static grid of the same thumbnails
 .reveal {
-  .gallery-count { display: block; font-size: 0.7em; color: #666; margin-top: -0.3em; }
+  .gallery-count { display: block; font-size: 0.7em; color: #444; margin-top: -0.3em; }
   .easycarousel__caption {
     position: static; background: none; color: #222;
     font-size: 28px; padding: 0.3em 0 0;
@@ -417,6 +417,10 @@ section#diagrams {
   // the carousel and the linked thumbnails must not widen the stack to their natural size
   .r-stack:has(.gallery-live) { grid-template-columns: minmax(0, 100%); }
   .gallery-live, .gallery-grid { min-width: 0; width: 100%; }
+  // no pointer on the live carousel: a resting mouse would pause autoplay (stopOnMouseEnter),
+  // and a click would focus it so the arrow keys move the carousel, not the deck.
+  // `*` and !important: the fade plugin sets pointer-events inline on the current image
+  .gallery-live, .gallery-live * { pointer-events: none !important; }
   .gallery-grid {
     background: white;
     width: 100%;
