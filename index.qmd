@@ -44,6 +44,8 @@ revealjs-plugins:
 
 ## {#title-slide .quarto-title-block .center timing-duration="10s"}
 
+<!-- fmt: skip file -->
+
 ```{=html}
 <h1 class='title'>Reproducible Statistical Publications with Quarto</h1>
 ```
