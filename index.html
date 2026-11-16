@@ -6,7 +6,7 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-f0688f390a76b21125ecd060a3d0a4db.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-a34e72179bd910c3a0d1c193f042680d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/quarto-contrib/easycarousel-0.1.0/embla-carousel.umd.js"></script>
 <script src="index_files/libs/quarto-contrib/easycarousel-0.1.0/embla-carousel-autoplay.umd.js"></script>
 <script src="index_files/libs/quarto-contrib/easycarousel-0.1.0/embla-carousel-fade.umd.js"></script>
@@ -16,7 +16,7 @@
 <link href="index_files/libs/quarto-contrib/timeline-0.1.0/timeline.css" rel="stylesheet">
 <script src="index_files/libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script>
 <script src="index_files/libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.12.0">
+  <meta name="generator" content="quarto-1.12.2">
 
   <meta name="dcterms.date" content="2026-11-19">
   <title>Reproducible Statistical Publications with Quarto - uRos2026</title>
@@ -109,8 +109,28 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-fe3a04598d0474151f0bc81477f137c7.css">
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-3115590b75f2b6d02eced3004200fd33.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -205,6 +225,28 @@
       margin-right: 0; 
     }
   </style>
+  <script>
+
+    // Icons without network: give the iconify component (mcanouil/iconify) the deck's icons before
+
+    // the slides are parsed, so it never calls api.iconify.design. The extension's own `preload`
+
+    // option injects its data after the component has started, too late to be read.
+
+    // Rebuild after adding an icon: https://api.iconify.design/mdi.json?icons=<name>,<name>
+
+    (function () {
+
+      var icons = {"prefix":"mdi","lastModified":1737398331,"aliases":{},"width":24,"height":24,"icons":{"chart-bar":{"body":"<path fill=\"currentColor\" d=\"M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z\"/>"},"file-document-edit-outline":{"body":"<path fill=\"currentColor\" d=\"M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1l-2.1-2.1l1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z\"/>"},"file-pdf-box":{"body":"<path fill=\"currentColor\" d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z\"/>"},"file-word-box":{"body":"<path fill=\"currentColor\" d=\"M15.5 17H14l-2-7.5l-2 7.5H8.5L6.1 7h1.7l1.54 7.5L11.3 7h1.4l1.97 7.5L16.2 7h1.7M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2\"/>"},"language-r":{"body":"<path fill=\"currentColor\" d=\"M12 4.29c-5.5 0-10 3-10 6.71c0 3.28 3.56 6 8.24 6.58v2.13h3.41v-2.12c.85-.09 1.64-.25 2.39-.48l1.38 2.6h3.86l-2.32-3.91C20.83 14.58 22 12.87 22 11c0-3.71-4.5-6.71-10-6.71m1.53 2.62c4.2 0 7.3 1.4 7.3 4.59c0 1.71-.92 2.91-2.42 3.65c-.09-.05-.17-.1-.22-.15c-.36-.16-.96-.34-.96-.34s2.98-.22 2.98-3.19s-3.12-3.02-3.12-3.02h-6.85v7.16c-2.55-.74-4.31-2.31-4.31-4.11c0-2.54 3.4-4.59 7.6-4.59m.15 3.98h2.07s.95-.05.95.94c0 .97-.95.97-.95.97h-2.07zm-.03 4.41h.92c.18 0 .27.05.43.2c.13.1.27.29.39.46c-.55.07-1.13.1-1.74.1z\"/>"},"newspaper-variant-outline":{"body":"<path fill=\"currentColor\" d=\"M20 5v14H4V5zm0-2H4c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2m-2 12H6v2h12zm-8-8H6v6h4zm2 2h6V7h-6zm6 2h-6v2h6z\"/>"},"web":{"body":"<path fill=\"currentColor\" d=\"M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2\"/>"}}};
+
+      var Icon = window.customElements && customElements.get('iconify-icon');
+
+      if (Icon && Icon.addCollection) Icon.addCollection(icons);
+
+    })();
+
+  </script>
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -214,6 +256,7 @@
 <section id="title-slide" class="slide level2 quarto-title-block center">
 <h2></h2>
 <span class="timing-bar-data" style="display:none" data-duration="10s"></span>
+<!-- fmt: skip file -->
 <h1 class="title">Reproducible Statistical Publications with Quarto</h1>
 <p><img data-src="images/uros2026-logo.jpg" class="absolute" style="bottom: 60px; right: 100px; width: 220px; " alt="uRos 2026 logo: a pink hexagon with the Eiffel Tower and an R flag, urosconf.org"></p>
 <div class="quarto-title-authors">
@@ -224,13 +267,6 @@
 </div>
 </div>
 <p>November 19, 2026</p>
-<!--
-STORYBOARD, low fidelity. Rhythm, titles, scripted lines and transitions are real;
-boxes with a dashed border (.ph) are placeholders for screenshots of the example
-repository; code marked "draft" will be replaced by the code of that repository.
-Timing (timing-duration) follows the timed outline: intro 2:00, X1 2:30, X2 1:45,
-X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
--->
 <aside class="notes">
 <p>Welcome everyone. Why here: I work on Quarto at Posit, and this room publishes numbers with R every day.</p>
 <style type="text/css">
@@ -244,15 +280,15 @@ X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- ============================ INTRO (2:00) ============================ -->
+<!-- ============================ INTRO (1:35) ============================ -->
 </section>
-<section id="conversation" class="slide level2 center" data-auto-animate="true" data-auto-animate-id="opening">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="conversation" class="slide level2 center">
+<h2></h2>
 <span class="timing-bar-data" style="display:none" data-duration="15s"></span>
-<p><span class="lead" data-id="quote-who">Friends in official statistics:</span></p>
-<p><span class="statement" data-id="quote"><em>“Quarto? Not really used in our world.”</em></span></p>
+<p><span class="lead">Friends in official statistics:</span></p>
+<p><span class="statement"><em>“Quarto? I haven’t seen it used much in official statistics.”</em></span></p>
 <aside class="notes">
-<p>Friends said it. You are an R community that publishes numbers every day: I wanted to understand.</p>
+<p>Friends said it. I wanted to understand why.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -265,19 +301,19 @@ X3 1:45, Y 1:30, Z 2:30, end 0:30 = 12:30, with 2 min of margin.
           display:block!important;
       }</style></aside>
 </section>
-<section id="publishing-needs" class="slide level2" data-auto-animate="true" data-auto-animate-id="opening">
-<h2 data-id="quarto-animate-title"></h2>
+<section id="publishing-needs" class="slide level2">
+<h2></h2>
 <span class="timing-bar-data" style="display:none" data-duration="20s"></span>
-<p><span class="lead quote-who-top" data-id="quote-who">Friends in official statistics:</span></p>
-<p><span class="statement quote-top" data-id="quote"><em>“Quarto? Not really used in our world.”</em></span></p>
-<p><span class="statement needs-head">Every uRos since 2017:<br>
-a talk about publishing statistics</span></p>
+<p><span class="lead quote-who-top">Friends in official statistics:</span></p>
+<p><span class="statement quote-top"><em>“Quarto? I haven’t seen it used much in official statistics.”</em></span></p>
+<p><span class="statement needs-head">Every uRos since 2017<br>
+has a talk about publishing statistics</span></p>
 <div class="needs">
 <p><span class="need">Recurring publications, automated</span> <span class="need">Your institute’s look</span> <span class="need">Less manual work</span></p>
 </div>
-<p><span class="chart-cap">About 35 talks in 532 program items, 2014 to 2026. Method, code and data: <code>analysis/</code> in the slides repository.</span></p>
+<p><span class="chart-cap">Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: <code>analysis/</code> in the slides repository.</span></p>
 <aside class="notes">
-<p>Read every uRos program since 2014: the same three needs, often a pipeline built in-house. Without one, the numbers leave the code: copied by hand into Word, the PDF, the web page. Bridge: a Thursday evening.</p>
+<p>I read every uRos program since 2014. The same three needs come back, often with a pipeline built in-house. Without one, someone copies the numbers by hand into Word, the PDF, the web page. Bridge: a Thursday evening.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -293,7 +329,7 @@ a talk about publishing statistics</span></p>
 <section id="thursday" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Thursday, 17:50</h2>
 <span class="timing-bar-data" style="display:none" data-duration="35s"></span>
-<p><span class="lead">Release tomorrow. The headline number is wrong.</span></p>
+<p><span class="lead">The key figure is wrong, and the release is tomorrow.</span></p>
 <div class="cards">
 <div class="card fragment custom fix is-code" data-id="card-src" data-fragment-index="1">
 <p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:language-r" aria-label="Icon language-r from mdi Iconify.design set." title="Icon language-r from mdi Iconify.design set."></iconify-icon></span> <span class="kind">R code</span> <span class="num wrong">245.0</span><span class="num right">514.7</span></p>
@@ -315,10 +351,10 @@ a talk about publishing statistics</span></p>
 </div>
 </div>
 <div class="fragment" data-fragment-index="6">
-<p><span class="statement question">Which one did you forget?</span></p>
+<p><span class="statement question">One is still wrong.</span></p>
 </div>
 <aside class="notes">
-<p>Thursday, ten to six. Release tomorrow. The headline number is wrong: 245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). Then: “Done?” (6) Which one did you forget? Pause, let the red card answer.</p>
+<p>245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). (6) Press release still red.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -336,7 +372,7 @@ a talk about publishing statistics</span></p>
 <span class="timing-bar-data" style="display:none" data-duration="15s"></span>
 <div class="cards-fan">
 <div class="card is-blank is-code" data-id="card-src">
-<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">One source</span></p>
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">One source file</span></p>
 </div>
 <div class="cards">
 <div class="card is-blank" data-id="card-word">
@@ -356,9 +392,9 @@ a talk about publishing statistics</span></p>
 </div>
 </div>
 </div>
-<p><span class="statement">What if you only had to fix it <span class="hl">once</span>?</span></p>
+<p><span class="statement">Fix it <span class="hl">once</span></span></p>
 <aside class="notes">
-<p>What if you only had to fix it once? Pause, no answer. Bridge: “Let me show you a bulletin built this way, with Eurostat data.”</p>
+<p>Bridge: “The tool for this is Quarto.”</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -370,17 +406,36 @@ a talk about publishing statistics</span></p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- ============================ X1 (2:30) ============================ -->
+<!-- ============================ X1 (2:25) ============================ -->
 </section>
-<section id="rendered" class="slide level2 timing-section" data-kicker="Every number computed" data-auto-animate="true" data-auto-animate-id="result">
+<section id="what-is-quarto" class="slide level2 timing-section">
+<h2>Quarto …</h2>
+<span class="timing-bar-data" style="display:none" data-duration="15s" data-section="true" data-title="X1 · Every number computed"></span>
+<p>…is an open-source, scientific, and technical publishing system</p>
+
+<img data-src="images/horst_quarto_schematic.png" alt="Schematic: R, Python, Observable, Julia and other languages go into Quarto, which makes HTML, PDF, Word and other documents." width="900" class="r-stretch quarto-figure-center"><p class="caption"><span class="small-cap">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</span></p><aside class="notes">
+<p>If you know R Markdown, same idea. For you, R on the left. On the right, the documents from Thursday. Bridge: “One example for the rest of the talk, a statistical bulletin.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rendered" class="slide level2" data-kicker="Every number computed" data-auto-animate="true" data-auto-animate-id="result">
 <h2 data-id="quarto-animate-title">Quarto renders text and R code into this bulletin</h2>
-<span class="timing-bar-data" style="display:none" data-title="X1 · Every number computed" data-section="true" data-duration="10s"></span>
-<div class="shots-v" data-id="result-shots">
+<span class="timing-bar-data" style="display:none" data-duration="10s"></span>
+<div class="shots-v">
 <p><img data-src="images/bulletin/html-key-figure.png" class="shot" alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier." width="560"></p>
-<p><img data-src="images/bulletin/html-trend.png" class="shot" alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million." height="370"></p>
+<p><img data-src="images/bulletin/html-trend.png" class="shot" alt="Figure 1 of the HTML bulletin, titled 'August 2026 set a new record'. Line chart of monthly nights in the EU, the 2026 line above the 2022-2025 range, August labelled 514.7 million." height="370"></p>
 </div>
 <aside class="notes">
-<p>First time the name is said. Quarto: your text and your R code in one file, rendered to this page.</p>
+<p>Monthly bulletin, Eurostat tourism data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -398,14 +453,14 @@ a talk about publishing statistics</span></p>
 <span class="timing-bar-data" style="display:none" data-duration="20s"></span>
 <div class="columns">
 <div class="column" style="width:58%;">
-<div class="shots-v" data-id="result-shots">
+<div class="shots-v">
 <p><img data-src="images/bulletin/html-key-figure.png" class="shot" alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier." width="500"></p>
-<p><img data-src="images/bulletin/html-trend.png" class="shot" alt="Figure 1 of the HTML bulletin, August 2026 set a new record: line chart of monthly nights in the EU, the 2026 line above the range of 2022-2025, with August labelled 514.7 million." height="300"></p>
+<p><img data-src="images/bulletin/html-trend.png" class="shot" alt="Figure 1 of the HTML bulletin, titled 'August 2026 set a new record'. Line chart of monthly nights in the EU, the 2026 line above the 2022-2025 range, August labelled 514.7 million." height="300"></p>
 </div>
 </div><div class="column side-steps" style="width:42%;">
 <p><span class="k">bulletin.html, August 2026</span></p>
 <p><span class="fragment">Key figure: 514.7 million nights</span></p>
-<p><span class="fragment">Chart and caption: from the same R code</span></p>
+<p><span class="fragment">Chart and caption come from the same R code</span></p>
 <p><span class="fragment">Nobody typed 514.7</span></p>
 </div></div>
 <aside class="notes">
@@ -424,20 +479,26 @@ a talk about publishing statistics</span></p>
 </section>
 <section id="r-code" class="slide level2 magic-move tall-code" data-kicker="Every number computed">
 <h2>The R code you already have</h2>
-<span class="timing-bar-data" style="display:none" data-duration="25s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="15s"></span>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eurostat)</span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span>
-<span id="cb1-7"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
-<span id="cb1-8"><a href="" aria-hidden="true" tabindex="-1"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
-<span id="cb1-9"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span class="chart-cap">Shortened for the slide. Full source: the example repository, link on the last slide.</span></p>
+<span id="cb1-4"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb1-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb1-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb1-7"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb1-8"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb1-9"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb1-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">c_resid =</span> <span class="st">"TOTAL"</span></span>
+<span id="cb1-11"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-12"><a href="" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
+<span id="cb1-14"><a href="" aria-hidden="true" tabindex="-1"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
+<span id="cb1-15"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="chart-cap">Shortened for the slide. Full source in <a href="https://github.com/cderv/uros2026-quarto-example">cderv/uros2026-quarto-example</a>.</span></p>
 <aside class="notes">
-<p>Eurostat data, latest month, one chart. Everything that works in R works here: packages, charts, tables, models. Nothing to rewrite.</p>
+<p>Eurostat data, latest month, one chart. Your R code and packages stay as they are.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -453,24 +514,30 @@ a talk about publishing statistics</span></p>
 <section id="cells-text" class="slide level2 magic-move tall-code" data-kicker="Every number computed">
 <h2>Put it in code cells, write the text around them</h2>
 <span class="timing-bar-data" style="display:none" data-duration="25s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eurostat)</span>
-<span id="cb2-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-4"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb2-5"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb2-6"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span>
-<span id="cb2-7"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
-<span id="cb2-8"><a href="" aria-hidden="true" tabindex="-1"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
-<span id="cb2-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-10"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="" aria-hidden="true" tabindex="-1"></a>Nights spent in tourist accommodation, EU, by month:</span>
-<span id="cb2-12"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
-<span id="cb2-15"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span class="chart-cap">A .qmd file: plain text. R code in code cells, your text in Markdown between them.</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-code-line-numbers="1,15,17,19,21"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="" aria-label="1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a><span class="fu">library</span>(eurostat)</span>
+<span id="cb2-3"><a href="" aria-label="3"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-4"><a href="" aria-label="4"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb2-5"><a href="" aria-label="5"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb2-6"><a href="" aria-label="6"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb2-7"><a href="" aria-label="7"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb2-8"><a href="" aria-label="8"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb2-9"><a href="" aria-label="9"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb2-10"><a href="" aria-label="10"></a>    <span class="at">c_resid =</span> <span class="st">"TOTAL"</span></span>
+<span id="cb2-11"><a href="" aria-label="11"></a>  )</span>
+<span id="cb2-12"><a href="" aria-label="12"></a>)</span>
+<span id="cb2-13"><a href="" aria-label="13"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
+<span id="cb2-14"><a href="" aria-label="14"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
+<span id="cb2-15"><a href="" aria-label="15"></a><span class="in">```</span></span>
+<span id="cb2-16"><a href="" aria-label="16"></a></span>
+<span id="cb2-17"><a href="" aria-label="17"></a>Nights spent in tourist accommodation, EU, by month:</span>
+<span id="cb2-18"><a href="" aria-label="18"></a></span>
+<span id="cb2-19"><a href="" aria-label="19"></a><span class="in">```{r}</span></span>
+<span id="cb2-20"><a href="" aria-label="20"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb2-21"><a href="" aria-label="21"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="chart-cap">A .qmd file is plain text. R code in code cells, your text in Markdown between them.</span></p>
 <aside class="notes">
-<p>One .qmd file: code cells, text between them. The comment and the method note live next to the code that makes the numbers.</p>
+<p>The comment and the method note live next to the code that makes the numbers.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -486,26 +553,32 @@ a talk about publishing statistics</span></p>
 <section id="options" class="slide level2 magic-move tall-code" data-kicker="Every number computed">
 <h2>Tell Quarto what each cell is</h2>
 <span class="timing-bar-data" style="display:none" data-duration="20s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eurostat)</span>
-<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb3-7"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span>
-<span id="cb3-8"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
-<span id="cb3-9"><a href="" aria-hidden="true" tabindex="-1"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
-<span id="cb3-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-11"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="" aria-hidden="true" tabindex="-1"></a>Nights spent in tourist accommodation, EU, by month:</span>
-<span id="cb3-13"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb3-15"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-trend</span></span>
-<span id="cb3-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Nights spent at tourist accommodation, EU"</span></span>
-<span id="cb3-17"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
-<span id="cb3-18"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-code-line-numbers="2,21,22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="" aria-label="1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a><span class="fu">library</span>(eurostat)</span>
+<span id="cb3-4"><a href="" aria-label="4"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-5"><a href="" aria-label="5"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb3-6"><a href="" aria-label="6"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb3-7"><a href="" aria-label="7"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb3-8"><a href="" aria-label="8"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb3-9"><a href="" aria-label="9"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb3-10"><a href="" aria-label="10"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb3-11"><a href="" aria-label="11"></a>    <span class="at">c_resid =</span> <span class="st">"TOTAL"</span></span>
+<span id="cb3-12"><a href="" aria-label="12"></a>  )</span>
+<span id="cb3-13"><a href="" aria-label="13"></a>)</span>
+<span id="cb3-14"><a href="" aria-label="14"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
+<span id="cb3-15"><a href="" aria-label="15"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
+<span id="cb3-16"><a href="" aria-label="16"></a><span class="in">```</span></span>
+<span id="cb3-17"><a href="" aria-label="17"></a></span>
+<span id="cb3-18"><a href="" aria-label="18"></a>Nights spent in tourist accommodation, EU, by month:</span>
+<span id="cb3-19"><a href="" aria-label="19"></a></span>
+<span id="cb3-20"><a href="" aria-label="20"></a><span class="in">```{r}</span></span>
+<span id="cb3-21"><a href="" aria-label="21"></a><span class="co">#| label: fig-trend</span></span>
+<span id="cb3-22"><a href="" aria-label="22"></a><span class="co">#| fig-cap: "Nights spent at tourist accommodation, EU"</span></span>
+<span id="cb3-23"><a href="" aria-label="23"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb3-24"><a href="" aria-label="24"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p><code>#|</code> lines are options for Quarto: hide the code; name the chart and caption it (the “Figure 1” you saw).</p>
+<p><code>#|</code> lines are options for Quarto. Hide the code, name and caption the chart (the “Figure 1” you saw).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -519,51 +592,34 @@ a talk about publishing statistics</span></p>
       }</style></aside>
 </section>
 <section id="inline" class="slide level2 magic-move tall-code" data-kicker="Every number computed">
-<h2>The number in the sentence: computed</h2>
+<h2>Write R code inside the sentence</h2>
 <span class="timing-bar-data" style="display:none" data-duration="25s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eurostat)</span>
-<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb4-7"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span>
-<span id="cb4-8"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
-<span id="cb4-9"><a href="" aria-hidden="true" tabindex="-1"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
-<span id="cb4-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-11"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="" aria-hidden="true" tabindex="-1"></a>The EU recorded <span class="in">`r round(latest$values / 1e6, 1)`</span> million nights.</span>
-<span id="cb4-13"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-15"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-trend</span></span>
-<span id="cb4-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Nights spent at tourist accommodation, EU"</span></span>
-<span id="cb4-17"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
-<span id="cb4-18"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span class="line-box fragment absolute" style=""></span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-code-line-numbers="18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="" aria-label="1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="" aria-label="2"></a><span class="co">#| echo: false</span></span>
+<span id="cb4-3"><a href="" aria-label="3"></a><span class="fu">library</span>(eurostat)</span>
+<span id="cb4-4"><a href="" aria-label="4"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-5"><a href="" aria-label="5"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb4-6"><a href="" aria-label="6"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb4-7"><a href="" aria-label="7"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb4-8"><a href="" aria-label="8"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb4-9"><a href="" aria-label="9"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb4-10"><a href="" aria-label="10"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb4-11"><a href="" aria-label="11"></a>    <span class="at">c_resid =</span> <span class="st">"TOTAL"</span></span>
+<span id="cb4-12"><a href="" aria-label="12"></a>  )</span>
+<span id="cb4-13"><a href="" aria-label="13"></a>)</span>
+<span id="cb4-14"><a href="" aria-label="14"></a>nights <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(nights)</span>
+<span id="cb4-15"><a href="" aria-label="15"></a>latest <span class="ot">&lt;-</span> nights[<span class="fu">which.max</span>(nights<span class="sc">$</span>time), ]</span>
+<span id="cb4-16"><a href="" aria-label="16"></a><span class="in">```</span></span>
+<span id="cb4-17"><a href="" aria-label="17"></a></span>
+<span id="cb4-18"><a href="" aria-label="18"></a>The EU recorded <span class="in">`{r} round(latest$values / 1e6, 1)`</span> million nights.</span>
+<span id="cb4-19"><a href="" aria-label="19"></a></span>
+<span id="cb4-20"><a href="" aria-label="20"></a><span class="in">```{r}</span></span>
+<span id="cb4-21"><a href="" aria-label="21"></a><span class="co">#| label: fig-trend</span></span>
+<span id="cb4-22"><a href="" aria-label="22"></a><span class="co">#| fig-cap: "Nights spent at tourist accommodation, EU"</span></span>
+<span id="cb4-23"><a href="" aria-label="23"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
+<span id="cb4-24"><a href="" aria-label="24"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>(click) Inline code: R inside the sentence. Nobody types 514.7; R computes it at render. Change the data, the sentence follows.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-<!-- ============================ X2 (1:45) ============================ -->
-</section>
-<section id="formats" class="slide level2 magic-move timing-section" data-kicker="One source, every format">
-<h2>One header, every format</h2>
-<span class="timing-bar-data" style="display:none" data-title="X2 · One source" data-section="true" data-duration="10s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb5-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tourism in the EU"</span></span>
-<span id="cb5-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
-<span id="cb5-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<aside class="notes">
-<p>Formats: one line each, in the header of the same file. HTML for the web first.</p>
+<p>R computes 514.7 at render. The sentence updates with new data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -576,17 +632,52 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="formats-pdf" class="slide level2 magic-move" data-kicker="One source, every format">
-<h2>One header, every format</h2>
+<section id="render-cli" class="slide level2" data-kicker="Every number computed">
+<h2>Quarto is a command line tool (CLI)</h2>
 <span class="timing-bar-data" style="display:none" data-duration="15s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tourism in the EU"</span></span>
-<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb6-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb6-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co">   # PDF, no LaTeX to install</span></span>
-<span id="cb6-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render bulletin.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p><span class="lead">Or one button in <img data-src="images/ide/positron-logo.png" class="tool-logo" alt="Positron logo"> Positron, <img data-src="images/ide/rstudio-logo.png" class="tool-logo" alt="RStudio logo"> RStudio, <img data-src="images/ide/vscode-logo.png" class="tool-logo" alt="VS Code logo"> VS Code</span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<!-- screenshots and frame positions: just ide-captures (scripts/capture-ide.sh) -->
+<div class="hl-shot">
+<p><img data-src="images/ide/positron-render-crop.png" class="shot" alt="Top of the Positron editor with bulletin.qmd open: the tab, the toolbar with the Preview button, and the first lines of the YAML header."></p>
+<p><span class="hl-box" style="left: 0.7%; top: 27.7%; width: 25.7%; height: 19.0%;"></span></p>
+</div>
+<p><span class="shot-label">Positron</span></p>
+</div><div class="column" style="width:50%;">
+<div class="hl-shot">
+<p><img data-src="images/ide/rstudio-render-crop.png" class="shot" alt="Top of the RStudio editor with bulletin.qmd open: the tab, the toolbar with the Render button, and the first lines of the YAML header."></p>
+<p><span class="hl-box" style="left: 63.1%; top: 18.7%; width: 15.7%; height: 16.5%;"></span></p>
+</div>
+<p><span class="shot-label">RStudio</span></p>
+</div></div>
+</div>
 <aside class="notes">
-<p>Typst: makes the PDF inside Quarto, nothing to install, nothing to learn.</p>
+<p>With one command, R computes the numbers and Quarto writes the page. Free to install. (click) Comes with Positron (Preview button) and RStudio (Render button). In VS Code, install one extension. Bridge: same command, more formats.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<!-- ============================ X2 (1:20) ============================ -->
+</section>
+<section id="formats" class="slide level2 magic-move timing-section" data-kicker="Same source, multiple formats">
+<h2>Output formats at the top of the file</h2>
+<span class="timing-bar-data" style="display:none" data-duration="10s" data-section="true" data-title="X2 · Same source, multiple formats"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="" aria-label="1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="" aria-label="2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Tourism in the EU</span></span>
+<span id="cb6-3"><a href="" aria-label="3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb6-4"><a href="" aria-label="4"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<aside class="notes">
+<p>Same file. This block at the top is the YAML header. HTML first.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -599,19 +690,17 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="formats-docx" class="slide level2 magic-move" data-kicker="One source, every format">
-<h2>One header, every format</h2>
+<section id="formats-pdf" class="slide level2 magic-move" data-kicker="Same source, multiple formats">
+<h2>Output formats at the top of the file</h2>
 <span class="timing-bar-data" style="display:none" data-duration="15s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb7-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Tourism in the EU"</span></span>
-<span id="cb7-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb7-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb7-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co">   # PDF, no LaTeX to install</span></span>
-<span id="cb7-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb7-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>quarto render bulletin.qmd</code> → <code>bulletin.html</code> · <code>bulletin.pdf</code> · <code>bulletin.docx</code></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-code-line-numbers="5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="" aria-label="1"></a><span class="pp">---</span></span>
+<span id="cb7-2"><a href="" aria-label="2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Tourism in the EU</span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb7-5"><a href="" aria-label="5"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # PDF, no LaTeX to install</span></span>
+<span id="cb7-6"><a href="" aria-label="6"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>Word, for the colleague who asks for Word. One command, three files.</p>
+<p>Typst comes with Quarto and makes the PDF. No LaTeX.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -624,7 +713,36 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="html" class="slide level2" data-kicker="One source, every format">
+<section id="formats-docx" class="slide level2 magic-move" data-kicker="Same source, multiple formats">
+<h2>Output formats at the top of the file</h2>
+<span class="timing-bar-data" style="display:none" data-duration="15s"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-code-line-numbers="6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="" aria-label="1"></a><span class="pp">---</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Tourism in the EU</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb8-4"><a href="" aria-label="4"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # PDF, no LaTeX to install</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb8-7"><a href="" aria-label="7"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>The same command…</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render bulletin.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>… now writes <code>bulletin.html</code>, <code>bulletin.pdf</code> and <code>bulletin.docx</code></p>
+</div>
+<aside class="notes">
+<p>Word, for the colleague who asks for Word. (click) Same command as on the CLI slide. Bridge: the web page, then the PDF.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="html" class="slide level2" data-kicker="Same source, multiple formats">
 <h2>For the web</h2>
 <span class="timing-bar-data" style="display:none" data-duration="20s"></span>
 <div class="quarto-figure quarto-figure-center">
@@ -633,7 +751,7 @@ a talk about publishing statistics</span></p>
 </figure>
 </div>
 <aside class="notes">
-<p>Web: readable on a phone, chart and table inside.</p>
+<p>The web page is readable on a phone, chart and table inside.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -646,14 +764,14 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="pdf" class="slide level2" data-kicker="One source, every format">
+<section id="pdf" class="slide level2" data-kicker="Same source, multiple formats">
 <h2>For print</h2>
 <span class="timing-bar-data" style="display:none" data-duration="20s"></span>
 <!-- the two PDF pages scroll slowly while the slide is shown; the PDF export shows them side by side -->
 <div class="page-scroll print-hide no-overflow-check">
 <div class="pages">
 <p><img data-src="images/bulletin/pdf-p1.png" alt="Page 1 of the PDF bulletin: the logo, the title, the contents, the key figure 514.7 million in a box, and Figure 1, the line chart of nights in 2026 against the 2022-2025 range."></p>
-<p><img data-src="images/bulletin/pdf-p2.png" alt="Page 2 of the PDF bulletin: Table 1 of nights by country, the map of the yearly change, and the methods section."></p>
+<p><img data-src="images/bulletin/pdf-p2.png" alt="Page 2 of the PDF bulletin: Table 1 of nights by country and the map of the yearly change."></p>
 </div>
 </div>
 <div class="print-only">
@@ -685,32 +803,39 @@ a talk about publishing statistics</span></p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- ============================ X3 (1:45) ============================ -->
+<!-- ============================ X3 (1:50) ============================ -->
 </section>
 <section id="table" class="slide level2 timing-section" data-kicker="Ready to publish">
-<h2>Tables ready to publish</h2>
-<span class="timing-bar-data" style="display:none" data-title="X3 · Ready to publish" data-section="true" data-duration="30s"></span>
+<h2>A gt table in HTML and PDF</h2>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="X3 · Ready to publish"></span>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb8-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-countries</span></span>
-<span id="cb8-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: &gt;</span></span>
-<span id="cb8-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Nights spent at tourist accommodation</span></span>
-<span id="cb8-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#|   by country, millions</span></span>
-<span id="cb8-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tab) <span class="sc">|&gt;</span></span>
-<span id="cb8-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(before, now),</span>
-<span id="cb8-8"><a href="" aria-hidden="true" tabindex="-1"></a>             <span class="at">scale_by =</span> <span class="fl">1e-6</span>, <span class="at">decimals =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
-<span id="cb8-9"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> change, <span class="at">decimals =</span> <span class="dv">1</span>,</span>
-<span id="cb8-10"><a href="" aria-hidden="true" tabindex="-1"></a>             <span class="at">force_sign =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-11"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-countries</span></span>
+<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: &gt;</span></span>
+<span id="cb10-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#|   Nights spent at tourist accommodation</span></span>
+<span id="cb10-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">#|   by country, millions</span></span>
+<span id="cb10-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tab) <span class="sc">|&gt;</span></span>
+<span id="cb10-7"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb10-8"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(before, now),</span>
+<span id="cb10-9"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">scale_by =</span> <span class="dv">1</span>e<span class="sc">-</span><span class="dv">6</span>,</span>
+<span id="cb10-10"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">1</span></span>
+<span id="cb10-11"><a href="" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb10-12"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb10-13"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> change,</span>
+<span id="cb10-14"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">1</span>,</span>
+<span id="cb10-15"><a href="" aria-hidden="true" tabindex="-1"></a>    <span class="at">force_sign =</span> <span class="cn">TRUE</span></span>
+<span id="cb10-16"><a href="" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb10-17"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="chart-cap">Shortened for the slide. Colors and the bold EU row are in the full source.</span></p>
 </div><div class="column" style="width:50%;">
 <div class="r-stack">
 <div class="fragment fade-out print-hide" data-fragment-index="1">
-<p><img data-src="images/bulletin/html-table.png" class="shot" alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy rules, the change cells coloured from gold for rises to pink for falls." width="600"></p>
+<p><img data-src="images/bulletin/html-table.png" class="shot" alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy lines, the change cells colored from gold for rises to pink for falls." width="600"></p>
 <p><span class="shot-label">bulletin.html</span></p>
 </div>
 <div class="fragment" data-fragment-index="1">
-<p><img data-src="images/bulletin/pdf-table.png" class="shot" alt="The same Table 1 in the PDF bulletin, with the same numbers, rules and colours." width="600"></p>
+<p><img data-src="images/bulletin/pdf-table.png" class="shot" alt="The same Table 1 in the PDF bulletin, with the same numbers, lines and colors." width="600"></p>
 <p><span class="shot-label">bulletin.pdf</span></p>
 </div>
 </div>
@@ -730,14 +855,16 @@ a talk about publishing statistics</span></p>
       }</style></aside>
 </section>
 <section id="crossref" class="slide level2" data-kicker="Ready to publish">
-<h2>Cross-references: numbered for you</h2>
+<h2>Cross-references are numbered for you</h2>
 <span class="timing-bar-data" style="display:none" data-duration="25s"></span>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown wrap-code code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a>No month on record had more nights than August 2026. @fig-trend compares this year with the four previous years; @sec-countries looks at each country and @sec-methods explains the figures.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown wrap-code code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a>No month on record had more nights than August 2026. @fig-trend compares</span>
+<span id="cb11-2"><a href="" aria-hidden="true" tabindex="-1"></a>this year with the four previous years; @sec-countries looks at each</span>
+<span id="cb11-3"><a href="" aria-hidden="true" tabindex="-1"></a>country and @sec-methods explains the figures.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 <!-- frames on the @ references, positions measured on the rendered slide -->
-<img data-src="images/bulletin/html-crossref.png" class="shot quarto-figure quarto-figure-center r-stretch" alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures." width="1100"><p><span class="xr-box absolute fragment" data-fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 447px; top: 131px; width: 220px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 1052px; top: 131px; width: 191px; height: 40px;"></span></p>
+<img data-src="images/bulletin/html-crossref.png" class="shot quarto-figure quarto-figure-center r-stretch" alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures." width="1100"><p><span class="xr-box absolute fragment" data-fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 594px; top: 134px; width: 221px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 180px; top: 171px; width: 191px; height: 40px;"></span></p>
 <aside class="notes">
-<p>(click) The references. Write @fig-trend, read “Figure 1”, a link in HTML; @sec-countries, “Section 2”. Add a figure, every number follows.</p>
+<p>(click) The references. @fig-trend becomes “Figure 1”, a link in HTML. @sec-countries becomes “Section 2”. When you add a figure, Quarto renumbers.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -751,7 +878,7 @@ a talk about publishing statistics</span></p>
       }</style></aside>
 </section>
 <section id="brand" class="slide level2" data-kicker="Ready to publish">
-<h2>Your institute’s look: one <code>_brand.yml</code> for every format</h2>
+<h2>Your institute’s look in <code>_brand.yml</code></h2>
 <span class="timing-bar-data" style="display:none" data-duration="25s"></span>
 <div class="columns">
 <div class="column" style="width:45%;">
@@ -759,25 +886,26 @@ a talk about publishing statistics</span></p>
 <div class="code-with-filename-file">
 <pre><strong>_brand.yml</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="_brand.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">meta</span><span class="kw">:</span></span>
-<span id="cb10-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Northbridge Statistical Office</span></span>
-<span id="cb10-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">logo</span><span class="kw">:</span></span>
-<span id="cb10-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">images</span><span class="kw">:</span></span>
-<span id="cb10-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">mark</span><span class="kw">:</span><span class="at"> brand/nso-mark.svg</span></span>
-<span id="cb10-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
-<span id="cb10-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> </span><span class="st">"#7a1f3d"</span></span>
-<span id="cb10-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
-<span id="cb10-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Source Sans 3</span></span>
-<span id="cb10-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> Source Serif 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="_brand.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">meta</span><span class="kw">:</span></span>
+<span id="cb12-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Northbridge Statistical Office</span></span>
+<span id="cb12-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">logo</span><span class="kw">:</span></span>
+<span id="cb12-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">images</span><span class="kw">:</span></span>
+<span id="cb12-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">mark</span><span class="kw">:</span><span class="at"> brand/nso-mark.svg</span></span>
+<span id="cb12-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
+<span id="cb12-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> </span><span class="st">"#7a1f3d"</span></span>
+<span id="cb12-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
+<span id="cb12-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> Source Sans 3</span></span>
+<span id="cb12-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span><span class="at"> Source Serif 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p><span class="chart-cap"><img data-src="images/brand/brand-yml-icon.svg" class="tool-logo" alt="brand.yml logo"> <a href="https://posit-dev.github.io/brand-yml/">brand.yml</a> · <a href="https://quarto.org/docs/authoring/brand.html">Brand in Quarto</a> · <a href="https://quarto.org/docs/authoring/brand.html#logo">Logos</a></span></p>
 </div><div class="column" style="width:55%;">
 <div class="shot-pair">
-<p><img data-src="images/bulletin/html-page.png" class="shot pair-back" alt="The HTML bulletin in the institute's colours: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."></p>
-<p><img data-src="images/bulletin/pdf-p1.png" class="shot pair-front" alt="Page 1 of the PDF bulletin laid over it, with the same logo, colours and fonts."></p>
+<p><img data-src="images/bulletin/html-page.png" class="shot pair-back" alt="The HTML bulletin in the institute's colors: a stone banner, the burgundy logo and title in Source Serif 4, body text in Source Sans 3."></p>
+<p><img data-src="images/bulletin/pdf-p1.png" class="shot pair-front" alt="Page 1 of the PDF bulletin laid over it, with the same logo, colors and fonts."></p>
 </div>
 </div></div>
 <aside class="notes">
-<p>Colors, logo, fonts: written once in _brand.yml; HTML, PDF and Word read it. A fictional institute, real Eurostat data.</p>
+<p>Colors, logo and fonts are set once, in _brand.yml. HTML and PDF read it. Word reads it through a reference document. The page layout adds a few small files. A fictional institute, real Eurostat data.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -791,22 +919,19 @@ a talk about publishing statistics</span></p>
       }</style></aside>
 </section>
 <section id="pdf-ua" class="slide level2" data-kicker="Ready to publish">
-<h2>Accessible PDF, checked</h2>
-<span class="timing-bar-data" style="display:none" data-duration="25s"></span>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>_quarto.yml</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="_quarto.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb11-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span></span>
-<span id="cb11-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pdf-standard</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">a-2b</span><span class="kw">,</span><span class="at"> ua</span><span class="dv">-1</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto render bulletin.qmd</span>
-<span id="cb12-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[verapdf]:</span> Validating bulletin.pdf against PDF/2B... PASSED</span>
-<span id="cb12-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[verapdf]:</span> Validating bulletin.pdf against PDF/UA1... PASSED</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><span class="lead">PDF/A: for the archive. PDF/UA: tagged, for screen readers. veraPDF: the checker, run by Quarto.</span></p>
+<h2>Quarto checks your outputs for accessibility</h2>
+<span class="timing-bar-data" style="display:none" data-duration="30s"></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb13-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">axe</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # accessibility check in the browser</span></span>
+<span id="cb13-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span></span>
+<span id="cb13-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">pdf-standard</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">a-2b</span><span class="kw">,</span><span class="at"> ua-1</span><span class="kw">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto render bulletin.qmd</span>
+<span id="cb14-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[verapdf]:</span> Validating bulletin.pdf against PDF/2B...PASSED</span>
+<span id="cb14-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[verapdf]:</span> Validating bulletin.pdf against PDF/UA1...PASSED</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="lead">PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto checks both with <a href="https://verapdf.org/">veraPDF</a>, and the web page with <a href="https://quarto.org/docs/output-formats/html-accessibility.html">axe-core</a>.</span></p>
 <aside class="notes">
-<p>One line asks for both standards; veraPDF installed, Quarto checks them at every render. PDF/A keeps the file readable in 20 years; PDF/UA is a tagged PDF a screen reader can follow.</p>
+<p>One line asks for both PDF standards. With veraPDF installed (<code>quarto install verapdf</code>), Quarto checks the PDF at each render. veraPDF checks that the tags are there; you still write the alt text. axe checks the web page when it opens; the bulletin passes.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -820,28 +945,22 @@ a talk about publishing statistics</span></p>
       }</style></aside>
 <!-- ============================ Y (1:30) ============================ -->
 </section>
-<section id="again" class="slide level2 timing-section" data-kicker="Fixed once">
-<h2>Thursday, 17:50. Again.</h2>
-<span class="timing-bar-data" style="display:none" data-title="Y · Fix it once" data-section="true" data-duration="30s"></span>
-<p><span class="lead">The headline number is wrong.</span></p>
-<div class="magic-move print-hide">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb13-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb13-3"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"FOR"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb14-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb14-3"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<!-- PDF export: the magic-move above is captured mid-animation, show its final state instead -->
-<div class="print-only">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-hidden="true" tabindex="-1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(<span class="st">"tour_occ_nim"</span>,</span>
-<span id="cb15-2"><a href="" aria-hidden="true" tabindex="-1"></a>  <span class="at">filters =</span> <span class="fu">list</span>(<span class="at">geo =</span> <span class="st">"EU27_2020"</span>, <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
-<span id="cb15-3"><a href="" aria-hidden="true" tabindex="-1"></a>                 <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>, <span class="at">c_resid =</span> <span class="st">"TOTAL"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><span class="word-box absolute" style=""></span></p>
-<p><span class="lead fragment">Country of residence: <code>FOR</code> = guests from abroad only → <code>TOTAL</code> = all guests</span></p>
+<section id="again" class="slide level2 magic-move timing-section" data-kicker="Fix it once">
+<h2>Thursday, 17:50, again</h2>
+<span class="timing-bar-data" style="display:none" data-duration="20s" data-section="true" data-title="Y · Fix it once"></span>
+<p><span class="lead">The key figure is wrong.</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-label="1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb15-2"><a href="" aria-label="2"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb15-3"><a href="" aria-label="3"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb15-4"><a href="" aria-label="4"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb15-5"><a href="" aria-label="5"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb15-6"><a href="" aria-label="6"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb15-7"><a href="" aria-label="7"></a>    <span class="at">c_resid =</span> <span class="st">"FOR"</span></span>
+<span id="cb15-8"><a href="" aria-label="8"></a>  )</span>
+<span id="cb15-9"><a href="" aria-label="9"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="lead fragment">Country of residence: <code>FOR</code> = guests from abroad only</span></p>
 <aside class="notes">
-<p>Back to Thursday, ten to six. Wrong again. Cause: someone kept the guests from abroad only. (click) One word in the R code.</p>
+<p>Back to Thursday, ten to six. Wrong again. (click) Cause: someone kept the guests from abroad only.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -854,26 +973,60 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="one-render" class="slide level2" data-kicker="Fixed once">
+<section id="again-fix" class="slide level2 magic-move" data-kicker="Fix it once">
+<h2>Thursday, 17:50, again</h2>
+<span class="timing-bar-data" style="display:none" data-duration="10s"></span>
+<p><span class="lead">The key figure is wrong.</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="" aria-label="1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
+<span id="cb16-2"><a href="" aria-label="2"></a>  <span class="st">"tour_occ_nim"</span>,</span>
+<span id="cb16-3"><a href="" aria-label="3"></a>  <span class="at">filters =</span> <span class="fu">list</span>(</span>
+<span id="cb16-4"><a href="" aria-label="4"></a>    <span class="at">geo =</span> <span class="st">"EU27_2020"</span>,</span>
+<span id="cb16-5"><a href="" aria-label="5"></a>    <span class="at">unit =</span> <span class="st">"NR"</span>,</span>
+<span id="cb16-6"><a href="" aria-label="6"></a>    <span class="at">nace_r2 =</span> <span class="st">"I551-I553"</span>,</span>
+<span id="cb16-7"><a href="" aria-label="7"></a>    <span class="at">c_resid =</span> <span class="st">"TOTAL"</span></span>
+<span id="cb16-8"><a href="" aria-label="8"></a>  )</span>
+<span id="cb16-9"><a href="" aria-label="9"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="lead">Country of residence: <code>FOR</code> = guests from abroad only <span class="fragment">→ <code>TOTAL</code> = all guests</span></span></p>
+<aside class="notes">
+<p>One word in the R code. (click) TOTAL keeps all guests.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="one-render" class="slide level2" data-kicker="Fix it once">
 <h2>One render</h2>
 <span class="timing-bar-data" style="display:none" data-duration="35s"></span>
 <p><code>quarto render bulletin.qmd</code></p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:33%;">
 <div class="hl-shot">
-<p><img data-src="images/bulletin/html-key-figure.png" class="shot" alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier." height="180"></p>
+<p><img data-src="images/bulletin/html-key-figure.png" class="shot" style="width:100.0%" alt="Key figure box of the HTML bulletin: 514.7 million nights spent at tourist accommodation in the EU in August 2026, +0.6% compared with a year earlier."></p>
 <p><span class="hl-box fragment" data-fragment-index="1" style="left: 3.5%; top: 9%; width: 42%; height: 28%;"></span></p>
 </div>
 <p><span class="shot-label">bulletin.html</span></p>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:33%;">
 <div class="hl-shot">
-<p><img data-src="images/bulletin/pdf-key-figure.png" class="shot" alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier." height="180"></p>
+<p><img data-src="images/bulletin/pdf-key-figure.png" class="shot" style="width:100.0%" alt="The same key figure box in the PDF bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."></p>
 <p><span class="hl-box fragment" data-fragment-index="1" style="left: 4%; top: 13%; width: 46%; height: 30%;"></span></p>
 </div>
 <p><span class="shot-label">bulletin.pdf</span></p>
+</div><div class="column" style="width:33%;">
+<div class="hl-shot">
+<p><img data-src="images/bulletin/docx-key-figure.png" class="shot" style="width:100.0%" alt="The same key figure box in the Word bulletin: 514.7 million nights in August 2026, +0.6% compared with a year earlier."></p>
+<p><span class="hl-box fragment" data-fragment-index="1" style="left: 3%; top: 15%; width: 36%; height: 26%;"></span></p>
+</div>
+<p><span class="shot-label">bulletin.docx</span></p>
 </div></div>
 <aside class="notes">
-<p>One render. (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart, caption and the Word file come from the same render.</p>
+<p>(click) 514.7 in the HTML, the PDF and the Word file. Table, chart and caption come from the same render.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -886,12 +1039,12 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="none" class="slide level2" data-kicker="Fixed once">
+<section id="none" class="slide level2" data-kicker="Fix it once">
 <h2>Thursday, 17:51</h2>
 <span class="timing-bar-data" style="display:none" data-duration="25s"></span>
 <div class="cards-fan">
 <div class="card is-right is-code" data-id="card-src">
-<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">One source</span> <span class="num wrong">245.0</span><span class="num right">514.7</span></p>
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">One source file</span> <span class="num wrong">245.0</span><span class="num right">514.7</span></p>
 </div>
 <div class="cards">
 <div class="card is-right" data-id="card-word">
@@ -911,9 +1064,9 @@ a talk about publishing statistics</span></p>
 </div>
 </div>
 </div>
-<p><span class="payoff-line">Which one did you forget? <span class="payoff fragment">None.</span></span></p>
+<p><span class="payoff-line">All six show <span class="payoff fragment">514.7</span></span></p>
 <aside class="notes">
-<p>Thursday, 17:51. Which one did you forget? (Pause.) None. The number people read is the number your code produced.</p>
+<p>(click) 514.7 on all six. Press release: one more file that reads the same R code (not in the example).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -925,55 +1078,56 @@ a talk about publishing statistics</span></p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<!-- ============================ Z (2:30) ============================ -->
+<!-- ============================ Z (1:50) ============================ -->
 </section>
-<section id="products" class="slide level2 timing-section" data-kicker="Already in official statistics">
+<section id="products" class="slide level2 timing-section" data-kicker="In official statistics">
 <h2>Already published with Quarto</h2>
-<span class="timing-bar-data" style="display:none" data-title="Z · And next" data-section="true" data-duration="45s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="45s" data-section="true" data-title="Z · In official statistics, and next"></span>
 <p><span class="gallery-count">France · Norway · United Kingdom · OECD</span></p>
 <!-- Screenshots: just gallery (scripts/capture-gallery.mjs), which also checks each page is made with Quarto -->
 <div class="r-stack">
 <div class="gallery-live fragment fade-out" data-fragment-index="1">
-<div id="easycarousel-1" class="easycarousel" role="region" aria-roledescription="carousel" data-options="{&quot;align&quot;:&quot;center&quot;,&quot;arrows&quot;:false,&quot;autoplay&quot;:5000,&quot;breakpoints&quot;:false,&quot;dots&quot;:false,&quot;dragFree&quot;:false,&quot;effect&quot;:&quot;scale&quot;,&quot;fade&quot;:false,&quot;fragment&quot;:false,&quot;loop&quot;:false,&quot;slides&quot;:1,&quot;thumbs&quot;:false,&quot;vertical&quot;:false}" style="--ec-slides: 1; --ec-gap: 1rem; --ec-img-max-height: 390px;">
+<div id="easycarousel-1" class="easycarousel" role="region" aria-roledescription="carousel" data-options="{&quot;align&quot;:&quot;center&quot;,&quot;arrows&quot;:false,&quot;autoplay&quot;:2000,&quot;breakpoints&quot;:false,&quot;dots&quot;:false,&quot;dragFree&quot;:false,&quot;effect&quot;:false,&quot;fade&quot;:true,&quot;fragment&quot;:false,&quot;loop&quot;:true,&quot;slides&quot;:1,&quot;thumbs&quot;:false,&quot;vertical&quot;:false}" style="--ec-slides: 1; --ec-gap: 1rem; --ec-img-max-height: 390px;">
 <div class="easycarousel__viewport" tabindex="0">
 <div class="easycarousel__container">
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 6">
-<img data-src="images/gallery/01-insee-working-paper.png" alt="Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef">
-<div class="easycarousel__caption">Insee: working paper, HTML + PDF · inseefrlab.github.io/DT-tvcoef</div>
+<img data-src="images/gallery/01-insee-working-paper.png" alt="Insee: working paper, HTML + PDF">
+<div class="easycarousel__caption">Insee: working paper, HTML + PDF</div>
 </div>
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 6">
-<img data-src="images/gallery/02-agreste-dataviz.png" alt="Agreste (SSM Agriculture): dataviz catalogue · ssm-agriculture.github.io/site-DataViz">
-<div class="easycarousel__caption">Agreste (SSM Agriculture): dataviz catalogue · ssm-agriculture.github.io/site-DataViz</div>
+<img data-src="images/gallery/02-agreste-dataviz.png" alt="Agreste (SSM Agriculture): dataviz catalog">
+<div class="easycarousel__caption">Agreste (SSM Agriculture): dataviz catalog</div>
 </div>
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 6">
-<img data-src="images/gallery/03-ons-weekly-deaths.png" alt="ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer">
-<div class="easycarousel__caption">ONS: weekly deaths data explorer (prototype) · onsdigital.github.io/weekly_deaths_data_explorer</div>
+<img data-src="images/gallery/03-ons-weekly-deaths.png" alt="ONS: weekly deaths data explorer (prototype)">
+<div class="easycarousel__caption">ONS: weekly deaths data explorer (prototype)</div>
 </div>
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 6">
-<img data-src="images/gallery/04-nisra-childcare.png" alt="NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey">
-<div class="easycarousel__caption">NISRA: Childcare Survey 2024 results · nisra-explore.github.io/childcare-survey</div>
+<img data-src="images/gallery/04-nisra-childcare.png" alt="NISRA: Childcare Survey 2024 results (prototype)">
+<div class="easycarousel__caption">NISRA: Childcare Survey 2024 results (prototype)</div>
 </div>
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="5 of 6">
-<img data-src="images/gallery/05-ssb-documentation.png" alt="Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no">
-<div class="easycarousel__caption">Statistics Norway: documentation report with an ISBN · doc.ameld.ssb.no</div>
+<img data-src="images/gallery/05-ssb-documentation.png" alt="Statistics Norway: documentation report with an ISBN">
+<div class="easycarousel__caption">Statistics Norway: documentation report with an ISBN</div>
 </div>
 <div class="easycarousel__slide" role="group" aria-roledescription="slide" aria-label="6 of 6">
-<img data-src="images/gallery/06-oecd-regional-profiles.png" alt="OECD: Regional Outlook 2023 country profiles · oecd-cfe-eds.github.io/ro2023-country-pages">
-<div class="easycarousel__caption">OECD: Regional Outlook 2023 country profiles · oecd-cfe-eds.github.io/ro2023-country-pages</div>
+<img data-src="images/gallery/06-oecd-regional-profiles.png" alt="OECD: Regional Outlook 2023 country profiles">
+<div class="easycarousel__caption">OECD: Regional Outlook 2023 country profiles</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="gallery-grid fragment" data-fragment-index="1">
-<p><a href="https://inseefrlab.github.io/DT-tvcoef/"><img data-src="images/gallery/01-insee-working-paper.png" alt="Top of the page: Insee: working paper, HTML + PDF, made with Quarto"></a> <a href="https://ssm-agriculture.github.io/site-DataViz/"><img data-src="images/gallery/02-agreste-dataviz.png" alt="Top of the page: Agreste (SSM Agriculture): dataviz catalogue, made with Quarto"></a> <a href="https://onsdigital.github.io/weekly_deaths_data_explorer/"><img data-src="images/gallery/03-ons-weekly-deaths.png" alt="Top of the page: ONS: weekly deaths data explorer (prototype), made with Quarto"></a> <a href="https://nisra-explore.github.io/childcare-survey/"><img data-src="images/gallery/04-nisra-childcare.png" alt="Top of the page: NISRA: Childcare Survey 2024 results, made with Quarto"></a> <a href="https://doc.ameld.ssb.no/"><img data-src="images/gallery/05-ssb-documentation.png" alt="Top of the page: Statistics Norway: documentation report with an ISBN, made with Quarto"></a> <a href="https://oecd-cfe-eds.github.io/ro2023-country-pages/"><img data-src="images/gallery/06-oecd-regional-profiles.png" alt="Top of the page: OECD: Regional Outlook 2023 country profiles, made with Quarto"></a></p>
+<p><a href="https://inseefrlab.github.io/DT-tvcoef/"><img data-src="images/gallery/01-insee-working-paper.png" alt="Insee working paper, HTML and PDF."></a> <a href="https://ssm-agriculture.github.io/site-DataViz/"><img data-src="images/gallery/02-agreste-dataviz.png" alt="Agreste (SSM Agriculture) dataviz catalog."></a> <a href="https://onsdigital.github.io/weekly_deaths_data_explorer/"><img data-src="images/gallery/03-ons-weekly-deaths.png" alt="ONS weekly deaths data explorer (prototype)."></a> <a href="https://nisra-explore.github.io/childcare-survey/"><img data-src="images/gallery/04-nisra-childcare.png" alt="NISRA Childcare Survey 2024 results (prototype)."></a> <a href="https://doc.ameld.ssb.no/"><img data-src="images/gallery/05-ssb-documentation.png" alt="Statistics Norway documentation report, with an ISBN."></a> <a href="https://oecd-cfe-eds.github.io/ro2023-country-pages/"><img data-src="images/gallery/06-oecd-regional-profiles.png" alt="OECD Regional Outlook 2023 country profiles."></a></p>
+<p><span class="gallery-count">Insee, Agreste (France) · ONS, NISRA (United Kingdom, prototypes) · Statistics Norway · OECD</span></p>
 </div>
 </div>
 <div class="fragment" data-fragment-index="2">
 <p><span class="lead">These slides are Quarto too.</span></p>
 </div>
 <aside class="notes">
-<p>Already published with Quarto, in official statistics: Insee, Agreste, ONS, NISRA, Statistics Norway, OECD. Some of you are already in this picture: a map, not a ranking. (click: grid) (click) These slides are Quarto too.</p>
+<p>Back to my friends’ quote. Some of you made these. Examples, in no order. (click: grid) (click)</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -986,21 +1140,21 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="quarto-today" class="slide level2">
-<h2>From R Markdown to Quarto, and next</h2>
-<span class="timing-bar-data" style="display:none" data-duration="25s"></span>
+<section id="quarto-today" class="slide level2" data-kicker="And next">
+<h2>From R Markdown to Quarto 2</h2>
+<span class="timing-bar-data" style="display:none" data-duration="35s"></span>
 <div class="timeline">
 <div class="event fragment" data-label="2014">
 <p><strong>R Markdown</strong></p>
 <p>R code and text, to HTML, PDF, Word</p>
 </div>
 <div class="event fragment" data-label="2022">
-<p><strong>Quarto 1.0</strong></p>
-<p>Same idea, any language, more formats</p>
+<p><strong>Quarto</strong></p>
+<p>Same idea, more languages and formats</p>
 </div>
 <div class="event fragment" data-label="Today">
-<p><strong>Quarto</strong></p>
-<p>The bulletin, the gallery, these slides</p>
+<p><strong>Quarto 1</strong></p>
+<p>The version you install</p>
 </div>
 <div class="event fragment" data-label="In development">
 <p><strong>Quarto 2</strong></p>
@@ -1008,7 +1162,9 @@ a talk about publishing statistics</span></p>
 </div>
 </div>
 <aside class="notes">
-<p>Quarto 2, the next generation: Quarto rewritten in Rust, public on GitHub (quarto-dev/q2), experimental nightly builds, not for production, no date. Two gains: a much faster engine, and Quarto Hub, several people writing the same document in the browser at once. Bridge: from the tool’s timeline to the conference’s, every edition since 2017.</p>
+<p>Quarto 2 is Quarto rewritten, faster, with Quarto Hub to write together in the browser. Experimental, no date.</p>
+<p>It aims to keep your projects working.</p>
+<p>Bridge: so, where to start.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1021,17 +1177,33 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 </section>
-<section id="next-year" class="slide level2 center">
-<h2></h2>
+<section id="next-year" class="slide level2" data-kicker="And next">
+<h2>Start with one monthly publication</h2>
 <span class="timing-bar-data" style="display:none" data-duration="30s"></span>
-<p><span class="lead">Every edition since 2017: a talk about publishing statistics.</span></p>
-<div class="fragment">
-<p><span class="statement">Next year, bring yours.</span></p>
-<div class="fragment">
-<p><span class="lead">The publication that comes back every month, rendered from one source.</span></p>
+<div class="cards-fan">
+<div class="card is-blank is-code">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">Your .qmd file</span></p>
+</div>
+<div class="cards">
+<div class="card is-blank">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-word-box" aria-label="Icon file-word-box from mdi Iconify.design set." title="Icon file-word-box from mdi Iconify.design set."></iconify-icon></span> <span class="kind">Word report</span></p>
+</div>
+<div class="card is-blank">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-pdf-box" aria-label="Icon file-pdf-box from mdi Iconify.design set." title="Icon file-pdf-box from mdi Iconify.design set."></iconify-icon></span> <span class="kind">PDF</span></p>
+</div>
+<div class="card is-blank">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:chart-bar" aria-label="Icon chart-bar from mdi Iconify.design set." title="Icon chart-bar from mdi Iconify.design set."></iconify-icon></span> <span class="kind">Chart</span></p>
+</div>
+<div class="card is-blank">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:web" aria-label="Icon web from mdi Iconify.design set." title="Icon web from mdi Iconify.design set."></iconify-icon></span> <span class="kind">Web page</span></p>
+</div>
+<div class="card is-blank">
+<p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:newspaper-variant-outline" aria-label="Icon newspaper-variant-outline from mdi Iconify.design set." title="Icon newspaper-variant-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">Press release</span></p>
+</div>
+</div>
 </div>
 <aside class="notes">
-<p>Every year since 2017, someone here talked about publishing statistics. Next year, bring yours. Pick the one that comes back every month, render it from one source, tell us what you learned.</p>
+<p>You already do R. You already publish. Quarto is the step between. Next Thursday at 17:50, fix one line and render.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1044,11 +1216,10 @@ a talk about publishing statistics</span></p>
           display:block!important;
       }</style></aside>
 <!-- ============================ END (0:30) ============================ -->
-</div>
 </section>
 <section id="learning-more" class="slide level2 timing-section">
 <h2>Learning More</h2>
-<span class="timing-bar-data" style="display:none" data-title="End" data-section="true" data-duration="40s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="End"></span>
 <div class="columns">
 <div class="column" style="width:62%;">
 <h4 class="bottom-pad" id="slides-httpscderv.github.iouros2026-quarto-intro">Slides: <a href="https://cderv.github.io/uros2026-quarto-intro/" class="uri">https://cderv.github.io/uros2026-quarto-intro/</a></h4>
@@ -1065,16 +1236,29 @@ a talk about publishing statistics</span></p>
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"200","text":"https://cderv.github.io/uros2026-quarto-intro/","width":"200"});
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"170","text":"https://cderv.github.io/uros2026-quarto-intro/","width":"170"});
   script.remove();
 })();
 </script>
     
 <p>Slides</p>
 </div>
+<div class="qr-block">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"170","text":"https://cderv.github.io/uros2026-quarto-example/","width":"170"});
+  script.remove();
+})();
+</script>
+    
+<p>Example bulletin</p>
+</div>
 </div></div>
 <aside class="notes">
-<p>You already do R and you already publish; Quarto is the step between the two, so next Thursday at 17:50 you fix one line and render. Slides and the example bulletin: the QR code. Thank you. Questions?</p>
+<p>Two QR codes: the slides, and the bulletin itself. Thank you. Questions?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1091,7 +1275,7 @@ a talk about publishing statistics</span></p>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="images/uros2026-logo.jpg" class="slide-logo"></p>
+<p><img src="images/uros2026-logo.jpg" alt="uRos 2026 logo" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Follow along at <a href="https://cderv.github.io/uros2026-quarto-intro/" class="uri">https://cderv.github.io/uros2026-quarto-intro/</a> and <a href="https://quarto.org" class="uri">https://quarto.org</a></p>
 </div>
@@ -1310,69 +1494,161 @@ a talk about publishing statistics</span></p>
       });
     </script>
     <script type="text/javascript">
-      // Hide the logo on the title slide only. No-op when the deck has no logo.
-      function toggleLogo(indexh) {
-        var logo = document.querySelector("div.has-logo > img.slide-logo");
-        if (!logo) return;
-        logo.style.display = indexh === 0 ? "none" : null;
-      }
-      Reveal.on('ready', (event) => {
-        toggleLogo(event.indexh);
-        // In an r-vstack made only of image paragraphs, lift the images out of
-        // their <p> so the stack sizes them.
-        var slides = Reveal.getSlidesElement();
-        slides.querySelectorAll('div.r-vstack').forEach((vstack) => {
-          var isAllP = Array.from(vstack.children).every((child) => child.tagName === 'P');
-          var isAllImg = Array.from(vstack.children).every((child) => Array.from(child.children).every((child) => child.tagName === 'IMG'));
-          if (isAllP && isAllImg) {
-            Array.from(vstack.children).forEach((child) => {
-              Array.from(child.children).forEach((img) => {
-                vstack.appendChild(img);
-              });
-              vstack.removeChild(child);
-            });
-          }
-        });
+
+      // iconify-icon draws an icon only once an IntersectionObserver sees it, which never happens in
+
+      // the revealjs print layout (empty icons in the PDF) and is not needed with the icons embedded
+
+      // (iconify-offline.html). Swap each icon for a copy with `noobserver`, drawn at once.
+
+      document.querySelectorAll('iconify-icon:not([noobserver])').forEach(function (el) {
+
+        var icon = el.cloneNode(true);
+
+        icon.setAttribute('noobserver', '');
+
+        el.replaceWith(icon);
+
       });
-      Reveal.on('slidechanged', (event) => {
-        toggleLogo(event.indexh);
-      });
+
     </script>
 
+    
+
     <script type="text/javascript">
-      // Z gallery: easycarousel autoplays from page load and loops. Restart it from
-      // the first thumbnail when its slide is shown, stop it on the last thumbnail,
-      // and pause it when the slide is left (the extension itself is not edited).
-      (function () {
-        function carousels() {
-          return Array.from(document.querySelectorAll('.easycarousel'))
-            .filter((el) => el.easycarousel && el.easycarousel.plugins().autoplay);
-        }
-        function stopOnLast(embla) {
-          // timerset fires just before the plugin marks itself as playing: defer
-          if (embla.selectedScrollSnap() === embla.scrollSnapList().length - 1) {
-            setTimeout(() => embla.plugins().autoplay.stop(), 0);
+
+      // Hide the logo on the title slide only. No-op when the deck has no logo.
+
+      function toggleLogo(indexh) {
+
+        var logo = document.querySelector("div.has-logo > img.slide-logo");
+
+        if (!logo) return;
+
+        logo.style.display = indexh === 0 ? "none" : null;
+
+      }
+
+      Reveal.on('ready', (event) => {
+
+        toggleLogo(event.indexh);
+
+        // In an r-vstack made only of image paragraphs, lift the images out of
+
+        // their <p> so the stack sizes them.
+
+        var slides = Reveal.getSlidesElement();
+
+        // auto-animate (#rendered -> #rendered-walk): Reveal pairs the empty <p> around each
+
+        // screenshot as well as the image, and the two moves add up. Lift the images out.
+
+        slides.querySelectorAll('.shots-v > p').forEach((p) => p.replaceWith(...p.childNodes));
+
+        slides.querySelectorAll('div.r-vstack').forEach((vstack) => {
+
+          var isAllP = Array.from(vstack.children).every((child) => child.tagName === 'P');
+
+          var isAllImg = Array.from(vstack.children).every((child) => Array.from(child.children).every((child) => child.tagName === 'IMG'));
+
+          if (isAllP && isAllImg) {
+
+            Array.from(vstack.children).forEach((child) => {
+
+              Array.from(child.children).forEach((img) => {
+
+                vstack.appendChild(img);
+
+              });
+
+              vstack.removeChild(child);
+
+            });
+
           }
-        }
-        function sync(slide) {
-          carousels().forEach((el) => {
-            var embla = el.easycarousel;
-            if (slide && slide.contains(el)) {
-              // measured while hidden, Embla saw a single snap and autoplay never
-              // initialised: re-initialise now that the slide is laid out
-              embla.reInit();
-              embla.off('autoplay:timerset', stopOnLast).on('autoplay:timerset', stopOnLast);
-              embla.scrollTo(0, true);
-              embla.plugins().autoplay.play();
-            } else {
-              embla.plugins().autoplay.stop();
-            }
-          });
-        }
-        Reveal.on('ready', () => setTimeout(() => sync(Reveal.getCurrentSlide()), 300));
-        Reveal.on('slidechanged', (e) => sync(e.currentSlide));
-      })();
+
+        });
+
+      });
+
+      Reveal.on('slidechanged', (event) => {
+
+        toggleLogo(event.indexh);
+
+      });
+
     </script>
+
+    
+
+    <script type="text/javascript">
+
+      // Z gallery: easycarousel autoplays from page load and loops. Restart it from
+
+      // the first thumbnail when its slide is shown, stop it on the last thumbnail,
+
+      // and pause it when the slide is left (the extension itself is not edited).
+
+      (function () {
+
+        function carousels() {
+
+          return Array.from(document.querySelectorAll('.easycarousel'))
+
+            .filter((el) => el.easycarousel && el.easycarousel.plugins().autoplay);
+
+        }
+
+        function stopOnLast(embla) {
+
+          // timerset fires just before the plugin marks itself as playing: defer
+
+          if (embla.selectedScrollSnap() === embla.scrollSnapList().length - 1) {
+
+            setTimeout(() => embla.plugins().autoplay.stop(), 0);
+
+          }
+
+        }
+
+        function sync(slide) {
+
+          carousels().forEach((el) => {
+
+            var embla = el.easycarousel;
+
+            if (slide && slide.contains(el)) {
+
+              // measured while hidden, Embla saw a single snap and autoplay never
+
+              // initialised: re-initialise now that the slide is laid out
+
+              embla.reInit();
+
+              embla.off('autoplay:timerset', stopOnLast).on('autoplay:timerset', stopOnLast);
+
+              embla.scrollTo(0, true);
+
+              embla.plugins().autoplay.play();
+
+            } else {
+
+              embla.plugins().autoplay.stop();
+
+            }
+
+          });
+
+        }
+
+        Reveal.on('ready', () => setTimeout(() => sync(Reveal.getCurrentSlide()), 300));
+
+        Reveal.on('slidechanged', (e) => sync(e.currentSlide));
+
+      })();
+
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -1444,6 +1720,28 @@ a talk about publishing statistics</span></p>
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
             var filterRegex = new RegExp('/' + window.location.host + '/');
+          const newWindowLabel = "(opens in a new tab)";
+          const newWindowNoteId = "quarto-ext-newwindow-label";
+          // Links reference one hidden label through aria-describedby, so the
+          // announcement never changes their accessible name.
+          var describeNewWindow = (link) => {
+            if (!window.document.getElementById(newWindowNoteId)) {
+              var newWindowNote = window.document.createElement("span");
+              newWindowNote.id = newWindowNoteId;
+              newWindowNote.hidden = true;
+              newWindowNote.textContent = newWindowLabel;
+              window.document.body.appendChild(newWindowNote);
+            }
+            var describedBy = (link.getAttribute("aria-describedby") || "").split(/\s+/).filter(Boolean);
+            if (!describedBy.includes(newWindowNoteId)) {
+              describedBy.push(newWindowNoteId);
+              link.setAttribute("aria-describedby", describedBy.join(" "));
+            }
+          }
+          var opensNewContext = (link) => {
+            var target = (link.getAttribute("target") || "").toLowerCase();
+            return target !== "" && !["_self", "_parent", "_top"].includes(target);
+          }
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
@@ -1460,6 +1758,9 @@ a talk about publishing statistics</span></p>
               }
               if (!link.classList.contains('no-external-icon')) {
               }
+            }
+            if (opensNewContext(link)) {
+              describeNewWindow(link);
             }
           }
           };
