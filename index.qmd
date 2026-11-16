@@ -502,8 +502,8 @@ chart of nights in 2026 against the 2022-2025 range."
 }
 
 ![](images/bulletin/pdf-p2.png){
-  fig-alt="Page 2 of the PDF bulletin: Table 1 of nights by country, the
-map of the yearly change, and the methods section."
+  fig-alt="Page 2 of the PDF bulletin: Table 1 of nights by country and the
+map of the yearly change."
 }
 :::
 :::
@@ -671,10 +671,8 @@ For the HTML pages, `axe: true` checks accessibility with [axe-core](
 
 ::: notes
 One line asks for both standards. With veraPDF installed
-(`quarto install verapdf`), Quarto checks at each render. The bulletin
-does not set axe today. axe
-runs when the page opens: results in the browser console, or on the page
-with output: document.
+(`quarto install verapdf`), Quarto checks at each render. It checks the
+tags, the alt text you still write. The bulletin does not set axe today.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
@@ -754,7 +752,8 @@ One word in the R code. (click) TOTAL keeps all guests.
 
 ::: notes
 (click) 514.7 in the HTML, 514.7 in the PDF. Table, chart, caption and
-the Word file come from the same render.
+the Word file come from the same render. Press release: one more file
+that reads the same R code (not in the example).
 :::
 
 ## Thursday, 17:51 {#none kicker="Fixed once" timing-duration="25s"}
@@ -813,7 +812,7 @@ the Word file come from the same render.
 ![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
 ![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png)
 ![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png)
-![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png)
+![NISRA: Childcare Survey 2024 results (prototype)](images/gallery/04-nisra-childcare.png)
 ![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png)
 ![OECD: Regional Outlook 2023 country profiles](images/gallery/06-oecd-regional-profiles.png)
 ```
@@ -829,8 +828,8 @@ the Word file come from the same render.
 [![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png){
   fig-alt="ONS weekly deaths data explorer (prototype)."
 }](https://onsdigital.github.io/weekly_deaths_data_explorer/)
-[![NISRA: Childcare Survey 2024 results](images/gallery/04-nisra-childcare.png){
-  fig-alt="NISRA Childcare Survey 2024 results."
+[![NISRA: Childcare Survey 2024 results (prototype)](images/gallery/04-nisra-childcare.png){
+  fig-alt="NISRA Childcare Survey 2024 results (prototype)."
 }](https://nisra-explore.github.io/childcare-survey/)
 [![Statistics Norway: documentation report with an ISBN](images/gallery/05-ssb-documentation.png){
   fig-alt="Statistics Norway documentation report, with an ISBN."
@@ -839,7 +838,7 @@ the Word file come from the same render.
   fig-alt="OECD Regional Outlook 2023 country profiles."
 }](https://oecd-cfe-eds.github.io/ro2023-country-pages/)
 
-[Insee, Agreste (France) · ONS, NISRA (United Kingdom) · Statistics Norway · OECD]{.gallery-count}
+[Insee, Agreste (France) · ONS, NISRA (United Kingdom, prototypes) · Statistics Norway · OECD]{.gallery-count}
 :::
 :::
 
@@ -848,7 +847,7 @@ the Word file come from the same render.
 :::
 
 ::: notes
-Some of you made these. Examples, in no order. (click: grid) (click)
+Back to my friends' quote. Some of you made these. Examples, in no order. (click: grid) (click)
 :::
 
 ## From R Markdown to Quarto 2 {#quarto-today kicker="And next" timing-duration="35s"}
