@@ -825,7 +825,7 @@ same R code (not in the example).
 
 ::: {.r-stack}
 ::: {.gallery-live .fragment .fade-out fragment-index="1"}
-```{.carousel #gallery autoplay="1000" fade="true" slides="1" height="390px" loop="false" dots="false" arrows="false" fragment="false"}
+```{.carousel #gallery autoplay="2000" fade="true" slides="1" height="390px" loop="true" dots="false" arrows="false" fragment="false"}
 ![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png)
 ![Agreste (SSM Agriculture): dataviz catalog](images/gallery/02-agreste-dataviz.png)
 ![ONS: weekly deaths data explorer (prototype)](images/gallery/03-ons-weekly-deaths.png)
