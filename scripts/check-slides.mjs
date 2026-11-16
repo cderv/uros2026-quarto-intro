@@ -351,35 +351,6 @@ async function exportPdf(context, url, file, { fragments, iframeShots }) {
     await Promise.all([...document.images].map((img) => (img.complete ? null
       : new Promise((r) => { img.addEventListener('load', r, { once: true }); img.addEventListener('error', r, { once: true }); setTimeout(r, 10000); }))));
   });
-  // iconify-icon draws nothing once revealjs has laid the deck out for print (empty shadow root
-  // although its status says rendered): swap each icon for its SVG from the same Iconify API.
-  const icons = await page.evaluate(async () => {
-    const els = [...document.querySelectorAll('iconify-icon[icon]')];
-    const cache = new Map();
-    let done = 0;
-    for (const el of els) {
-      const [prefix, name] = el.getAttribute('icon').split(':');
-      const key = `${prefix}/${name}`;
-      if (!cache.has(key)) {
-        cache.set(key, fetch(`https://api.iconify.design/${key}.svg?height=1em`)
-          .then((r) => (r.ok ? r.text() : null)).catch(() => null));
-      }
-      const svg = await cache.get(key);
-      if (!svg) continue;
-      const span = document.createElement('span');
-      span.className = el.className;
-      span.setAttribute('role', 'img');
-      if (el.getAttribute('aria-label')) span.setAttribute('aria-label', el.getAttribute('aria-label'));
-      span.style.cssText = `${el.style.cssText};display:inline-block;vertical-align:-0.125em;line-height:0`;
-      span.innerHTML = svg;
-      el.replaceWith(span);
-      done += 1;
-    }
-    return { total: els.length, done };
-  });
-  if (icons.total && icons.done < icons.total) {
-    report('warning', 'pdf', null, `${icons.total - icons.done} of ${icons.total} icons could not be drawn in the PDF`);
-  }
   await sleep(500);
   fs.mkdirSync(path.dirname(path.resolve(file)), { recursive: true });
   const pdf = await page.pdf({ path: file, preferCSSPageSize: true, printBackground: true });

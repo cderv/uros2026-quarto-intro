@@ -1,4 +1,15 @@
 <script type="text/javascript">
+  // iconify-icon draws an icon only once an IntersectionObserver sees it, which never happens in
+  // the revealjs print layout (empty icons in the PDF) and is not needed with the icons embedded
+  // (iconify-offline.html). Swap each icon for a copy with `noobserver`, drawn at once.
+  document.querySelectorAll('iconify-icon:not([noobserver])').forEach(function (el) {
+    var icon = el.cloneNode(true);
+    icon.setAttribute('noobserver', '');
+    el.replaceWith(icon);
+  });
+</script>
+
+<script type="text/javascript">
   // Hide the logo on the title slide only. No-op when the deck has no logo.
   function toggleLogo(indexh) {
     var logo = document.querySelector("div.has-logo > img.slide-logo");

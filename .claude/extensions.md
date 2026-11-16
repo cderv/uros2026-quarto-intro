@@ -72,9 +72,20 @@ per line (the caption is the image text; keep it short, it shows for 2.5 s). Dec
 ### iconify (icons)
 
 `{{< iconify mdi file-word-box >}}`: the set (`mdi`), then the icon name. The `iconify-icon` web
-component fetches each icon from the Iconify servers when the deck is viewed, so the icons need
-network. The extension can preload icons from a JSON file for offline use (its filter reads them
-into `window.IconifyPreload`); this deck does not do it yet.
+component fetches each icon from the Iconify servers when the deck is viewed, unless it already
+has the icon. Two pitfalls, both handled outside `_extensions/`:
+
+- **No network** (room wifi): `iconify-offline.html` (`include-in-header`) hands the deck's icons
+  to the component with `addCollection` before the slides are parsed, so no call is made. The
+  extension's own `preload` option does not work here: its script lands in the body, after the
+  component has read `window.IconifyPreload`. After adding an icon, refresh the data in that file
+  from `https://api.iconify.design/mdi.json?icons=<name>,<name>`.
+- **Empty icons in the PDF**: the component draws an icon only once an IntersectionObserver sees
+  it, which never happens in the revealjs print layout. `revealjs-tweak.html` swaps each icon for
+  a copy with the `noobserver` attribute, drawn at once.
+
+Check without network: block every request outside localhost in Playwright and count the
+`iconify-icon` elements whose shadow root holds an `<svg>`, in normal and `?print-pdf` mode.
 
 ### qrcode
 

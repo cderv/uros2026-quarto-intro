@@ -19,6 +19,8 @@ format:
     mermaid-format: png
     preview-links: auto
     multiplex: false
+    include-in-header:
+      - iconify-offline.html
     include-after-body:
       - revealjs-tweak.html
     logo:
