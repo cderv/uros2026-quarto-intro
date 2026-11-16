@@ -654,7 +654,7 @@ few small files. A fictional institute,
 real Eurostat data.
 :::
 
-## Quarto checks the PDF for accessibility {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
+## Quarto checks your outputs for accessibility {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
 
 ```{.yaml}
 format:
