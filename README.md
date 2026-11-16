@@ -85,3 +85,9 @@ just publish connect  # check, then update the Posit Connect Cloud preview
 
 Both publishing commands ask for confirmation.
 `just publish-only` skips the check when it has already run; it still re-renders `index.html` first.
+
+## License
+
+Slides and other content: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Code (scripts, recipes, styles): MIT.
+Third-party material (extensions, logos, screenshots of other publications, the Quarto schematic, quoted abstracts) keeps its own license; details in [LICENSE.md](LICENSE.md).
