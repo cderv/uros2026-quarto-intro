@@ -35,7 +35,7 @@ the first session, then keep it current.
   started, Gallery, `#### Questions?` and a QR code to the slides; no `.smaller`.
 - **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
 - **Work tracking:** braid, label `uros2026`
-- **Organisers' guidelines (presenters' email, 29 Sept 2026):**
+- **Organisers' guidelines for presenters (29 Sept 2026):**
   - upload the slides to the organisers' folder for session C1 by **11 November 2026**; updated
     versions can be uploaded until the day of the talk (upload the PDF from `just pdf`);
   - the chair introduces speakers by name and institution only: no bio, no self-introduction slide;
