@@ -21,7 +21,9 @@ format:
     multiplex: false
     include-after-body:
       - revealjs-tweak.html
-    logo: images/uros2026-logo.jpg
+    logo:
+      path: images/uros2026-logo.jpg
+      alt: "uRos 2026 logo"
     timing-bar:
       duration: 12m30s
 filters:
