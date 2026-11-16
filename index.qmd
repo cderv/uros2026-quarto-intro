@@ -487,7 +487,7 @@ the CLI slide. Bridge: the web page, then the PDF.
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
 
 ![](images/bulletin/html-page.png){
-  .shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions, and the key figure 514.7 million in a box."
+  .shot height="530px" fig-align="center" fig-alt="Top of the HTML bulletin in a browser: the Northbridge Statistical Office banner with its logo, the title Tourism in the European Union, a contents sidebar with links to the PDF and Word versions and to the source on GitHub, and the key figure 514.7 million in a box."
 }
 
 ::: notes
