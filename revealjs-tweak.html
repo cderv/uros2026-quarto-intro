@@ -44,18 +44,12 @@
 
 <script type="text/javascript">
   // Z gallery: easycarousel autoplays from page load and loops. Restart it from
-  // the first thumbnail when its slide is shown, stop it on the last thumbnail,
-  // and pause it when the slide is left (the extension itself is not edited).
+  // the first thumbnail when its slide is shown, and pause it when the slide is
+  // left (the extension itself is not edited).
   (function () {
     function carousels() {
       return Array.from(document.querySelectorAll('.easycarousel'))
         .filter((el) => el.easycarousel && el.easycarousel.plugins().autoplay);
-    }
-    function stopOnLast(embla) {
-      // timerset fires just before the plugin marks itself as playing: defer
-      if (embla.selectedScrollSnap() === embla.scrollSnapList().length - 1) {
-        setTimeout(() => embla.plugins().autoplay.stop(), 0);
-      }
     }
     function sync(slide) {
       carousels().forEach((el) => {
@@ -64,7 +58,6 @@
           // measured while hidden, Embla saw a single snap and autoplay never
           // initialised: re-initialise now that the slide is laid out
           embla.reInit();
-          embla.off('autoplay:timerset', stopOnLast).on('autoplay:timerset', stopOnLast);
           embla.scrollTo(0, true);
           embla.plugins().autoplay.play();
         } else {
@@ -72,7 +65,15 @@
         }
       });
     }
-    Reveal.on('ready', () => setTimeout(() => sync(Reveal.getCurrentSlide()), 300));
+    Reveal.on('ready', () => setTimeout(() => {
+      carousels().forEach((el) => {
+        el.easycarousel.on('reInit', () => {
+          // Hiding a slide re-initializes Embla, which restarts autoplay.
+          if (!Reveal.getCurrentSlide().contains(el)) el.easycarousel.plugins().autoplay.stop();
+        });
+      });
+      sync(Reveal.getCurrentSlide());
+    }, 300));
     Reveal.on('slidechanged', (e) => sync(e.currentSlide));
   })();
 </script>

@@ -63,9 +63,8 @@ line). Used once, on `#quarto-today`.
 A fenced block ```` ```{.carousel #gallery autoplay="2000" fade="true" ...} ```` with one image
 per line (the caption is the image text; keep it short, it shows for 2 s). Deck additions:
 
-- `revealjs-tweak.html` restarts the carousel from the first image when its slide is shown, stops
-  it on the last image and pauses it when the slide is left (the extension autoplays from page
-  load and loops).
+- `revealjs-tweak.html` restarts the carousel from the first image when its slide is shown and
+  pauses it when the slide is left (the extension autoplays from page load and loops).
 - `reveal-style.scss` turns pointer events off on the live carousel: the extension pauses autoplay
   while the mouse is over it, and a click focuses it so the arrow keys move the carousel instead
   of the deck. Keep the `*` and `!important`: the fade plugin sets `pointer-events` inline.
