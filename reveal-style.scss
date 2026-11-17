@@ -440,6 +440,9 @@ html.print-pdf .reveal .gallery-live,
 html.print-pdf .reveal .carousel-live,
 html.print-pdf .reveal .print-hide { display: none !important; }
 html.print-pdf .reveal .print-only { display: block !important; }
+// a layer that a later fragment replaces: only the PDF with final states drops it, the PDF with
+// one page per fragment step (`pdf-fragments`, revealjs-tweak.html) shows each step
+html.print-pdf:not(.pdf-fragments) .reveal .print-hide-final { display: none !important; }
 
 // ---------------------------------------------------------------------------
 // Opening: programme figures

@@ -10,6 +10,13 @@
 </script>
 
 <script type="text/javascript">
+  // Mark the PDF export with one page per fragment step, for `.print-hide-final` (reveal-style.scss)
+  Reveal.on('ready', () => {
+    if (Reveal.getConfig().pdfSeparateFragments) document.documentElement.classList.add('pdf-fragments');
+  });
+</script>
+
+<script type="text/javascript">
   // Hide the logo on the title slide only. No-op when the deck has no logo.
   function toggleLogo(indexh) {
     var logo = document.querySelector("div.has-logo > img.slide-logo");

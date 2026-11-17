@@ -564,7 +564,7 @@ gt(tab) |>
 
 ::: {.column width="50%"}
 ::: {.r-stack}
-::: {.fragment .fade-out .print-hide fragment-index="1"}
+::: {.fragment .fade-out .print-hide-final fragment-index="1"}
 ![](images/bulletin/html-table.png){
   .shot width="600px" fig-alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy lines, the change cells colored from gold for rises to pink for falls."
 }

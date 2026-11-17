@@ -126,6 +126,9 @@ Adds a toolbar to the rendered deck to pin comments on slides and send them to t
   px, measured on the rendered slide: re-measure after any change to the code text above.
 - **`revealjs-tweak.html`**: hides the logo on the title slide, sizes images in `r-vstack`,
   lifts the screenshots out of their `<p>` in `.shots-v` (otherwise auto-animate moves the `<p>`
-  as well as the image and the screenshots jump), and drives the gallery carousel.
+  as well as the image and the screenshots jump), drives the gallery carousel, and marks the PDF
+  export with one page per fragment step (`html.pdf-fragments`).
 - **Print**: `.print-hide` / `.print-only` swap content in the PDF export (the scrolling PDF pages
-  on `#pdf`, the gallery carousel).
+  on `#pdf`, the gallery carousel). `.print-hide-final` drops a `.fade-out` layer only from the
+  PDF with final states, where fade-outs do not apply and the layer would overlap its replacement;
+  the PDF with one page per step (`just pdf`) keeps it (the HTML table on `#table`).
