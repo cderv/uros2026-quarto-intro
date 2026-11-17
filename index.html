@@ -130,7 +130,7 @@
         page-break-after: avoid;
       }
     }  </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-3115590b75f2b6d02eced3004200fd33.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-433a784bb87c8876922b197f20c2e49a.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -410,7 +410,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="what-is-quarto" class="slide level2 timing-section">
 <h2>Quarto …</h2>
-<span class="timing-bar-data" style="display:none" data-title="X1 · Every number computed" data-section="true" data-duration="15s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="15s" data-section="true" data-title="X1 · Every number computed"></span>
 <p>…is an open-source, scientific, and technical publishing system</p>
 
 <img data-src="images/horst_quarto_schematic.png" alt="Schematic: R, Python, Observable, Julia and other languages go into Quarto, which makes HTML, PDF, Word and other documents." width="900" class="r-stretch quarto-figure-center"><p class="caption"><span class="small-cap">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</span></p><aside class="notes">
@@ -671,7 +671,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="formats" class="slide level2 magic-move timing-section" data-kicker="Same source, multiple formats">
 <h2>Output formats at the top of the file</h2>
-<span class="timing-bar-data" style="display:none" data-title="X2 · Same source, multiple formats" data-section="true" data-duration="10s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="10s" data-section="true" data-title="X2 · Same source, multiple formats"></span>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="" aria-label="1"></a><span class="pp">---</span></span>
 <span id="cb6-2"><a href="" aria-label="2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Tourism in the EU</span></span>
 <span id="cb6-3"><a href="" aria-label="3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
@@ -807,7 +807,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="table" class="slide level2 timing-section" data-kicker="Ready to publish">
 <h2>A gt table in HTML and PDF</h2>
-<span class="timing-bar-data" style="display:none" data-title="X3 · Ready to publish" data-section="true" data-duration="30s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="X3 · Ready to publish"></span>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -830,7 +830,7 @@ has a talk about publishing statistics</span></p>
 <p><span class="chart-cap">Shortened for the slide. Colors and the bold EU row are in the full source.</span></p>
 </div><div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment fade-out print-hide" data-fragment-index="1">
+<div class="fragment fade-out print-hide-final" data-fragment-index="1">
 <p><img data-src="images/bulletin/html-table.png" class="shot" alt="Table 1 in the HTML bulletin: nights by country in August 2025 and August 2026 and the change in %, the EU row in bold between burgundy lines, the change cells colored from gold for rises to pink for falls." width="600"></p>
 <p><span class="shot-label">bulletin.html</span></p>
 </div>
@@ -947,7 +947,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="again" class="slide level2 magic-move timing-section" data-kicker="Fix it once">
 <h2>Thursday, 17:50, again</h2>
-<span class="timing-bar-data" style="display:none" data-title="Y · Fix it once" data-section="true" data-duration="20s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="20s" data-section="true" data-title="Y · Fix it once"></span>
 <p><span class="lead">The key figure is wrong.</span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-label="1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
 <span id="cb15-2"><a href="" aria-label="2"></a>  <span class="st">"tour_occ_nim"</span>,</span>
@@ -1082,7 +1082,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="products" class="slide level2 timing-section" data-kicker="In official statistics">
 <h2>Already published with Quarto</h2>
-<span class="timing-bar-data" style="display:none" data-title="Z · In official statistics, and next" data-section="true" data-duration="45s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="45s" data-section="true" data-title="Z · In official statistics, and next"></span>
 <p><span class="gallery-count">France · Norway · United Kingdom · OECD</span></p>
 <!-- Screenshots: just gallery (scripts/capture-gallery.mjs), which also checks each page is made with Quarto -->
 <div class="r-stack">
@@ -1117,6 +1117,9 @@ has a talk about publishing statistics</span></p>
 </div>
 </div>
 </div>
+</div>
+<div class="print-only fragment fade-out" data-fragment-index="1">
+<p><img data-src="images/gallery/01-insee-working-paper.png" alt="Insee working paper, HTML and PDF." height="390"></p>
 </div>
 <div class="gallery-grid fragment" data-fragment-index="1">
 <p><a href="https://inseefrlab.github.io/DT-tvcoef/"><img data-src="images/gallery/01-insee-working-paper.png" alt="Insee working paper, HTML and PDF."></a> <a href="https://ssm-agriculture.github.io/site-DataViz/"><img data-src="images/gallery/02-agreste-dataviz.png" alt="Agreste (SSM Agriculture) dataviz catalog."></a> <a href="https://onsdigital.github.io/weekly_deaths_data_explorer/"><img data-src="images/gallery/03-ons-weekly-deaths.png" alt="ONS weekly deaths data explorer (prototype)."></a> <a href="https://nisra-explore.github.io/childcare-survey/"><img data-src="images/gallery/04-nisra-childcare.png" alt="NISRA Childcare Survey 2024 results (prototype)."></a> <a href="https://doc.ameld.ssb.no/"><img data-src="images/gallery/05-ssb-documentation.png" alt="Statistics Norway documentation report, with an ISBN."></a> <a href="https://oecd-cfe-eds.github.io/ro2023-country-pages/"><img data-src="images/gallery/06-oecd-regional-profiles.png" alt="OECD Regional Outlook 2023 country profiles."></a></p>
@@ -1219,7 +1222,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="learning-more" class="slide level2 timing-section">
 <h2>Learning More</h2>
-<span class="timing-bar-data" style="display:none" data-title="End" data-section="true" data-duration="30s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="End"></span>
 <div class="columns">
 <div class="column" style="width:62%;">
 <h4 class="bottom-pad" id="slides-httpscderv.github.iouros2026-quarto-intro">Slides: <a href="https://cderv.github.io/uros2026-quarto-intro/" class="uri">https://cderv.github.io/uros2026-quarto-intro/</a></h4>
@@ -1508,6 +1511,20 @@ has a talk about publishing statistics</span></p>
         icon.setAttribute('noobserver', '');
 
         el.replaceWith(icon);
+
+      });
+
+    </script>
+
+    
+
+    <script type="text/javascript">
+
+      // Mark the PDF export with one page per fragment step, for `.print-hide-final` (reveal-style.scss)
+
+      Reveal.on('ready', () => {
+
+        if (Reveal.getConfig().pdfSeparateFragments) document.documentElement.classList.add('pdf-fragments');
 
       });
 
