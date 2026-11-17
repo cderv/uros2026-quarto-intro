@@ -928,7 +928,13 @@ You fixed the number once.
 :::
 
 ::: notes
-Back to my friends' quote. Some of you made these. Examples, in no order. (click: grid) (click)
+*Start speaking on the first image, the carousel runs by itself.*
+
+Some of you already publish with Quarto. These are a few public
+examples, in no particular order. (click) Two of them are still
+prototypes. (click) And these slides are made with Quarto too.
+
+So it is used. But my friends are right, not much yet.
 :::
 
 ## From R Markdown to Quarto 2 {#quarto-today kicker="And next" timing-duration="35s"}
@@ -1010,6 +1016,12 @@ So, where to start?
 :::
 
 ::: notes
+With one publication you make every month. You turn it into one Quarto
+file, and you get every format from it. You can start from the example
+bulletin.
+
+*Pause.*
+
 You already do R. You already publish. Quarto is the step between. Next
 Thursday evening, fix one line and render.
 :::
@@ -1046,6 +1058,8 @@ Example bulletin
 :::
 
 ::: notes
-Two QR codes: the slides, and the bulletin itself. Thank you.
-Questions?
+Everything is here. The slides, and the example bulletin with its
+source. You can copy it and put in your own data.
+
+Thank you.
 :::
