@@ -735,8 +735,10 @@ nights <- get_eurostat(
 [Country of residence: `FOR` = guests from abroad only]{.lead .fragment}
 
 ::: notes
-Back to Thursday, ten to six. Wrong again. (click) Cause: someone kept
-the guests from abroad only.
+Back to Thursday evening. The key figure is wrong again. This time, the
+bulletin is a Quarto file, and the number comes from this R code.
+
+(click) Someone kept only the guests from abroad.
 :::
 
 ## Thursday, 17:50, again {#again-fix kicker="Fix it once" .magic-move timing-duration="10s"}
@@ -758,7 +760,7 @@ nights <- get_eurostat(
 [Country of residence: `FOR` = guests from abroad only [→ `TOTAL` = all guests]{.fragment}]{.lead}
 
 ::: notes
-One word in the R code. (click) TOTAL keeps all guests.
+You change one word in the R code. (click) Now it counts all the guests.
 :::
 
 ## One render {#one-render kicker="Fix it once" timing-duration="35s"}
@@ -801,8 +803,14 @@ One word in the R code. (click) TOTAL keeps all guests.
 :::
 
 ::: notes
-(click) 514.7 in the HTML, the PDF and the Word file. Table, chart and
-caption come from the same render.
+Then you render, once. Quarto runs the R code again and writes every
+format.
+
+(click) In all three files, the key figure is now 514.7. The chart and
+its caption changed too, because they come from the same R code. You did
+not open the PDF or the Word file.
+
+*Pause on the three boxes. This is the slide to slow down on.*
 :::
 
 ## Thursday, 17:51 {#none kicker="Fix it once" timing-duration="25s"}
@@ -844,8 +852,12 @@ caption come from the same render.
 [All six show [514.7]{.payoff .fragment}]{.payoff-line}
 
 ::: notes
-(click) 514.7 on all six. Press release: one more file that reads the
-same R code (not in the example).
+One minute later. (click) All six show 514.7.
+
+The press release can be one more Quarto file that reads the same R
+code. It is not in my example, but it works the same way.
+
+You fixed the number once.
 :::
 
 <!-- ============================ Z (1:50) ============================ -->
@@ -984,7 +996,7 @@ So, where to start?
 
 ::: notes
 You already do R. You already publish. Quarto is the step between. Next
-Thursday at 17:50, fix one line and render.
+Thursday evening, fix one line and render.
 :::
 
 <!-- ============================ END (0:30) ============================ -->

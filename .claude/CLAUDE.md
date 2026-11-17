@@ -28,9 +28,10 @@ the first session, then keep it current.
   you get publications that stay correct and consistent everywhere and update in one run, for
   statistics you communicate faster, to every audience, with confidence.
 - **Closing line:** spoken, in the notes of the last story slide, never on screen (talk-voice F4):
-  "You already do R. You already publish. Quarto is the step between. Next Thursday at 17:50, fix
+  "You already do R. You already publish. Quarto is the step between. Next Thursday evening, fix
   one line and render." (The first candidate ended on a three-beat slogan, "reproducible, from one
-  source, ready to publish", banned by F9.)
+  source, ready to publish", banned by F9. "Thursday evening", not "17:50": the time is never said
+  aloud, talk-voice §18 rule 5.)
 - **Closing:** a short "Learning More": slides URL first, the example bulletin repository, Getting
   started, Gallery, `#### Questions?` and a QR code to the slides; no `.smaller`.
 - **Slides URL:** <https://cderv.github.io/uros2026-quarto-intro/>
