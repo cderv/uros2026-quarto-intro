@@ -101,10 +101,10 @@ grid; ask the institutions before showing screenshots if in doubt.
 | Insee | Working paper *Introduction aux méthodes ensemblistes* (PDF built with Typst) | book, HTML + PDF | <https://inseefrlab.github.io/DT_methodes_ensemblistes/> |
 | Insee / SSP | *Manuel de protection des tableaux* | book, HTML + PDF | <https://inseefrlab.github.io/manuel-protection-tableaux/> |
 | SSM Agriculture (Agreste) | Dataviz catalogue (Closeread scrollytelling) | website | <https://ssm-agriculture.github.io/site-DataViz/> |
-| ONS | Weekly deaths data explorer (prototype) | dashboard | <https://onsdigital.github.io/weekly_deaths_data_explorer/> |
+| ONS | Weekly deaths data explorer (prototype data explorer) | dashboard | <https://onsdigital.github.io/weekly_deaths_data_explorer/> |
 | ONS | Health Insight Survey dashboard (official statistics in development) | dashboard | <https://onsdigital.github.io/health-insight-survey-dashboard/> |
 | NISRA | Weekly deaths in Northern Ireland | dashboard | <https://nisra-explore.github.io/weekly-deaths/> |
-| NISRA / Dept of Education | NI Childcare Survey 2024 results | report | <https://nisra-explore.github.io/childcare-survey/> |
+| NISRA / Dept of Education | NI Childcare Survey 2024 results (prototype output, says its banner) | report | <https://nisra-explore.github.io/childcare-survey/> |
 | Statistics Norway | Documentation report with an ISBN (register-based wage statistics) | book | <https://doc.ameld.ssb.no/> |
 | OECD (CFE) | Regional Outlook 2023 country profiles | website | <https://oecd-cfe-eds.github.io/ro2023-country-pages/> |
 | UNECE HLG-MOS | Statistical Open Source Software principles, endorsed by the CES in 2025 | website | <https://unece.github.io/OSS/> |
