@@ -474,7 +474,8 @@ format: html
 ```
 
 ::: notes
-Same file. This block at the top is the YAML header. HTML first.
+Same file, at the top. This block is the header, written in YAML. It
+says the format, here HTML.
 :::
 
 ## Output formats at the top of the file {#formats-pdf kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
@@ -489,7 +490,8 @@ format:
 ```
 
 ::: notes
-Typst comes with Quarto and makes the PDF. No LaTeX.
+Add one line, and you also get a PDF. It is made with Typst, a page
+layout tool that comes with Quarto. No LaTeX to install.
 :::
 
 ## Output formats at the top of the file {#formats-docx kicker="Same source, multiple formats" .magic-move timing-duration="15s"}
@@ -515,8 +517,8 @@ quarto render bulletin.qmd
 :::
 
 ::: notes
-Word, for the colleague who asks for Word. (click) Same command as on
-the CLI slide. Bridge: the web page, then the PDF.
+One more line for Word, for the colleague who asks for Word. (click) The
+same command now writes the three files.
 :::
 
 ## For the web {#html kicker="Same source, multiple formats" timing-duration="20s"}
@@ -526,7 +528,9 @@ the CLI slide. Bridge: the web page, then the PDF.
 }
 
 ::: notes
-The web page is readable on a phone, chart and table inside.
+This is the web page. It has the table of contents, and links to the PDF
+and the Word file. It also works on a phone, with the chart and the
+table inside.
 :::
 
 ## For print {#pdf kicker="Same source, multiple formats" timing-duration="20s"}
@@ -564,8 +568,12 @@ map of the yearly change."
 :::
 
 ::: notes
-Print and the archive, from the same file. (The pages scroll by
-themselves.)
+And this is the PDF, from the same file, for print and for the archive.
+Same numbers, same chart.
+
+*Let the pages scroll for a few seconds.*
+
+Let's look at what makes it ready to publish.
 :::
 
 <!-- ============================ X3 (1:50) ============================ -->
@@ -619,8 +627,10 @@ gt(tab) |>
 :::
 
 ::: notes
-Same gt code, one table in bulletin.html and in bulletin.pdf. Table 1
-comes from label + tbl-cap, numbered for you.
+Tables are made with gt, the R package you may already use. The label
+and the caption are options of the cell. (click) The same code gives
+this table in the web page, and this one in the PDF. It is Table 1,
+numbered for you.
 :::
 
 ## Cross-references are numbered for you {#crossref kicker="Ready to publish" timing-duration="25s"}
@@ -641,9 +651,10 @@ country and @sec-methods explains the figures.
 []{.xr-box .absolute .fragment fragment-index="1" style="left: 180px; top: 171px; width: 191px; height: 40px;"}
 
 ::: notes
-(click) The references. \@fig-trend becomes "Figure 1", a link in HTML.
-\@sec-countries becomes "Section 2". When you add a figure, Quarto
-renumbers.
+In the text, you refer to a figure or a section by its label. This is
+called a cross-reference. (click) Quarto replaces each one with its
+number, and makes it a link in the web page. When you add a figure,
+Quarto renumbers them.
 :::
 
 ## Your institute's look in `_brand.yml` {#brand kicker="Ready to publish" timing-duration="25s"}
@@ -683,10 +694,13 @@ with the same logo, colors and fonts."
 :::
 
 ::: notes
-Colors, logo and fonts are set once, in _brand.yml. HTML and PDF read
-it. Word reads it through a reference document. The page layout adds a
-few small files. A fictional institute,
-real Eurostat data.
+Your institute's look goes in one small file, the brand file. You set
+the colors, the logo and the fonts once. The web page and the PDF both
+read it. For Word, you give Quarto a reference document with the same
+styles.
+
+*Do not explain the page layout files or how the Word reference is
+built.*
 :::
 
 ## Quarto checks your outputs for accessibility {#pdf-ua kicker="Ready to publish" timing-duration="30s"}
@@ -708,10 +722,11 @@ $ quarto render bulletin.qmd
 [PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto checks both with [veraPDF](https://verapdf.org/), and the web page with [axe-core](https://quarto.org/docs/output-formats/html-accessibility.html).]{.lead}
 
 ::: notes
-One line asks for both PDF standards. With veraPDF installed
-(`quarto install verapdf`), Quarto checks the PDF at each render.
-veraPDF checks that the tags are there; you still write the alt text.
-axe checks the web page when it opens; the bulletin passes.
+Last, accessibility. One line asks for two PDF standards. PDF A is for
+the archive. PDF UA adds tags, so screen readers can read the PDF.
+Quarto checks both at every render, with veraPDF, a tool you install
+once. The web page is checked too, in the browser. You still write the
+alt text yourself.
 :::
 
 <!-- ============================ Y (1:30) ============================ -->
