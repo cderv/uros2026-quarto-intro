@@ -40,7 +40,7 @@ revealjs-plugins:
 ---
 
 
-## {#title-slide .quarto-title-block .center timing-duration="10s"}
+## {#title-slide .quarto-title-block .center timing-duration="15s"}
 
 <!-- fmt: skip file -->
 
@@ -64,20 +64,26 @@ Christophe Dervieux
 {{< meta date >}}
 
 ::: notes
-Welcome everyone. Why here: I work on Quarto at Posit, and this room
-publishes numbers with R every day.
+Welcome everyone. This is my first time at this conference. I work on
+Quarto at Posit, and I did not really know how you use Quarto in
+official statistics.
 :::
 
 <!-- ============================ INTRO (1:35) ============================ -->
 
-## {#conversation .center timing-duration="15s"}
+## {#conversation .center timing-duration="20s"}
 
 [Friends in official statistics:]{.lead}
 
 [*"Quarto? I haven't seen it used much in official statistics."*]{.statement}
 
 ::: notes
-Friends said it. I wanted to understand why.
+So I asked friends who work in official statistics. They told me this.
+
+*Pause, let the room read the quote.*
+
+I wanted to understand why. So I looked at what you present here, at
+uRos.
 :::
 
 ## {#publishing-needs timing-duration="20s"}
@@ -97,13 +103,16 @@ has a talk about publishing statistics]{.statement .needs-head}
 [Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
-I read every uRos program since 2014. The same three needs come back,
-often with a pipeline built in-house. Without one, someone copies the
-numbers by hand into Word, the PDF, the web page. Bridge: a Thursday
-evening.
+Every year since 2017, there is a talk here about publishing statistics.
+The same needs come back. You want recurring publications, with your
+institute's look, and less manual work. Without a pipeline, someone
+copies the numbers by hand.
+
+*Do not explain the method or the counts. The caption says where they
+are.*
 :::
 
-## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="35s"}
+## Thursday, 17:50 {#thursday auto-animate="true" timing-duration="30s"}
 
 [The key figure is wrong, and the release is tomorrow.]{.lead}
 
@@ -144,11 +153,16 @@ evening.
 :::
 
 ::: notes
-245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF
-(3), chart (4), web page (5). (6) Press release still red.
+Let's say it is Thursday evening. You have to fix a number in your
+analysis, and the release is tomorrow.
+
+(click) You fix it in the R code. (click) Then in the Word report,
+(click) the PDF, (click) the chart, (click) the web page.
+
+(click) And the press release is still wrong.
 :::
 
-## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="15s"}
+## Thursday, 17:50 {#one-source auto-animate="true" timing-duration="10s"}
 
 ::: {.cards-fan}
 ::: {.card .is-blank .is-code data-id="card-src"}
@@ -183,7 +197,10 @@ evening.
 [Fix it [once]{.hl}]{.statement}
 
 ::: notes
-Bridge: "The tool for this is Quarto."
+With one source file, every output comes from it. You fix the number
+once.
+
+This is where Quarto can help.
 :::
 
 <!-- ============================ X1 (2:25) ============================ -->
@@ -197,9 +214,12 @@ Bridge: "The tool for this is Quarto."
 }
 
 ::: notes
-If you know R Markdown, same idea. For you, R on the left. On the right,
-the documents from Thursday. Bridge: "One example for the rest of the
-talk, a statistical bulletin."
+Quarto runs your R code and makes the documents. On the left, your R
+code. On the right, documents ready to publish. For the rest of the
+talk, I use one bulletin.
+
+*Do not read the definition line. Do not go through the other
+languages.*
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="10s"}
@@ -215,7 +235,8 @@ talk, a statistical bulletin."
 :::
 
 ::: notes
-Monthly bulletin, Eurostat tourism data.
+I made this bulletin for this talk. The data are real, from Eurostat.
+The office that publishes it is fictional.
 :::
 
 ## Quarto renders text and R code into this bulletin {#rendered-walk kicker="Every number computed" auto-animate="true" auto-animate-id="result" timing-duration="20s"}
@@ -245,8 +266,11 @@ Monthly bulletin, Eurostat tourism data.
 :::
 
 ::: notes
-Point at 514.7 in the box, then in the chart. Bridge: "Let's open the
-source file."
+This is the web page. (click) The key figure, 514.7 million nights.
+(click) The chart and its caption come from the same R code. (click)
+Nobody typed this number.
+
+Let's open the source file.
 :::
 
 ## The R code you already have {#r-code kicker="Every number computed" .magic-move .tall-code timing-duration="15s"}
@@ -273,8 +297,12 @@ ggplot(nights, aes(time, values)) + geom_line()
 [Shortened for the slide. Full source in [cderv/uros2026-quarto-example](https://github.com/cderv/uros2026-quarto-example).]{.chart-cap}
 
 ::: notes
-Eurostat data, latest month, one chart. Your R code and packages stay as
-they are.
+This is the R code you already write. It gets the Eurostat data, takes
+the latest month, and draws one chart. Your code and your packages stay
+as they are.
+
+*Do not read the filters. Give the room two seconds to look at the
+code.*
 :::
 
 ## Put it in code cells, write the text around them {#cells-text kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
@@ -306,8 +334,9 @@ ggplot(nights, aes(time, values)) + geom_line()
 [A .qmd file is plain text. R code in code cells, your text in Markdown between them.]{.chart-cap}
 
 ::: notes
-The comment and the method note live next to the code that makes the
-numbers.
+With Quarto, you put this code in code cells. Between the cells, you
+write your text, in Markdown. So your analysis and your method note sit
+next to the code that makes the numbers. And the file stays plain text.
 :::
 
 ## Tell Quarto what each cell is {#options kicker="Every number computed" .magic-move .tall-code timing-duration="20s"}
@@ -340,8 +369,9 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-`#|` lines are options for Quarto. Hide the code, name and caption the
-chart (the "Figure 1" you saw).
+The highlighted lines are options for Quarto. The first one, echo false,
+hides the code in the bulletin. The other two give the chart a label and
+a caption. In the bulletin, this is Figure 1.
 :::
 
 ## Write R code inside the sentence {#inline kicker="Every number computed" .magic-move .tall-code timing-duration="25s"}
@@ -374,7 +404,9 @@ ggplot(nights, aes(time, values)) + geom_line()
 ````
 
 ::: notes
-R computes 514.7 at render. The sentence updates with new data.
+And now the key figure. You write R code inside the sentence. When
+Quarto makes the bulletin, R computes 514.7 and puts it in the text.
+Next month, with new data, the sentence updates.
 :::
 
 ## Quarto is a command line tool (CLI) {#render-cli kicker="Every number computed" timing-duration="15s"}
@@ -421,10 +453,13 @@ YAML header."
 
 
 ::: notes
-With one command, R computes the numbers and Quarto writes the page.
-Free to install. (click) Comes with Positron (Preview button) and
-RStudio (Render button). In VS Code, install one extension. Bridge: same
-command, more formats.
+Quarto is free. You install it next to R. You make the bulletin with one
+command, quarto render. (click) Or with one button, in Positron or in
+RStudio.
+
+And the same command makes other formats.
+
+*Do not explain the screenshots. The boxes show the buttons.*
 :::
 
 <!-- ============================ X2 (1:20) ============================ -->
@@ -898,12 +933,21 @@ Faster, and writing together in the browser
 :::
 
 ::: notes
-Quarto 2 is Quarto rewritten, faster, with Quarto Hub to write together
-in the browser. Experimental, no date.
+(click) The idea is not new. In 2014, R Markdown already mixed R code
+and text.
 
-It aims to keep your projects working.
+(click) Quarto came in 2022. So in official statistics, it is still
+young.
 
-Bridge: so, where to start.
+(click) Today, it is Quarto 1.
+
+(click) We are working on Quarto 2, because Quarto 1 has limits. It is
+faster, and it is made for collaboration and review. It is experimental,
+with no date yet, and it aims to keep your projects working.
+
+So, where to start?
+
+*No engine details, no roadmap. Keep them for questions.*
 :::
 
 ## Start with one monthly publication {#next-year kicker="And next" timing-duration="30s"}
