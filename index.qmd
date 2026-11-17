@@ -930,14 +930,14 @@ You fixed the number once.
 ::: notes
 *Start speaking on the first image, the carousel runs by itself.*
 
-Some of you already publish with Quarto. These are a few public
+Some of you already use Quarto for publications. These are a few public
 examples. (click) Two of them are still prototypes. (click) And these
 slides are made with Quarto too.
 
-More of you use it for reports inside your institute. I saw it in this
-year's program. So for publications, my friends are right, not much yet.
+More of you use it for reports inside your institute. I saw that in this
+year's program. But for publications, my friends are right. Not much yet.
 
-*Do not name the talks from the program. Do not comment on each
+*Do not name or count the talks from the program. Do not comment on each
 screenshot.*
 :::
 
