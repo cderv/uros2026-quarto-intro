@@ -9,6 +9,10 @@ outputs, and what needs do they describe?
 
 Speakers' names are never kept: talks are referred to by year, title and institution.
 
+The scripts and this README were written with the help of an AI coding assistant (Claude),
+directed and reviewed by the author.
+Step 4 below also uses language-model agents for the classification itself.
+
 ## Pipeline
 
 Run from this directory after `rig proj sync` (packages pinned in `rproj.lock`):
