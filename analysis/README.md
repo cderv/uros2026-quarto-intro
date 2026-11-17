@@ -59,8 +59,11 @@ that makes Quarto:
    citing the abstract, and records the reason.
 3. **Agreement** between the two codings is reported for every variable
    (`data/agreement.csv`).
-4. **Cross-check** against the keyword flags of step 3: a talk flagged `quarto` must not
-   be coded as using no tool, and so on.
+4. **Cross-check** against the keyword flags of step 3: a tool named in the text that
+   neither coder recorded is listed in `data/keyword-crosscheck.csv` and reviewed by the
+   adjudicator. `tools` records only tools used to publish for readers: a talk that names
+   Quarto or R Markdown for an internal report keeps `not_stated`, and the mention stays
+   visible in `data/keywords.csv`.
 5. **Claim check**: an agent that did not take part checks every number and sentence
    used in the talk against `data/` and reports what is not supported.
 

@@ -42,3 +42,16 @@ sessions): 532 from 2014 to 2026.
   agreement 96% on "publishing or not" (kappa 0.85); method in `README.md`, data in
   `data/`.
 - Small numbers: several years rest on one or two talks.
+- Not only R Markdown talks: about 10 of the 35 talks centred on publishing name knitr,
+  R Markdown, pagedown or Quarto; the other 25 name Shiny, an in-house package, another
+  tool, or none. Without those 10, every year from 2018 still has a talk centred on
+  publishing. 2017 is one title-only talk (Destatis, knitr).
+- Reports for internal use are not counted as publishing (2024-025, 2025-028, 2026-044,
+  2026-077), even when they use R Markdown or Quarto.
+- Quarto at uRos: up to 2025, two abstracts name it (2023 for publications, 2025 for an
+  internal report). In 2026, six other abstracts name it: one for a publication (OECD),
+  three for internal reports, two in passing. Tools used inside institutes but not
+  presented at uRos do not show here.
+
+These last three caveats were recomputed from `data/coding-final.csv` and
+`data/talks.csv` on 17 November 2026, after the independent claim check.
