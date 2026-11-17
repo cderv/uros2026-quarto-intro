@@ -226,27 +226,16 @@
     }
   </style>
   <script>
-
     // Icons without network: give the iconify component (mcanouil/iconify) the deck's icons before
-
     // the slides are parsed, so it never calls api.iconify.design. The extension's own `preload`
-
     // option injects its data after the component has started, too late to be read.
-
     // Rebuild after adding an icon: https://api.iconify.design/mdi.json?icons=<name>,<name>
-
     (function () {
-
       var icons = {"prefix":"mdi","lastModified":1737398331,"aliases":{},"width":24,"height":24,"icons":{"chart-bar":{"body":"<path fill=\"currentColor\" d=\"M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z\"/>"},"file-document-edit-outline":{"body":"<path fill=\"currentColor\" d=\"M8 12h8v2H8zm2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4zm-2-2h4.1l.9-.9V16H8zm12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1l-2.1-2.1l1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z\"/>"},"file-pdf-box":{"body":"<path fill=\"currentColor\" d=\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z\"/>"},"file-word-box":{"body":"<path fill=\"currentColor\" d=\"M15.5 17H14l-2-7.5l-2 7.5H8.5L6.1 7h1.7l1.54 7.5L11.3 7h1.4l1.97 7.5L16.2 7h1.7M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2\"/>"},"language-r":{"body":"<path fill=\"currentColor\" d=\"M12 4.29c-5.5 0-10 3-10 6.71c0 3.28 3.56 6 8.24 6.58v2.13h3.41v-2.12c.85-.09 1.64-.25 2.39-.48l1.38 2.6h3.86l-2.32-3.91C20.83 14.58 22 12.87 22 11c0-3.71-4.5-6.71-10-6.71m1.53 2.62c4.2 0 7.3 1.4 7.3 4.59c0 1.71-.92 2.91-2.42 3.65c-.09-.05-.17-.1-.22-.15c-.36-.16-.96-.34-.96-.34s2.98-.22 2.98-3.19s-3.12-3.02-3.12-3.02h-6.85v7.16c-2.55-.74-4.31-2.31-4.31-4.11c0-2.54 3.4-4.59 7.6-4.59m.15 3.98h2.07s.95-.05.95.94c0 .97-.95.97-.95.97h-2.07zm-.03 4.41h.92c.18 0 .27.05.43.2c.13.1.27.29.39.46c-.55.07-1.13.1-1.74.1z\"/>"},"newspaper-variant-outline":{"body":"<path fill=\"currentColor\" d=\"M20 5v14H4V5zm0-2H4c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2m-2 12H6v2h12zm-8-8H6v6h4zm2 2h6V7h-6zm6 2h-6v2h6z\"/>"},"web":{"body":"<path fill=\"currentColor\" d=\"M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2\"/>"}}};
-
       var Icon = window.customElements && customElements.get('iconify-icon');
-
       if (Icon && Icon.addCollection) Icon.addCollection(icons);
-
     })();
-
   </script>
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -255,7 +244,7 @@
 
 <section id="title-slide" class="slide level2 quarto-title-block center">
 <h2></h2>
-<span class="timing-bar-data" style="display:none" data-duration="10s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="15s"></span>
 <!-- fmt: skip file -->
 <h1 class="title">Reproducible Statistical Publications with Quarto</h1>
 <p><img data-src="images/uros2026-logo.jpg" class="absolute" style="bottom: 60px; right: 100px; width: 220px; " alt="uRos 2026 logo: a pink hexagon with the Eiffel Tower and an R flag, urosconf.org"></p>
@@ -268,7 +257,7 @@
 </div>
 <p>November 19, 2026</p>
 <aside class="notes">
-<p>Welcome everyone. Why here: I work on Quarto at Posit, and this room publishes numbers with R every day.</p>
+<p>Welcome everyone. This is my first time at this conference. I work on Quarto at Posit, and I did not really know how you use Quarto in official statistics.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -284,11 +273,13 @@
 </section>
 <section id="conversation" class="slide level2 center">
 <h2></h2>
-<span class="timing-bar-data" style="display:none" data-duration="15s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="20s"></span>
 <p><span class="lead">Friends in official statistics:</span></p>
 <p><span class="statement"><em>“Quarto? I haven’t seen it used much in official statistics.”</em></span></p>
 <aside class="notes">
-<p>Friends said it. I wanted to understand why.</p>
+<p>So I asked friends who work in official statistics. They told me this.</p>
+<p><em>Pause, let the room read the quote.</em></p>
+<p>I wanted to understand why. So I looked at what you present here, at uRos.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -313,7 +304,8 @@ has a talk about publishing statistics</span></p>
 </div>
 <p><span class="chart-cap">Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: <code>analysis/</code> in the slides repository.</span></p>
 <aside class="notes">
-<p>I read every uRos program since 2014. The same three needs come back, often with a pipeline built in-house. Without one, someone copies the numbers by hand into Word, the PDF, the web page. Bridge: a Thursday evening.</p>
+<p>Every year since 2017, there is a talk here about publishing statistics. The same needs come back. You want recurring publications, with your institute’s look, and less manual work. Without a pipeline, someone copies the numbers by hand.</p>
+<p><em>Do not explain the method or the counts. The caption says where they are.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -328,7 +320,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="thursday" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Thursday, 17:50</h2>
-<span class="timing-bar-data" style="display:none" data-duration="35s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s"></span>
 <p><span class="lead">The key figure is wrong, and the release is tomorrow.</span></p>
 <div class="cards">
 <div class="card fragment custom fix is-code" data-id="card-src" data-fragment-index="1">
@@ -354,7 +346,9 @@ has a talk about publishing statistics</span></p>
 <p><span class="statement question">One is still wrong.</span></p>
 </div>
 <aside class="notes">
-<p>245.0 instead of 514.7. One fix per click: R code (1), Word (2), PDF (3), chart (4), web page (5). (6) Press release still red.</p>
+<p>Let’s say it is Thursday evening. You have to fix a number in your analysis, and the release is tomorrow.</p>
+<p>(click) You fix it in the R code. (click) Then in the Word report, (click) the PDF, (click) the chart, (click) the web page.</p>
+<p>(click) And the press release is still wrong.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -369,7 +363,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="one-source" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Thursday, 17:50</h2>
-<span class="timing-bar-data" style="display:none" data-duration="15s"></span>
+<span class="timing-bar-data" style="display:none" data-duration="10s"></span>
 <div class="cards-fan">
 <div class="card is-blank is-code" data-id="card-src">
 <p><span class="ico"><iconify-icon role="img" inline="" icon="mdi:file-document-edit-outline" aria-label="Icon file-document-edit-outline from mdi Iconify.design set." title="Icon file-document-edit-outline from mdi Iconify.design set."></iconify-icon></span> <span class="kind">One source file</span></p>
@@ -394,7 +388,8 @@ has a talk about publishing statistics</span></p>
 </div>
 <p><span class="statement">Fix it <span class="hl">once</span></span></p>
 <aside class="notes">
-<p>Bridge: “The tool for this is Quarto.”</p>
+<p>With one source file, every output comes from it. You fix the number once.</p>
+<p>This is where Quarto can help.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -410,11 +405,12 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="what-is-quarto" class="slide level2 timing-section">
 <h2>Quarto …</h2>
-<span class="timing-bar-data" style="display:none" data-duration="15s" data-section="true" data-title="X1 · Every number computed"></span>
+<span class="timing-bar-data" style="display:none" data-duration="15s" data-title="X1 · Every number computed" data-section="true"></span>
 <p>…is an open-source, scientific, and technical publishing system</p>
 
 <img data-src="images/horst_quarto_schematic.png" alt="Schematic: R, Python, Observable, Julia and other languages go into Quarto, which makes HTML, PDF, Word and other documents." width="900" class="r-stretch quarto-figure-center"><p class="caption"><span class="small-cap">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</span></p><aside class="notes">
-<p>If you know R Markdown, same idea. For you, R on the left. On the right, the documents from Thursday. Bridge: “One example for the rest of the talk, a statistical bulletin.”</p>
+<p>Quarto runs your R code and makes the documents. On the left, your R code. On the right, documents ready to publish. For the rest of the talk, I use one bulletin.</p>
+<p><em>Do not read the definition line. Do not go through the other languages.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -435,7 +431,7 @@ has a talk about publishing statistics</span></p>
 <p><img data-src="images/bulletin/html-trend.png" class="shot" alt="Figure 1 of the HTML bulletin, titled 'August 2026 set a new record'. Line chart of monthly nights in the EU, the 2026 line above the 2022-2025 range, August labelled 514.7 million." height="370"></p>
 </div>
 <aside class="notes">
-<p>Monthly bulletin, Eurostat tourism data.</p>
+<p>I made this bulletin for this talk. The data are real, from Eurostat. The office that publishes it is fictional.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -464,7 +460,8 @@ has a talk about publishing statistics</span></p>
 <p><span class="fragment">Nobody typed 514.7</span></p>
 </div></div>
 <aside class="notes">
-<p>Point at 514.7 in the box, then in the chart. Bridge: “Let’s open the source file.”</p>
+<p>This is the web page. (click) The key figure, 514.7 million nights. (click) The chart and its caption come from the same R code. (click) Nobody typed this number.</p>
+<p>Let’s open the source file.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -498,7 +495,8 @@ has a talk about publishing statistics</span></p>
 <span id="cb1-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="chart-cap">Shortened for the slide. Full source in <a href="https://github.com/cderv/uros2026-quarto-example">cderv/uros2026-quarto-example</a>.</span></p>
 <aside class="notes">
-<p>Eurostat data, latest month, one chart. Your R code and packages stay as they are.</p>
+<p>This is the R code you already write. It gets the Eurostat data, takes the latest month, and draws one chart. Your code and your packages stay as they are.</p>
+<p><em>Do not read the filters. Give the room two seconds to look at the code.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -537,7 +535,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb2-21"><a href="" aria-label="21"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="chart-cap">A .qmd file is plain text. R code in code cells, your text in Markdown between them.</span></p>
 <aside class="notes">
-<p>The comment and the method note live next to the code that makes the numbers.</p>
+<p>With Quarto, you put this code in code cells. Between the cells, you write your text, in Markdown. So your analysis and your method note sit next to the code that makes the numbers. And the file stays plain text.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -578,7 +576,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb3-23"><a href="" aria-label="23"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
 <span id="cb3-24"><a href="" aria-label="24"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p><code>#|</code> lines are options for Quarto. Hide the code, name and caption the chart (the “Figure 1” you saw).</p>
+<p>The highlighted lines are options for Quarto. The first one, echo false, hides the code in the bulletin. The other two give the chart a label and a caption. In the bulletin, this is Figure 1.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -619,7 +617,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb4-23"><a href="" aria-label="23"></a><span class="fu">ggplot</span>(nights, <span class="fu">aes</span>(time, values)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span>
 <span id="cb4-24"><a href="" aria-label="24"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>R computes 514.7 at render. The sentence updates with new data.</p>
+<p>And now the key figure. You write R code inside the sentence. When Quarto makes the bulletin, R computes 514.7 and puts it in the text. Next month, with new data, the sentence updates.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -655,7 +653,9 @@ has a talk about publishing statistics</span></p>
 </div></div>
 </div>
 <aside class="notes">
-<p>With one command, R computes the numbers and Quarto writes the page. Free to install. (click) Comes with Positron (Preview button) and RStudio (Render button). In VS Code, install one extension. Bridge: same command, more formats.</p>
+<p>Quarto is free. You install it next to R. You make the bulletin with one command, quarto render. (click) Or with one button, in Positron or in RStudio.</p>
+<p>And the same command makes other formats.</p>
+<p><em>Do not explain the screenshots. The boxes show the buttons.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -671,13 +671,13 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="formats" class="slide level2 magic-move timing-section" data-kicker="Same source, multiple formats">
 <h2>Output formats at the top of the file</h2>
-<span class="timing-bar-data" style="display:none" data-duration="10s" data-section="true" data-title="X2 · Same source, multiple formats"></span>
+<span class="timing-bar-data" style="display:none" data-duration="10s" data-title="X2 · Same source, multiple formats" data-section="true"></span>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-code-line-numbers="3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="" aria-label="1"></a><span class="pp">---</span></span>
 <span id="cb6-2"><a href="" aria-label="2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Tourism in the EU</span></span>
 <span id="cb6-3"><a href="" aria-label="3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb6-4"><a href="" aria-label="4"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>Same file. This block at the top is the YAML header. HTML first.</p>
+<p>Same file, at the top. This block is the header, written in YAML. It says the format, here HTML.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -700,7 +700,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb7-5"><a href="" aria-label="5"></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span><span class="co"> # PDF, no LaTeX to install</span></span>
 <span id="cb7-6"><a href="" aria-label="6"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <aside class="notes">
-<p>Typst comes with Quarto and makes the PDF. No LaTeX.</p>
+<p>Add one line, and you also get a PDF. It is made with Typst, a page layout tool that comes with Quarto. No LaTeX to install.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -729,7 +729,7 @@ has a talk about publishing statistics</span></p>
 <p>… now writes <code>bulletin.html</code>, <code>bulletin.pdf</code> and <code>bulletin.docx</code></p>
 </div>
 <aside class="notes">
-<p>Word, for the colleague who asks for Word. (click) Same command as on the CLI slide. Bridge: the web page, then the PDF.</p>
+<p>One more line for Word, for the colleague who asks for Word. (click) The same command now writes the three files.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -751,7 +751,7 @@ has a talk about publishing statistics</span></p>
 </figure>
 </div>
 <aside class="notes">
-<p>The web page is readable on a phone, chart and table inside.</p>
+<p>This is the web page. It has the table of contents, and links to the PDF and the Word file. It also works on a phone, with the chart and the table inside.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -791,7 +791,9 @@ has a talk about publishing statistics</span></p>
 </div></div>
 </div>
 <aside class="notes">
-<p>Print and the archive, from the same file. (The pages scroll by themselves.)</p>
+<p>And this is the PDF, from the same file, for print and for the archive. Same numbers, same chart.</p>
+<p><em>Let the pages scroll for a few seconds.</em></p>
+<p>Let’s look at what makes it ready to publish.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -807,7 +809,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="table" class="slide level2 timing-section" data-kicker="Ready to publish">
 <h2>A gt table in HTML and PDF</h2>
-<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="X3 · Ready to publish"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-title="X3 · Ready to publish" data-section="true"></span>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -841,7 +843,7 @@ has a talk about publishing statistics</span></p>
 </div>
 </div></div>
 <aside class="notes">
-<p>Same gt code, one table in bulletin.html and in bulletin.pdf. Table 1 comes from label + tbl-cap, numbered for you.</p>
+<p>Tables are made with gt, the R package you may already use. The label and the caption are options of the cell. (click) The same code gives this table in the web page, and this one in the PDF. It is Table 1, numbered for you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -864,7 +866,7 @@ has a talk about publishing statistics</span></p>
 <!-- frames on the @ references, positions measured on the rendered slide -->
 <img data-src="images/bulletin/html-crossref.png" class="shot quarto-figure quarto-figure-center r-stretch" alt="The sentence in the HTML bulletin, with links: Figure 1 compares this year with the four previous years; Section 2 looks at each country and Section 3 explains the figures." width="1100"><p><span class="xr-box absolute fragment" data-fragment-index="1" style="left: 786px; top: 97px; width: 161px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 594px; top: 134px; width: 221px; height: 40px;"></span> <span class="xr-box absolute fragment" data-fragment-index="1" style="left: 180px; top: 171px; width: 191px; height: 40px;"></span></p>
 <aside class="notes">
-<p>(click) The references. @fig-trend becomes “Figure 1”, a link in HTML. @sec-countries becomes “Section 2”. When you add a figure, Quarto renumbers.</p>
+<p>In the text, you refer to a figure or a section by its label. This is called a cross-reference. (click) Quarto replaces each one with its number, and makes it a link in the web page. When you add a figure, Quarto renumbers them.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -905,7 +907,8 @@ has a talk about publishing statistics</span></p>
 </div>
 </div></div>
 <aside class="notes">
-<p>Colors, logo and fonts are set once, in _brand.yml. HTML and PDF read it. Word reads it through a reference document. The page layout adds a few small files. A fictional institute, real Eurostat data.</p>
+<p>Your institute’s look goes in one small file, the brand file. You set the colors, the logo and the fonts once. The web page and the PDF both read it. For Word, you give Quarto a reference document with the same styles.</p>
+<p><em>Do not explain the page layout files or how the Word reference is built.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -931,7 +934,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb14-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ex">[verapdf]:</span> Validating bulletin.pdf against PDF/UA1...PASSED</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="lead">PDF/A is for the archive. PDF/UA is tagged for screen readers. Quarto checks both with <a href="https://verapdf.org/">veraPDF</a>, and the web page with <a href="https://quarto.org/docs/output-formats/html-accessibility.html">axe-core</a>.</span></p>
 <aside class="notes">
-<p>One line asks for both PDF standards. With veraPDF installed (<code>quarto install verapdf</code>), Quarto checks the PDF at each render. veraPDF checks that the tags are there; you still write the alt text. axe checks the web page when it opens; the bulletin passes.</p>
+<p>Last, accessibility. One line asks for two PDF standards. PDF A is for the archive. PDF UA adds tags, so screen readers can read the PDF. Quarto checks both at every render, with veraPDF, a tool you install once. The web page is checked too, in the browser. You still write the alt text yourself.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -947,7 +950,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="again" class="slide level2 magic-move timing-section" data-kicker="Fix it once">
 <h2>Thursday, 17:50, again</h2>
-<span class="timing-bar-data" style="display:none" data-duration="20s" data-section="true" data-title="Y · Fix it once"></span>
+<span class="timing-bar-data" style="display:none" data-duration="20s" data-title="Y · Fix it once" data-section="true"></span>
 <p><span class="lead">The key figure is wrong.</span></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="" aria-label="1"></a>nights <span class="ot">&lt;-</span> <span class="fu">get_eurostat</span>(</span>
 <span id="cb15-2"><a href="" aria-label="2"></a>  <span class="st">"tour_occ_nim"</span>,</span>
@@ -960,7 +963,8 @@ has a talk about publishing statistics</span></p>
 <span id="cb15-9"><a href="" aria-label="9"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="lead fragment">Country of residence: <code>FOR</code> = guests from abroad only</span></p>
 <aside class="notes">
-<p>Back to Thursday, ten to six. Wrong again. (click) Cause: someone kept the guests from abroad only.</p>
+<p>Back to Thursday evening. The key figure is wrong again. This time, the bulletin is a Quarto file, and the number comes from this R code.</p>
+<p>(click) Someone kept only the guests from abroad.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -988,7 +992,7 @@ has a talk about publishing statistics</span></p>
 <span id="cb16-9"><a href="" aria-label="9"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><span class="lead">Country of residence: <code>FOR</code> = guests from abroad only <span class="fragment">→ <code>TOTAL</code> = all guests</span></span></p>
 <aside class="notes">
-<p>One word in the R code. (click) TOTAL keeps all guests.</p>
+<p>You change one word in the R code. (click) Now it counts all the guests.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1026,7 +1030,9 @@ has a talk about publishing statistics</span></p>
 <p><span class="shot-label">bulletin.docx</span></p>
 </div></div>
 <aside class="notes">
-<p>(click) 514.7 in the HTML, the PDF and the Word file. Table, chart and caption come from the same render.</p>
+<p>Then you render, once. Quarto runs the R code again and writes every format.</p>
+<p>(click) In all three files, the key figure is now 514.7. The chart and its caption changed too, because they come from the same R code. You did not open the PDF or the Word file.</p>
+<p><em>Pause on the three boxes. This is the slide to slow down on.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1066,7 +1072,9 @@ has a talk about publishing statistics</span></p>
 </div>
 <p><span class="payoff-line">All six show <span class="payoff fragment">514.7</span></span></p>
 <aside class="notes">
-<p>(click) 514.7 on all six. Press release: one more file that reads the same R code (not in the example).</p>
+<p>One minute later. (click) All six show 514.7.</p>
+<p>The press release can be one more Quarto file that reads the same R code. It is not in my example, but it works the same way.</p>
+<p>You fixed the number once.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1082,7 +1090,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="products" class="slide level2 timing-section" data-kicker="In official statistics">
 <h2>Already published with Quarto</h2>
-<span class="timing-bar-data" style="display:none" data-duration="45s" data-section="true" data-title="Z · In official statistics, and next"></span>
+<span class="timing-bar-data" style="display:none" data-duration="45s" data-title="Z · In official statistics, and next" data-section="true"></span>
 <p><span class="gallery-count">France · Norway · United Kingdom · OECD</span></p>
 <!-- Screenshots: just gallery (scripts/capture-gallery.mjs), which also checks each page is made with Quarto -->
 <div class="r-stack">
@@ -1130,7 +1138,9 @@ has a talk about publishing statistics</span></p>
 <p><span class="lead">These slides are Quarto too.</span></p>
 </div>
 <aside class="notes">
-<p>Back to my friends’ quote. Some of you made these. Examples, in no order. (click: grid) (click)</p>
+<p><em>Start speaking on the first image, the carousel runs by itself.</em></p>
+<p>Some of you already publish with Quarto. These are a few public examples, in no particular order. (click) Two of them are still prototypes. (click) And these slides are made with Quarto too.</p>
+<p>So it is used. But my friends are right, not much yet.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1165,9 +1175,12 @@ has a talk about publishing statistics</span></p>
 </div>
 </div>
 <aside class="notes">
-<p>Quarto 2 is Quarto rewritten, faster, with Quarto Hub to write together in the browser. Experimental, no date.</p>
-<p>It aims to keep your projects working.</p>
-<p>Bridge: so, where to start.</p>
+<p>(click) The idea is not new. In 2014, R Markdown already mixed R code and text.</p>
+<p>(click) Quarto came in 2022. So in official statistics, it is still young.</p>
+<p>(click) Today, it is Quarto 1.</p>
+<p>(click) We are working on Quarto 2, because Quarto 1 has limits. It is faster, and it is made for collaboration and review. It is experimental, with no date yet, and it aims to keep your projects working.</p>
+<p>So, where to start?</p>
+<p><em>No engine details, no roadmap. Keep them for questions.</em></p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1206,7 +1219,9 @@ has a talk about publishing statistics</span></p>
 </div>
 </div>
 <aside class="notes">
-<p>You already do R. You already publish. Quarto is the step between. Next Thursday at 17:50, fix one line and render.</p>
+<p>With one publication you make every month. You turn it into one Quarto file, and you get every format from it. You can start from the example bulletin.</p>
+<p><em>Pause.</em></p>
+<p>You already do R. You already publish. Quarto is the step between. Next Thursday evening, fix one line and render.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1222,7 +1237,7 @@ has a talk about publishing statistics</span></p>
 </section>
 <section id="learning-more" class="slide level2 timing-section">
 <h2>Learning More</h2>
-<span class="timing-bar-data" style="display:none" data-duration="30s" data-section="true" data-title="End"></span>
+<span class="timing-bar-data" style="display:none" data-duration="30s" data-title="End" data-section="true"></span>
 <div class="columns">
 <div class="column" style="width:62%;">
 <h4 class="bottom-pad" id="slides-httpscderv.github.iouros2026-quarto-intro">Slides: <a href="https://cderv.github.io/uros2026-quarto-intro/" class="uri">https://cderv.github.io/uros2026-quarto-intro/</a></h4>
@@ -1261,7 +1276,8 @@ has a talk about publishing statistics</span></p>
 </div>
 </div></div>
 <aside class="notes">
-<p>Two QR codes: the slides, and the bulletin itself. Thank you. Questions?</p>
+<p>Everything is here. The slides, and the example bulletin with its source. You can copy it and put in your own data.</p>
+<p>Thank you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1497,177 +1513,91 @@ has a talk about publishing statistics</span></p>
       });
     </script>
     <script type="text/javascript">
-
       // iconify-icon draws an icon only once an IntersectionObserver sees it, which never happens in
-
       // the revealjs print layout (empty icons in the PDF) and is not needed with the icons embedded
-
       // (iconify-offline.html). Swap each icon for a copy with `noobserver`, drawn at once.
-
       document.querySelectorAll('iconify-icon:not([noobserver])').forEach(function (el) {
-
         var icon = el.cloneNode(true);
-
         icon.setAttribute('noobserver', '');
-
         el.replaceWith(icon);
-
       });
-
     </script>
 
-    
-
     <script type="text/javascript">
-
       // Mark the PDF export with one page per fragment step, for `.print-hide-final` (reveal-style.scss)
-
       Reveal.on('ready', () => {
-
         if (Reveal.getConfig().pdfSeparateFragments) document.documentElement.classList.add('pdf-fragments');
-
       });
-
     </script>
 
-    
-
     <script type="text/javascript">
-
       // Hide the logo on the title slide only. No-op when the deck has no logo.
-
       function toggleLogo(indexh) {
-
         var logo = document.querySelector("div.has-logo > img.slide-logo");
-
         if (!logo) return;
-
         logo.style.display = indexh === 0 ? "none" : null;
-
       }
-
       Reveal.on('ready', (event) => {
-
         toggleLogo(event.indexh);
-
         // In an r-vstack made only of image paragraphs, lift the images out of
-
         // their <p> so the stack sizes them.
-
         var slides = Reveal.getSlidesElement();
-
         // auto-animate (#rendered -> #rendered-walk): Reveal pairs the empty <p> around each
-
         // screenshot as well as the image, and the two moves add up. Lift the images out.
-
         slides.querySelectorAll('.shots-v > p').forEach((p) => p.replaceWith(...p.childNodes));
-
         slides.querySelectorAll('div.r-vstack').forEach((vstack) => {
-
           var isAllP = Array.from(vstack.children).every((child) => child.tagName === 'P');
-
           var isAllImg = Array.from(vstack.children).every((child) => Array.from(child.children).every((child) => child.tagName === 'IMG'));
-
           if (isAllP && isAllImg) {
-
             Array.from(vstack.children).forEach((child) => {
-
               Array.from(child.children).forEach((img) => {
-
                 vstack.appendChild(img);
-
               });
-
               vstack.removeChild(child);
-
             });
-
           }
-
         });
-
       });
-
       Reveal.on('slidechanged', (event) => {
-
         toggleLogo(event.indexh);
-
       });
-
     </script>
-
-    
 
     <script type="text/javascript">
-
       // Z gallery: easycarousel autoplays from page load and loops. Restart it from
-
       // the first thumbnail when its slide is shown, and pause it when the slide is
-
       // left (the extension itself is not edited).
-
       (function () {
-
         function carousels() {
-
           return Array.from(document.querySelectorAll('.easycarousel'))
-
             .filter((el) => el.easycarousel && el.easycarousel.plugins().autoplay);
-
         }
-
         function sync(slide) {
-
           carousels().forEach((el) => {
-
             var embla = el.easycarousel;
-
             if (slide && slide.contains(el)) {
-
               // measured while hidden, Embla saw a single snap and autoplay never
-
               // initialised: re-initialise now that the slide is laid out
-
               embla.reInit();
-
               embla.scrollTo(0, true);
-
               embla.plugins().autoplay.play();
-
             } else {
-
               embla.plugins().autoplay.stop();
-
             }
-
           });
-
         }
-
         Reveal.on('ready', () => setTimeout(() => {
-
           carousels().forEach((el) => {
-
             el.easycarousel.on('reInit', () => {
-
               // Hiding a slide re-initializes Embla, which restarts autoplay.
-
               if (!Reveal.getCurrentSlide().contains(el)) el.easycarousel.plugins().autoplay.stop();
-
             });
-
           });
-
           sync(Reveal.getCurrentSlide());
-
         }, 300));
-
         Reveal.on('slidechanged', (e) => sync(e.currentSlide));
-
       })();
-
     </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
