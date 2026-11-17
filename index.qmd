@@ -833,6 +833,10 @@ same R code (not in the example).
 ```
 :::
 
+::: {.print-only .fragment .fade-out fragment-index="1"}
+![](images/gallery/01-insee-working-paper.png){height="390px" fig-alt="Insee working paper, HTML and PDF."}
+:::
+
 ::: {.gallery-grid .fragment fragment-index="1"}
 [![Insee: working paper, HTML + PDF](images/gallery/01-insee-working-paper.png){
   fig-alt="Insee working paper, HTML and PDF."

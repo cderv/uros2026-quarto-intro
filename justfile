@@ -28,10 +28,10 @@ preview mode="":
 check:
     node scripts/check-slides.mjs --strict
 
-# Export the deck to slides-full.pdf (for the organisers), without the checks
+# Export the deck to slides-full.pdf (for the organisers, one page per fragment step), without the checks
 [group('slides')]
 pdf:
-    node scripts/check-slides.mjs --pdf-only
+    node scripts/check-slides.mjs --pdf-only --pdf-fragments
 
 # Screenshot the public Quarto publications of the gallery slide into images/gallery/
 [group('slides')]

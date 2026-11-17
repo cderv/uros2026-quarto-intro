@@ -69,7 +69,9 @@ per line (the caption is the image text; keep it short, it shows for 2 s). Deck 
   while the mouse is over it, and a click focuses it so the arrow keys move the carousel instead
   of the deck. Keep the `*` and `!important`: the fade plugin sets `pointer-events` inline.
 - On the next click the carousel fades out and a static grid of the same thumbnails (with links
-  and a line of names) takes its place. The PDF export shows only the grid.
+  and a line of names) takes its place. The PDF export hides the carousel (its script does not
+  lay it out in print, so all six images would stack and spill over extra pages); a `.print-only`
+  still of the first image stands in for it until the grid comes in.
 
 ### iconify (icons)
 
