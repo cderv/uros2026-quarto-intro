@@ -263,8 +263,8 @@ node scripts/check-slides.mjs --strict
 # Publish to GitHub Pages
 quarto publish gh-pages
 
-# PDF for the organisers (slides-full.pdf), without Docker
-node scripts/check-slides.mjs --pdf-only
+# PDF for the organisers (descriptive filename), without Docker
+node scripts/check-slides.mjs --pdf-only slides-uros2026-reproducible-statistical-publications-with-quarto.pdf --pdf-fragments
 ```
 
 Setup, options and the decktape fallback: `.claude/CLAUDE.md`, section **Checking the deck**.

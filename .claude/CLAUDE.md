@@ -125,7 +125,7 @@ braid holds the plan and the history of the talk; the repository holds only the 
 just preview          # live preview of the slides, as presented (no review toolbar)
 just preview annotate # same, with the annotate review toolbar (notes server of the editor extension)
 just check            # render + browser + layout checks, screenshots in _check/slides/
-just pdf              # slides-full.pdf for the organisers
+just pdf              # descriptive PDF for the organisers
 just gallery          # screenshots of the public Quarto publications shown on the gallery slide
 just ide-captures     # Positron and RStudio editor screenshots for the CLI slide (.claude/ide-captures.md)
 just example-status   # example submodule: local edits, unpushed commits, new public commits
