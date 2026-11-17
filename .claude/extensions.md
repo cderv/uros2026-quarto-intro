@@ -53,6 +53,13 @@ can show ghost code from the previous one. Check those slides live or with a set
 `timing-title="X1 · ..."`. The per-part budgets are in `.claude/rules/deck-structure.md`; keep
 the durations aligned with it.
 
+For a timed rehearsal, press ↺ before the first slide and do not pause until the end; the 📋
+button shows planned against actual per slide. The clock at the bottom is the reliable total: in
+0.1.0 the per-slide times keep counting when you change slide or open the summary while paused,
+so their sum can exceed the clock (one rehearsal: 14:59 summed, 13:58 on the clock). Slides with
+no heading show as "Slide N"; the first part is named "Slide 1" because the title slide has no
+`timing-title`.
+
 ### timeline
 
 `::: timeline` with one `::: {.event .fragment data-label="2022"}` per event (bold name, then one

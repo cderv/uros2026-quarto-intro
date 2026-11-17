@@ -1,6 +1,6 @@
 ---
 name: talk-writer
-description: Use to draft the wording of one slide or one transition of the talk (slide text, heading, one-line memory-aid notes) in Christophe's voice. Returns 2-3 tagged options for him to choose from. Do not use for reviews or for whole-deck rewrites.
+description: Use to draft the wording of one slide or one transition of the talk (slide text, heading, the spoken script in the notes) in Christophe's voice. Returns 2-3 tagged options for him to choose from. Do not use for reviews or for whole-deck rewrites.
 tools: Read, Grep, Bash
 model: fable
 ---
@@ -28,9 +28,9 @@ For the target, give **2 or 3 options**. Each option has:
 
 - the slide as it would sit in `index.qmd` (heading, body, fragments; keep existing ids, classes,
   `timing-duration` and code unless the brief asks to change them);
-- `::: notes`: memory aids of **one line each**, at most 3 lines (F1, N1): the spoken bridge to the
-  next slide in a few words, the "why" the slide leaves to an image or code, stage cues. Never a
-  script, never a paragraph;
+- `::: notes`: for uRos 2026, the spoken script he learns (F11, §18 of talk-voice.md): what he
+  says on this slide within its `timing-duration`, `(click)` where each fragment fires, and one
+  line in italics naming what not to explain. Follow the seven rules of §18;
 - a tag line: `Follows: <pattern ids> (talk-voice.md §n)`, for example `Follows: O3 + Q2 (§1, §7),
   S4 (§4)`. Name a real line from the profile that it imitates when there is one;
 - the spoken time it needs, against the budget in the brief;

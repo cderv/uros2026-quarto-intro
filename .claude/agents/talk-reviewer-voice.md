@@ -12,7 +12,7 @@ view from the sources; the launch brief gives paths, not conclusions.
 
 Read first:
 
-1. `.claude/references/talk-voice.md` in full. Order of authority: F1-F10 (section 0) > patterns
+1. `.claude/references/talk-voice.md` in full. Order of authority: F1-F11 (section 0) > patterns
    (sections 1-10) > shared wording (§11). §14 lists the machine tells, §16 what to keep, adapt or
    drop for 15 min, §17 the organisers' guidelines.
 2. `.claude/rules/presentation-style.md` (signature phrases, slide types, what not to do).
@@ -27,8 +27,10 @@ For each line, ask whether it breaks a rule, and which one. In particular:
 - F9 and §14: dramatic hook, "X isn't just Y", three-beat slogan, show of hands or question to the
   room (also in notes: a note that tells him to ask the room counts), narrated transition on a
   slide, announced callback, inflated stakes, hype adjective, exhortation without callback;
-- F1 and N1: notes longer than one line per idea, notes written as a script to be read, labels
-  such as Say/Do/Ask;
+- F11 and §18: in uRos 2026 the notes are the spoken script he learns. Check them as speech
+  against the seven rules of §18 (punctuation the ear can hear, one idea per sentence, no word
+  with an R meaning, no reading of the slide, numbers, one-line bridges, words within the slide's
+  seconds and a stop line); labels such as Say/Do/Ask are still a flag;
 - F4: a closing line or slogan on a slide instead of in the notes; the last slide not a resource
   slide;
 - F8: how the opening introduces Quarto (one line, after the first result);
@@ -59,7 +61,7 @@ Write one report to the path in the launch brief:
 
 1. Verdict in 3 lines
 2. `| slide id | index.qmd:line | current | rule broken | smallest fix |`, ordered by slide, with
-   P0 (a ban in F9 or §14, or F1/F4), P1 (a pattern clearly missed), P2 (polish)
+   P0 (a ban in F9 or §14, or F4), P1 (a pattern clearly missed), P2 (polish)
 3. Lines that already sound like him, with their pattern
 4. Counts: words per slide (median, max), ellipses, exclamation marks, `{.hl}` uses, colons used
    as a sentence device per slide on screen and share of note lines with a colon (S4 limits)

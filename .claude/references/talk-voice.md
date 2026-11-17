@@ -17,7 +17,8 @@
 
 These outrank every inferred pattern below.
 
-- **F1. Notes are memory aids, not a script.** He does not read his notes.
+- **F1. Notes are memory aids, not a script.** He does not read his notes. *Superseded for the uRos
+  2026 deck by F11.*
 - **F2. The intro is short.** "Welcome everyone", then directly a quick hook that says why he is
   here, then quickly the slide that hooks the topic.
 - **F3. He does not read the formula lines** (the recurring Quarto definitions); they support what
@@ -39,6 +40,9 @@ These outrank every inferred pattern below.
 - **F10. Colons (2026-11-13).** Label + colon stays his form, but never as a reveal that replaces
   the verb, and sparingly: about one colon device every five slides, a few in the notes (limits of
   S4, §14 items 13 to 17).
+- **F11. The notes are the learned script (2026-11-17, uRos 2026).** After a timed rehearsal ran
+  13:58 for 11:00, he chose to write out what he says, learn it, and keep it as the speaker-view
+  notes. He learns it, he does not read it from the screen. Rules for writing it: section 18.
 
 ## Evidence base and how to read the counts
 
@@ -410,7 +414,7 @@ Spoken, he says why he is here (F2). Tutorials differ (`I'm going to **assume** 
 
 **N1. Notes are short, unlabelled memory aids.** 9/12 talks have notes (none in T7, T9, T12).
 Length: 10 to 35 words (xaringan), 1 to 5 short bullets (Raukr 2025), one line (PyData 2025), 4 to
-17 words (T10). No Say/Do/Ask labels. He does not read them (F1). A one-line `Bridge:` or `Next:`
+17 words (T10). No Say/Do/Ask labels. He does not read them (F1). For uRos 2026 the notes are the learned script instead (F11, §18). A one-line `Bridge:` or `Next:`
 cue to the next slide is fine (kept in the uRos 2026 deck after the coach review of 2026-11-12).
 
 - `Click on the link to show example` (`raukr-2023-quarto/index.qmd:389`); `Cliquez sur le lien pour voir l'exemple` (`2024-quarto-evolution-rmd/index.qmd:485`)
@@ -592,7 +596,10 @@ Each is **invented** unless marked real. Rewrites use his own forms, not the sha
     Rewrite: `Quarto renders the notebook to HTML and PDF from the same source. Both can use the organisation's brand.`
 11. **Bold-lead + em-dash bullets** (real, 2026 tutorial only, e.g. `**Rien à installer** —`, `tuto-quarto-typst-rr-2026/1-quarto-typst/1-quarto-typst.qmd:179`).
     Rewrite: a verb first (`- Typst comes with Quarto, nothing to install`); a label + colon (S4) only within its limits.
-12. **Script-length notes** (2026 tutorial notes average about 85 words). Rewrite: one memory aid per line (N1, F1).
+12. **Script-length notes** (2026 tutorial notes average about 85 words). Rewrite: one memory aid per line (N1, F1), or, when the notes are the learned script (F11), the spoken text of §18 within the slide's seconds.
+
+The bans of F9 and of this section apply to spoken lines too, not only to slide text: a spoken
+triad is still a slogan (`one command, one button, one extension`, cut from the uRos 2026 script).
 
 Found in the assisted uRos 2026 draft by the wording reviews of 2026-11-13 (real, assisted; all
 removed with Christophe's agreement):
@@ -704,4 +711,42 @@ Case: uRos 2026 (CLAUDE.md, "This talk", "Organisers' guidelines"); reusable for
   Tables?` -> `## Tooling to use brand`, `pydata-paris-2025-quarto-publish/index.qmd:427-435`);
   backup slides kept with `visibility="hidden"` (18 in `raukr-2023-quarto/index.qmd`, 20 in
   `2024-quarto-evolution-rmd/index.qmd`). Cut middle sections first; keep the hook and the resource
-  slide; conclude by speaking (F4). Notes stay memory aids (F1).
+  slide; conclude by speaking (F4). Notes stay memory aids (F1), except in a deck where they are
+  the learned script (F11, §18).
+
+## 18. Spoken script (speaker notes that are learned)
+
+Applies when the notes are the learned script (F11). Agreed with Christophe on 2026-11-17, after
+three reviews and a coach verdict on the uRos 2026 script. [C] = his own choice in that session,
+[I] = inferred from the script and one timed rehearsal; revise [I] rules after the next rehearsal.
+
+1. **Only punctuation the ear can hear.** [C] Full stops and commas. No colon, parenthesis, dash
+   or slash in a spoken line: it is speech, not text to read.
+   Good: `The data are real, from Eurostat.` Bad: `One example for the rest of the talk: a
+   statistical bulletin.`
+2. **One idea per sentence, subject first, plain verbs.** [I] About 6 to 12 words, a pronoun next
+   to its noun, no idioms or phrasal verbs: many in the room, and the speaker, are non-native.
+   Good: `You fix it in the R code.` Bad: a French construction such as `you are Thursday evening`
+   (say `it is Thursday evening`).
+3. **The plain word first, and no word that means something else to an R user.** [I]
+   Good: `your analysis and your method note`. Bad: `the comment` (heard as a `#` line), `pipe`
+   (heard as `|>`).
+4. **The voice says what the screen does not; point at code, do not read it.** [C] for F3, [I]
+   for symbols. Do not name signs aloud, do not read fragments word for word.
+   Good: `The highlighted lines are options for Quarto.` Bad: `The lines that start with hash and
+   pipe are options for Quarto.`
+5. **Few numbers, each with one meaning and one spoken form.** [I] A year said once for one thing;
+   a time or a figure said the same way every time it comes back, or not said at all.
+   Good: `2014` only for R Markdown; `Thursday evening` in the intro and in the callback. Bad:
+   `since 2014` for the programmes, then `In 2014, R Markdown`.
+6. **A bridge is one spoken line and does not tell the room what to do.** [C] "Let's" with a
+   concrete verb, `This is where ...`, or a question the next slide answers.
+   Good: `This is where Quarto can help.`, `Let's open the source file.` Bad: `The tool for this
+   is Quarto.` (judged too directive by Christophe).
+7. **Words fit the slide's seconds, and the slide ends on a stop line.** [I] for the rate, [C] for
+   the format. About 2 words per second until his rate is measured, less about 2 words per click;
+   `(click)` where the fragment fires; one line in italics names what not to explain (the method,
+   the roadmap, the screenshots). Story-role notes stay out of the deck (tracker).
+   Good: #publishing-needs at 38 words for 0:20, ending on `Do not explain the method or the
+   counts.` Bad: 52 words and a caption that invites the method (1:21 in rehearsal).
+

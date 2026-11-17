@@ -9,8 +9,8 @@ Files (read-only, do not edit anything):
 Context: the speaker is a French software engineer giving the talk in English to official
 statisticians, many of them non-native English speakers. Slides were drafted with an AI
 assistant. The goal is slides and notes that read as if he wrote them himself: plain, spoken,
-a little dry, short labels on slides, one-line memory aids in the notes (he does not read his
-notes aloud).
+a little dry, short labels on slides. The notes are the spoken script he learns and says: check
+them as speech, against section 18 of `.claude/references/talk-voice.md`.
 
 Flag every line that sounds machine-written or not like a person speaking, for example:
 - polished marketing rhythm, three-part lists or slogans, "X isn't just Y", "not X, but Y";
@@ -18,7 +18,8 @@ Flag every line that sounds machine-written or not like a person speaking, for e
 - abstract nouns where a concrete word would do ("workflow", "pipeline", "journey", "story");
 - over-symmetrical parallel phrasing across slides, colon-titles everywhere;
 - em-dashes, semicolons and other written-only punctuation in spoken text;
-- notes that read as a script or a stage direction instead of a short memory aid;
+- notes that only work when read: colons, brackets or dashes, long sentences, words that mean
+  something else to an R user, code or symbols read aloud, more words than the slide's seconds;
 - idioms or rare words a non-native listener may miss;
 - anything you would bet a language model wrote.
 

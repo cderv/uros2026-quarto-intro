@@ -4,7 +4,8 @@ Rules for helping Chris (cderv) prepare talks. Apply when drafting slides, sugge
 
 This file covers structure. For **wording** (hooks, bridges, slide text, notes, closings), read
 `.claude/references/talk-voice.md` before drafting: it starts with Christophe's own statements
-(notes are memory aids he does not read; short spoken intro; he concludes by speaking) and holds
+(short spoken intro; he concludes by speaking; for uRos 2026 the notes are his learned spoken
+script, F11 and section 18) and holds
 the evidence from his decks. It extends the workshop profile `cderv/raukr-2026-quarto`, `.claude/references/house-voice.md` (not yet copied into this repository).
 
 ---
@@ -245,7 +246,7 @@ Builds, fragments and `code-line-numbers` steps do the pacing (posit::conf 2025:
 
 ## Presenter Notes
 
-`::: notes` are memory aids, not a script: Christophe does not read them. They hold the transition to the next section, the "why" that the slide leaves to an image or code, and stage cues ("Click on the link to show example"). The attested spoken bridges are few and one line long ("Next, let's focus on ..."): never fill notes with paragraphs. The slide never narrates the transition; it shows where we are in the story (a section label that changes, a diagram or image that comes back with the current step marked). Details: `.claude/references/talk-voice.md`.
+**uRos 2026:** `::: notes` hold the spoken script Christophe learns (talk-voice.md F11, section 18): what he says, `(click)` where each fragment fires, and one line in italics naming what not to explain. In his other decks, `::: notes` are memory aids, not a script: Christophe does not read them. They hold the transition to the next section, the "why" that the slide leaves to an image or code, and stage cues ("Click on the link to show example"). The attested spoken bridges are few and one line long ("Next, let's focus on ..."): never fill notes with paragraphs. The slide never narrates the transition; it shows where we are in the story (a section label that changes, a diagram or image that comes back with the current step marked). Details: `.claude/references/talk-voice.md`.
 
 ## Attribution Pattern
 
