@@ -103,8 +103,8 @@ has a talk about publishing statistics]{.statement .needs-head}
 [Programs read from 2014 to 2026: 532 items, about 35 publishing talks. Method, code and data: `analysis/` in the slides repository.]{.chart-cap}
 
 ::: notes
-Every year since 2017, there is a talk here about publishing statistics.
-The same needs come back. You want recurring publications, with your
+Every year since 2017, there is a talk here about publishing statistics
+for your readers. The same needs come back. You want recurring publications, with your
 institute's look, and less manual work. Without a pipeline, someone
 copies the numbers by hand.
 
